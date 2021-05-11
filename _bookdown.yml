@@ -1,0 +1,27 @@
+book_filename: "nibrsbook"
+new_session: yes
+repo: https://github.com/jacobkap/nibrsbook
+output_dir: "docs"
+before_chapter_script: "_common.R"
+always_allow_html: yes
+delete_merged_file: true
+language:
+  ui:
+    chapter_name: "Chapter "
+rmd_files: [
+  "index.Rmd",
+  "author.Rmd",
+  # Overview of NIBRS data
+  "nibrs_general.Rmd",
+  "administrative.Rmd",
+  "offense.Rmd",
+  "offender.Rmd",
+  "victim.Rmd",
+  "arrestee.Rmd",
+  "property.Rmd",
+  "group_b_arrest_reports.Rmd",
+  "window_arrestee.Rmd",
+  "window_property.Rmd",
+  "window_exceptional_clearance.Rmd",
+  "references.Rmd"
+]
