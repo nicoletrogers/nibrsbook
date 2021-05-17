@@ -1,6 +1,15 @@
 # Offender Segment
 
-```{r}
+```{r, echo=FALSE}
+knitr::opts_chunk$set(
+  echo    = FALSE,
+  warning = FALSE,
+  error   = FALSE,
+  message = FALSE
+)
+```
+
+```{r,  results='hide'}
 load("data/nibrs_offender_segment_segment_2019.rda")
 offender <- nibrs_offender_segment_segment_2019
 rm(nibrs_offender_segment_segment_2019)

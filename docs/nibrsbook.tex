@@ -349,18 +349,6 @@ An extremely important aspect of crime data is when exactly the crime occurs. If
 \hypertarget{offense-segment}{%
 \chapter{Offense Segment}\label{offense-segment}}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{load}\NormalTok{(}\StringTok{"data/nibrs\_offense\_segment\_segment\_2019.rda"}\NormalTok{)}
-\NormalTok{offense }\OtherTok{\textless{}{-}}\NormalTok{ nibrs\_offense\_segment\_segment\_2019}
-\FunctionTok{rm}\NormalTok{(nibrs\_offense\_segment\_segment\_2019)}
-\FunctionTok{gc}\NormalTok{()}
-\CommentTok{\#\textgreater{}             used   (Mb) gc trigger   (Mb)  max used   (Mb)}
-\CommentTok{\#\textgreater{} Ncells   5081061  271.4    9818648  524.4   5098871  272.4}
-\CommentTok{\#\textgreater{} Vcells 192420688 1468.1  268965598 2052.1 192464051 1468.4}
-\end{Highlighting}
-\end{Shaded}
-
 \hypertarget{important-variables-1}{%
 \section{Important variables}\label{important-variables-1}}
 
@@ -385,18 +373,6 @@ An extremely important aspect of crime data is when exactly the crime occurs. If
 \hypertarget{offender-segment}{%
 \chapter{Offender Segment}\label{offender-segment}}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{load}\NormalTok{(}\StringTok{"data/nibrs\_offender\_segment\_segment\_2019.rda"}\NormalTok{)}
-\NormalTok{offender }\OtherTok{\textless{}{-}}\NormalTok{ nibrs\_offender\_segment\_segment\_2019}
-\FunctionTok{rm}\NormalTok{(nibrs\_offender\_segment\_segment\_2019)}
-\FunctionTok{gc}\NormalTok{()}
-\CommentTok{\#\textgreater{}            used  (Mb) gc trigger  (Mb) max used  (Mb)}
-\CommentTok{\#\textgreater{} Ncells  5081047 271.4    9819981 524.5  5098857 272.4}
-\CommentTok{\#\textgreater{} Vcells 88748472 677.1  108845140 830.5 88791835 677.5}
-\end{Highlighting}
-\end{Shaded}
-
 As might be expected, the Offender Segment provides information about who the offender is for each incident, though this is limited to only demographic variables. So we know the age, sex, and race of each offender but nothing else. This means that important variables such as criminal history, ethnicity, socioeconomic status, and motive are missing. In the Victim Segment we learn about the relationship between the victim and offender, and in the Offense Segment we learn which weapon (if any) the offender used. So there is some other data on the offender in other segments but its quite limited. This data has one row per offender so incidents with multiple offenders have multiple rows. In cases where there is no information about the offender there will be a single row where all of the offender variables will be ``unknown''. In these cases having a single row for the offender is merely a placeholder and doesn't necessarily mean that there was only one offender for that incident.
 
 \hypertarget{important-variables-2}{%
@@ -405,52 +381,17 @@ As might be expected, the Offender Segment provides information about who the of
 \hypertarget{age}{%
 \subsection{Age}\label{age}}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{offender}\SpecialCharTok{$}\NormalTok{age\_of\_offender[offender}\SpecialCharTok{$}\NormalTok{age\_of\_offender }\SpecialCharTok{\%in\%} \StringTok{"over 98 years old"}\NormalTok{] }\OtherTok{\textless{}{-}} \DecValTok{99}
-\NormalTok{offender}\SpecialCharTok{$}\NormalTok{age\_of\_offender[offender}\SpecialCharTok{$}\NormalTok{age\_of\_offender }\SpecialCharTok{\%in\%} \StringTok{"unknown"}\NormalTok{] }\OtherTok{\textless{}{-}} \ConstantTok{NA}
-\NormalTok{offender}\SpecialCharTok{$}\NormalTok{age\_of\_offender }\OtherTok{\textless{}{-}} \FunctionTok{as.numeric}\NormalTok{(offender}\SpecialCharTok{$}\NormalTok{age\_of\_offender)}
-\FunctionTok{make\_stat\_count\_plots}\NormalTok{(offender, }\StringTok{"age\_of\_offender"}\NormalTok{, }\AttributeTok{count =} \ConstantTok{FALSE}\NormalTok{, }\AttributeTok{ylab =} \StringTok{"\% of Offenders"}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{xlab}\NormalTok{(}\StringTok{"Age"}\NormalTok{)}
-\CommentTok{\#\textgreater{} Warning: Removed 2943237 rows containing non{-}finite values (stat\_count).}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-2-1} \end{center}
+\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-3-1} \end{center}
 
 \hypertarget{sex}{%
 \subsection{Sex}\label{sex}}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{offender}\SpecialCharTok{$}\NormalTok{sex\_of\_offender[offender}\SpecialCharTok{$}\NormalTok{sex\_of\_offender }\SpecialCharTok{==} \StringTok{"m"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"male"}
-\NormalTok{offender}\SpecialCharTok{$}\NormalTok{sex\_of\_offender[}\FunctionTok{is.na}\NormalTok{(offender}\SpecialCharTok{$}\NormalTok{sex\_of\_offender)] }\OtherTok{\textless{}{-}} \StringTok{"unknown"}
-\NormalTok{offender }\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{sex\_of\_offender =} \FunctionTok{capitalize\_words}\NormalTok{(sex\_of\_offender)) }\SpecialCharTok{\%\textgreater{}\%}
-\NormalTok{crimeutils}\SpecialCharTok{::}\FunctionTok{make\_barplots}\NormalTok{(}\StringTok{"sex\_of\_offender"}\NormalTok{, }\AttributeTok{count =} \ConstantTok{FALSE}\NormalTok{, }\AttributeTok{ylab =} \StringTok{"\% of Offenders"}\NormalTok{) }\SpecialCharTok{+}
-\NormalTok{  ggplot2}\SpecialCharTok{::}\FunctionTok{scale\_y\_continuous}\NormalTok{(}\AttributeTok{labels =}\NormalTok{ scales}\SpecialCharTok{::}\NormalTok{percent)}
-\CommentTok{\#\textgreater{} Scale for \textquotesingle{}y\textquotesingle{} is already present. Adding another scale for \textquotesingle{}y\textquotesingle{}, which will}
-\CommentTok{\#\textgreater{} replace the existing scale.}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-3-1} \end{center}
+\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-4-1} \end{center}
 
 \hypertarget{race}{%
 \subsection{Race}\label{race}}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{offender}\SpecialCharTok{$}\NormalTok{race\_of\_offender[}\FunctionTok{is.na}\NormalTok{(offender}\SpecialCharTok{$}\NormalTok{race\_of\_offender)] }\OtherTok{\textless{}{-}} \StringTok{"unknown"}
-\NormalTok{offender }\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{race\_of\_offender =} \FunctionTok{capitalize\_words}\NormalTok{(race\_of\_offender)) }\SpecialCharTok{\%\textgreater{}\%}
-\NormalTok{crimeutils}\SpecialCharTok{::}\FunctionTok{make\_barplots}\NormalTok{(}\StringTok{"race\_of\_offender"}\NormalTok{, }\AttributeTok{count =} \ConstantTok{FALSE}\NormalTok{, }\AttributeTok{ylab =} \StringTok{"\% of Offenders"}\NormalTok{) }\SpecialCharTok{+}
-\NormalTok{  ggplot2}\SpecialCharTok{::}\FunctionTok{scale\_y\_continuous}\NormalTok{(}\AttributeTok{labels =}\NormalTok{ scales}\SpecialCharTok{::}\NormalTok{percent)}
-\CommentTok{\#\textgreater{} Scale for \textquotesingle{}y\textquotesingle{} is already present. Adding another scale for \textquotesingle{}y\textquotesingle{}, which will}
-\CommentTok{\#\textgreater{} replace the existing scale.}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-4-1} \end{center}
+\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-5-1} \end{center}
 
 \hypertarget{victim-segment}{%
 \chapter{Victim Segment}\label{victim-segment}}
