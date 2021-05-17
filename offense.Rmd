@@ -1,1 +1,22 @@
 # Offense Segment
+
+```{r}
+load("data/nibrs_offense_segment_segment_2019.rda")
+offense <- nibrs_offense_segment_segment_2019
+rm(nibrs_offense_segment_segment_2019)
+gc()
+```
+
+## Important variables
+
+### Crime category
+
+### Offense subtype
+
+### Drug or alcohol use
+
+### Crime location
+
+### Weapons
+
+### Hate crime indicator (bias motivation)

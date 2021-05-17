@@ -5,26 +5,26 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 6 Victim Segment | National Incident-Based Reporting System (NIBRS) Data: A Practitioner’s Guide</title>
-  <meta name="description" content="This is a comprehensive guide to using the FBI’s National Incident-Based Reporting System Data, an incident-level dataset which provides detailed information on every crime reported to the police, including victim and offender traits and characteristics of the crime." />
+  <meta name="description" content="This is a comprehensive guide to using the FBI’s National Incident-Based Reporting System (NIBRS) Data, an incident-level dataset which provides detailed information on every crime reported to the police, including victim and offender traits and characteristics of the crime." />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 6 Victim Segment | National Incident-Based Reporting System (NIBRS) Data: A Practitioner’s Guide" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://nibrsbook.com" />
   
-  <meta property="og:description" content="This is a comprehensive guide to using the FBI’s National Incident-Based Reporting System Data, an incident-level dataset which provides detailed information on every crime reported to the police, including victim and offender traits and characteristics of the crime." />
+  <meta property="og:description" content="This is a comprehensive guide to using the FBI’s National Incident-Based Reporting System (NIBRS) Data, an incident-level dataset which provides detailed information on every crime reported to the police, including victim and offender traits and characteristics of the crime." />
   <meta name="github-repo" content="jacobkap/nibrsbook" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Chapter 6 Victim Segment | National Incident-Based Reporting System (NIBRS) Data: A Practitioner’s Guide" />
   
-  <meta name="twitter:description" content="This is a comprehensive guide to using the FBI’s National Incident-Based Reporting System Data, an incident-level dataset which provides detailed information on every crime reported to the police, including victim and offender traits and characteristics of the crime." />
+  <meta name="twitter:description" content="This is a comprehensive guide to using the FBI’s National Incident-Based Reporting System (NIBRS) Data, an incident-level dataset which provides detailed information on every crime reported to the police, including victim and offender traits and characteristics of the crime." />
   
 
 <meta name="author" content="Jacob Kaplan" />
 
 
-<meta name="date" content="2021-05-11" />
+<meta name="date" content="2021-05-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,8 +32,8 @@
   
   
 <link rel="prev" href="offender-segment.html"/>
-<link rel="next" href="arrestee-segment.html"/>
-<script src="libs/header-attrs-2.7/header-attrs.js"></script>
+<link rel="next" href="arrestee-and-window-arrestee-segment.html"/>
+<script src="libs/header-attrs-2.8/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -158,17 +158,60 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#recommended-reading"><i class="fa fa-check"></i><b>1.6</b> Recommended reading</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="about-the-author.html"><a href="about-the-author.html"><i class="fa fa-check"></i>About the Author</a></li>
-<li class="chapter" data-level="2" data-path="overview-of-the-data.html"><a href="overview-of-the-data.html"><i class="fa fa-check"></i><b>2</b> Overview of the Data</a></li>
-<li class="chapter" data-level="3" data-path="administrative-segment.html"><a href="administrative-segment.html"><i class="fa fa-check"></i><b>3</b> Administrative Segment</a></li>
-<li class="chapter" data-level="4" data-path="offense-segment.html"><a href="offense-segment.html"><i class="fa fa-check"></i><b>4</b> Offense Segment</a></li>
-<li class="chapter" data-level="5" data-path="offender-segment.html"><a href="offender-segment.html"><i class="fa fa-check"></i><b>5</b> Offender Segment</a></li>
-<li class="chapter" data-level="6" data-path="victim-segment.html"><a href="victim-segment.html"><i class="fa fa-check"></i><b>6</b> Victim Segment</a></li>
-<li class="chapter" data-level="7" data-path="arrestee-segment.html"><a href="arrestee-segment.html"><i class="fa fa-check"></i><b>7</b> Arrestee Segment</a></li>
-<li class="chapter" data-level="8" data-path="property-segment.html"><a href="property-segment.html"><i class="fa fa-check"></i><b>8</b> Property Segment</a></li>
+<li class="chapter" data-level="2" data-path="overview-of-the-data.html"><a href="overview-of-the-data.html"><i class="fa fa-check"></i><b>2</b> Overview of the Data</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="overview-of-the-data.html"><a href="overview-of-the-data.html#choosing-a-unit-of-analysis"><i class="fa fa-check"></i><b>2.1</b> Choosing a unit of analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="administrative-window-exceptional-clearance-segment.html"><a href="administrative-window-exceptional-clearance-segment.html"><i class="fa fa-check"></i><b>3</b> Administrative- Window Exceptional Clearance Segment</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="administrative-window-exceptional-clearance-segment.html"><a href="administrative-window-exceptional-clearance-segment.html#important-variables"><i class="fa fa-check"></i><b>3.1</b> Important variables</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="administrative-window-exceptional-clearance-segment.html"><a href="administrative-window-exceptional-clearance-segment.html#the-incident-date-or-report-date"><i class="fa fa-check"></i><b>3.1.1</b> The incident date or report date</a></li>
+<li class="chapter" data-level="3.1.2" data-path="administrative-window-exceptional-clearance-segment.html"><a href="administrative-window-exceptional-clearance-segment.html#hour-of-incident"><i class="fa fa-check"></i><b>3.1.2</b> Hour of incident</a></li>
+<li class="chapter" data-level="3.1.3" data-path="administrative-window-exceptional-clearance-segment.html"><a href="administrative-window-exceptional-clearance-segment.html#exceptional-clearance"><i class="fa fa-check"></i><b>3.1.3</b> Exceptional clearance</a></li>
+<li class="chapter" data-level="3.1.4" data-path="administrative-window-exceptional-clearance-segment.html"><a href="administrative-window-exceptional-clearance-segment.html#number-of-other-segments"><i class="fa fa-check"></i><b>3.1.4</b> Number of other segments</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="offense-segment.html"><a href="offense-segment.html"><i class="fa fa-check"></i><b>4</b> Offense Segment</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="offense-segment.html"><a href="offense-segment.html#important-variables-1"><i class="fa fa-check"></i><b>4.1</b> Important variables</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="offense-segment.html"><a href="offense-segment.html#crime-category"><i class="fa fa-check"></i><b>4.1.1</b> Crime category</a></li>
+<li class="chapter" data-level="4.1.2" data-path="offense-segment.html"><a href="offense-segment.html#offense-subtype"><i class="fa fa-check"></i><b>4.1.2</b> Offense subtype</a></li>
+<li class="chapter" data-level="4.1.3" data-path="offense-segment.html"><a href="offense-segment.html#drug-or-alcohol-use"><i class="fa fa-check"></i><b>4.1.3</b> Drug or alcohol use</a></li>
+<li class="chapter" data-level="4.1.4" data-path="offense-segment.html"><a href="offense-segment.html#crime-location"><i class="fa fa-check"></i><b>4.1.4</b> Crime location</a></li>
+<li class="chapter" data-level="4.1.5" data-path="offense-segment.html"><a href="offense-segment.html#weapons"><i class="fa fa-check"></i><b>4.1.5</b> Weapons</a></li>
+<li class="chapter" data-level="4.1.6" data-path="offense-segment.html"><a href="offense-segment.html#hate-crime-indicator-bias-motivation"><i class="fa fa-check"></i><b>4.1.6</b> Hate crime indicator (bias motivation)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="offender-segment.html"><a href="offender-segment.html"><i class="fa fa-check"></i><b>5</b> Offender Segment</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="offender-segment.html"><a href="offender-segment.html#important-variables-2"><i class="fa fa-check"></i><b>5.1</b> Important variables</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="offender-segment.html"><a href="offender-segment.html#age"><i class="fa fa-check"></i><b>5.1.1</b> Age</a></li>
+<li class="chapter" data-level="5.1.2" data-path="offender-segment.html"><a href="offender-segment.html#sex"><i class="fa fa-check"></i><b>5.1.2</b> Sex</a></li>
+<li class="chapter" data-level="5.1.3" data-path="offender-segment.html"><a href="offender-segment.html#race"><i class="fa fa-check"></i><b>5.1.3</b> Race</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="victim-segment.html"><a href="victim-segment.html"><i class="fa fa-check"></i><b>6</b> Victim Segment</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="victim-segment.html"><a href="victim-segment.html#important-variables-3"><i class="fa fa-check"></i><b>6.1</b> Important variables</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="victim-segment.html"><a href="victim-segment.html#crime-category-1"><i class="fa fa-check"></i><b>6.1.1</b> Crime category</a></li>
+<li class="chapter" data-level="6.1.2" data-path="victim-segment.html"><a href="victim-segment.html#victim-type"><i class="fa fa-check"></i><b>6.1.2</b> Victim type</a></li>
+<li class="chapter" data-level="6.1.3" data-path="victim-segment.html"><a href="victim-segment.html#injury"><i class="fa fa-check"></i><b>6.1.3</b> Injury</a></li>
+<li class="chapter" data-level="6.1.4" data-path="victim-segment.html"><a href="victim-segment.html#relationship-to-offender"><i class="fa fa-check"></i><b>6.1.4</b> Relationship to offender</a></li>
+<li class="chapter" data-level="6.1.5" data-path="victim-segment.html"><a href="victim-segment.html#residence-status"><i class="fa fa-check"></i><b>6.1.5</b> Residence status</a></li>
+<li class="chapter" data-level="6.1.6" data-path="victim-segment.html"><a href="victim-segment.html#age-1"><i class="fa fa-check"></i><b>6.1.6</b> Age</a></li>
+<li class="chapter" data-level="6.1.7" data-path="victim-segment.html"><a href="victim-segment.html#sex-1"><i class="fa fa-check"></i><b>6.1.7</b> Sex</a></li>
+<li class="chapter" data-level="6.1.8" data-path="victim-segment.html"><a href="victim-segment.html#race-1"><i class="fa fa-check"></i><b>6.1.8</b> Race</a></li>
+<li class="chapter" data-level="6.1.9" data-path="victim-segment.html"><a href="victim-segment.html#ethnicity"><i class="fa fa-check"></i><b>6.1.9</b> Ethnicity</a></li>
+<li class="chapter" data-level="6.1.10" data-path="victim-segment.html"><a href="victim-segment.html#homicide-type"><i class="fa fa-check"></i><b>6.1.10</b> Homicide type</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="arrestee-and-window-arrestee-segment.html"><a href="arrestee-and-window-arrestee-segment.html"><i class="fa fa-check"></i><b>7</b> Arrestee and Window Arrestee Segment</a></li>
+<li class="chapter" data-level="8" data-path="property-and-window-property-segment.html"><a href="property-and-window-property-segment.html"><i class="fa fa-check"></i><b>8</b> Property and Window Property Segment</a></li>
 <li class="chapter" data-level="9" data-path="group-b-arrest-reports-segment.html"><a href="group-b-arrest-reports-segment.html"><i class="fa fa-check"></i><b>9</b> Group B Arrest Reports Segment</a></li>
-<li class="chapter" data-level="10" data-path="window-arrestee-segment.html"><a href="window-arrestee-segment.html"><i class="fa fa-check"></i><b>10</b> Window Arrestee Segment</a></li>
-<li class="chapter" data-level="11" data-path="window-property-segment.html"><a href="window-property-segment.html"><i class="fa fa-check"></i><b>11</b> Window Property Segment</a></li>
-<li class="chapter" data-level="12" data-path="window-exceptional-clearance-segment.html"><a href="window-exceptional-clearance-segment.html"><i class="fa fa-check"></i><b>12</b> Window Exceptional Clearance Segment</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 </ul>
 
@@ -189,7 +232,44 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="victim-segment" class="section level1" number="6">
 <h1><span class="header-section-number">Chapter 6</span> Victim Segment</h1>
+<div id="important-variables-3" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> Important variables</h2>
+<div id="crime-category-1" class="section level3" number="6.1.1">
+<h3><span class="header-section-number">6.1.1</span> Crime category</h3>
+</div>
+<div id="victim-type" class="section level3" number="6.1.2">
+<h3><span class="header-section-number">6.1.2</span> Victim type</h3>
+</div>
+<div id="injury" class="section level3" number="6.1.3">
+<h3><span class="header-section-number">6.1.3</span> Injury</h3>
+</div>
+<div id="relationship-to-offender" class="section level3" number="6.1.4">
+<h3><span class="header-section-number">6.1.4</span> Relationship to offender</h3>
+</div>
+<div id="residence-status" class="section level3" number="6.1.5">
+<h3><span class="header-section-number">6.1.5</span> Residence status</h3>
+</div>
+<div id="age-1" class="section level3" number="6.1.6">
+<h3><span class="header-section-number">6.1.6</span> Age</h3>
+<p><img src="victim_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="sex-1" class="section level3" number="6.1.7">
+<h3><span class="header-section-number">6.1.7</span> Sex</h3>
+<p><img src="victim_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="race-1" class="section level3" number="6.1.8">
+<h3><span class="header-section-number">6.1.8</span> Race</h3>
+<p><img src="victim_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="ethnicity" class="section level3" number="6.1.9">
+<h3><span class="header-section-number">6.1.9</span> Ethnicity</h3>
+<p><img src="victim_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="homicide-type" class="section level3" number="6.1.10">
+<h3><span class="header-section-number">6.1.10</span> Homicide type</h3>
 
+</div>
+</div>
 </div>
             </section>
 
@@ -197,7 +277,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         </div>
       </div>
 <a href="offender-segment.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="arrestee-segment.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="arrestee-and-window-arrestee-segment.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

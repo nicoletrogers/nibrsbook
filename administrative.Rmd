@@ -1,1 +1,219 @@
-# Administrative Segment
+# Administrative- Window Exceptional Clearance Segment 
+
+```{r, echo=FALSE}
+knitr::opts_chunk$set(
+  echo    = FALSE,
+  warning = FALSE,
+  error   = FALSE,
+  message = FALSE
+)
+```
+
+```{r,  results='hide'}
+load("data/nibrs_administrative_segment_segment_2019.rda")
+
+load("data/nibrs_window_exceptional_clearance_segment_segment_2019.rda")
+
+administrative     <- nibrs_administrative_segment_segment_2019
+window_exceptional <- nibrs_window_exceptional_clearance_segment_segment_2019
+
+rm(nibrs_administrative_segment_segment_2019)
+rm(nibrs_window_exceptional_clearance_segment_segment_2019)
+gc()
+```
+
+The Administrative Segment provides information about the incident itself, such as how many victims or offenders there were. In practice this means that it tells us how many other segments - offense, victim, offender, and arrestee segments - there are for this particular incident. It also has several important variables at the incident-level such as what hour of the day the incident occurred and whether the incident date variable is actually just the date the incident was reported. Finally, it tells us whether the case was cleared exceptionally and, if so, what type of exceptional clearance it was. This can tell us, for example, how many crimes was cleared because the offender died or the victim refused to cooperate. As the UCR data doesn't differentiate between normal clearances (i.e. arrest the offender) and exceptional clearances, this provides a far deeper understanding of case outcomes. 
+
+
+## Important variables
+
+### The incident date or report date
+
+```{r administrativeMonthDay, fig.cap = "The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019."}
+
+administrative$mday <- lubridate::mday(administrative$incident_date)
+administrative$mday <- factor(administrative$mday, 
+                              levels = rev(1:31))
+
+
+ggplot2::ggplot(administrative, aes(x = mday)) + 
+  theme_crim() + 
+  ggplot2::coord_flip() +
+  ggplot2::xlab("Day of Month") +
+  ggplot2::geom_bar(ggplot2::aes_string(y = "(..count..)/sum(..count..)")) + 
+  crimeutils::theme_crim() +
+  ggplot2::scale_y_continuous(labels = scales::percent, 
+                              expand = c(0, 0)) +
+  ylab("% of Crimes")
+```
+
+
+```{r administrativeMonthDayReport, fig.cap = "The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019."}
+
+administrative$mday <- mday(administrative$incident_date)
+administrative$mday <- factor(administrative$mday, 
+                              levels = rev(1:31))
+
+
+ggplot2::ggplot(administrative[administrative$report_date_indicator %in% "report date", ], aes(x = mday)) + 
+  theme_crim() + 
+  ggplot2::coord_flip() +
+  ggplot2::xlab("Day of Month") +
+  ggplot2::geom_bar(ggplot2::aes_string(y = "(..count..)/sum(..count..)")) + 
+  crimeutils::theme_crim() +
+  ggplot2::scale_y_continuous(labels = scales::percent, 
+                              expand = c(0, 0)) +
+  ylab("% of Crimes")
+```
+
+
+### Hour of incident
+
+An extremely important aspect of crime data is when exactly the crime occurs. If, for example, crime always spikes when the local high school ends their day that would likely indicate that high school students are involved with crime (both as victims-offenders). In my own research on daylight saving time-crime I only care about the sunset hours, which is when daylight saving time would affect outdoor lighting. When crime happens also would affect police behavior as they'd likely increase patrol during times of elevated crime. Luckily NIBRS data does have the time of each incident, though it's only at the hour level.
+
+```{r administrativeHours, fig.cap = "The percent of crimes that are reported each hour for all agencies reporting to NIBRS in 2019."}
+
+administrative$hour <- administrative$incident_date_hour
+administrative$hour <- gsub("on or between ", "",
+                            administrative$hour)
+administrative$hour <- gsub(" and ", "-",
+                            administrative$hour)
+administrative$hour <- gsub("midnight", "Midnight",
+                            administrative$hour)
+administrative$hour <- factor(administrative$hour, 
+                              levels = rev(c(
+                                "Midnight-00:59",
+                                "01:00-01:59",
+                                "02:00-02:59",
+                                "03:00-03:59",
+                                "04:00-04:59",
+                                "05:00-05:59",
+                                "06:00-06:59",
+                                "07:00-07:59",
+                                "08:00-08:59",
+                                "09:00-09:59",
+                                "10:00-10:59",
+                                "11:00-11:59",
+                                "12:00-12:59",
+                                "13:00-13:59",
+                                "14:00-14:59",
+                                "15:00-15:59",
+                                "16:00-16:59",
+                                "17:00-17:59",
+                                "18:00-18:59",
+                                "19:00-19:59",
+                                "20:00-20:59",
+                                "21:00-21:59",
+                                "22:00-22:59",
+                                "23:00-23:59")))
+
+
+ggplot2::ggplot(administrative, aes(x = hour)) + 
+  theme_crim() + 
+  ggplot2::coord_flip() +
+  ggplot2::xlab("Hour of Day") +
+  ggplot2::geom_bar(ggplot2::aes_string(y = "(..count..)/sum(..count..)")) + 
+  crimeutils::theme_crim() +
+  ggplot2::scale_y_continuous(labels = scales::percent, 
+                              expand = c(0, 0)) +
+  ylab("% of Crimes")
+```
+
+
+
+
+
+### Exceptional clearance
+
+```{r administrativeExceptionalClearances, fig.cap = "The percent of crimes that are reported each hour for all agencies reporting to NIBRS in 2019."}
+
+administrative$cleared_exceptionally <- gsub(" \\(.*", "", administrative$cleared_exceptionally)
+administrative %>%
+  filter(!cleared_exceptionally %in% "not applicable") %>%
+  mutate(cleared_exceptionally = capitalize_words(cleared_exceptionally)) %>%
+crimeutils::make_barplots("cleared_exceptionally", count = FALSE, ylab = "% of Exceptional Clearances")
+
+```
+
+
+### Number of other segments
+
+#### Offense segments
+
+```{r administrativeOffenseSegments, fig.cap = "The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019."}
+
+administrative$total_offense_segments[administrative$total_offense_segments >= 10] <- "10 or more"
+administrative$total_offense_segments <- factor(administrative$total_offense_segments, 
+                              levels = rev(c(0:9, "10 or more")))
+
+
+ggplot2::ggplot(administrative, aes(x = total_offense_segments)) + 
+  theme_crim() + 
+  ggplot2::coord_flip() +
+  ggplot2::xlab("# of Offense Segments") +
+  ggplot2::geom_bar(ggplot2::aes_string(y = "(..count..)/sum(..count..)")) + 
+  crimeutils::theme_crim() +
+  ggplot2::scale_y_continuous(labels = scales::percent, 
+                              expand = c(0, 0)) +
+  ylab("% of Crimes")
+```
+
+#### Victim segments
+
+```{r administrativeVictimSegments, fig.cap = "The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019."}
+
+administrative$total_victim_segments[administrative$total_victim_segments >= 10] <- "10 or more"
+administrative$total_victim_segments <- factor(administrative$total_victim_segments, 
+                              levels = rev(c(0:9, "10 or more")))
+
+
+ggplot2::ggplot(administrative, aes(x = total_victim_segments)) + 
+  theme_crim() + 
+  ggplot2::coord_flip() +
+  ggplot2::xlab("# of Victim Segments") +
+  ggplot2::geom_bar(ggplot2::aes_string(y = "(..count..)/sum(..count..)")) + 
+  crimeutils::theme_crim() +
+  ggplot2::scale_y_continuous(labels = scales::percent, 
+                              expand = c(0, 0)) +
+  ylab("% of Crimes")
+```
+
+#### Offender segments
+
+```{r administrativeOffenderSegments, fig.cap = "The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019."}
+
+administrative$total_offender_segments[administrative$total_offender_segments >= 10] <- "10 or more"
+administrative$total_offender_segments <- factor(administrative$total_offender_segments, 
+                              levels = rev(c(0:9, "10 or more")))
+
+
+ggplot2::ggplot(administrative, aes(x = total_offender_segments)) + 
+  theme_crim() + 
+  ggplot2::coord_flip() +
+  ggplot2::xlab("# of Arrestee Segments") +
+  ggplot2::geom_bar(ggplot2::aes_string(y = "(..count..)/sum(..count..)")) + 
+  crimeutils::theme_crim() +
+  ggplot2::scale_y_continuous(labels = scales::percent, 
+                              expand = c(0, 0)) +
+  ylab("% of Crimes")
+```
+
+#### Arrestee segments
+
+```{r administrativeArresteeSegments, fig.cap = "The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019."}
+
+administrative$total_arrestee_segments[administrative$total_arrestee_segments >= 10] <- "10 or more"
+administrative$total_arrestee_segments <- factor(administrative$total_arrestee_segments, 
+                              levels = rev(c(0:9, "10 or more")))
+
+
+ggplot2::ggplot(administrative, aes(x = total_arrestee_segments)) + 
+  theme_crim() + 
+  ggplot2::coord_flip() +
+  ggplot2::xlab("# of Arrestee Segments") +
+  ggplot2::geom_bar(ggplot2::aes_string(y = "(..count..)/sum(..count..)")) + 
+  crimeutils::theme_crim() +
+  ggplot2::scale_y_continuous(labels = scales::percent, 
+                              expand = c(0, 0)) +
+  ylab("% of Crimes")
+```

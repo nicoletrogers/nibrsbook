@@ -20,8 +20,5 @@ rmd_files: [
   "arrestee.Rmd",
   "property.Rmd",
   "group_b_arrest_reports.Rmd",
-  "window_arrestee.Rmd",
-  "window_property.Rmd",
-  "window_exceptional_clearance.Rmd",
   "references.Rmd"
 ]

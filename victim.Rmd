@@ -1,1 +1,78 @@
 # Victim Segment
+
+```{r, echo=FALSE}
+knitr::opts_chunk$set(
+  echo    = FALSE,
+  warning = FALSE,
+  error   = FALSE,
+  message = FALSE
+)
+```
+
+```{r,  results='hide'}
+load("data/nibrs_victim_segment_segment_2019.rda")
+victim <- nibrs_victim_segment_segment_2019
+rm(nibrs_victim_segment_segment_2019)
+gc()
+```
+
+## Important variables
+
+### Crime category
+
+### Victim type
+
+### Injury
+
+### Relationship to offender
+
+### Residence status
+
+
+### Age
+
+```{r}
+victim$age_of_victim[victim$age_of_victim %in% "over 98 years old"] <- 99
+victim$age_of_victim[victim$age_of_victim %in% c("under 24 hours (neonate)",
+                                                 "7-364 days old",
+                                                 "1-6 days old")] <- 0
+victim$age_of_victim[victim$age_of_victim %in% "unknown"] <- NA
+victim$age_of_victim <- as.numeric(victim$age_of_victim)
+make_stat_count_plots(victim, "age_of_victim", count = FALSE, ylab = "% of victims") + xlab("Age")
+
+```
+
+
+### Sex
+
+```{r}
+victim$sex_of_victim[is.na(victim$sex_of_victim)] <- "unknown"
+victim %>%
+  mutate(sex_of_victim = capitalize_words(sex_of_victim)) %>%
+crimeutils::make_barplots("sex_of_victim", count = FALSE, ylab = "% of victims") +
+  ggplot2::scale_y_continuous(labels = scales::percent)
+```
+
+
+### Race
+
+```{r}
+victim$race_of_victim[is.na(victim$race_of_victim)] <- "unknown"
+victim %>%
+  mutate(race_of_victim = capitalize_words(race_of_victim)) %>%
+crimeutils::make_barplots("race_of_victim", count = FALSE, ylab = "% of victims") +
+  ggplot2::scale_y_continuous(labels = scales::percent)
+```
+
+### Ethnicity
+
+```{r}
+victim$ethnicity_of_victim[is.na(victim$ethnicity_of_victim)] <- "unknown"
+victim %>%
+  mutate(ethnicity_of_victim = capitalize_words(ethnicity_of_victim)) %>%
+crimeutils::make_barplots("ethnicity_of_victim", count = FALSE, ylab = "% of victims") +
+  ggplot2::scale_y_continuous(labels = scales::percent)
+```
+
+### Homicide type
+

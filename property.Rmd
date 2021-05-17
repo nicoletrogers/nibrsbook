@@ -1,1 +1,15 @@
-# Property Segment
+# Property and Window Property Segment
+
+```{r, echo=FALSE}
+knitr::opts_chunk$set(
+  echo    = FALSE,
+  warning = FALSE,
+  error   = FALSE,
+  message = FALSE
+)
+```
+
+```{r,  results='hide'}
+load("data/nibrs_property_segment_segment_2019.rda")
+load("data/nibrs_window_recovered_property_segment_segment_2019.rda")
+```
