@@ -11,7 +11,6 @@ language:
 rmd_files: [
   "index.Rmd",
   "author.Rmd",
-  # Overview of NIBRS data
   "nibrs_general.Rmd",
   "administrative.Rmd",
   "offense.Rmd",
@@ -19,6 +18,5 @@ rmd_files: [
   "victim.Rmd",
   "arrestee.Rmd",
   "property.Rmd",
-  "group_b_arrest_reports.Rmd",
-  "references.Rmd"
+  "group_b_arrest_reports.Rmd"
 ]

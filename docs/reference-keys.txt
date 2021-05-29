@@ -1,3 +1,4 @@
+fig:unnamed-chunk-2
 fig:administrativeMonthDay
 fig:administrativeMonthDayReport
 fig:administrativeHours
@@ -14,7 +15,9 @@ pronunciation
 sources-of-nibrs-data
 where-to-find-the-data-used-in-this-book
 recommended-reading
+how-to-contribute-to-this-book
 overview-of-the-data
+nibrs-gives-you-choices-which-means-you-need-to-think
 choosing-a-unit-of-analysis
 administrative--window-exceptional-clearance-segment
 important-variables
