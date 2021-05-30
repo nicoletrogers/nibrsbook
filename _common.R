@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
   out.width = "90%",
   fig.align = 'center',
   fig.width = 15.33333,
-  fig.height = 13.63333,
+  fig.height = 14.63333,
 #  fig.asp = (1 / 1.818033988749895),  # 1 / phi
   fig.show = "hold",
   error = TRUE

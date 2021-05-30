@@ -10,27 +10,172 @@ knitr::opts_chunk$set(
 ```
 
 ```{r,  results='hide'}
-load("data/nibrs_property_segment_segment_2019.rda")
-property <- nibrs_property_segment_segment_2019
-rm(nibrs_property_segment_segment_2019)
-gc()
-load("data/nibrs_window_recovered_property_segment_segment_2019.rda")
-window_property <- nibrs_window_recovered_property_segment_segment_2019
-rm(nibrs_window_recovered_property_segment_segment_2019)
+property        <- readRDS("data/nibrs_property_segment_2019.rds")
+window_property <- readRDS("data/nibrs_window_recovered_property_segment_2019.rds")
 gc()
 ```
 
 
 ## Important variables
 
+### Description of property
+
+```{r}
+temp <- make_frequency_table(property,
+                             "property_description",
+                             c("Property",
+                               "# of Property Stolen",
+                               "% of Property Stolen"))
+datatable(temp, options = list(pageLength = 100)) %>%
+  formatPercentage('% of Property Stolen', 2) %>%
+  formatRound('# of Property Stolen', digits = 0)
+```
+
+
 ### Type of property loss
 
-### Description of stolen property
+```{r}
+property$type_of_property_loss <- capitalize_words(property$type_of_property_loss)
+property$type_of_property_loss <- gsub(" \\(.*", "", property$type_of_property_loss, ignore.case = TRUE)
+property$type_of_property_loss[property$type_of_property_loss == "Stolen/Etc."] <- "Stolen/Robbed/Etc."
+make_barplots(property, "type_of_property_loss", count = FALSE, ylab = "% of Property")
+```
+
 
 ### Value of stolen property
 
+```{r propertyValuePropertyLevel}
+temp <-
+  property %>%
+  mutate(value_of_property = parse_number(value_of_property)) %>%
+  filter(!is.na(value_of_property),
+         value_of_property < 1000000) %>%
+  mutate(value_of_property_100 = plyr::round_any(value_of_property, 100)) %>%
+  group_by(value_of_property_100) %>%
+  tally()
+temp$proportion <- temp$n / sum(temp$n)
+ggplot(temp, aes(x = value_of_property_100, y = proportion)) +
+  geom_line(size = 1.02) +
+  scale_y_continuous(labels = scales::percent) +
+  scale_x_log10(labels = scales::comma) +
+  xlab("Property Value") +
+  ylab("% of Property") +
+  theme_crim()
+```
+
+
+
+```{r propertyValueIncidentLevel}
+property$unique_id <- paste(property$ori, property$incident_number)
+temp <-
+  property %>%
+  mutate(value_of_property = parse_number(value_of_property)) %>%
+  filter(!is.na(value_of_property)) %>%
+  dplyr::group_by(unique_id) %>%
+  summarize(value_of_property = sum(value_of_property, na.rm = TRUE)) %>%
+  filter(value_of_property < 1000000) %>%
+  mutate(value_of_property_100 = plyr::round_any(value_of_property, 100)) %>%
+  dplyr::group_by(value_of_property_100) %>%
+  tally()
+temp$proportion <- temp$n / sum(temp$n)
+ggplot(temp, aes(x = value_of_property_100, y = proportion)) +
+  geom_line(size = 1.02) +
+  scale_y_continuous(labels = scales::percent) +
+  scale_x_log10(labels = scales::comma) +
+  xlab("Property Value") +
+  ylab("% of Property") +
+  theme_crim()
+```
+
+
 ### Date property was recovered
 
-### Stolen and recovered vehicles
+```{r}
+property$days_until_recovery <- as.numeric(ymd(property$date_recovered) - ymd(property$incident_date))
+max_days <- max(property$days_until_recovery, na.rm = TRUE)
+temp <- 
+  property %>%
+  filter(!is.na(date_recovered)) %>%
+  mutate(days_until_recovery = as.numeric(days_until_recovery))
+temp$days_until_recovery[temp$days_until_recovery %in% 10:30] <- "10-30"
+temp$days_until_recovery[temp$days_until_recovery %in% 31:90] <- "31-90"
+temp$days_until_recovery[temp$days_until_recovery %in% 91:max_days] <- "91+"
+temp <-
+  temp %>%
+  group_by(days_until_recovery) %>%
+  count()
+
+temp$days_until_recovery <- factor(temp$days_until_recovery, 
+                                 rev(stringr::str_sort(temp$days_until_recovery, numeric = TRUE)))
+temp$proportion <- temp$n / sum(temp$n)
+ggplot(temp, aes(x = days_until_recovery, y = proportion)) +
+  geom_col() +
+  coord_flip() + 
+  ggplot2::scale_y_continuous(labels = scales::percent) + 
+  xlab("Days Until Recovery") +
+  ylab("% of Recoveries") + 
+  theme_crim()
+```
+
+
 
 ### Drugs
+
+#### Suspected drug type
+
+```{r}
+temp <- make_frequency_table(property,
+                             "suspected_drug_type_1",
+                             c("Drug Type",
+                               "# of Drugs",
+                               "% of Drugs"))
+datatable(temp, options = list(pageLength = 100)) %>%
+  formatPercentage('% of Drugs', 2) %>%
+  formatRound('# of Drugs', digits = 0)
+```
+
+
+#### Amount of drugs
+
+
+* Dosage Unit/Items (Pills, Etc.)
+* Fluid Ounce
+* Gallon                   
+* Gram
+* Kilogram       
+* Liter                   
+* Milliliter
+* Not Reported
+* Number of Plants           
+* Ounce
+* Pound
+
+
+```{r propertyAllGramMeasures}
+temp <-
+  property %>%
+  filter(!is.na(estimated_quantity_1),
+         type_of_measurement_1 %in% "gram") %>%
+  mutate(estimated_quantity_1 = parse_number(estimated_quantity_1),
+         estimated_quantity_1 = plyr::round_any(estimated_quantity_1, 1)) %>%
+  group_by(estimated_quantity_1) %>%
+  count() 
+temp$estimated_quantity_1[temp$estimated_quantity_1 > 99] <- "101+"
+temp$estimated_quantity_1[temp$estimated_quantity_1 %in% 0] <- "<1"
+temp$estimated_quantity_1[temp$estimated_quantity_1 %in% 10:25] <- "10-25"
+temp$estimated_quantity_1[temp$estimated_quantity_1 %in% 26:50] <- "26-50"
+temp$estimated_quantity_1[temp$estimated_quantity_1 %in% 51:100] <- "50-100"
+
+temp$estimated_quantity_1 <- factor(temp$estimated_quantity_1, rev(c("<1", 1:9, "10-25", "26-50", "50-100", "101+")))
+
+temp$proportion <- temp$n / sum(temp$n)
+ggplot(temp, aes(x = estimated_quantity_1, y = proportion)) +
+  geom_col() +
+  coord_flip() + 
+  ggplot2::scale_y_continuous(labels = scales::percent) + 
+  ylab("% of Drugs") +
+  xlab("# of Grams") + 
+  theme_crim()
+
+```
+

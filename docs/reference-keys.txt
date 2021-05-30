@@ -90,9 +90,10 @@ race-2
 ethnicity-1
 property-and-window-property-segment
 important-variables-5
+description-of-property
 type-of-property-loss
-description-of-stolen-property
 value-of-stolen-property
 date-property-was-recovered
-stolen-and-recovered-vehicles
 drugs
+suspected-drug-type
+amount-of-drugs
