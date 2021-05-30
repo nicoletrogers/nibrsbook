@@ -16,16 +16,191 @@ rm(nibrs_offense_segment_segment_2019)
 gc()
 ```
 
+
+
+
 ## Important variables
 
 ### Crime category
 
+```{r offenseCrimeCategories, fig.cap = "The number and percent of crimes reported from all agencies in 2019, by crime category."}
+
+temp <- make_frequency_table(offense,
+                             "ucr_offense_code",
+                             c("Crime Category",
+                               "# of Offenses",
+                               "% of Offenses"))
+datatable(temp, options = list(pageLength = 100)) %>%
+  formatPercentage('% of Offenses', 2) %>%
+  formatRound('# of Offenses', digits = 0)
+```
+
 ### Offense subtype
 
-### Drug or alcohol use
+```{r offenseCrimeSubcategories, fig.cap = "The number and percent of crimes reported from all agencies in 2019, by crime category."}
+
+temp <- make_frequency_table(offense,
+                             "type_criminal_activity_1",
+                             c("Crime Subcategory",
+                               "# of Offenses",
+                               "% of Offenses"))
+datatable(temp, options = list(pageLength = 100)) %>%
+  formatPercentage('% of Offenses', 2) %>%
+  formatRound('# of Offenses', digits = 0)
+```
+
+* Aggravated Assault
+* Animal Cruelty
+* Counterfeiting/Forgery
+* Drug Equipment Violations
+* Drug/Narcotic Violations
+* Fondling (Incident Liberties/Child Molest)
+* Gambling Equipment Violations
+* Intimidation
+* Kidnapping/Abduction
+* Murder/Nonnegligent Manslaughter
+* Negligent Manslaughter
+* Pornography/Obscene Material
+* Rape
+* Robbery
+* Sexual Assault With An Object
+* Simple Assault
+* Sodomy
+* Stolen Property Offenses (Receiving, Selling, Etc.)
+* Weapon Law Violations
+
+```{r offenseCrimeSubcategoriesAnimalAbuse, fig.cap = "The number and percent of crimes reported from all agencies in 2019, by crime category."}
+
+temp <- make_frequency_table(offense[offense$ucr_offense_code %in% "animal cruelty", ],
+                             "type_criminal_activity_1",
+                             c("Crime Subcategory",
+                               "# of Offenses",
+                               "% of Offenses"))
+datatable(temp, options = list(pageLength = 100)) %>%
+  formatPercentage('% of Offenses', 2) %>%
+  formatRound('# of Offenses', digits = 0)
+```
+
+### Drug, alcohol, or computer use
+
+```{r}
+offense %>%
+  mutate(offender_suspected_of_using_1 = capitalize_words(offender_suspected_of_using_1)) %>%
+crimeutils::make_barplots("offender_suspected_of_using_1", count = FALSE, ylab = "% of Offenses") +
+  ggplot2::scale_y_continuous(labels = scales::percent)
+```
+
+```{r}
+offense %>%
+  filter(offender_suspected_of_using_1 != "not applicable") %>%
+  mutate(offender_suspected_of_using_1 = capitalize_words(offender_suspected_of_using_1)) %>%
+crimeutils::make_barplots("offender_suspected_of_using_1", count = FALSE, ylab = "% of Offenses") +
+  ggplot2::scale_y_continuous(labels = scales::percent)
+```
 
 ### Crime location
 
+```{r offenseLocation, fig.cap = "The location of crimes for all offenses reported in 2019."}
+
+temp <- make_frequency_table(offense,
+                             "location_type",
+                             c("Crime Location",
+                               "# of Offenses",
+                               "% of Offenses"))
+datatable(temp, options = list(pageLength = 100)) %>%
+  formatPercentage('% of Offenses', 2) %>%
+  formatRound('# of Offenses', digits = 0)
+```
+
 ### Weapons
 
+```{r offenseWeapon, fig.cap = "The bias motivation (i.e. if hate crime or not) for all offenses reported in 2019."}
+
+temp <- make_frequency_table(offense,
+                             "type_weapon_force_involved_1",
+                             c("Weapon Used",
+                               "# of Offenses",
+                               "% of Offenses"))
+datatable(temp, options = list(pageLength = 100)) %>%
+  formatPercentage('% of Offenses', 2) %>%
+  formatRound('# of Offenses', digits = 0)
+```
+
+* Aggravated Assault
+* Extortion/Blackmail
+* Fondling (Incident Liberties/Child Molest)
+* Human Trafficking - Commercial Sex Acts
+* Human Trafficking - Involuntary Servitude
+* Justifiable Homicide
+* Kidnapping/Abduction
+* Murder/Nonnegligent Manslaughter
+* Negligent Manslaughter
+* Rape
+* Robbery
+* Sexual Assault With An Object
+* Simple Assault
+* Sodomy
+* Weapon Law Violations
+
+### Automatic weapons
+
+This variable only tells you if the weapon is automatic 
+
+```{r}
+temp <- 
+  offense %>%
+  filter(type_weapon_force_involved_1 %in% c("firearm (type not stated)",
+                                             "handgun ",
+                                             "other firearm",
+                                             "rifle",
+                                             "shotgun"))
+temp$automatic_binary <- 0
+temp$automatic_binary[temp$automatic_weapon_indicator_1 %in% "automatic weapon"] <- 1
+
+temp <- 
+  temp %>%
+  group_by(type_weapon_force_involved_1) %>%
+  summarize(automatic_weapon = mean(automatic_binary)) %>%
+  mutate(type_weapon_force_involved_1 = capitalize_words(type_weapon_force_involved_1)) %>%
+  arrange(desc(automatic_weapon))
+temp$type_weapon_force_involved_1 <- factor(temp$type_weapon_force_involved_1, 
+                                            levels = rev(temp$type_weapon_force_involved_1))
+
+
+ggplot(temp, aes(x = type_weapon_force_involved_1, y = automatic_weapon)) +
+  geom_col() +
+  coord_flip() + 
+  ggplot2::scale_y_continuous(labels = scales::percent) + 
+  xlab("Weapon") +
+  ylab("% Automatic Weapon") + 
+  theme_crim()
+
+```
+
 ### Hate crime indicator (bias motivation)
+
+```{r offenseBiasMotivation, fig.cap = "The bias motivation (i.e. if hate crime or not) for all offenses reported in 2019."}
+
+temp <- make_frequency_table(offense,
+                             "bias_motivation",
+                             c("Bias Motivation",
+                               "# of Offenses",
+                               "% of Offenses"))
+datatable(temp, options = list(pageLength = 100)) %>%
+  formatPercentage('% of Offenses', 2) %>%
+  formatRound('# of Offenses', digits = 0)
+```
+
+
+```{r offenseBiasMotivationBiases, fig.cap = "The bias motivation (i.e. if hate crime or not) for all offenses reported in 2019 that were classifed as hate crimes."}
+
+temp <- make_frequency_table(offense[!offense$bias_motivation %in% c("no bias motivation",
+                                                                     "unknown bias motivation"),],
+                             "bias_motivation",
+                             c("Bias Motivation",
+                               "# of Offenses",
+                               "% of Offenses"))
+datatable(temp, options = list(pageLength = 100)) %>%
+  formatPercentage('% of Offenses', 2) %>%
+  formatRound('# of Offenses', digits = 0)
+```

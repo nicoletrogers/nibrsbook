@@ -9,17 +9,19 @@ As might be expected, the Offender Segment provides information about who the of
 
 ## Important variables
 
-### Age
+### Demographics
+
+#### Age
 
 <img src="offender_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" />
 
 
-### Sex
+#### Sex
 
 <img src="offender_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" />
 
 
-### Race
+#### Race
 
 <img src="offender_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" />
 

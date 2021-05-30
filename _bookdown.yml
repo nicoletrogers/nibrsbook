@@ -17,6 +17,5 @@ rmd_files: [
   "offender.Rmd",
   "victim.Rmd",
   "arrestee.Rmd",
-  "property.Rmd",
-  "group_b_arrest_reports.Rmd"
+  "property.Rmd"
 ]

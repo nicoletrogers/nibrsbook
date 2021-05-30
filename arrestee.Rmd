@@ -1,4 +1,4 @@
-# Arrestee and Window Arrestee Segment 
+# Arrestee, Group B Arrestee, and Window Arrestee Segment 
 
 ```{r, echo=FALSE}
 knitr::opts_chunk$set(
@@ -19,4 +19,218 @@ window_arrestee <- nibrs_window_arrestee_segment_segment_2019
 rm(nibrs_arrestee_segment_segment_2019)
 rm(nibrs_window_arrestee_segment_segment_2019)
 gc()
+
+load("data/nibrs_group_b_arrest_report_segment_segment_2019.rda")
+group_b <- nibrs_group_b_arrest_report_segment_segment_2019
+rm(nibrs_group_b_arrest_report_segment_segment_2019)
+gc()
+```
+
+## Important variables
+
+### Crime arrested for (excluding Group B arrests)
+
+```{r arresteeCrime, fig.cap = "The number and percent of crimes reported from all agencies in 2019, by crime category."}
+
+temp <- make_frequency_table(arrestee,
+                             "ucr_arrest_offense_code",
+                             c("Crime Category",
+                               "# of Offenses",
+                               "% of Offenses"))
+datatable(temp, options = list(pageLength = 100)) %>%
+  formatPercentage('% of Offenses', 2) %>%
+  formatRound('# of Offenses', digits = 0)
+```
+
+### Group B Crimes arrested for
+
+```{r GrouBarresteeCrime, fig.cap = "The number and percent of crimes reported from all agencies in 2019, by crime category."}
+
+temp <- make_frequency_table(group_b,
+                             "ucr_arrest_offense_code",
+                             c("Crime Category",
+                               "# of Offenses",
+                               "% of Offenses"))
+datatable(temp, options = list(pageLength = 100)) %>%
+  formatPercentage('% of Offenses', 2) %>%
+  formatRound('# of Offenses', digits = 0)
+```
+
+### Arrest date
+
+```{r}
+arrestee$days_until_arrest <- as.numeric(ymd(arrestee$arrest_date) - ymd(arrestee$incident_date))
+
+temp <- 
+  arrestee %>%
+  group_by(days_until_arrest) %>%
+  count()
+temp$proportion <- temp$n / sum(temp$n)
+temp$percent <- temp$proportion * 100  
+
+ggplot(temp, aes(x = days_until_arrest, y = proportion)) +
+  geom_line(size = 1.05) +
+  theme_crim() +
+  xlab("Days Until Arrest") +
+  ylab("% of Arrests") +
+  scale_y_continuous(label = scales::percent)
+
+```
+
+
+```{r}
+
+max_days <- max(arrestee$days_until_arrest)
+temp <- 
+  arrestee %>%
+  mutate(days_until_arrest = as.numeric(days_until_arrest))
+temp$days_until_arrest[temp$days_until_arrest %in% 10:30] <- "10-30"
+temp$days_until_arrest[temp$days_until_arrest %in% 31:90] <- "31-90"
+temp$days_until_arrest[temp$days_until_arrest %in% 91:max_days] <- "91+"
+temp <-
+  temp %>%
+  group_by(days_until_arrest) %>%
+  count()
+
+temp$days_until_arrest <- factor(temp$days_until_arrest, 
+                                 rev(stringr::str_sort(temp$days_until_arrest, numeric = TRUE)))
+temp$proportion <- temp$n / sum(temp$n)
+ggplot(temp, aes(x = days_until_arrest, y = proportion)) +
+  geom_col() +
+  coord_flip() + 
+  ggplot2::scale_y_continuous(labels = scales::percent) + 
+  xlab("Days Until Arrest") +
+  ylab("% of Arrests") + 
+  theme_crim()
+
+```
+
+
+### Weapons
+
+All crimes can potentially have a weapon
+
+```{r arresteeWeapon, fig.cap = "The bias motivation (i.e. if hate crime or not) for all arrestees reported in 2019."}
+arrestee$weapon <- capitalize_words(arrestee$arrestee_weapon_1)
+arrestee$weapon <- gsub(" \\(e.g..*", "", arrestee$weapon, ignore.case = TRUE)
+make_barplots(arrestee, "weapon", count = FALSE, ylab = "% of Arrestees")
+```
+
+```{r arresteeWeaponArmed, fig.cap = "The bias motivation (i.e. if hate crime or not) for all arrestees reported in 2019."}
+
+make_barplots(arrestee[arrestee$weapon != "Unarmed", ], "weapon", count = FALSE, ylab = "% of Arrestees") +
+   ggplot2::scale_y_continuous(labels = scales::percent)
+```
+
+
+### Automatic weapons
+
+This variable only tells you if the weapon is automatic 
+
+```{r}
+temp <- 
+  arrestee %>%
+  filter(arrestee_weapon_1 %in% c("firearm (type not stated)",
+                                             "handgun ",
+                                             "other firearm",
+                                             "rifle",
+                                             "shotgun"))
+temp$automatic_binary <- 0
+temp$automatic_binary[temp$automatic_weapon_indicator_1 %in% "automatic weapon"] <- 1
+
+temp <- 
+  temp %>%
+  group_by(arrestee_weapon_1) %>%
+  summarize(automatic_weapon = mean(automatic_binary)) %>%
+  mutate(arrestee_weapon_1 = capitalize_words(arrestee_weapon_1)) %>%
+  arrange(desc(automatic_weapon))
+temp$arrestee_weapon_1 <- factor(temp$arrestee_weapon_1, 
+                                            levels = rev(temp$arrestee_weapon_1))
+
+
+ggplot(temp, aes(x = arrestee_weapon_1, y = automatic_weapon)) +
+  geom_col() +
+  coord_flip() + 
+  ggplot2::scale_y_continuous(labels = scales::percent) + 
+  xlab("Weapon") +
+  ylab("% Automatic Weapon") + 
+  theme_crim()
+
+```
+
+### Type of arrest
+
+```{r}
+arrestee$arrest_type <- arrestee$type_of_arrest
+arrestee$arrest_type <- gsub(" \\(.*", "", arrestee$arrest_type)
+arrestee$arrest_type[arrestee$arrest_type == "taken into custody"] <- "Warrant/Previous Incident Report"
+arrestee$arrest_type <- capitalize_words(arrestee$arrest_type)
+
+make_barplots(arrestee, "arrest_type", ylab = "% Of Arrests", count = FALSE)
+```
+
+### Disposition for juvenile arrestees
+
+```{r}
+arrestee$disposition_temp <- arrestee$disposition_of_arrestee_under_18
+arrestee$disposition_temp[is.na(arrestee$disposition_temp)] <- "unknown"
+arrestee$disposition_temp <- gsub(" \\(.*", "", arrestee$disposition_temp)
+arrestee %>%
+  filter(age_of_arrestee < 18) %>%
+  mutate(disposition_temp = capitalize_words(disposition_temp)) %>%
+crimeutils::make_barplots("disposition_temp", count = FALSE, ylab = "% of Juvenile Arrestees") +
+  ggplot2::scale_y_continuous(labels = scales::percent)
+```
+
+
+### Residence status
+
+```{r}
+arrestee$resident_status_of_arrestee[is.na(arrestee$resident_status_of_arrestee)] <- "unknown"
+arrestee %>%
+  mutate(resident_status_of_arrestee = capitalize_words(resident_status_of_arrestee)) %>%
+crimeutils::make_barplots("resident_status_of_arrestee", count = FALSE, ylab = "% of arrestees") +
+  ggplot2::scale_y_continuous(labels = scales::percent)
+```
+
+### Demographics
+
+#### Age
+
+```{r}
+arrestee$age_of_arrestee[arrestee$age_of_arrestee %in% "over 98 years old"] <- 99
+arrestee$age_of_arrestee[arrestee$age_of_arrestee %in% "unknown"] <- NA
+arrestee$age_of_arrestee <- as.numeric(arrestee$age_of_arrestee)
+make_stat_count_plots(arrestee, "age_of_arrestee", count = FALSE, ylab = "% of arrestees") + xlab("Age")
+```
+
+
+#### Sex
+
+```{r}
+arrestee %>%
+  mutate(sex_of_arrestee = capitalize_words(sex_of_arrestee)) %>%
+crimeutils::make_barplots("sex_of_arrestee", count = FALSE, ylab = "% of arrestees") +
+  ggplot2::scale_y_continuous(labels = scales::percent)
+```
+
+
+#### Race
+
+```{r}
+arrestee$race_of_arrestee[arrestee$race_of_arrestee %in% "native hawaiian or other pacific islander"] <- "native hawaiian/pacific islander"
+arrestee %>%
+  mutate(race_of_arrestee = capitalize_words(race_of_arrestee)) %>%
+crimeutils::make_barplots("race_of_arrestee", count = FALSE, ylab = "% of arrestees") +
+  ggplot2::scale_y_continuous(labels = scales::percent)
+```
+
+#### Ethnicity
+
+```{r}
+arrestee$ethnicity_of_arrestee[is.na(arrestee$ethnicity_of_arrestee)] <- "unknown"
+arrestee %>%
+  mutate(ethnicity_of_arrestee = capitalize_words(ethnicity_of_arrestee)) %>%
+crimeutils::make_barplots("ethnicity_of_arrestee", count = FALSE, ylab = "% of arrestees") +
+  ggplot2::scale_y_continuous(labels = scales::percent)
 ```

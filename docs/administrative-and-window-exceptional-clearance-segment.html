@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Administrative and Window Exceptional Clearance Segment | National Incident-Based Reporting System (NIBRS) Data: A Practitioner’s Guide</title>
+  <meta name="description" content="This is a comprehensive guide to using the FBI’s National Incident-Based Reporting System (NIBRS) Data, an incident-level dataset which provides detailed information on every crime reported to the police, including victim and offender traits and characteristics of the crime." />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Administrative and Window Exceptional Clearance Segment | National Incident-Based Reporting System (NIBRS) Data: A Practitioner’s Guide" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://nibrsbook.com" />
+  
+  <meta property="og:description" content="This is a comprehensive guide to using the FBI’s National Incident-Based Reporting System (NIBRS) Data, an incident-level dataset which provides detailed information on every crime reported to the police, including victim and offender traits and characteristics of the crime." />
+  <meta name="github-repo" content="jacobkap/nibrsbook" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Administrative and Window Exceptional Clearance Segment | National Incident-Based Reporting System (NIBRS) Data: A Practitioner’s Guide" />
+  
+  <meta name="twitter:description" content="This is a comprehensive guide to using the FBI’s National Incident-Based Reporting System (NIBRS) Data, an incident-level dataset which provides detailed information on every crime reported to the police, including victim and offender traits and characteristics of the crime." />
+  
+
+<meta name="author" content="Jacob Kaplan" />
+
+
+<meta name="date" content="2021-05-29" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="overview-of-the-data.html"/>
+<link rel="next" href="offense-segment.html"/>
+<script src="libs/header-attrs-2.8/header-attrs.js"></script>
+<script src="libs/jquery-3.5.1/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="libs/datatables-binding-0.18/datatables.js"></script>
+<link href="libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-48BYKNQFJY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-48BYKNQFJY');
+</script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">National Incident-Based Reporting System (NIBRS) Data: A Practitioner's Guide</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preface</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#goal-of-the-book"><i class="fa fa-check"></i><b>1.1</b> Goal of the book</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#structure-of-the-book"><i class="fa fa-check"></i><b>1.2</b> Structure of the book</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#citing-this-book"><i class="fa fa-check"></i><b>1.3</b> Citing this book</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#pronunciation"><i class="fa fa-check"></i><b>1.4</b> Pronunciation</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#sources-of-nibrs-data"><i class="fa fa-check"></i><b>1.5</b> Sources of NIBRS data</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="index.html"><a href="index.html#where-to-find-the-data-used-in-this-book"><i class="fa fa-check"></i><b>1.5.1</b> Where to find the data used in this book</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#recommended-reading"><i class="fa fa-check"></i><b>1.6</b> Recommended reading</a></li>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#how-to-contribute-to-this-book"><i class="fa fa-check"></i><b>1.7</b> How to contribute to this book</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="about-the-author.html"><a href="about-the-author.html"><i class="fa fa-check"></i>About the Author</a></li>
+<li class="chapter" data-level="2" data-path="overview-of-the-data.html"><a href="overview-of-the-data.html"><i class="fa fa-check"></i><b>2</b> Overview of the Data</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="overview-of-the-data.html"><a href="overview-of-the-data.html#nibrs-gives-you-choices-which-means-you-need-to-think"><i class="fa fa-check"></i><b>2.1</b> NIBRS gives you choices (which means you need to think)</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="overview-of-the-data.html"><a href="overview-of-the-data.html#choosing-a-unit-of-analysis"><i class="fa fa-check"></i><b>2.1.1</b> Choosing a unit of analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="overview-of-the-data.html"><a href="overview-of-the-data.html#crimes-included-in-nibrs"><i class="fa fa-check"></i><b>2.2</b> Crimes included in NIBRS</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="overview-of-the-data.html"><a href="overview-of-the-data.html#index-crimes"><i class="fa fa-check"></i><b>2.2.1</b> Index crimes</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="overview-of-the-data.html"><a href="overview-of-the-data.html#nibrs-does-not-have-unfounded-crimes"><i class="fa fa-check"></i><b>2.3</b> NIBRS does not have unfounded crimes</a></li>
+<li class="chapter" data-level="2.4" data-path="overview-of-the-data.html"><a href="overview-of-the-data.html#a-summary-of-each-segment-file"><i class="fa fa-check"></i><b>2.4</b> A summary of each segment file</a></li>
+<li class="chapter" data-level="2.5" data-path="overview-of-the-data.html"><a href="overview-of-the-data.html#the-data-as-you-get-it-from-the-fbi"><i class="fa fa-check"></i><b>2.5</b> The data as you get it from the FBI</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="administrative-and-window-exceptional-clearance-segment.html"><a href="administrative-and-window-exceptional-clearance-segment.html"><i class="fa fa-check"></i><b>3</b> Administrative and Window Exceptional Clearance Segment</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="administrative-and-window-exceptional-clearance-segment.html"><a href="administrative-and-window-exceptional-clearance-segment.html#important-variables"><i class="fa fa-check"></i><b>3.1</b> Important variables</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="administrative-and-window-exceptional-clearance-segment.html"><a href="administrative-and-window-exceptional-clearance-segment.html#the-incident-date-or-report-date"><i class="fa fa-check"></i><b>3.1.1</b> The incident date or report date</a></li>
+<li class="chapter" data-level="3.1.2" data-path="administrative-and-window-exceptional-clearance-segment.html"><a href="administrative-and-window-exceptional-clearance-segment.html#hour-of-incident"><i class="fa fa-check"></i><b>3.1.2</b> Hour of incident</a></li>
+<li class="chapter" data-level="3.1.3" data-path="administrative-and-window-exceptional-clearance-segment.html"><a href="administrative-and-window-exceptional-clearance-segment.html#exceptional-clearance"><i class="fa fa-check"></i><b>3.1.3</b> Exceptional clearance</a></li>
+<li class="chapter" data-level="3.1.4" data-path="administrative-and-window-exceptional-clearance-segment.html"><a href="administrative-and-window-exceptional-clearance-segment.html#number-of-other-segments"><i class="fa fa-check"></i><b>3.1.4</b> Number of other segments</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="offense-segment.html"><a href="offense-segment.html"><i class="fa fa-check"></i><b>4</b> Offense Segment</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="offense-segment.html"><a href="offense-segment.html#important-variables-1"><i class="fa fa-check"></i><b>4.1</b> Important variables</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="offense-segment.html"><a href="offense-segment.html#crime-category"><i class="fa fa-check"></i><b>4.1.1</b> Crime category</a></li>
+<li class="chapter" data-level="4.1.2" data-path="offense-segment.html"><a href="offense-segment.html#offense-subtype"><i class="fa fa-check"></i><b>4.1.2</b> Offense subtype</a></li>
+<li class="chapter" data-level="4.1.3" data-path="offense-segment.html"><a href="offense-segment.html#drug-alcohol-or-computer-use"><i class="fa fa-check"></i><b>4.1.3</b> Drug, alcohol, or computer use</a></li>
+<li class="chapter" data-level="4.1.4" data-path="offense-segment.html"><a href="offense-segment.html#crime-location"><i class="fa fa-check"></i><b>4.1.4</b> Crime location</a></li>
+<li class="chapter" data-level="4.1.5" data-path="offense-segment.html"><a href="offense-segment.html#weapons"><i class="fa fa-check"></i><b>4.1.5</b> Weapons</a></li>
+<li class="chapter" data-level="4.1.6" data-path="offense-segment.html"><a href="offense-segment.html#automatic-weapons"><i class="fa fa-check"></i><b>4.1.6</b> Automatic weapons</a></li>
+<li class="chapter" data-level="4.1.7" data-path="offense-segment.html"><a href="offense-segment.html#hate-crime-indicator-bias-motivation"><i class="fa fa-check"></i><b>4.1.7</b> Hate crime indicator (bias motivation)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="offender-segment.html"><a href="offender-segment.html"><i class="fa fa-check"></i><b>5</b> Offender Segment</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="offender-segment.html"><a href="offender-segment.html#important-variables-2"><i class="fa fa-check"></i><b>5.1</b> Important variables</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="offender-segment.html"><a href="offender-segment.html#demographics"><i class="fa fa-check"></i><b>5.1.1</b> Demographics</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="victim-segment.html"><a href="victim-segment.html"><i class="fa fa-check"></i><b>6</b> Victim Segment</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="victim-segment.html"><a href="victim-segment.html#important-variables-3"><i class="fa fa-check"></i><b>6.1</b> Important variables</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="victim-segment.html"><a href="victim-segment.html#crime-category-1"><i class="fa fa-check"></i><b>6.1.1</b> Crime category</a></li>
+<li class="chapter" data-level="6.1.2" data-path="victim-segment.html"><a href="victim-segment.html#victim-type"><i class="fa fa-check"></i><b>6.1.2</b> Victim type</a></li>
+<li class="chapter" data-level="6.1.3" data-path="victim-segment.html"><a href="victim-segment.html#injury"><i class="fa fa-check"></i><b>6.1.3</b> Injury</a></li>
+<li class="chapter" data-level="6.1.4" data-path="victim-segment.html"><a href="victim-segment.html#relationship-to-offender"><i class="fa fa-check"></i><b>6.1.4</b> Relationship to offender</a></li>
+<li class="chapter" data-level="6.1.5" data-path="victim-segment.html"><a href="victim-segment.html#residence-status"><i class="fa fa-check"></i><b>6.1.5</b> Residence status</a></li>
+<li class="chapter" data-level="6.1.6" data-path="victim-segment.html"><a href="victim-segment.html#aggravated-assault-and-homicide-circumstances"><i class="fa fa-check"></i><b>6.1.6</b> Aggravated assault and homicide circumstances</a></li>
+<li class="chapter" data-level="6.1.7" data-path="victim-segment.html"><a href="victim-segment.html#justifiable-homicide-circumstance"><i class="fa fa-check"></i><b>6.1.7</b> Justifiable homicide circumstance</a></li>
+<li class="chapter" data-level="6.1.8" data-path="victim-segment.html"><a href="victim-segment.html#age-1"><i class="fa fa-check"></i><b>6.1.8</b> Age</a></li>
+<li class="chapter" data-level="6.1.9" data-path="victim-segment.html"><a href="victim-segment.html#sex-1"><i class="fa fa-check"></i><b>6.1.9</b> Sex</a></li>
+<li class="chapter" data-level="6.1.10" data-path="victim-segment.html"><a href="victim-segment.html#race-1"><i class="fa fa-check"></i><b>6.1.10</b> Race</a></li>
+<li class="chapter" data-level="6.1.11" data-path="victim-segment.html"><a href="victim-segment.html#ethnicity"><i class="fa fa-check"></i><b>6.1.11</b> Ethnicity</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="arrestee-group-b-arrestee-and-window-arrestee-segment.html"><a href="arrestee-group-b-arrestee-and-window-arrestee-segment.html"><i class="fa fa-check"></i><b>7</b> Arrestee, Group B Arrestee, and Window Arrestee Segment</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="arrestee-group-b-arrestee-and-window-arrestee-segment.html"><a href="arrestee-group-b-arrestee-and-window-arrestee-segment.html#important-variables-4"><i class="fa fa-check"></i><b>7.1</b> Important variables</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="arrestee-group-b-arrestee-and-window-arrestee-segment.html"><a href="arrestee-group-b-arrestee-and-window-arrestee-segment.html#crime-arrested-for-excluding-group-b-arrests"><i class="fa fa-check"></i><b>7.1.1</b> Crime arrested for (excluding Group B arrests)</a></li>
+<li class="chapter" data-level="7.1.2" data-path="arrestee-group-b-arrestee-and-window-arrestee-segment.html"><a href="arrestee-group-b-arrestee-and-window-arrestee-segment.html#group-b-crimes-arrested-for"><i class="fa fa-check"></i><b>7.1.2</b> Group B Crimes arrested for</a></li>
+<li class="chapter" data-level="7.1.3" data-path="arrestee-group-b-arrestee-and-window-arrestee-segment.html"><a href="arrestee-group-b-arrestee-and-window-arrestee-segment.html#arrest-date"><i class="fa fa-check"></i><b>7.1.3</b> Arrest date</a></li>
+<li class="chapter" data-level="7.1.4" data-path="arrestee-group-b-arrestee-and-window-arrestee-segment.html"><a href="arrestee-group-b-arrestee-and-window-arrestee-segment.html#weapons-1"><i class="fa fa-check"></i><b>7.1.4</b> Weapons</a></li>
+<li class="chapter" data-level="7.1.5" data-path="arrestee-group-b-arrestee-and-window-arrestee-segment.html"><a href="arrestee-group-b-arrestee-and-window-arrestee-segment.html#automatic-weapons-1"><i class="fa fa-check"></i><b>7.1.5</b> Automatic weapons</a></li>
+<li class="chapter" data-level="7.1.6" data-path="arrestee-group-b-arrestee-and-window-arrestee-segment.html"><a href="arrestee-group-b-arrestee-and-window-arrestee-segment.html#type-of-arrest"><i class="fa fa-check"></i><b>7.1.6</b> Type of arrest</a></li>
+<li class="chapter" data-level="7.1.7" data-path="arrestee-group-b-arrestee-and-window-arrestee-segment.html"><a href="arrestee-group-b-arrestee-and-window-arrestee-segment.html#disposition-for-juvenile-arrestees"><i class="fa fa-check"></i><b>7.1.7</b> Disposition for juvenile arrestees</a></li>
+<li class="chapter" data-level="7.1.8" data-path="arrestee-group-b-arrestee-and-window-arrestee-segment.html"><a href="arrestee-group-b-arrestee-and-window-arrestee-segment.html#residence-status-1"><i class="fa fa-check"></i><b>7.1.8</b> Residence status</a></li>
+<li class="chapter" data-level="7.1.9" data-path="arrestee-group-b-arrestee-and-window-arrestee-segment.html"><a href="arrestee-group-b-arrestee-and-window-arrestee-segment.html#demographics-1"><i class="fa fa-check"></i><b>7.1.9</b> Demographics</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="property-and-window-property-segment.html"><a href="property-and-window-property-segment.html"><i class="fa fa-check"></i><b>8</b> Property and Window Property Segment</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="property-and-window-property-segment.html"><a href="property-and-window-property-segment.html#important-variables-5"><i class="fa fa-check"></i><b>8.1</b> Important variables</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="property-and-window-property-segment.html"><a href="property-and-window-property-segment.html#type-of-property-loss"><i class="fa fa-check"></i><b>8.1.1</b> Type of property loss</a></li>
+<li class="chapter" data-level="8.1.2" data-path="property-and-window-property-segment.html"><a href="property-and-window-property-segment.html#description-of-stolen-property"><i class="fa fa-check"></i><b>8.1.2</b> Description of stolen property</a></li>
+<li class="chapter" data-level="8.1.3" data-path="property-and-window-property-segment.html"><a href="property-and-window-property-segment.html#value-of-stolen-property"><i class="fa fa-check"></i><b>8.1.3</b> Value of stolen property</a></li>
+<li class="chapter" data-level="8.1.4" data-path="property-and-window-property-segment.html"><a href="property-and-window-property-segment.html#date-property-was-recovered"><i class="fa fa-check"></i><b>8.1.4</b> Date property was recovered</a></li>
+<li class="chapter" data-level="8.1.5" data-path="property-and-window-property-segment.html"><a href="property-and-window-property-segment.html#stolen-and-recovered-vehicles"><i class="fa fa-check"></i><b>8.1.5</b> Stolen and recovered vehicles</a></li>
+<li class="chapter" data-level="8.1.6" data-path="property-and-window-property-segment.html"><a href="property-and-window-property-segment.html#drugs"><i class="fa fa-check"></i><b>8.1.6</b> Drugs</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">National Incident-Based Reporting System (NIBRS) Data: A Practitioner’s Guide</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="administrative-and-window-exceptional-clearance-segment" class="section level1" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Administrative and Window Exceptional Clearance Segment</h1>
+<p>The Administrative Segment provides information about the incident itself, such as how many victims or offenders there were. In practice this means that it tells us how many other segments - offense, victim, offender, and arrestee segments - there are for this particular incident. It also has several important variables at the incident-level such as what hour of the day the incident occurred and whether the incident date variable is actually just the date the incident was reported. Finally, it tells us whether the case was cleared exceptionally and, if so, what type of exceptional clearance it was. This can tell us, for example, how many crimes was cleared because the offender died or the victim refused to cooperate. As the UCR data doesn’t differentiate between normal clearances (i.e. arrest the offender) and exceptional clearances, this provides a far deeper understanding of case outcomes.</p>
+<div id="important-variables" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Important variables</h2>
+<div id="the-incident-date-or-report-date" class="section level3" number="3.1.1">
+<h3><span class="header-section-number">3.1.1</span> The incident date or report date</h3>
+<div class="figure" style="text-align: center"><span id="fig:administrativeMonthDay"></span>
+<img src="administrative_files/figure-html/administrativeMonthDay-1.png" alt="The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019." width="90%" />
+<p class="caption">
+Figure 3.1: The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019.
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:administrativeMonthDayReport"></span>
+<img src="administrative_files/figure-html/administrativeMonthDayReport-1.png" alt="The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019." width="90%" />
+<p class="caption">
+Figure 3.2: The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019.
+</p>
+</div>
+</div>
+<div id="hour-of-incident" class="section level3" number="3.1.2">
+<h3><span class="header-section-number">3.1.2</span> Hour of incident</h3>
+<p>An extremely important aspect of crime data is when exactly the crime occurs. If, for example, crime always spikes when the local high school ends their day that would likely indicate that high school students are involved with crime (both as victims-offenders). In my own research on daylight saving time-crime I only care about the sunset hours, which is when daylight saving time would affect outdoor lighting. When crime happens also would affect police behavior as they’d likely increase patrol during times of elevated crime. Luckily NIBRS data does have the time of each incident, though it’s only at the hour level.</p>
+<div class="figure" style="text-align: center"><span id="fig:administrativeHours"></span>
+<img src="administrative_files/figure-html/administrativeHours-1.png" alt="The percent of crimes that are reported each hour for all agencies reporting to NIBRS in 2019." width="90%" />
+<p class="caption">
+Figure 3.3: The percent of crimes that are reported each hour for all agencies reporting to NIBRS in 2019.
+</p>
+</div>
+</div>
+<div id="exceptional-clearance" class="section level3" number="3.1.3">
+<h3><span class="header-section-number">3.1.3</span> Exceptional clearance</h3>
+<div class="figure" style="text-align: center"><span id="fig:administrativeExceptionalClearances"></span>
+<img src="administrative_files/figure-html/administrativeExceptionalClearances-1.png" alt="The percent of crimes that are reported each hour for all agencies reporting to NIBRS in 2019." width="90%" />
+<p class="caption">
+Figure 3.4: The percent of crimes that are reported each hour for all agencies reporting to NIBRS in 2019.
+</p>
+</div>
+</div>
+<div id="number-of-other-segments" class="section level3" number="3.1.4">
+<h3><span class="header-section-number">3.1.4</span> Number of other segments</h3>
+<div id="offense-segments" class="section level4" number="3.1.4.1">
+<h4><span class="header-section-number">3.1.4.1</span> Offense segments</h4>
+<div class="figure" style="text-align: center"><span id="fig:administrativeOffenseSegments"></span>
+<img src="administrative_files/figure-html/administrativeOffenseSegments-1.png" alt="The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019." width="90%" />
+<p class="caption">
+Figure 3.5: The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019.
+</p>
+</div>
+</div>
+<div id="victim-segments" class="section level4" number="3.1.4.2">
+<h4><span class="header-section-number">3.1.4.2</span> Victim segments</h4>
+<div class="figure" style="text-align: center"><span id="fig:administrativeVictimSegments"></span>
+<img src="administrative_files/figure-html/administrativeVictimSegments-1.png" alt="The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019." width="90%" />
+<p class="caption">
+Figure 3.6: The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019.
+</p>
+</div>
+</div>
+<div id="offender-segments" class="section level4" number="3.1.4.3">
+<h4><span class="header-section-number">3.1.4.3</span> Offender segments</h4>
+<div class="figure" style="text-align: center"><span id="fig:administrativeOffenderSegments"></span>
+<img src="administrative_files/figure-html/administrativeOffenderSegments-1.png" alt="The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019." width="90%" />
+<p class="caption">
+Figure 3.7: The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019.
+</p>
+</div>
+</div>
+<div id="arrestee-segments" class="section level4" number="3.1.4.4">
+<h4><span class="header-section-number">3.1.4.4</span> Arrestee segments</h4>
+<div class="figure" style="text-align: center"><span id="fig:administrativeArresteeSegments"></span>
+<img src="administrative_files/figure-html/administrativeArresteeSegments-1.png" alt="The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019." width="90%" />
+<p class="caption">
+Figure 3.8: The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019.
+</p>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="overview-of-the-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="offense-segment.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": true,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/jacobkap/nibrsbook/edit/main/administrative.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": [["nibrsbook.pdf", "PDF"], ["nibrsbook.epub", "EPUB"]],
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

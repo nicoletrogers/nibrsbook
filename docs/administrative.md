@@ -1,4 +1,4 @@
-# Administrative- Window Exceptional Clearance Segment 
+# Administrative and Window Exceptional Clearance Segment 
 
 
 

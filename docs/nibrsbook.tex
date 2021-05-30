@@ -125,7 +125,7 @@
 
 \title{National Incident-Based Reporting System (NIBRS) Data: A Practitioner's Guide}
 \author{Jacob Kaplan}
-\date{2021-05-28}
+\date{2021-05-29}
 
 \begin{document}
 \maketitle
@@ -140,13 +140,13 @@
 \hypertarget{preface}{%
 \chapter{Preface}\label{preface}}
 
-The average American had in 2019, according to the FBI, about a 1 in 20,500 chance of being murder, 1 in 1,223 chance of being robbed, and a 1 in 64 chance of having something they own stolen. Getting these numbers is extremely simple. We take the number of crimes reported to the police and divide it by the number of people living in the United States that year. For example, there were about 16,000 murders in 2019 and 328 million people in the county - 16,000 / 328 million = \textasciitilde1/20,500. You'll more commonly see this - in news articles, in political speeches, in research articles, on TV, etc. - reported as the rate per 100,000 people but that's just a matter of conversion, the numbers are the same. This is, however, totally wrong. It assumes - and let's now just pretend that there's no underreporting of crimes to the police - that every single person has the exact same risk of victimization. We know this is wrong intuitively. There are the ``bad parts of town'' or people who ``run with the wrong crowd.'' Research in criminology backs this up by finding that crime is generally concentrated among a small group of people and within a small geographic area (usually a very small number of streets or neighborhoods in a city). From surveys that ask if people have been victims of a crime we also know that victimization rates differ by age, race, gender, income, and city type. Indeed, think of a personal characteristic (e.g.~risk tolerance, athleticism, frequency outdoors) and there will probably be large differences in the likelihood of being a victim within these groups.
+The average American had, in 2019, about a 1 in 20,500 chance of being murder, 1 in 1,223 chance of being robbed, and a 1 in 64 chance of having something they own stolen.\footnote{This is according to data from the FBI's 2019 Crime in the United States report.} Getting these numbers is extremely simple. We take the number of crimes reported to the police and divide it by the number of people living in the United States that year. For example, there were about 16,000 murders in 2019 and 328 million people in the county - 16,000 / 328 million = \textasciitilde1/20,500. You'll more commonly see this - in news articles, in political speeches, in research articles, on TV, etc. - reported as the rate per 100,000 people but that's just a matter of conversion, the numbers are the same. This is, however, totally wrong. It assumes - and let's now just pretend that there's no underreporting of crimes to the police - that every single person has the exact same risk of victimization. We know this is wrong intuitively. There are the ``bad parts of town'' or people who ``run with the wrong crowd.'' Research in criminology backs this up by finding that crime is generally concentrated among a small group of people and within a small geographic area (usually a very small number of streets or neighborhoods in a city). From surveys that ask if people have been victims of a crime we also know that victimization rates differ by age, race, gender, income, and city type. Indeed, think of a personal characteristic (e.g.~risk tolerance, athleticism, frequency outdoors) and there will probably be large differences in the likelihood of being a victim within these groups.
 
-So why do people so frequently talk about crime as rates per total population? Why assume that everyone has equal risk of being a victim? The major reason, I think, is that the main FBI dataset on crime, the \href{ucrbook.com/}{Uniform Crime Reporting (UCR) System Data} doesn't provide any information about crime victims other than for homicide and hate crime victims.\footnote{There is a small amount of information available for property theft victims, but not enough to do these kinds of victimization rate calculations}. Victimization surveys are nearly all at state or national levels so trying to use their results for specific city-level rates will have very high levels of imprecision, likely enough to make the results unhelpful. So by necessity people tend to assume equal risk since there's not good data to do so otherwise. Doing so, however, is a large mistake in my opinion. It both overstates and understates risk, often very drastically. For example, many murders are concentrated among young minority men in impoverished areas of urban cities. Their risk of being murdered is many times higher than you'd expect from simply dividing murders by city population overall. And the risk for other people in the city is far smaller than you'd expect from the naive risk value.
+So why do people so frequently talk about crime as rates per total population? Why assume that everyone has equal risk of being a victim? The major reason, I think, is that the main FBI dataset on crime, the \href{https://ucrbook.com/}{Uniform Crime Reporting (UCR) System Data} doesn't provide any information about crime victims other than for homicide and hate crime victims.\footnote{There is a small amount of information available for property theft victims, but not enough to do these kinds of victimization rate calculations} Victimization surveys are nearly all at state or national levels so trying to use their results for specific city-level rates will have very high levels of imprecision, likely enough to make the results unhelpful. So by necessity people tend to assume equal risk since there's not good data to do so otherwise. Doing so, however, is a large mistake in my opinion. It both overstates and understates risk, often very drastically. For example, many murders are concentrated among young minority men in impoverished areas of urban cities. Their risk of being murdered is many times higher than you'd expect from simply dividing murders by city population overall. And the risk for other people in the city is far smaller than you'd expect from the naive risk value.
 
 While UCR data is the predominant dataset in criminology and the one that truly guides America's perceptions of crime, there is actually one that is far more detailed and allows us do a much better (though far from perfect) measure of crime victimization by a number of victim traits. This dataset, called the National Incident-Based Reporting System - and often called by its abbreviation NIBRS - provides demographics information about each victim of crime. Like the UCR this is a dataset from the FBI which standardizes information from agencies in the United States so it is comparable across agencies and over time (with some caveats). This data includes the age, race, gender, and the relationship of the victim to the offender for every known victim. We also have info about the offense such as which crimes occurred (and unlike the UCR, incidents can have multiple offenses), where and when it occurred, and what weapons (if any) we used. And we have demographic information about offenders, and whether they were arrested (including the type of arrest such as warrant arrest). From this we can figure out victimization rates based on certain victim characteristics, though not all of them that we may think are important.
 
-Of course, the research opportunities from this highly detailed data extend far beyond mere victimization rates. Personally I've used the data to examine topics ranging from marijuana decriminalization and domestic violence injuries to daylight saving time's effect on crime clearance. As of this writing in early summer 2021, \href{https://scholar.google.com/scholar?as_ylo=2017\&q=NIBRS\&hl=en\&as_sdt=0,44}{Google Scholar has over 1,500 results for NIBRS research since 2017}. As the FBI has said that starting in 2021 NIBRS data will completely replace UCR data, this is crime dataset of the future (though I believe that UCR will still be heavily used for many years to come). For graduate students and early career researchers, this is likely the dataset that you'll use for your entire career.\footnote{If a new dataset replaces NIBRS I hope the field has more people willing to do this grunt work and make manuals for commonly used data and I don't have to write that book alone.}
+Of course, the research opportunities from this highly detailed data extend far beyond mere victimization rates. Personally I've used the data to examine topics ranging from marijuana decriminalization and domestic violence injuries to daylight saving time's effect on crime clearance. As of this writing in early summer 2021, \href{https://scholar.google.com/scholar?as_ylo=2017\&q=NIBRS\&hl=en\&as_sdt=0,44}{Google Scholar has over 1,500 results for NIBRS research since 2017}. As the FBI has said that starting in 2021 NIBRS data will completely replace UCR data, this is crime dataset of the future (though I believe that UCR will still be heavily used for many years to come). For graduate students and early career researchers, this is likely the dataset that you'll use for your entire career.
 
 \hypertarget{goal-of-the-book}{%
 \section{Goal of the book}\label{goal-of-the-book}}
@@ -255,17 +255,30 @@ A word of caution. To date fewer than half of agencies report NIBRS data. As the
 \hypertarget{nibrs-gives-you-choices-which-means-you-need-to-think}{%
 \section{NIBRS gives you choices (which means you need to think)}\label{nibrs-gives-you-choices-which-means-you-need-to-think}}
 
-A major benefit of UCR data is that you have very limited choices. If you wanted to measure crime you only choice was to use their monthly aggregated city-level data. This makes working with the data relatively easy, even though what work you could do was limited. NIBRS data takes an opposite approach. It provides detailed data and largely leaves it up to the users for what to do with it. This flexibility is also a curse. It means that people have to think about what they're doing. Personally I don't like to do much thinking
-
-Criminologists (and economists, political scientists, psychologists, law professors, and everyone else who researches crime) are, generally, atrocious are describing what they do with the data. I try not to read any UCR or NIBRS papers if I can help it because they just make me angry. Beyond refusing to properly cite the source of the data (and saying that it's FBI data is not sufficient since there are many different sources of that)
+A major benefit of UCR data is that you have very limited choices. If you wanted to measure crime you only choice was to use their monthly aggregated city-level data. This makes working with the data relatively easy, even though what work you could do was limited. NIBRS data takes an opposite approach. It provides detailed data and largely leaves it up to the users for what to do with it. This flexibility is also a curse.
 
 \hypertarget{choosing-a-unit-of-analysis}{%
 \subsection{Choosing a unit of analysis}\label{choosing-a-unit-of-analysis}}
 
 Consider, for example, that you want to measure rape in a city. Even if we somehow solve the issue of victims not reporting their rapes, we still have a few different ways of even measuring rape. Let's use an incident where four men rape a single woman as an example. If you're interested in measuring robbery you could do so in several different ways, each of which addresses a different part of crime measurement and will lead to different answers to your questions: the number of crime incidents, the number of victims, the number of offenders, and the number of crimes. First, we can follow the old UCR measure of incident-level and say that this is one rape since only one crime incident occurred (even though there were multiple offenders). Second, we could look at the victim-level, which again is one rape as there was only one victim. Or at the offender-level, which now has four rapes since each offender would be responsible the robbery. Finally we could look at the offense-level. This data actually makes it unclear what act each offender actually committed so we'd likely measure it as one offense per offender in each incident.\footnote{For four people involved in a rape, do we care if all four actually committed the crime? Does it matter if only three committed the rape and one merely stood by?}
 
-\hypertarget{administrative--window-exceptional-clearance-segment}{%
-\chapter{Administrative- Window Exceptional Clearance Segment}\label{administrative--window-exceptional-clearance-segment}}
+\hypertarget{crimes-included-in-nibrs}{%
+\section{Crimes included in NIBRS}\label{crimes-included-in-nibrs}}
+
+\hypertarget{index-crimes}{%
+\subsection{Index crimes}\label{index-crimes}}
+
+\hypertarget{nibrs-does-not-have-unfounded-crimes}{%
+\section{NIBRS does not have unfounded crimes}\label{nibrs-does-not-have-unfounded-crimes}}
+
+\hypertarget{a-summary-of-each-segment-file}{%
+\section{A summary of each segment file}\label{a-summary-of-each-segment-file}}
+
+\hypertarget{the-data-as-you-get-it-from-the-fbi}{%
+\section{The data as you get it from the FBI}\label{the-data-as-you-get-it-from-the-fbi}}
+
+\hypertarget{administrative-and-window-exceptional-clearance-segment}{%
+\chapter{Administrative and Window Exceptional Clearance Segment}\label{administrative-and-window-exceptional-clearance-segment}}
 
 The Administrative Segment provides information about the incident itself, such as how many victims or offenders there were. In practice this means that it tells us how many other segments - offense, victim, offender, and arrestee segments - there are for this particular incident. It also has several important variables at the incident-level such as what hour of the day the incident occurred and whether the incident date variable is actually just the date the incident was reported. Finally, it tells us whether the case was cleared exceptionally and, if so, what type of exceptional clearance it was. This can tell us, for example, how many crimes was cleared because the offender died or the victim refused to cooperate. As the UCR data doesn't differentiate between normal clearances (i.e.~arrest the offender) and exceptional clearances, this provides a far deeper understanding of case outcomes.
 
@@ -379,20 +392,135 @@ An extremely important aspect of crime data is when exactly the crime occurs. If
 \hypertarget{crime-category}{%
 \subsection{Crime category}\label{crime-category}}
 
+\textbackslash begin\{figure\}
+
+\{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/offenseCrimeCategories-1}
+
 \hypertarget{offense-subtype}{%
 \subsection{Offense subtype}\label{offense-subtype}}
 
-\hypertarget{drug-or-alcohol-use}{%
-\subsection{Drug or alcohol use}\label{drug-or-alcohol-use}}
+\textbackslash begin\{figure\}
+
+\{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/offenseCrimeSubcategories-1}
+
+\begin{itemize}
+\tightlist
+\item
+  Aggravated Assault
+\item
+  Animal Cruelty
+\item
+  Counterfeiting/Forgery
+\item
+  Drug Equipment Violations
+\item
+  Drug/Narcotic Violations
+\item
+  Fondling (Incident Liberties/Child Molest)
+\item
+  Gambling Equipment Violations
+\item
+  Intimidation
+\item
+  Kidnapping/Abduction
+\item
+  Murder/Nonnegligent Manslaughter
+\item
+  Negligent Manslaughter
+\item
+  Pornography/Obscene Material
+\item
+  Rape
+\item
+  Robbery
+\item
+  Sexual Assault With An Object
+\item
+  Simple Assault
+\item
+  Sodomy
+\item
+  Stolen Property Offenses (Receiving, Selling, Etc.)
+\item
+  Weapon Law Violations
+\end{itemize}
+
+\textbackslash begin\{figure\}
+
+\{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/offenseCrimeSubcategoriesAnimalAbuse-1}
+
+\hypertarget{drug-alcohol-or-computer-use}{%
+\subsection{Drug, alcohol, or computer use}\label{drug-alcohol-or-computer-use}}
+
+\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-3-1} \end{center}
+
+\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-4-1} \end{center}
 
 \hypertarget{crime-location}{%
 \subsection{Crime location}\label{crime-location}}
 
+\textbackslash begin\{figure\}
+
+\{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/offenseLocation-1}
+
 \hypertarget{weapons}{%
 \subsection{Weapons}\label{weapons}}
 
+\textbackslash begin\{figure\}
+
+\{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/offenseWeapon-1}
+
+\begin{itemize}
+\tightlist
+\item
+  Aggravated Assault
+\item
+  Extortion/Blackmail
+\item
+  Fondling (Incident Liberties/Child Molest)
+\item
+  Human Trafficking - Commercial Sex Acts
+\item
+  Human Trafficking - Involuntary Servitude
+\item
+  Justifiable Homicide
+\item
+  Kidnapping/Abduction
+\item
+  Murder/Nonnegligent Manslaughter
+\item
+  Negligent Manslaughter
+\item
+  Rape
+\item
+  Robbery
+\item
+  Sexual Assault With An Object
+\item
+  Simple Assault
+\item
+  Sodomy
+\item
+  Weapon Law Violations
+\end{itemize}
+
+\hypertarget{automatic-weapons}{%
+\subsection{Automatic weapons}\label{automatic-weapons}}
+
+This variable only tells you if the weapon is automatic
+
+\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-5-1} \end{center}
+
 \hypertarget{hate-crime-indicator-bias-motivation}{%
 \subsection{Hate crime indicator (bias motivation)}\label{hate-crime-indicator-bias-motivation}}
+
+\textbackslash begin\{figure\}
+
+\{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/offenseBiasMotivation-1}
+
+\textbackslash begin\{figure\}
+
+\{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/offenseBiasMotivationBiases-1}
 
 \hypertarget{offender-segment}{%
 \chapter{Offender Segment}\label{offender-segment}}
@@ -402,18 +530,21 @@ As might be expected, the Offender Segment provides information about who the of
 \hypertarget{important-variables-2}{%
 \section{Important variables}\label{important-variables-2}}
 
+\hypertarget{demographics}{%
+\subsection{Demographics}\label{demographics}}
+
 \hypertarget{age}{%
-\subsection{Age}\label{age}}
+\subsubsection{Age}\label{age}}
 
 \begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-3-1} \end{center}
 
 \hypertarget{sex}{%
-\subsection{Sex}\label{sex}}
+\subsubsection{Sex}\label{sex}}
 
 \begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-4-1} \end{center}
 
 \hypertarget{race}{%
-\subsection{Race}\label{race}}
+\subsubsection{Race}\label{race}}
 
 \begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-5-1} \end{center}
 
@@ -426,49 +557,186 @@ As might be expected, the Offender Segment provides information about who the of
 \hypertarget{crime-category-1}{%
 \subsection{Crime category}\label{crime-category-1}}
 
+\textbackslash begin\{center\}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-3-1}
+
 \hypertarget{victim-type}{%
 \subsection{Victim type}\label{victim-type}}
+
+\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-4-1} \end{center}
 
 \hypertarget{injury}{%
 \subsection{Injury}\label{injury}}
 
+\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-5-1} \end{center}
+
+\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-6-1} \end{center}
+
 \hypertarget{relationship-to-offender}{%
 \subsection{Relationship to offender}\label{relationship-to-offender}}
+
+\textbackslash begin\{center\}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-7-1}
 
 \hypertarget{residence-status}{%
 \subsection{Residence status}\label{residence-status}}
 
+Only for when victim is individual or law enforcement officer
+
+victim\$resident\_status\_of\_victim
+
+\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-8-1} \end{center}
+
+\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-9-1} \end{center}
+
+\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-10-1} \end{center}
+
+\hypertarget{aggravated-assault-and-homicide-circumstances}{%
+\subsection{Aggravated assault and homicide circumstances}\label{aggravated-assault-and-homicide-circumstances}}
+
+\textbackslash begin\{center\}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-11-1}
+
+\hypertarget{justifiable-homicide-circumstance}{%
+\subsection{Justifiable homicide circumstance}\label{justifiable-homicide-circumstance}}
+
+\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-12-1} \end{center}
+
 \hypertarget{age-1}{%
 \subsection{Age}\label{age-1}}
 
-\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-3-1} \end{center}
+\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-13-1} \end{center}
 
 \hypertarget{sex-1}{%
 \subsection{Sex}\label{sex-1}}
 
-\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-4-1} \end{center}
+\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-14-1} \end{center}
 
 \hypertarget{race-1}{%
 \subsection{Race}\label{race-1}}
 
-\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-5-1} \end{center}
+\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-15-1} \end{center}
 
 \hypertarget{ethnicity}{%
 \subsection{Ethnicity}\label{ethnicity}}
 
+\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-16-1} \end{center}
+
+\hypertarget{arrestee-group-b-arrestee-and-window-arrestee-segment}{%
+\chapter{Arrestee, Group B Arrestee, and Window Arrestee Segment}\label{arrestee-group-b-arrestee-and-window-arrestee-segment}}
+
+\hypertarget{important-variables-4}{%
+\section{Important variables}\label{important-variables-4}}
+
+\hypertarget{crime-arrested-for-excluding-group-b-arrests}{%
+\subsection{Crime arrested for (excluding Group B arrests)}\label{crime-arrested-for-excluding-group-b-arrests}}
+
+\textbackslash begin\{figure\}
+
+\{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/arresteeCrime-1}
+
+\hypertarget{group-b-crimes-arrested-for}{%
+\subsection{Group B Crimes arrested for}\label{group-b-crimes-arrested-for}}
+
+\textbackslash begin\{figure\}
+
+\{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/GrouBarresteeCrime-1}
+
+\hypertarget{arrest-date}{%
+\subsection{Arrest date}\label{arrest-date}}
+
+\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-3-1} \end{center}
+
+\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-4-1} \end{center}
+
+\hypertarget{weapons-1}{%
+\subsection{Weapons}\label{weapons-1}}
+
+All crimes can potentially have a weapon
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/arresteeWeapon-1} 
+
+}
+
+\caption{The bias motivation (i.e. if hate crime or not) for all arrestees reported in 2019.}\label{fig:arresteeWeapon}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/arresteeWeaponArmed-1} 
+
+}
+
+\caption{The bias motivation (i.e. if hate crime or not) for all arrestees reported in 2019.}\label{fig:arresteeWeaponArmed}
+\end{figure}
+
+\hypertarget{automatic-weapons-1}{%
+\subsection{Automatic weapons}\label{automatic-weapons-1}}
+
+This variable only tells you if the weapon is automatic
+
+\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-5-1} \end{center}
+
+\hypertarget{type-of-arrest}{%
+\subsection{Type of arrest}\label{type-of-arrest}}
+
 \begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-6-1} \end{center}
 
-\hypertarget{homicide-type}{%
-\subsection{Homicide type}\label{homicide-type}}
+\hypertarget{disposition-for-juvenile-arrestees}{%
+\subsection{Disposition for juvenile arrestees}\label{disposition-for-juvenile-arrestees}}
 
-\hypertarget{arrestee-and-window-arrestee-segment}{%
-\chapter{Arrestee and Window Arrestee Segment}\label{arrestee-and-window-arrestee-segment}}
+\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-7-1} \end{center}
+
+\hypertarget{residence-status-1}{%
+\subsection{Residence status}\label{residence-status-1}}
+
+\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-8-1} \end{center}
+
+\hypertarget{demographics-1}{%
+\subsection{Demographics}\label{demographics-1}}
+
+\hypertarget{age-2}{%
+\subsubsection{Age}\label{age-2}}
+
+\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-9-1} \end{center}
+
+\hypertarget{sex-2}{%
+\subsubsection{Sex}\label{sex-2}}
+
+\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-10-1} \end{center}
+
+\hypertarget{race-2}{%
+\subsubsection{Race}\label{race-2}}
+
+\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-11-1} \end{center}
+
+\hypertarget{ethnicity-1}{%
+\subsubsection{Ethnicity}\label{ethnicity-1}}
+
+\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-12-1} \end{center}
 
 \hypertarget{property-and-window-property-segment}{%
 \chapter{Property and Window Property Segment}\label{property-and-window-property-segment}}
 
-\hypertarget{group-b-arrest-reports-segment}{%
-\chapter{Group B Arrest Reports Segment}\label{group-b-arrest-reports-segment}}
+\hypertarget{important-variables-5}{%
+\section{Important variables}\label{important-variables-5}}
+
+\hypertarget{type-of-property-loss}{%
+\subsection{Type of property loss}\label{type-of-property-loss}}
+
+\hypertarget{description-of-stolen-property}{%
+\subsection{Description of stolen property}\label{description-of-stolen-property}}
+
+\hypertarget{value-of-stolen-property}{%
+\subsection{Value of stolen property}\label{value-of-stolen-property}}
+
+\hypertarget{date-property-was-recovered}{%
+\subsection{Date property was recovered}\label{date-property-was-recovered}}
+
+\hypertarget{stolen-and-recovered-vehicles}{%
+\subsection{Stolen and recovered vehicles}\label{stolen-and-recovered-vehicles}}
+
+\hypertarget{drugs}{%
+\subsection{Drugs}\label{drugs}}
 
   \bibliography{book.bib}
 
