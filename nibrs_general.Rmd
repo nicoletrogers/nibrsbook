@@ -9,6 +9,20 @@ knitr::opts_chunk$set(
 )
 ```
 
+```{r,  results='hide'}
+agencies_reporting <- readRDS("data/agencies_reporting.rds")
+load("data/nibrs_administrative_segment_segment_2019.rda")
+
+administrative     <- nibrs_administrative_segment_segment_2019
+rm(nibrs_administrative_segment_segment_2019)
+
+load("data/offenses_known_yearly_1960_2019.rda")
+ucr <- offenses_known_yearly_1960_2019
+rm(offenses_known_yearly_1960_2019)
+gc()
+```
+
+
 Nearly a century ago the FBI started collecting data on crime that occurred in the United States as a way to better understand and respond to crime. This data, the Uniform Crime Reporting (UCR) Program Data, is a monthly count of the number of crime incidents (in cases where more than one crime happens per incident, only the most serious crime is included) in each police agency that reports data.^[This data has been expanded since it began in 1929 to include information on arrests, hate crimes, and stolen property. For more on this, please see my book Uniform Crime Reporting (UCR) Program Data: A Practitioner’s Guide at ucrbook.com.] Other than for homicides, only the number of crimes that occurred is included. So we know, for example, the number of robberies in a city but nothing about who the victims or offenders were, when that month (day or time of day) the robberies occurred, or the type of location where they happened. To address these limitations the FBI started a new dataset in 1991, the National Incident-Based Reporting System data, which is known by its abbreviation NIBRS, and is the topic of this book.
 
 NIBRS data provides detailed information on every crime reported to the police, including victim and offender demographics, whether the offender was arrested (and type of arrest or type of "exceptional clearance"), the crime date and hour, victim-offender relationship, and the crime location (as a location type, not the exact address). It also covers a far wider range of crimes than UCR data did. With the exception of UCR data on assaults against police officers, all NIBRS data can be converted back to UCR data, making it fully backwards compatible - and, therefore, comparable to UCR data. In many ways NIBRS data is a massive improvement to UCR data. We now have a far deeper understanding of crime and this has led to an explosion of research that allows a far more detailed analysis of crime and crime-policies than the blunt UCR data. 
@@ -42,8 +56,76 @@ Consider, for example, that you want to measure rape in a city. Even if we someh
 ## A summary of each segment file
 
 
-
+```{r agenciesReporting, fig.cap="The annual number of agencies reporting at least one incident in that year."}
+agencies_reporting %>%
+  ggplot(aes(x = year, y = agencies)) +
+  geom_line(size = 1.05) +
+  xlab("Year") +
+  ylab("# of Agencies Reporting") +
+  theme_crim() +
+  scale_y_continuous(labels = scales::comma) +
+  expand_limits(y = 0)
+```
 
  
+```{r agenciesReportingMap, fig.cap = "The number of agencies in each state that reported at least one crime in 2019 to NIBRS."}
+admin_map <-
+  administrative %>%
+  distinct(ori, .keep_all = TRUE) %>%
+  count(state)
+
+missing_states <- data.frame(state = unique(fifty_states$id[!fifty_states$id %in% admin_map$state]),
+                             n = 0)
+
+admin_map <- bind_rows(admin_map, missing_states)
+admin_map %>%
+  ggplot2::ggplot(aes(map_id = state)) + 
+  ggplot2::geom_map(aes(fill = n), map = fifty_states, color = "black") + 
+  expand_limits(x = fifty_states$long, y = fifty_states$lat) +
+  coord_map() +
+  scale_x_continuous(breaks = NULL) + 
+  scale_y_continuous(breaks = NULL) +
+  labs(x = "", y = "", fill = "# of NIBRS Agencies") +
+  theme(panel.background = element_blank()) +
+  fifty_states_inset_boxes() +
+  scale_fill_gradient(low = "white", high = "red", breaks = c(0, 100, 200, 300, 400, 500, 619)) 
+```
+
+```{r agenciesReportingMapPercent, fig.cap = "Agencies in each state reporting at least one crime to NIBRS in 2019 as a percent of agencies that reported UCR Offenses Known and Clearances by Arrests data in 2019."}
+ucr_agencies_per_state <- 
+  ucr %>%
+  filter(year %in% 2019,
+         !last_month_reported %in% "no months reported") %>%
+  count(state) %>%
+  rename(ucr_n = n)
+
+admin_map <- left_join(admin_map, ucr_agencies_per_state, by = "state")
+admin_map$percent <- admin_map$n / admin_map$ucr_n
+admin_map$percent <- admin_map$percent * 100
+
+
+admin_map %>%
+  ggplot2::ggplot(aes(map_id = state)) + 
+  ggplot2::geom_map(aes(fill = percent), map = fifty_states, color = "black") + 
+  expand_limits(x = fifty_states$long, y = fifty_states$lat) +
+  coord_map() +
+  scale_x_continuous(breaks = NULL) + 
+  scale_y_continuous(breaks = NULL) +
+  labs(x = "", y = "", fill = "% Also Report to UCR") +
+  theme(panel.background = element_blank()) +
+  fifty_states_inset_boxes() +
+  scale_fill_gradient(low = "white", high = "red", 
+                      breaks = c(0, 20, 40, 60, 80, 99.64)) 
+
+```
+
+```{r agenciesReportingTable, fig.cap = "The number of agencies in each state reporting to NIBRS and to UCR in 2019. Also shows NIBRS reporting in each state as a percent of UCR reporting."}
+
+admin_map$state <- capitalize_words(admin_map$state)
+names(admin_map) <- c("State", "NIBRS Agencies", "UCR Agencies", "% of UCR Agencies")
+datatable(admin_map, options = list(pageLength = 100)) %>%
+  formatPercentage('% of UCR Agencies', 2) 
+```
+
 
 ## The data as you get it from the FBI

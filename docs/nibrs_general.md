@@ -2,6 +2,9 @@
 
 
 
+
+
+
 Nearly a century ago the FBI started collecting data on crime that occurred in the United States as a way to better understand and respond to crime. This data, the Uniform Crime Reporting (UCR) Program Data, is a monthly count of the number of crime incidents (in cases where more than one crime happens per incident, only the most serious crime is included) in each police agency that reports data.^[This data has been expanded since it began in 1929 to include information on arrests, hate crimes, and stolen property. For more on this, please see my book Uniform Crime Reporting (UCR) Program Data: A Practitioner’s Guide at ucrbook.com.] Other than for homicides, only the number of crimes that occurred is included. So we know, for example, the number of robberies in a city but nothing about who the victims or offenders were, when that month (day or time of day) the robberies occurred, or the type of location where they happened. To address these limitations the FBI started a new dataset in 1991, the National Incident-Based Reporting System data, which is known by its abbreviation NIBRS, and is the topic of this book.
 
 NIBRS data provides detailed information on every crime reported to the police, including victim and offender demographics, whether the offender was arrested (and type of arrest or type of "exceptional clearance"), the crime date and hour, victim-offender relationship, and the crime location (as a location type, not the exact address). It also covers a far wider range of crimes than UCR data did. With the exception of UCR data on assaults against police officers, all NIBRS data can be converted back to UCR data, making it fully backwards compatible - and, therefore, comparable to UCR data. In many ways NIBRS data is a massive improvement to UCR data. We now have a far deeper understanding of crime and this has led to an explosion of research that allows a far more detailed analysis of crime and crime-policies than the blunt UCR data. 
@@ -35,8 +38,31 @@ Consider, for example, that you want to measure rape in a city. Even if we someh
 ## A summary of each segment file
 
 
-
+<div class="figure" style="text-align: center">
+<img src="nibrs_general_files/figure-html/agenciesReporting-1.png" alt="The annual number of agencies reporting at least one incident in that year." width="90%" />
+<p class="caption">(\#fig:agenciesReporting)The annual number of agencies reporting at least one incident in that year.</p>
+</div>
 
  
+<div class="figure" style="text-align: center">
+<img src="nibrs_general_files/figure-html/agenciesReportingMap-1.png" alt="The number of agencies in each state that reported at least one crime in 2019 to NIBRS." width="90%" />
+<p class="caption">(\#fig:agenciesReportingMap)The number of agencies in each state that reported at least one crime in 2019 to NIBRS.</p>
+</div>
+
+<div class="figure" style="text-align: center">
+<img src="nibrs_general_files/figure-html/agenciesReportingMapPercent-1.png" alt="Agencies in each state reporting at least one crime to NIBRS in 2019 as a percent of agencies that reported UCR Offenses Known and Clearances by Arrests data in 2019." width="90%" />
+<p class="caption">(\#fig:agenciesReportingMapPercent)Agencies in each state reporting at least one crime to NIBRS in 2019 as a percent of agencies that reported UCR Offenses Known and Clearances by Arrests data in 2019.</p>
+</div>
+
+<div class="figure" style="text-align: center">
+
+```{=html}
+<div id="htmlwidget-aa39c67201db489e0f83" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-aa39c67201db489e0f83">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51"],["Alabama","Arizona","Arkansas","Colorado","Connecticut","Delaware","District of Columbia","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire","New Mexico","North Carolina","North Dakota","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming","Alaska","California","Florida","New Jersey","New York"],[1,11,277,217,100,60,1,251,1,104,1,180,240,343,389,30,39,2,317,616,153,26,80,95,113,4,187,4,320,106,529,381,184,21,47,306,115,443,619,88,86,411,231,221,215,5,0,0,0,0,0],[352,114,278,222,107,63,3,522,3,108,739,289,246,376,413,188,135,156,363,650,409,79,576,103,236,62,188,121,333,110,604,437,208,1477,49,405,129,465,1053,129,89,415,257,240,428,55,33,738,678,578,572],[0.284090909090909,9.64912280701754,99.6402877697842,97.7477477477478,93.4579439252336,95.2380952380952,33.3333333333333,48.0842911877395,33.3333333333333,96.2962962962963,0.13531799729364,62.2837370242215,97.5609756097561,91.2234042553192,94.1888619854721,15.9574468085106,28.8888888888889,1.28205128205128,87.3278236914601,94.7692307692308,37.4083129584352,32.9113924050633,13.8888888888889,92.2330097087379,47.8813559322034,6.45161290322581,99.468085106383,3.30578512396694,96.0960960960961,96.3636363636364,87.5827814569536,87.1853546910755,88.4615384615385,1.4218009478673,95.9183673469388,75.5555555555556,89.1472868217054,95.2688172043011,58.7844254510921,68.2170542635659,96.6292134831461,99.0361445783133,89.8832684824903,92.0833333333333,50.2336448598131,9.09090909090909,0,0,0,0,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>State<\/th>\n      <th>NIBRS Agencies<\/th>\n      <th>UCR Agencies<\/th>\n      <th>% of UCR Agencies<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":100,"columnDefs":[{"targets":4,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatPercentage(data, 2, 3, \",\", \".\");\n  }"},{"className":"dt-right","targets":[2,3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render"],"jsHooks":[]}</script>
+```
+
+<p class="caption">(\#fig:agenciesReportingTable)The number of agencies in each state reporting to NIBRS and to UCR in 2019. Also shows NIBRS reporting in each state as a percent of UCR reporting.</p>
+</div>
+
 
 ## The data as you get it from the FBI

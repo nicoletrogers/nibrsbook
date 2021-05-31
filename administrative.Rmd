@@ -11,7 +11,6 @@ knitr::opts_chunk$set(
 
 ```{r,  results='hide'}
 load("data/nibrs_administrative_segment_segment_2019.rda")
-
 load("data/nibrs_window_exceptional_clearance_segment_segment_2019.rda")
 
 administrative     <- nibrs_administrative_segment_segment_2019
