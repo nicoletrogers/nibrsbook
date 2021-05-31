@@ -20,7 +20,7 @@ gc()
 
 ### Description of property
 
-```{r}
+```{r propertyDescription, fig.cap = "The number and percent of property stolen (including forcibly taken such as during a robbery) in a crime or seized by police (generally in drug arrests) for all offenses in 2019. Each offense can have multiple items stolen/seized."}
 temp <- make_frequency_table(property,
                              "property_description",
                              c("Property",
@@ -34,22 +34,25 @@ datatable(temp, options = list(pageLength = 100)) %>%
 
 ### Type of property loss
 
-```{r}
-property$type_of_property_loss <- capitalize_words(property$type_of_property_loss)
-property$type_of_property_loss <- gsub(" \\(.*", "", property$type_of_property_loss, ignore.case = TRUE)
-property$type_of_property_loss[property$type_of_property_loss == "Stolen/Etc."] <- "Stolen/Robbed/Etc."
+```{r propertyTypeLoss, fig.cap = "The type of loss or if the item is recovered."}
+property$type_of_property_loss_temp <- capitalize_words(property$type_of_property_loss)
+property$type_of_property_loss_temp <- gsub(" \\(.*", "", property$type_of_property_loss_temp, ignore.case = TRUE)
+property$type_of_property_loss_temp[property$type_of_property_loss_temp == "Stolen/Etc."] <- "Stolen/Robbed/Etc."
 make_barplots(property, "type_of_property_loss", count = FALSE, ylab = "% of Property")
 ```
 
 
 ### Value of stolen property
 
-```{r propertyValuePropertyLevel}
+```{r propertyValuePropertyLevel, fig.cap = "The distribution of the value of property stolen. Values are capped at $1,000,000 and each value is rounded to the nearest $100. The x-axis is set on the log scale as this distribution is hugely right skewed."}
 temp <-
   property %>%
+  filter(type_of_property_loss %in% "stolen/etc. (includes bribed, defrauded, embezzled, extorted, ransomed, robbed, etc.)") %>%
   mutate(value_of_property = parse_number(value_of_property)) %>%
-  filter(!is.na(value_of_property),
-         value_of_property < 1000000) %>%
+  filter(!is.na(value_of_property))
+temp$value_of_property[temp$value_of_property > 1000000] <- 1000000
+temp <-
+  temp %>%
   mutate(value_of_property_100 = plyr::round_any(value_of_property, 100)) %>%
   group_by(value_of_property_100) %>%
   tally()
@@ -65,15 +68,18 @@ ggplot(temp, aes(x = value_of_property_100, y = proportion)) +
 
 
 
-```{r propertyValueIncidentLevel}
+```{r propertyValueIncidentLevel, fig.cap = "The incident-level distribution of the value of property stolen. As values are aggregated to the incident-level, these are higher than the above graph which shows each item individually. Values are capped at $1,000,000 and each value is rounded to the nearest $100. The x-axis is set on the log scale as this distribution is hugely right skewed."}
 property$unique_id <- paste(property$ori, property$incident_number)
 temp <-
   property %>%
+  filter(type_of_property_loss %in% "stolen/etc. (includes bribed, defrauded, embezzled, extorted, ransomed, robbed, etc.)") %>%
   mutate(value_of_property = parse_number(value_of_property)) %>%
   filter(!is.na(value_of_property)) %>%
   dplyr::group_by(unique_id) %>%
-  summarize(value_of_property = sum(value_of_property, na.rm = TRUE)) %>%
-  filter(value_of_property < 1000000) %>%
+  summarize(value_of_property = sum(value_of_property, na.rm = TRUE))
+temp$value_of_property[temp$value_of_property > 1000000] <- 1000000
+temp <-
+  temp %>%
   mutate(value_of_property_100 = plyr::round_any(value_of_property, 100)) %>%
   dplyr::group_by(value_of_property_100) %>%
   tally()
@@ -90,7 +96,7 @@ ggplot(temp, aes(x = value_of_property_100, y = proportion)) +
 
 ### Date property was recovered
 
-```{r}
+```{r propertyDaysUntilRecovered, fig.cap = "The distribution of the number of days from the incident to the property recovered date. In 2019 the maxiumum days from incident to arrest was 450 days. Zero days means that the arrest occurred on the same day as the incident. "}
 property$days_until_recovery <- as.numeric(ymd(property$date_recovered) - ymd(property$incident_date))
 max_days <- max(property$days_until_recovery, na.rm = TRUE)
 temp <- 
@@ -123,7 +129,7 @@ ggplot(temp, aes(x = days_until_recovery, y = proportion)) +
 
 #### Suspected drug type
 
-```{r}
+```{r propertyDrugs, fig.cap = "The number and percent of drugs seized by police by type of drug."}
 temp <- make_frequency_table(property,
                              "suspected_drug_type_1",
                              c("Drug Type",
@@ -151,7 +157,7 @@ datatable(temp, options = list(pageLength = 100)) %>%
 * Pound
 
 
-```{r propertyAllGramMeasures}
+```{r propertyAllGramMeasures, fig.cap = "For drugs seized that are measured in grams, this figure shows the distribution in the number of grams seized. Values over 10 grams are grouped together for easier interpretation of lower values of drugs seized."}
 temp <-
   property %>%
   filter(!is.na(estimated_quantity_1),

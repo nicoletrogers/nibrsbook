@@ -25,7 +25,7 @@ As might be expected, the Offender Segment provides information about who the of
 
 #### Age
 
-```{r}
+```{r offenderAge, fig.cap = "The age of all offenders reported in the 2019 NIBRS data. Approximately 39% of offenders have an unknown age are an not shown in the figure."}
 offender$age_of_offender[offender$age_of_offender %in% "over 98 years old"] <- 99
 offender$age_of_offender[offender$age_of_offender %in% "unknown"] <- NA
 offender$age_of_offender <- as.numeric(offender$age_of_offender)
@@ -35,7 +35,7 @@ make_stat_count_plots(offender, "age_of_offender", count = FALSE, ylab = "% of O
 
 #### Sex
 
-```{r}
+```{r offenderSex, fig.cap = "The sex of all offenders reported in the 2019 NIBRS data."}
 offender$sex_of_offender[offender$sex_of_offender == "m"] <- "male"
 offender$sex_of_offender[is.na(offender$sex_of_offender)] <- "unknown"
 offender %>%
@@ -47,7 +47,7 @@ crimeutils::make_barplots("sex_of_offender", count = FALSE, ylab = "% of Offende
 
 #### Race
 
-```{r}
+```{r offenderRace, fig.cap = "The race of all offenders reported in the 2019 NIBRS data."}
 offender$race_of_offender[offender$race_of_offender %in% "native hawaiian or other pacific islander"] <- "native hawaiian/pacific islander"
 offender$race_of_offender[is.na(offender$race_of_offender)] <- "unknown"
 offender %>%

@@ -9,17 +9,17 @@ The Administrative Segment provides information about the incident itself, such 
 
 ## Important variables
 
-### The incident date or report date
+### The incident report date
 
 <div class="figure" style="text-align: center">
-<img src="administrative_files/figure-html/administrativeMonthDay-1.png" alt="The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019." width="90%" />
-<p class="caption">(\#fig:administrativeMonthDay)The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019.</p>
+<img src="administrative_files/figure-html/administrativeMonthDay-1.png" alt="The percent of crimes that occur (the day of the incident, even if the crime wasn't reported that day) each day of the month for all agencies reporting to NIBRS in 2019." width="90%" />
+<p class="caption">(\#fig:administrativeMonthDay)The percent of crimes that occur (the day of the incident, even if the crime wasn't reported that day) each day of the month for all agencies reporting to NIBRS in 2019.</p>
 </div>
 
 
 <div class="figure" style="text-align: center">
-<img src="administrative_files/figure-html/administrativeMonthDayReport-1.png" alt="The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019." width="90%" />
-<p class="caption">(\#fig:administrativeMonthDayReport)The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019.</p>
+<img src="administrative_files/figure-html/administrativeMonthDayReport-1.png" alt="The percent of crimes that are reported (the day of the report, even if not the day of the incident) each day of the month for all agencies reporting to NIBRS in 2019." width="90%" />
+<p class="caption">(\#fig:administrativeMonthDayReport)The percent of crimes that are reported (the day of the report, even if not the day of the incident) each day of the month for all agencies reporting to NIBRS in 2019.</p>
 </div>
 
 

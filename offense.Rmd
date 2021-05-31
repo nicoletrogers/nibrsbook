@@ -37,7 +37,7 @@ datatable(temp, options = list(pageLength = 100)) %>%
 
 ### Offense subtype
 
-```{r offenseCrimeSubcategories, fig.cap = "The number and percent of crimes reported from all agencies in 2019, by crime category."}
+```{r offenseCrimeSubcategories, fig.cap = "The number and percent of crime subtypes. This breakdown is only available for a subset of offenses."}
 
 temp <- make_frequency_table(offense,
                              "type_criminal_activity_1",
@@ -58,7 +58,7 @@ datatable(temp, options = list(pageLength = 100)) %>%
 * Gambling Equipment Violations
 * Intimidation
 * Kidnapping/Abduction
-* Murder/Nonnegligent Manslaughter
+* Murder/Non-negligent Manslaughter
 * Negligent Manslaughter
 * Pornography/Obscene Material
 * Rape
@@ -69,7 +69,7 @@ datatable(temp, options = list(pageLength = 100)) %>%
 * Stolen Property Offenses (Receiving, Selling, Etc.)
 * Weapon Law Violations
 
-```{r offenseCrimeSubcategoriesAnimalAbuse, fig.cap = "The number and percent of crimes reported from all agencies in 2019, by crime category."}
+```{r offenseCrimeSubcategoriesAnimalAbuse, fig.cap = "The number and percent of crime subtypes for animal abuse."}
 
 temp <- make_frequency_table(offense[offense$ucr_offense_code %in% "animal cruelty", ],
                              "type_criminal_activity_1",
@@ -83,14 +83,14 @@ datatable(temp, options = list(pageLength = 100)) %>%
 
 ### Drug, alcohol, or computer use
 
-```{r}
+```{r offenseDrugAlcoholComputer, fig.cap = "The distribution of drug, alcohol, or computer use for all offenses in 2019."}
 offense %>%
   mutate(offender_suspected_of_using_1 = capitalize_words(offender_suspected_of_using_1)) %>%
 crimeutils::make_barplots("offender_suspected_of_using_1", count = FALSE, ylab = "% of Offenses") +
   ggplot2::scale_y_continuous(labels = scales::percent)
 ```
 
-```{r}
+```{r offenseDrugAlcoholComputerAny, fig.cap = "The distribution of drug, alcohol, or computer use for offenses where there was usage of one of these items. For easier viewing of how this variable is distributed, this figure excludes all offenses where there was no drug, alcohol, or computer use or the variable was NA."}
 offense %>%
   filter(offender_suspected_of_using_1 != "not applicable") %>%
   mutate(offender_suspected_of_using_1 = capitalize_words(offender_suspected_of_using_1)) %>%
@@ -114,7 +114,7 @@ datatable(temp, options = list(pageLength = 100)) %>%
 
 ### Weapons
 
-```{r offenseWeapon, fig.cap = "The bias motivation (i.e. if hate crime or not) for all offenses reported in 2019."}
+```{r offenseWeapon, fig.cap = "The weapon used by an offender in the crime for all offenses reported in 2019. The use means that it was part of the crime though may not have been physically discharged. For example, pointing a gun at someone even without firing the gun is still using it."}
 
 temp <- make_frequency_table(offense,
                              "type_weapon_force_involved_1",
@@ -146,7 +146,7 @@ datatable(temp, options = list(pageLength = 100)) %>%
 
 This variable only tells you if the weapon is automatic 
 
-```{r}
+```{r offenseAutomaticWeapon, fig.cap = "The percent of firearms used that were fully automatic, for all offenses in 2019."}
 temp <- 
   offense %>%
   filter(type_weapon_force_involved_1 %in% c("firearm (type not stated)",
@@ -179,7 +179,7 @@ ggplot(temp, aes(x = type_weapon_force_involved_1, y = automatic_weapon)) +
 
 ### Hate crime indicator (bias motivation)
 
-```{r offenseBiasMotivation, fig.cap = "The bias motivation (i.e. if hate crime or not) for all offenses reported in 2019."}
+```{r offenseBiasMotivation, fig.cap = "The bias motivation (i.e. if hate crime or not and what type of hate crime) for all offenses reported in 2019."}
 
 temp <- make_frequency_table(offense,
                              "bias_motivation",
@@ -192,7 +192,7 @@ datatable(temp, options = list(pageLength = 100)) %>%
 ```
 
 
-```{r offenseBiasMotivationBiases, fig.cap = "The bias motivation (i.e. if hate crime or not) for all offenses reported in 2019 that were classifed as hate crimes."}
+```{r offenseBiasMotivationBiases, fig.cap = "The bias motivation (i.e. if hate crime or not and what type of hate crime) for all offenses reported in 2019 that were classifed as hate crimes. For easier viewing of how hate crimes are broken down, this excludes all offenses where there was no bias motivation."}
 
 temp <- make_frequency_table(offense[!offense$bias_motivation %in% c("no bias motivation",
                                                                      "unknown bias motivation"),],

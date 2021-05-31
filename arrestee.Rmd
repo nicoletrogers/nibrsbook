@@ -30,7 +30,7 @@ gc()
 
 ### Crime arrested for (excluding Group B arrests)
 
-```{r arresteeCrime, fig.cap = "The number and percent of crimes reported from all agencies in 2019, by crime category."}
+```{r arresteeCrime, fig.cap = "The number and percent of arrests for Group A crimes for all arrests reported to NIBRS in 2019."}
 
 temp <- make_frequency_table(arrestee,
                              "ucr_arrest_offense_code",
@@ -44,7 +44,7 @@ datatable(temp, options = list(pageLength = 100)) %>%
 
 ### Group B Crimes arrested for
 
-```{r GrouBarresteeCrime, fig.cap = "The number and percent of crimes reported from all agencies in 2019, by crime category."}
+```{r GrouBarresteeCrime, fig.cap = "The number and percent of arrests for Group B crimes for all arrests reported to NIBRS in 2019."}
 
 temp <- make_frequency_table(group_b,
                              "ucr_arrest_offense_code",
@@ -58,7 +58,7 @@ datatable(temp, options = list(pageLength = 100)) %>%
 
 ### Arrest date
 
-```{r}
+```{r arrestsDaysUntilArrest, fig.cap = "The distribution of the number of days from the incident to the arrest date. In 2019 the maxiumum days from incident to arrest was 461 days. Zero days means that the arrest occurred on the same day as the incident."}
 arrestee$days_until_arrest <- as.numeric(ymd(arrestee$arrest_date) - ymd(arrestee$incident_date))
 
 temp <- 
@@ -78,7 +78,7 @@ ggplot(temp, aes(x = days_until_arrest, y = proportion)) +
 ```
 
 
-```{r}
+```{r arrestsDaysUntilArrestBarplot, fig.cap = "The number of days from the incident to the arrest date. Values over 10 days are grouped to better see the distribution for arrests that took fewer than 10 days. Zero days means that the arrest occurred on the same day as the incident."}
 
 max_days <- max(arrestee$days_until_arrest)
 temp <- 
@@ -110,13 +110,13 @@ ggplot(temp, aes(x = days_until_arrest, y = proportion)) +
 
 All crimes can potentially have a weapon
 
-```{r arresteeWeapon, fig.cap = "The bias motivation (i.e. if hate crime or not) for all arrestees reported in 2019."}
+```{r arresteeWeapon, fig.cap = "The weapon used in the crime for all arrestees reported in 2019. Unarmed can still mean that the arrestee used force, such as by punching the victim, but that they did not use any weapon."}
 arrestee$weapon <- capitalize_words(arrestee$arrestee_weapon_1)
 arrestee$weapon <- gsub(" \\(e.g..*", "", arrestee$weapon, ignore.case = TRUE)
 make_barplots(arrestee, "weapon", count = FALSE, ylab = "% of Arrestees")
 ```
 
-```{r arresteeWeaponArmed, fig.cap = "The bias motivation (i.e. if hate crime or not) for all arrestees reported in 2019."}
+```{r arresteeWeaponArmed, fig.cap = "The distribution of weapon usage for all arrestees in 2019 who used a weapon (i.e. excludes unarmed offenders)."}
 
 make_barplots(arrestee[arrestee$weapon != "Unarmed", ], "weapon", count = FALSE, ylab = "% of Arrestees") +
    ggplot2::scale_y_continuous(labels = scales::percent)
@@ -127,7 +127,7 @@ make_barplots(arrestee[arrestee$weapon != "Unarmed", ], "weapon", count = FALSE,
 
 This variable only tells you if the weapon is automatic 
 
-```{r}
+```{r arresteeAutomaticWeapon, fig.cap = "The percent of firearms used that were fully automatic, for arrestees in 2019."}
 temp <- 
   arrestee %>%
   filter(arrestee_weapon_1 %in% c("firearm (type not stated)",
@@ -160,7 +160,7 @@ ggplot(temp, aes(x = arrestee_weapon_1, y = automatic_weapon)) +
 
 ### Type of arrest
 
-```{r}
+```{r arresteeTypeOfArrest, fig.cap = "The distrubution of arrests by type of arrest. Previous Incident Report includes cases where an individual was arrested for a separate crime and are then reported as also arrested for this incident."}
 arrestee$arrest_type <- arrestee$type_of_arrest
 arrestee$arrest_type <- gsub(" \\(.*", "", arrestee$arrest_type)
 arrestee$arrest_type[arrestee$arrest_type == "taken into custody"] <- "Warrant/Previous Incident Report"
@@ -171,7 +171,7 @@ make_barplots(arrestee, "arrest_type", ylab = "% Of Arrests", count = FALSE)
 
 ### Disposition for juvenile arrestees
 
-```{r}
+```{r arresteeJuvenileDisposition, fig.cap = "For juvenile arrestees (under age 18), the distribution of case outcomes."}
 arrestee$disposition_temp <- arrestee$disposition_of_arrestee_under_18
 arrestee$disposition_temp[is.na(arrestee$disposition_temp)] <- "unknown"
 arrestee$disposition_temp <- gsub(" \\(.*", "", arrestee$disposition_temp)
@@ -185,7 +185,7 @@ crimeutils::make_barplots("disposition_temp", count = FALSE, ylab = "% of Juveni
 
 ### Residence status
 
-```{r}
+```{r arresteeResidenceStatus, fig.cap = "The distrubution of residence status for all arrestees reported to NIBRS in 2019. Residence status is residence in the arresting agency's jurisdiction (e.g. do you live in the city you were arrested in?). It is unrelated to citizenship or immigration status."}
 arrestee$resident_status_of_arrestee[is.na(arrestee$resident_status_of_arrestee)] <- "unknown"
 arrestee %>%
   mutate(resident_status_of_arrestee = capitalize_words(resident_status_of_arrestee)) %>%
@@ -197,7 +197,7 @@ crimeutils::make_barplots("resident_status_of_arrestee", count = FALSE, ylab = "
 
 #### Age
 
-```{r}
+```{r arresteeAge, fig.cap = "The age of all arrestees reported in the 2019 NIBRS data."}
 arrestee$age_of_arrestee[arrestee$age_of_arrestee %in% "over 98 years old"] <- 99
 arrestee$age_of_arrestee[arrestee$age_of_arrestee %in% "unknown"] <- NA
 arrestee$age_of_arrestee <- as.numeric(arrestee$age_of_arrestee)
@@ -207,7 +207,7 @@ make_stat_count_plots(arrestee, "age_of_arrestee", count = FALSE, ylab = "% of a
 
 #### Sex
 
-```{r}
+```{r arresteeSex, fig.cap = "The sex of all arrestees reported in the 2019 NIBRS data."}
 arrestee %>%
   mutate(sex_of_arrestee = capitalize_words(sex_of_arrestee)) %>%
 crimeutils::make_barplots("sex_of_arrestee", count = FALSE, ylab = "% of arrestees") +
@@ -217,7 +217,7 @@ crimeutils::make_barplots("sex_of_arrestee", count = FALSE, ylab = "% of arreste
 
 #### Race
 
-```{r}
+```{r arresteeRace, fig.cap = "The race of all arrestees reported in the 2019 NIBRS data."}
 arrestee$race_of_arrestee[arrestee$race_of_arrestee %in% "native hawaiian or other pacific islander"] <- "native hawaiian/pacific islander"
 arrestee %>%
   mutate(race_of_arrestee = capitalize_words(race_of_arrestee)) %>%
@@ -227,7 +227,7 @@ crimeutils::make_barplots("race_of_arrestee", count = FALSE, ylab = "% of arrest
 
 #### Ethnicity
 
-```{r}
+```{r arresteeEthnicity, fig.cap = "The ethnicity of all arrestees reported in the 2019 NIBRS data."}
 arrestee$ethnicity_of_arrestee[is.na(arrestee$ethnicity_of_arrestee)] <- "unknown"
 arrestee %>%
   mutate(ethnicity_of_arrestee = capitalize_words(ethnicity_of_arrestee)) %>%

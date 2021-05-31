@@ -13,15 +13,24 @@ As might be expected, the Offender Segment provides information about who the of
 
 #### Age
 
-<img src="offender_files/figure-html/unnamed-chunk-3-1.png" width="90%" style="display: block; margin: auto;" />
+<div class="figure" style="text-align: center">
+<img src="offender_files/figure-html/offenderAge-1.png" alt="The age of all offenders reported in the 2019 NIBRS data. Approximately 39% of offenders have an unknown age are an not shown in the figure." width="90%" />
+<p class="caption">(\#fig:offenderAge)The age of all offenders reported in the 2019 NIBRS data. Approximately 39% of offenders have an unknown age are an not shown in the figure.</p>
+</div>
 
 
 #### Sex
 
-<img src="offender_files/figure-html/unnamed-chunk-4-1.png" width="90%" style="display: block; margin: auto;" />
+<div class="figure" style="text-align: center">
+<img src="offender_files/figure-html/offenderSex-1.png" alt="The sex of all offenders reported in the 2019 NIBRS data." width="90%" />
+<p class="caption">(\#fig:offenderSex)The sex of all offenders reported in the 2019 NIBRS data.</p>
+</div>
 
 
 #### Race
 
-<img src="offender_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" />
+<div class="figure" style="text-align: center">
+<img src="offender_files/figure-html/offenderRace-1.png" alt="The race of all offenders reported in the 2019 NIBRS data." width="90%" />
+<p class="caption">(\#fig:offenderRace)The race of all offenders reported in the 2019 NIBRS data.</p>
+</div>
 

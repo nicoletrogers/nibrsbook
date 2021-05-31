@@ -125,7 +125,7 @@
 
 \title{National Incident-Based Reporting System (NIBRS) Data: A Practitioner's Guide}
 \author{Jacob Kaplan}
-\date{2021-05-30}
+\date{2021-05-31}
 
 \begin{document}
 \maketitle
@@ -285,8 +285,8 @@ The Administrative Segment provides information about the incident itself, such 
 \hypertarget{important-variables}{%
 \section{Important variables}\label{important-variables}}
 
-\hypertarget{the-incident-date-or-report-date}{%
-\subsection{The incident date or report date}\label{the-incident-date-or-report-date}}
+\hypertarget{the-incident-report-date}{%
+\subsection{The incident report date}\label{the-incident-report-date}}
 
 \begin{figure}
 
@@ -294,7 +294,7 @@ The Administrative Segment provides information about the incident itself, such 
 
 }
 
-\caption{The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019.}\label{fig:administrativeMonthDay}
+\caption{The percent of crimes that occur (the day of the incident, even if the crime wasn't reported that day) each day of the month for all agencies reporting to NIBRS in 2019.}\label{fig:administrativeMonthDay}
 \end{figure}
 
 \begin{figure}
@@ -303,7 +303,7 @@ The Administrative Segment provides information about the incident itself, such 
 
 }
 
-\caption{The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019.}\label{fig:administrativeMonthDayReport}
+\caption{The percent of crimes that are reported (the day of the report, even if not the day of the incident) each day of the month for all agencies reporting to NIBRS in 2019.}\label{fig:administrativeMonthDayReport}
 \end{figure}
 
 \hypertarget{hour-of-incident}{%
@@ -424,7 +424,7 @@ An extremely important aspect of crime data is when exactly the crime occurs. If
 \item
   Kidnapping/Abduction
 \item
-  Murder/Nonnegligent Manslaughter
+  Murder/Non-negligent Manslaughter
 \item
   Negligent Manslaughter
 \item
@@ -452,9 +452,23 @@ An extremely important aspect of crime data is when exactly the crime occurs. If
 \hypertarget{drug-alcohol-or-computer-use}{%
 \subsection{Drug, alcohol, or computer use}\label{drug-alcohol-or-computer-use}}
 
-\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-3-1} \end{center}
+\begin{figure}
 
-\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-4-1} \end{center}
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/offenseDrugAlcoholComputer-1} 
+
+}
+
+\caption{The distribution of drug, alcohol, or computer use for all offenses in 2019.}\label{fig:offenseDrugAlcoholComputer}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/offenseDrugAlcoholComputerAny-1} 
+
+}
+
+\caption{The distribution of drug, alcohol, or computer use for offenses where there was usage of one of these items. For easier viewing of how this variable is distributed, this figure excludes all offenses where there was no drug, alcohol, or computer use or the variable was NA.}\label{fig:offenseDrugAlcoholComputerAny}
+\end{figure}
 
 \hypertarget{crime-location}{%
 \subsection{Crime location}\label{crime-location}}
@@ -509,7 +523,14 @@ An extremely important aspect of crime data is when exactly the crime occurs. If
 
 This variable only tells you if the weapon is automatic
 
-\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-5-1} \end{center}
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/offenseAutomaticWeapon-1} 
+
+}
+
+\caption{The percent of firearms used that were fully automatic, for all offenses in 2019.}\label{fig:offenseAutomaticWeapon}
+\end{figure}
 
 \hypertarget{hate-crime-indicator-bias-motivation}{%
 \subsection{Hate crime indicator (bias motivation)}\label{hate-crime-indicator-bias-motivation}}
@@ -536,17 +557,38 @@ As might be expected, the Offender Segment provides information about who the of
 \hypertarget{age}{%
 \subsubsection{Age}\label{age}}
 
-\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-3-1} \end{center}
+\textbackslash begin\{figure\}
+
+\{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/offenderAge-1}
+
+\}
+
+\textbackslash caption\{The age of all offenders reported in the 2019 NIBRS data. Approximately 39\% of offenders have an unknown age are an not shown in the figure.\}\label{fig:offenderAge}
+\textbackslash end\{figure\}
 
 \hypertarget{sex}{%
 \subsubsection{Sex}\label{sex}}
 
-\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-4-1} \end{center}
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/offenderSex-1} 
+
+}
+
+\caption{The sex of all offenders reported in the 2019 NIBRS data.}\label{fig:offenderSex}
+\end{figure}
 
 \hypertarget{race}{%
 \subsubsection{Race}\label{race}}
 
-\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-5-1} \end{center}
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/offenderRace-1} 
+
+}
+
+\caption{The race of all offenders reported in the 2019 NIBRS data.}\label{fig:offenderRace}
+\end{figure}
 
 \hypertarget{victim-segment}{%
 \chapter{Victim Segment}\label{victim-segment}}
@@ -557,24 +599,71 @@ As might be expected, the Offender Segment provides information about who the of
 \hypertarget{crime-category-1}{%
 \subsection{Crime category}\label{crime-category-1}}
 
-\textbackslash begin\{center\}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-3-1}
+\textbackslash begin\{figure\}
+
+\{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/victimCrimeCategory-1}
 
 \hypertarget{victim-type}{%
 \subsection{Victim type}\label{victim-type}}
 
-\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-4-1} \end{center}
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/victimType-1} 
+
+}
+
+\caption{The distribution of the type of victim. Victim types are mutuaully exclusive.}\label{fig:victimType}
+\end{figure}
 
 \hypertarget{injury}{%
 \subsection{Injury}\label{injury}}
 
-\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-5-1} \end{center}
+\begin{figure}
 
-\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-6-1} \end{center}
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/victimInjury-1} 
+
+}
+
+\caption{The distribution of the injury sustained by the victim. Only individual and law enforcement officer victims have this variable available.}\label{fig:victimInjury}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/victimInjuryExcludeNone-1} 
+
+}
+
+\caption{The distribution of the injury sustained by the victim for those who had an injury other than 'none'.}\label{fig:victimInjuryExcludeNone}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/victimInjuryPolice-1} 
+
+}
+
+\caption{The distribution of the injury sustained by the victim for law enforcement officer victims}\label{fig:victimInjuryPolice}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/victimInjuryPoliceExcludeNone-1} 
+
+}
+
+\caption{The distribution of the injury sustained by the victim for law enforcement officer victims excluding those who had no injury at all.}\label{fig:victimInjuryPoliceExcludeNone}
+\end{figure}
 
 \hypertarget{relationship-to-offender}{%
 \subsection{Relationship to offender}\label{relationship-to-offender}}
 
-\textbackslash begin\{center\}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-7-1}
+\textbackslash begin\{figure\}
+
+\{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/victimRelationship-1}
+
+\textbackslash begin\{figure\}
+
+\{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/victimRelationshipPolice-1}
 
 \hypertarget{residence-status}{%
 \subsection{Residence status}\label{residence-status}}
@@ -583,41 +672,99 @@ Only for when victim is individual or law enforcement officer
 
 victim\$resident\_status\_of\_victim
 
-\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-8-1} \end{center}
+\begin{figure}
 
-\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-9-1} \end{center}
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/victimResidenceStatus-1} 
 
-\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-10-1} \end{center}
+}
+
+\caption{The distrubution of residence status for all victims reported to NIBRS in 2019. Residence status is residence in the police agency's jurisdiction (e.g. do you live in the city you were victimized in?). It is unrelated to citizenship or immigration status.}\label{fig:victimResidenceStatus}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/victimResidenceStatusIndividual-1} 
+
+}
+
+\caption{The distrubution of residence status for all Individual (i.e. person who is not law enforcement officer) victims.}\label{fig:victimResidenceStatusIndividual}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/victimResidenceStatusPolice-1} 
+
+}
+
+\caption{The distrubution of residence status for all Law Enforcement Officer victims.}\label{fig:victimResidenceStatusPolice}
+\end{figure}
 
 \hypertarget{aggravated-assault-and-homicide-circumstances}{%
 \subsection{Aggravated assault and homicide circumstances}\label{aggravated-assault-and-homicide-circumstances}}
 
-\textbackslash begin\{center\}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-11-1}
+\textbackslash begin\{figure\}
+
+\{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/victimAggAssault-1}
 
 \hypertarget{justifiable-homicide-circumstance}{%
 \subsection{Justifiable homicide circumstance}\label{justifiable-homicide-circumstance}}
 
-\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-12-1} \end{center}
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/victimJustifiableHomicide-1} 
+
+}
+
+\caption{The distribution of circumstances for justifiable homicides (N = 308 in 2019 for all agencies reporting).}\label{fig:victimJustifiableHomicide}
+\end{figure}
 
 \hypertarget{age-1}{%
 \subsection{Age}\label{age-1}}
 
-\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-13-1} \end{center}
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/victimAge-1} 
+
+}
+
+\caption{The age of all victims reported in the 2019 NIBRS data.}\label{fig:victimAge}
+\end{figure}
 
 \hypertarget{sex-1}{%
 \subsection{Sex}\label{sex-1}}
 
-\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-14-1} \end{center}
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/victimSex-1} 
+
+}
+
+\caption{The sex of all victims reported in the 2019 NIBRS data.}\label{fig:victimSex}
+\end{figure}
 
 \hypertarget{race-1}{%
 \subsection{Race}\label{race-1}}
 
-\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-15-1} \end{center}
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/victimRace-1} 
+
+}
+
+\caption{The race of all victims reported in the 2019 NIBRS data.}\label{fig:victimRace}
+\end{figure}
 
 \hypertarget{ethnicity}{%
 \subsection{Ethnicity}\label{ethnicity}}
 
-\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-16-1} \end{center}
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/victimEthnicity-1} 
+
+}
+
+\caption{The ethnicity of all victims reported in the 2019 NIBRS data.}\label{fig:victimEthnicity}
+\end{figure}
 
 \hypertarget{arrestee-group-b-arrestee-and-window-arrestee-segment}{%
 \chapter{Arrestee, Group B Arrestee, and Window Arrestee Segment}\label{arrestee-group-b-arrestee-and-window-arrestee-segment}}
@@ -642,9 +789,23 @@ victim\$resident\_status\_of\_victim
 \hypertarget{arrest-date}{%
 \subsection{Arrest date}\label{arrest-date}}
 
-\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-3-1} \end{center}
+\begin{figure}
 
-\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-4-1} \end{center}
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/arrestsDaysUntilArrest-1} 
+
+}
+
+\caption{The distribution of the number of days from the incident to the arrest date. In 2019 the maxiumum days from incident to arrest was 461 days. Zero days means that the arrest occurred on the same day as the incident.}\label{fig:arrestsDaysUntilArrest}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/arrestsDaysUntilArrestBarplot-1} 
+
+}
+
+\caption{The number of days from the incident to the arrest date. Values over 10 days are grouped to better see the distribution for arrests that took fewer than 10 days. Zero days means that the arrest occurred on the same day as the incident.}\label{fig:arrestsDaysUntilArrestBarplot}
+\end{figure}
 
 \hypertarget{weapons-1}{%
 \subsection{Weapons}\label{weapons-1}}
@@ -657,7 +818,7 @@ All crimes can potentially have a weapon
 
 }
 
-\caption{The bias motivation (i.e. if hate crime or not) for all arrestees reported in 2019.}\label{fig:arresteeWeapon}
+\caption{The weapon used in the crime for all arrestees reported in 2019. Unarmed can still mean that the arrestee used force, such as by punching the victim, but that they did not use any weapon.}\label{fig:arresteeWeapon}
 \end{figure}
 
 \begin{figure}
@@ -666,7 +827,7 @@ All crimes can potentially have a weapon
 
 }
 
-\caption{The bias motivation (i.e. if hate crime or not) for all arrestees reported in 2019.}\label{fig:arresteeWeaponArmed}
+\caption{The distribution of weapon usage for all arrestees in 2019 who used a weapon (i.e. excludes unarmed offenders).}\label{fig:arresteeWeaponArmed}
 \end{figure}
 
 \hypertarget{automatic-weapons-1}{%
@@ -674,22 +835,50 @@ All crimes can potentially have a weapon
 
 This variable only tells you if the weapon is automatic
 
-\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-5-1} \end{center}
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/arresteeAutomaticWeapon-1} 
+
+}
+
+\caption{The percent of firearms used that were fully automatic, for arrestees in 2019.}\label{fig:arresteeAutomaticWeapon}
+\end{figure}
 
 \hypertarget{type-of-arrest}{%
 \subsection{Type of arrest}\label{type-of-arrest}}
 
-\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-6-1} \end{center}
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/arresteeTypeOfArrest-1} 
+
+}
+
+\caption{The distrubution of arrests by type of arrest. Previous Incident Report includes cases where an individual was arrested for a separate crime and are then reported as also arrested for this incident.}\label{fig:arresteeTypeOfArrest}
+\end{figure}
 
 \hypertarget{disposition-for-juvenile-arrestees}{%
 \subsection{Disposition for juvenile arrestees}\label{disposition-for-juvenile-arrestees}}
 
-\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-7-1} \end{center}
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/arresteeJuvenileDisposition-1} 
+
+}
+
+\caption{For juvenile arrestees (under age 18), the distribution of case outcomes.}\label{fig:arresteeJuvenileDisposition}
+\end{figure}
 
 \hypertarget{residence-status-1}{%
 \subsection{Residence status}\label{residence-status-1}}
 
-\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-8-1} \end{center}
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/arresteeResidenceStatus-1} 
+
+}
+
+\caption{The distrubution of residence status for all arrestees reported to NIBRS in 2019. Residence status is residence in the arresting agency's jurisdiction (e.g. do you live in the city you were arrested in?). It is unrelated to citizenship or immigration status.}\label{fig:arresteeResidenceStatus}
+\end{figure}
 
 \hypertarget{demographics-1}{%
 \subsection{Demographics}\label{demographics-1}}
@@ -697,22 +886,50 @@ This variable only tells you if the weapon is automatic
 \hypertarget{age-2}{%
 \subsubsection{Age}\label{age-2}}
 
-\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-9-1} \end{center}
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/arresteeAge-1} 
+
+}
+
+\caption{The age of all arrestees reported in the 2019 NIBRS data.}\label{fig:arresteeAge}
+\end{figure}
 
 \hypertarget{sex-2}{%
 \subsubsection{Sex}\label{sex-2}}
 
-\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-10-1} \end{center}
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/arresteeSex-1} 
+
+}
+
+\caption{The sex of all arrestees reported in the 2019 NIBRS data.}\label{fig:arresteeSex}
+\end{figure}
 
 \hypertarget{race-2}{%
 \subsubsection{Race}\label{race-2}}
 
-\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-11-1} \end{center}
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/arresteeRace-1} 
+
+}
+
+\caption{The race of all arrestees reported in the 2019 NIBRS data.}\label{fig:arresteeRace}
+\end{figure}
 
 \hypertarget{ethnicity-1}{%
 \subsubsection{Ethnicity}\label{ethnicity-1}}
 
-\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-12-1} \end{center}
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/arresteeEthnicity-1} 
+
+}
+
+\caption{The ethnicity of all arrestees reported in the 2019 NIBRS data.}\label{fig:arresteeEthnicity}
+\end{figure}
 
 \hypertarget{property-and-window-property-segment}{%
 \chapter{Property and Window Property Segment}\label{property-and-window-property-segment}}
@@ -723,24 +940,54 @@ This variable only tells you if the weapon is automatic
 \hypertarget{description-of-property}{%
 \subsection{Description of property}\label{description-of-property}}
 
-\textbackslash begin\{center\}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-3-1}
+\textbackslash begin\{figure\}
+
+\{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/propertyDescription-1}
 
 \hypertarget{type-of-property-loss}{%
 \subsection{Type of property loss}\label{type-of-property-loss}}
 
-\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-4-1} \end{center}
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/propertyTypeLoss-1} 
+
+}
+
+\caption{The type of loss or if the item is recovered.}\label{fig:propertyTypeLoss}
+\end{figure}
 
 \hypertarget{value-of-stolen-property}{%
 \subsection{Value of stolen property}\label{value-of-stolen-property}}
 
-\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/propertyValuePropertyLevel-1} \end{center}
+\begin{figure}
 
-\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/propertyValueIncidentLevel-1} \end{center}
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/propertyValuePropertyLevel-1} 
+
+}
+
+\caption{The distribution of the value of property stolen. Values are capped at $1,000,000 and each value is rounded to the nearest $100. The x-axis is set on the log scale as this distribution is hugely right skewed.}\label{fig:propertyValuePropertyLevel}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/propertyValueIncidentLevel-1} 
+
+}
+
+\caption{The incident-level distribution of the value of property stolen. As values are aggregated to the incident-level, these are higher than the above graph which shows each item individually. Values are capped at $1,000,000 and each value is rounded to the nearest $100. The x-axis is set on the log scale as this distribution is hugely right skewed.}\label{fig:propertyValueIncidentLevel}
+\end{figure}
 
 \hypertarget{date-property-was-recovered}{%
 \subsection{Date property was recovered}\label{date-property-was-recovered}}
 
-\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-5-1} \end{center}
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/propertyDaysUntilRecovered-1} 
+
+}
+
+\caption{The distribution of the number of days from the incident to the property recovered date. In 2019 the maxiumum days from incident to arrest was 450 days. Zero days means that the arrest occurred on the same day as the incident. }\label{fig:propertyDaysUntilRecovered}
+\end{figure}
 
 \hypertarget{drugs}{%
 \subsection{Drugs}\label{drugs}}
@@ -748,7 +995,9 @@ This variable only tells you if the weapon is automatic
 \hypertarget{suspected-drug-type}{%
 \subsubsection{Suspected drug type}\label{suspected-drug-type}}
 
-\textbackslash begin\{center\}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/unnamed-chunk-6-1}
+\textbackslash begin\{figure\}
+
+\{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/propertyDrugs-1}
 
 \hypertarget{amount-of-drugs}{%
 \subsubsection{Amount of drugs}\label{amount-of-drugs}}
@@ -779,7 +1028,14 @@ This variable only tells you if the weapon is automatic
   Pound
 \end{itemize}
 
-\begin{center}\includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/propertyAllGramMeasures-1} \end{center}
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/propertyAllGramMeasures-1} 
+
+}
+
+\caption{For drugs seized that are measured in grams, this figure shows the distribution in the number of grams seized. Values over 10 grams are grouped together for easier interpretation of lower values of drugs seized.}\label{fig:propertyAllGramMeasures}
+\end{figure}
 
   \bibliography{book.bib}
 
