@@ -120,11 +120,12 @@ admin_map %>%
 ```
 
 ```{r agenciesReportingTable, fig.cap = "The number of agencies in each state reporting to NIBRS and to UCR in 2019. Also shows NIBRS reporting in each state as a percent of UCR reporting."}
-
+admin_map$percent <- admin_map$percent / 100
 admin_map$state <- capitalize_words(admin_map$state)
 names(admin_map) <- c("State", "NIBRS Agencies", "UCR Agencies", "% of UCR Agencies")
 datatable(admin_map, options = list(pageLength = 100)) %>%
-  formatPercentage('% of UCR Agencies', 2) 
+  formatPercentage('% of UCR Agencies', 2) %>%
+  formatStyle(1, `text-align` = 'left')
 ```
 
 

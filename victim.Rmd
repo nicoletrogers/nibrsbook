@@ -28,7 +28,8 @@ temp <- make_frequency_table(victim,
                                "% of Victims"))
 datatable(temp, options = list(pageLength = 100)) %>%
   formatPercentage('% of Victims', 2) %>%
-  formatRound('# of Victims', digits = 0)
+  formatRound('# of Victims', digits = 0) %>%
+  formatStyle(1, `text-align` = 'left')
 ```
 
 
@@ -91,7 +92,8 @@ temp <- make_frequency_table(victim,
                                "% of Victims"))
 datatable(temp, options = list(pageLength = 100)) %>%
   formatPercentage('% of Victims', 2) %>%
-  formatRound('# of Victims', digits = 0)
+  formatRound('# of Victims', digits = 0) %>%
+  formatStyle(1, `text-align` = 'left')
 ```
 
 ```{r victimRelationshipPolice, fig.cap = "The distribution of the relationship between the victim and the offender for law enforcement officer victims."}
@@ -104,7 +106,8 @@ temp <-
                          "% of Victims"))
 datatable(temp, options = list(pageLength = 100)) %>%
   formatPercentage('% of Victims', 2) %>%
-  formatRound('# of Victims', digits = 0)
+  formatRound('# of Victims', digits = 0) %>%
+  formatStyle(1, `text-align` = 'left')
 ```
 
 ### Residence status
@@ -165,7 +168,8 @@ names(temp)[2] <- "Crime Category"
 
 datatable(temp, options = list(pageLength = 100)) %>%
   formatPercentage('% of Victims', 2) %>%
-  formatRound('# of Victims', digits = 0)
+  formatRound('# of Victims', digits = 0) %>%
+  formatStyle(1:2, `text-align` = 'left')
 ```
 
 

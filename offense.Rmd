@@ -31,8 +31,9 @@ temp <- make_frequency_table(offense,
                                "# of Offenses",
                                "% of Offenses"))
 datatable(temp, options = list(pageLength = 100)) %>%
-  formatPercentage('% of Offenses', 2) %>%
-  formatRound('# of Offenses', digits = 0)
+  formatPercentage('% of Offenses', 2) %>% 
+  formatRound('# of Offenses', digits = 0) %>%
+  formatStyle(1, `text-align` = 'left')
 ```
 
 ### Offense subtype
@@ -46,7 +47,8 @@ temp <- make_frequency_table(offense,
                                "% of Offenses"))
 datatable(temp, options = list(pageLength = 100)) %>%
   formatPercentage('% of Offenses', 2) %>%
-  formatRound('# of Offenses', digits = 0)
+  formatRound('# of Offenses', digits = 0) %>%
+  formatStyle(1, `text-align` = 'left') 
 ```
 
 * Aggravated Assault
@@ -78,7 +80,8 @@ temp <- make_frequency_table(offense[offense$ucr_offense_code %in% "animal cruel
                                "% of Offenses"))
 datatable(temp, options = list(pageLength = 100)) %>%
   formatPercentage('% of Offenses', 2) %>%
-  formatRound('# of Offenses', digits = 0)
+  formatRound('# of Offenses', digits = 0) %>%
+  formatStyle(1, `text-align` = 'left')
 ```
 
 ### Drug, alcohol, or computer use
@@ -109,7 +112,8 @@ temp <- make_frequency_table(offense,
                                "% of Offenses"))
 datatable(temp, options = list(pageLength = 100)) %>%
   formatPercentage('% of Offenses', 2) %>%
-  formatRound('# of Offenses', digits = 0)
+  formatRound('# of Offenses', digits = 0) %>%
+  formatStyle(1, `text-align` = 'left')
 ```
 
 ### Weapons
@@ -123,7 +127,8 @@ temp <- make_frequency_table(offense,
                                "% of Offenses"))
 datatable(temp, options = list(pageLength = 100)) %>%
   formatPercentage('% of Offenses', 2) %>%
-  formatRound('# of Offenses', digits = 0)
+  formatRound('# of Offenses', digits = 0) %>%
+  formatStyle(1, `text-align` = 'left')
 ```
 
 * Aggravated Assault
@@ -188,7 +193,8 @@ temp <- make_frequency_table(offense,
                                "% of Offenses"))
 datatable(temp, options = list(pageLength = 100)) %>%
   formatPercentage('% of Offenses', 2) %>%
-  formatRound('# of Offenses', digits = 0)
+  formatRound('# of Offenses', digits = 0) %>%
+  formatStyle(1, `text-align` = 'left')
 ```
 
 
@@ -202,5 +208,6 @@ temp <- make_frequency_table(offense[!offense$bias_motivation %in% c("no bias mo
                                "% of Offenses"))
 datatable(temp, options = list(pageLength = 100)) %>%
   formatPercentage('% of Offenses', 2) %>%
-  formatRound('# of Offenses', digits = 0)
+  formatRound('# of Offenses', digits = 0) %>%
+  formatStyle(1, `text-align` = 'left')
 ```

@@ -28,7 +28,8 @@ temp <- make_frequency_table(property,
                                "% of Property Stolen"))
 datatable(temp, options = list(pageLength = 100)) %>%
   formatPercentage('% of Property Stolen', 2) %>%
-  formatRound('# of Property Stolen', digits = 0)
+  formatRound('# of Property Stolen', digits = 0) %>%
+  formatStyle(1, `text-align` = 'left')
 ```
 
 
@@ -38,7 +39,7 @@ datatable(temp, options = list(pageLength = 100)) %>%
 property$type_of_property_loss_temp <- capitalize_words(property$type_of_property_loss)
 property$type_of_property_loss_temp <- gsub(" \\(.*", "", property$type_of_property_loss_temp, ignore.case = TRUE)
 property$type_of_property_loss_temp[property$type_of_property_loss_temp == "Stolen/Etc."] <- "Stolen/Robbed/Etc."
-make_barplots(property, "type_of_property_loss", count = FALSE, ylab = "% of Property")
+make_barplots(property, "type_of_property_loss_temp", count = FALSE, ylab = "% of Property")
 ```
 
 
@@ -137,7 +138,8 @@ temp <- make_frequency_table(property,
                                "% of Drugs"))
 datatable(temp, options = list(pageLength = 100)) %>%
   formatPercentage('% of Drugs', 2) %>%
-  formatRound('# of Drugs', digits = 0)
+  formatRound('# of Drugs', digits = 0) %>%
+  formatStyle(1, `text-align` = 'left')
 ```
 
 

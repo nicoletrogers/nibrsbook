@@ -39,7 +39,8 @@ temp <- make_frequency_table(arrestee,
                                "% of Offenses"))
 datatable(temp, options = list(pageLength = 100)) %>%
   formatPercentage('% of Offenses', 2) %>%
-  formatRound('# of Offenses', digits = 0)
+  formatRound('# of Offenses', digits = 0) %>%
+  formatStyle(1, `text-align` = 'left')
 ```
 
 ### Group B Crimes arrested for
@@ -53,7 +54,8 @@ temp <- make_frequency_table(group_b,
                                "% of Offenses"))
 datatable(temp, options = list(pageLength = 100)) %>%
   formatPercentage('% of Offenses', 2) %>%
-  formatRound('# of Offenses', digits = 0)
+  formatRound('# of Offenses', digits = 0) %>%
+  formatStyle(1, `text-align` = 'left')
 ```
 
 ### Arrest date
