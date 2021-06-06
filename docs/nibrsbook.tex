@@ -125,7 +125,7 @@
 
 \title{National Incident-Based Reporting System (NIBRS) Data: A Practitioner's Guide}
 \author{Jacob Kaplan}
-\date{2021-05-31}
+\date{2021-06-05}
 
 \begin{document}
 \maketitle
@@ -265,14 +265,167 @@ Consider, for example, that you want to measure rape in a city. Even if we someh
 \hypertarget{crimes-included-in-nibrs}{%
 \section{Crimes included in NIBRS}\label{crimes-included-in-nibrs}}
 
+\hypertarget{group-a-crimes}{%
+\subsection{Group A crimes}\label{group-a-crimes}}
+
+\begin{itemize}
+\tightlist
+\item
+  Aggravated Assault\\
+\item
+  All Other Larceny\\
+\item
+  Animal Cruelty\\
+\item
+  Arson\\
+\item
+  Assisting Or Promoting Prostitution\\
+\item
+  Betting/Wagering\\
+\item
+  Bribery\\
+\item
+  Burglary/Breaking And Entering\\
+\item
+  Counterfeiting/Forgery\\
+\item
+  Credit Card/ATM Fraud\\
+\item
+  Destruction/Damage/Vandalism of Property\\
+\item
+  Drug Equipment Violations\\
+\item
+  Drug/Narcotic Violations\\
+\item
+  Embezzlement\\
+\item
+  Extortion/Blackmail\\
+\item
+  False Pretenses/Swindle/Confidence Game\\
+\item
+  Fondling (Incident Liberties/Child Molest)\\
+\item
+  Gambling Equipment Violations\\
+\item
+  Hacking/Computer Invasion\\
+\item
+  Human Trafficking - Commercial Sex Acts\\
+\item
+  Human Trafficking - Involuntary Servitude\\
+\item
+  Identity Theft\\
+\item
+  Impersonation\\
+\item
+  Incest\\
+\item
+  Intimidation\\
+\item
+  Justifiable Homicide\\
+\item
+  Kidnapping/Abduction\\
+\item
+  Motor Vehicle Theft\\
+\item
+  Murder/Non-negligent Manslaughter\\
+\item
+  Negligent Manslaughter\\
+\item
+  Operating/Promoting/Assisting Gambling\\
+\item
+  Pocket-Picking\\
+\item
+  Pornography/Obscene Material\\
+\item
+  Prostitution\\
+\item
+  Purchasing Prostitution\\
+\item
+  Purse-Snatching\\
+\item
+  Rape\\
+\item
+  Robbery\\
+\item
+  Sexual Assault With An Object\\
+\item
+  Shoplifting\\
+\item
+  Simple Assault\\
+\item
+  Sodomy\\
+\item
+  Sports Tampering\\
+\item
+  Statutory Rape\\
+\item
+  Stolen Property Offenses (Receiving, Selling, Etc.)
+\item
+  Theft From Building\\
+\item
+  Theft From Coin-Operated Machine Or Device\\
+\item
+  Theft From Motor Vehicle\\
+\item
+  Theft of Motor Vehicle Parts/Accessories\\
+\item
+  Weapon Law Violations\\
+\item
+  Welfare Fraud\\
+\item
+  Wire Fraud
+\end{itemize}
+
+\hypertarget{group-b-crimes}{%
+\subsection{Group B crimes}\label{group-b-crimes}}
+
+\begin{itemize}
+\tightlist
+\item
+  All Other Offenses
+\item
+  Bad Checks\\
+\item
+  Curfew/Loitering/Vagrancy Violations
+\item
+  Disorderly Conduct\\
+\item
+  Driving Under The Influence
+\item
+  Drunkenness\\
+\item
+  Family Offenses, Nonviolent
+\item
+  Liquor Law Violations\\
+\item
+  Peeping Tom
+\item
+  Runaway\\
+\item
+  Trespass of Real Property
+\end{itemize}
+
 \hypertarget{index-crimes}{%
 \subsection{Index crimes}\label{index-crimes}}
 
+\hypertarget{differences-from-ucr-data}{%
+\section{Differences from UCR data}\label{differences-from-ucr-data}}
+
 \hypertarget{nibrs-does-not-have-unfounded-crimes}{%
-\section{NIBRS does not have unfounded crimes}\label{nibrs-does-not-have-unfounded-crimes}}
+\subsection{NIBRS does not have unfounded crimes}\label{nibrs-does-not-have-unfounded-crimes}}
+
+\hypertarget{nibrs-does-not-have-negative-numbers}{%
+\subsection{NIBRS does not have negative numbers}\label{nibrs-does-not-have-negative-numbers}}
 
 \hypertarget{a-summary-of-each-segment-file}{%
 \section{A summary of each segment file}\label{a-summary-of-each-segment-file}}
+
+\hypertarget{which-agencies-report-data}{%
+\section{Which agencies report data}\label{which-agencies-report-data}}
+
+So if this data has the same info (other than unfounded crimes) as UCR data, but is also far more detailed, why do people ever use UCR data? Besides NIBRS being more complicated to use, far fewer agencies report NIBRS data than do UCR data. Nearly all agencies report crime data for UCR, though fewer do so for some of the UCR datasets such as arrests or arsons - for more, please see my \href{https://ucrbook.com/}{UCR book}. In comparison, fewer than half of agencies report to NIBRS, and these agencies are disproportionately smaller and more rural. Starting with 2021 data, the FBI has stopped collecting UCR data, instead only collecting NIBRS data. So if - and this is a very large if - agencies move to NIBRS in 2021, we'll start having much more detail from a very representative sample of agencies.\footnote{I say representative sample as certainly not all agencies will report, even once UCR is no longer collected. It'll take time for all agencies to report, and I doubt we'll ever get to 100\% of agencies.}. Even so, most research - especially policy analyses - requires many years of data so it'll take many years before the full potential of NIBRS data can be realized, assuming most agencies report data starting in 2021.
+
+We'll look here at how many agencies report at least one crime between 1991 - the first year of data - and 2019 - the latest year of data - as well as compare NIBRS reporting to UCR reporting. Figure \ref{fig:agenciesReporting} shows the number of agencies each year that reported at least one incident. Keep in mind that there are about 18,000 police agencies in the United States. Only a little over 600 agencies reporting in 1991. This has grown pretty linearly, adding a few hundred agencies each year though that trend accelerated in recent years. In 2019, nearly 8,200 agencies reported at least some data to NIBRS. Compared to the estimated 18,000 police agencies in the united States, however, this is This is an overcount, however, this constitutes relatively low participation among agencies. And, as agencies may report for part of the year meaning that we actually have fewer fully reporting agencies that this graph applies.
 
 \begin{figure}
 
@@ -283,6 +436,8 @@ Consider, for example, that you want to measure rape in a city. Even if we someh
 \caption{The annual number of agencies reporting at least one incident in that year.}\label{fig:agenciesReporting}
 \end{figure}
 
+Another way to look at reporting is comparing it to reporting to UCR. Figure \ref{fig:agenciesReportingMap} shows the number of agencies in each state that report NIBRS data in 2019. Since 2019 is the year with the most participation, this does overstate reporting for previous years. This map pretty closely follows a population map of the US. Texas had the most agencies, followed by Michigan and Ohio. The southern states have more agencies reporting than the lightly populated northern states. The issue here is that a number of states are in white, indicating that very few agencies reported. Indeed, four four of the most populated states - California, New York, Florida, and New Jersey - don't have any agencies at all that report NIBRS data.
+
 \begin{figure}
 
 {\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/agenciesReportingMap-1} 
@@ -291,6 +446,8 @@ Consider, for example, that you want to measure rape in a city. Even if we someh
 
 \caption{The number of agencies in each state that reported at least one crime in 2019 to NIBRS.}\label{fig:agenciesReportingMap}
 \end{figure}
+
+Since the number of agencies in a state is partially just a factor of population, Figure \ref{fig:agenciesReportingMapPercent} shows each state as a percent of agencies in that state that report to NIBRS that also reported to the UCR Offenses Known and Clearances by Arrest (the ``crime'' dataset) in 2019. Not all agencies in the US reported to UCR in 2019 - and a small number reported to NIBRS but not UCR in 2019 - but this is a fairly good measure of reporting rates. Here the story looks a bit different than in the previous figure. Now we can tell that among north-western states and states along the Appalachian mountains, nearly all agencies report. In total, 18 states have 90\% or more of agencies that reported to UCR in 2019 also reporting to NIBRS. Thirteen agencies have fewer than 10\% of agencies reporting to NIBRS that also reported to UCR, with 5 of these having 0\% of agencies reporting. The remaining states average about 56\% of agencies reporting. So when using NIBRS data, keep in mind that you have very good coverage of certain states, and very poor coverage of other states. And the low - or no - reporting states are systematically high population states.
 
 \begin{figure}
 
@@ -301,12 +458,40 @@ Consider, for example, that you want to measure rape in a city. Even if we someh
 \caption{Agencies in each state reporting at least one crime to NIBRS in 2019 as a percent of agencies that reported UCR Offenses Known and Clearances by Arrests data in 2019.}\label{fig:agenciesReportingMapPercent}
 \end{figure}
 
+For ease of reference, Table \ref{fig:agenciesReportingTable} shows the number of agencies in each state reporting to NIBRs and to UCR in 2019, and the percent shown in Figure \ref{fig:agenciesReportingMapPercent}. If you're reading this on your phone or computer you can search or sort the table.
+
 \textbackslash begin\{figure\}
 
 \{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/agenciesReportingTable-1}
 
+\hypertarget{how-to-identify-a-particular-agency-ori-codes}{%
+\section{How to identify a particular agency (ORI codes)}\label{how-to-identify-a-particular-agency-ori-codes}}
+
+In the UCR and other FBI data sets, agencies are identified using \textbf{OR}iginating Agency \textbf{I}dentifiers or an ORI. An ORI is a unique ID code used to identify an agency.\footnote{I will refer to this an ``ORI'', ``ORI code'', and ``ORI number'', all of which mean the same thing.} If we used the agency's name we'd end up with some duplicates since there can be multiple agencies in the country (and in a state, those this is very rare) with the same name. For example, if you looked for the Philadelphia Police Department using the agency name, you'd find both the ``Philadelphia Police Department'' in Pennsylvania and the one in Mississippi. Each ORI is a 9-digit value starting with the state abbreviation (for some reason the FBI incorrectly puts the abbreviation for Nebraska as NB instead of NE) followed by 7 numbers. In the UCR data (another FBI data set) the ORI uses only a 7-digit code - with only the 5 numbers following the state abbreviation instead of 7. So the NIBRS ORI codes are sometimes called ORI9. For nearly all agencies, the only difference between the UCR ORI and the NIBRS ORI is that the NIBRS ORI has ``00'' at the end so it is technically 9 characters long but isn't any more specific than the 7-character UCR ORI code.
+
+When dealing with specific agencies, make sure to use the ORI rather than the agency name to avoid any mistakes. For an easy way to find the ORI number of an agency, use \href{https://jacobdkaplan.com/crosswalk.html}{this page} on my site. Type an agency name or an ORI code into the search section and it will return everything that is a match.
+
 \hypertarget{the-data-as-you-get-it-from-the-fbi}{%
 \section{The data as you get it from the FBI}\label{the-data-as-you-get-it-from-the-fbi}}
+
+We'll finish this overview of the NIBRS data by briefly talking about format of the data that is released by the FBI, before the processing done by myself or \href{https://www.icpsr.umich.edu/web/pages/NACJD/index.html}{NACJD} that converts the data to a type that software like R or Stata or Excel can understand. The FBI releases their data as fixed-width ASCII files which are basically just an Excel file but with all of the columns squished together. As an example, Figure \ref{fig:ascii} shows what the data looks like as you receive it from the FBI for the Offenses Known and Clearances by Arrest dataset for 1960, the first year with data available. In the figure, it seems like there are multiple rows but that's just because the software that I opened the file in isn't wide enough - in reality what is shown is a single row that is extremely wide because there are over 1,500 columns in this data. If you scroll down enough you'll see the next row, but that isn't shown in the current image. What is shown is a single row with a ton of columns all pushed up next to each other. Since all of the columns are squished together (the gaps are just blank spaces because the value there is a space, but that doesn't mean there is a in the data. Spaces are possible values in the data and are meaningful), you need some way to figure out which parts of the data belong in which column.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{images/nibrs_ascii} 
+
+}
+
+\caption{Fixed-width ASCII file for the 1991 National Incident-Based Reporting System (NIBRS) dataset.}\label{fig:ascii}
+\end{figure}
+
+The ``fixed-width'' part of the file type is how this works (the ASCII part basically means it's a text file). Each row is the same width - literally the same number of characters, including blank spaces. So you must tell the software you are using to process this file - by literally writing code in something called a ``setup file'' but is basically just instructions for whatever software you use (R, SPSS, Stata, SAS can all do this) - which characters are certain columns. For example, in this data the first character says which type of UCR data it is (1 means the Offenses Known and Clearances by Arrest data) and the next two characters (in the setup file written as 2-3 since it is characters 2 through 3 {[}inclusive{]}) are the state number (01 is the state code for Alabama). So we can read this row as the first column indicating it is an Offenses Known data, the second column indicating that it is for the state of Alabama, and so on for each of the remaining columns. To read in this data you'll need a setup file that covers every column in the data (some software, like R, can handle just reading in the specific columns you want and don't need to include every column in the setup file).
+
+The second important thing to know about reading in a fixed-width ASCII file is something called a ``value label.''\footnote{For most fixed-width ASCII files there are also missing values where it'll have placeholder value such as -8 and the setup file will instruct the software to convert that to NA. UCR data, however, does not have this and does not indicate when values are missing in this manner.} For example, in the above image we saw the characters 2-3 is the state and in the row we have the value ``01'' which means that the state is ``Alabama.'' Since this type of data is trying to be as small as efficient as possible, it often replaces longer values with shorter one and provides a translation for the software to use to convert it to the proper value when reading it. ``Alabama'' is more characters than ``01'' so it saves space to say ``01'' and just replace that with ``Alabama'' later on. So ``01'' would be the ``value'' and ``Alabama'' would be the ``label'' that it changes to once read.
+
+Fixed-width ASCII files may seem awful to you reading it today, and it is awful to use. But it appears to be an efficient way to store data back many decades ago when data releases began but now is extremely inefficient - in terms of speed, file size, ease of use - compared to modern software so I'm not sure why they \emph{still} release data in this format. But they do, and even the more \emph{modern} (if starting in 1991, before I was born, is modern!) NIBRS data comes in this format. For you, however, the important part to understand is not how exactly to read this type of data, but to understand that people who made this data publicly available (such as myself and the team at NACJD) must make this conversion process.\footnote{For those interested in reading in this type of data, please see my R package asciiSetupReader.} \textbf{This conversion process, from fixed-width ASCII to a useful format is the most dangerous step taken in using this data - and one that is nearly entirely unseen by researchers.}
+
+Every line of code you write (or, for SPSS users, click you make) invites the possibility of making a mistake.\footnote{Even highly experienced programmers who are doing something like can make mistakes. For example, if you type out ``2+2'' 100 times - something extremely simple that anyone can do - how often will you mistype a character and get a wrong result? I'd guess that at least once you'd make a mistake.} The FBI does not provide a setup file with the fixed-width ASCII data so to read in this data you need to make it yourself. Since some UCR data are massive, this involves assigning the column width for thousands of columns and the value labels for hundreds of different value labels.\footnote{With the exception of the arrest data and some value label changes in hate crimes and homicide data, the setup files remain consistent so a single file will work for all years for a given dataset. You do not need to make a setup file for each year.} A typo anywhere could have potentially far-reaching consequences, so this is a crucial weak point in the data cleaning process - and one in which I have not seen anything written about before. While I have been diligent in checking the setup files and my code to seek out any issues - and I know that NACJD has a robust checking process for their own work - that doesn't mean our work is perfect.\footnote{For evidence of this, please see any of the openICPSR pages for my detail as they detail changes I've made in the data such as decisions on what level to aggregate to and mistakes that I made and later found and fixed.} Even with perfection in processing the raw data to useful files, decisions we make (e.g.~what level to aggregate to, what is an outlier) can affect both what type of questions you can ask when using this data, and how well you can answer them.
 
 \hypertarget{administrative-and-window-exceptional-clearance-segment}{%
 \chapter{Administrative and Window Exceptional Clearance Segment}\label{administrative-and-window-exceptional-clearance-segment}}

@@ -3,6 +3,7 @@ fig:agenciesReporting
 fig:agenciesReportingMap
 fig:agenciesReportingMapPercent
 fig:agenciesReportingTable
+fig:ascii
 fig:administrativeMonthDay
 fig:administrativeMonthDayReport
 fig:administrativeHours
@@ -75,9 +76,15 @@ overview-of-the-data
 nibrs-gives-you-choices-which-means-you-need-to-think
 choosing-a-unit-of-analysis
 crimes-included-in-nibrs
+group-a-crimes
+group-b-crimes
 index-crimes
+differences-from-ucr-data
 nibrs-does-not-have-unfounded-crimes
+nibrs-does-not-have-negative-numbers
 a-summary-of-each-segment-file
+which-agencies-report-data
+how-to-identify-a-particular-agency-ori-codes
 the-data-as-you-get-it-from-the-fbi
 administrative-and-window-exceptional-clearance-segment
 important-variables
