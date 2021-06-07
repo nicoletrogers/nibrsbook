@@ -11,38 +11,26 @@ The Administrative Segment provides information about the incident itself, such 
 
 ### The incident report date
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/administrativeMonthDay-1} 
-
-}
-
-\caption{The percent of crimes that occur (the day of the incident, even if the crime wasn't reported that day) each day of the month for all agencies reporting to NIBRS in 2019.}(\#fig:administrativeMonthDay)
-\end{figure}
+<div class="figure" style="text-align: center">
+<img src="administrative_files/figure-html/administrativeMonthDay-1.png" alt="The percent of crimes that occur (the day of the incident, even if the crime wasn't reported that day) each day of the month for all agencies reporting to NIBRS in 2019." width="90%" />
+<p class="caption">(\#fig:administrativeMonthDay)The percent of crimes that occur (the day of the incident, even if the crime wasn't reported that day) each day of the month for all agencies reporting to NIBRS in 2019.</p>
+</div>
 
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/administrativeMonthDayReport-1} 
-
-}
-
-\caption{The percent of crimes that are reported (the day of the report, even if not the day of the incident) each day of the month for all agencies reporting to NIBRS in 2019.}(\#fig:administrativeMonthDayReport)
-\end{figure}
+<div class="figure" style="text-align: center">
+<img src="administrative_files/figure-html/administrativeMonthDayReport-1.png" alt="The percent of crimes that are reported (the day of the report, even if not the day of the incident) each day of the month for all agencies reporting to NIBRS in 2019." width="90%" />
+<p class="caption">(\#fig:administrativeMonthDayReport)The percent of crimes that are reported (the day of the report, even if not the day of the incident) each day of the month for all agencies reporting to NIBRS in 2019.</p>
+</div>
 
 
 ### Hour of incident
 
 An extremely important aspect of crime data is when exactly the crime occurs. If, for example, crime always spikes when the local high school ends their day that would likely indicate that high school students are involved with crime (both as victims-offenders). In my own research on daylight saving time-crime I only care about the sunset hours, which is when daylight saving time would affect outdoor lighting. When crime happens also would affect police behavior as they'd likely increase patrol during times of elevated crime. Luckily NIBRS data does have the time of each incident, though it's only at the hour level.
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/administrativeHours-1} 
-
-}
-
-\caption{The percent of crimes that are reported each hour for all agencies reporting to NIBRS in 2019.}(\#fig:administrativeHours)
-\end{figure}
+<div class="figure" style="text-align: center">
+<img src="administrative_files/figure-html/administrativeHours-1.png" alt="The percent of crimes that are reported each hour for all agencies reporting to NIBRS in 2019." width="90%" />
+<p class="caption">(\#fig:administrativeHours)The percent of crimes that are reported each hour for all agencies reporting to NIBRS in 2019.</p>
+</div>
 
 
 
@@ -50,58 +38,38 @@ An extremely important aspect of crime data is when exactly the crime occurs. If
 
 ### Exceptional clearance
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/administrativeExceptionalClearances-1} 
-
-}
-
-\caption{The percent of crimes that are reported each hour for all agencies reporting to NIBRS in 2019.}(\#fig:administrativeExceptionalClearances)
-\end{figure}
+<div class="figure" style="text-align: center">
+<img src="administrative_files/figure-html/administrativeExceptionalClearances-1.png" alt="The percent of crimes that are reported each hour for all agencies reporting to NIBRS in 2019." width="90%" />
+<p class="caption">(\#fig:administrativeExceptionalClearances)The percent of crimes that are reported each hour for all agencies reporting to NIBRS in 2019.</p>
+</div>
 
 
 ### Number of other segments
 
 #### Offense segments
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/administrativeOffenseSegments-1} 
-
-}
-
-\caption{The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019.}(\#fig:administrativeOffenseSegments)
-\end{figure}
+<div class="figure" style="text-align: center">
+<img src="administrative_files/figure-html/administrativeOffenseSegments-1.png" alt="The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019." width="90%" />
+<p class="caption">(\#fig:administrativeOffenseSegments)The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019.</p>
+</div>
 
 #### Victim segments
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/administrativeVictimSegments-1} 
-
-}
-
-\caption{The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019.}(\#fig:administrativeVictimSegments)
-\end{figure}
+<div class="figure" style="text-align: center">
+<img src="administrative_files/figure-html/administrativeVictimSegments-1.png" alt="The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019." width="90%" />
+<p class="caption">(\#fig:administrativeVictimSegments)The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019.</p>
+</div>
 
 #### Offender segments
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/administrativeOffenderSegments-1} 
-
-}
-
-\caption{The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019.}(\#fig:administrativeOffenderSegments)
-\end{figure}
+<div class="figure" style="text-align: center">
+<img src="administrative_files/figure-html/administrativeOffenderSegments-1.png" alt="The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019." width="90%" />
+<p class="caption">(\#fig:administrativeOffenderSegments)The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019.</p>
+</div>
 
 #### Arrestee segments
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/administrativeArresteeSegments-1} 
-
-}
-
-\caption{The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019.}(\#fig:administrativeArresteeSegments)
-\end{figure}
+<div class="figure" style="text-align: center">
+<img src="administrative_files/figure-html/administrativeArresteeSegments-1.png" alt="The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019." width="90%" />
+<p class="caption">(\#fig:administrativeArresteeSegments)The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019.</p>
+</div>

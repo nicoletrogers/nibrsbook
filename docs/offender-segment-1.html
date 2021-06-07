@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Administrative and Window Exceptional Clearance Segment | National Incident-Based Reporting System (NIBRS) Data: A Practitioner’s Guide</title>
+  <title>Chapter 5 Offender Segment | National Incident-Based Reporting System (NIBRS) Data: A Practitioner’s Guide</title>
   <meta name="description" content="This is a comprehensive guide to using the FBI’s National Incident-Based Reporting System (NIBRS) Data, an incident-level dataset which provides detailed information on every crime reported to the police, including victim and offender traits and characteristics of the crime." />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 Administrative and Window Exceptional Clearance Segment | National Incident-Based Reporting System (NIBRS) Data: A Practitioner’s Guide" />
+  <meta property="og:title" content="Chapter 5 Offender Segment | National Incident-Based Reporting System (NIBRS) Data: A Practitioner’s Guide" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://nibrsbook.com" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="jacobkap/nibrsbook" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Administrative and Window Exceptional Clearance Segment | National Incident-Based Reporting System (NIBRS) Data: A Practitioner’s Guide" />
+  <meta name="twitter:title" content="Chapter 5 Offender Segment | National Incident-Based Reporting System (NIBRS) Data: A Practitioner’s Guide" />
   
   <meta name="twitter:description" content="This is a comprehensive guide to using the FBI’s National Incident-Based Reporting System (NIBRS) Data, an incident-level dataset which provides detailed information on every crime reported to the police, including victim and offender traits and characteristics of the crime." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="overview-of-the-data.html"/>
-<link rel="next" href="offense-segment-1.html"/>
+<link rel="prev" href="offense-segment-1.html"/>
+<link rel="next" href="victim-segment-1.html"/>
 <script src="libs/header-attrs-2.8/header-attrs.js"></script>
 <script src="libs/jquery-3.5.1/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -284,80 +284,37 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="administrative-and-window-exceptional-clearance-segment" class="section level1" number="3">
-<h1><span class="header-section-number">Chapter 3</span> Administrative and Window Exceptional Clearance Segment</h1>
-<p>The Administrative Segment provides information about the incident itself, such as how many victims or offenders there were. In practice this means that it tells us how many other segments - offense, victim, offender, and arrestee segments - there are for this particular incident. It also has several important variables at the incident-level such as what hour of the day the incident occurred and whether the incident date variable is actually just the date the incident was reported. Finally, it tells us whether the case was cleared exceptionally and, if so, what type of exceptional clearance it was. This can tell us, for example, how many crimes was cleared because the offender died or the victim refused to cooperate. As the UCR data doesn’t differentiate between normal clearances (i.e. arrest the offender) and exceptional clearances, this provides a far deeper understanding of case outcomes.</p>
-<div id="important-variables" class="section level2" number="3.1">
-<h2><span class="header-section-number">3.1</span> Important variables</h2>
-<div id="the-incident-report-date" class="section level3" number="3.1.1">
-<h3><span class="header-section-number">3.1.1</span> The incident report date</h3>
-<div class="figure" style="text-align: center"><span id="fig:administrativeMonthDay"></span>
-<img src="administrative_files/figure-html/administrativeMonthDay-1.png" alt="The percent of crimes that occur (the day of the incident, even if the crime wasn't reported that day) each day of the month for all agencies reporting to NIBRS in 2019." width="90%" />
+<div id="offender-segment-1" class="section level1" number="5">
+<h1><span class="header-section-number">Chapter 5</span> Offender Segment</h1>
+<p>As might be expected, the Offender Segment provides information about who the offender is for each incident, though this is limited to only demographic variables. So we know the age, sex, and race of each offender but nothing else. This means that important variables such as criminal history, ethnicity, socioeconomic status, and motive are missing. In the Victim Segment we learn about the relationship between the victim and offender, and in the Offense Segment we learn which weapon (if any) the offender used. So there is some other data on the offender in other segments but its quite limited. This data has one row per offender so incidents with multiple offenders have multiple rows. In cases where there is no information about the offender there will be a single row where all of the offender variables will be “unknown.” In these cases having a single row for the offender is merely a placeholder and doesn’t necessarily mean that there was only one offender for that incident.</p>
+<div id="important-variables-2" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> Important variables</h2>
+<div id="demographics" class="section level3" number="5.1.1">
+<h3><span class="header-section-number">5.1.1</span> Demographics</h3>
+<div id="age" class="section level4" number="5.1.1.1">
+<h4><span class="header-section-number">5.1.1.1</span> Age</h4>
+<div class="figure" style="text-align: center"><span id="fig:offenderAge"></span>
+<img src="offender_files/figure-html/offenderAge-1.png" alt="The age of all offenders reported in the 2019 NIBRS data. Approximately 39% of offenders have an unknown age are an not shown in the figure." width="90%" />
 <p class="caption">
-Figure 3.1: The percent of crimes that occur (the day of the incident, even if the crime wasn’t reported that day) each day of the month for all agencies reporting to NIBRS in 2019.
-</p>
-</div>
-<div class="figure" style="text-align: center"><span id="fig:administrativeMonthDayReport"></span>
-<img src="administrative_files/figure-html/administrativeMonthDayReport-1.png" alt="The percent of crimes that are reported (the day of the report, even if not the day of the incident) each day of the month for all agencies reporting to NIBRS in 2019." width="90%" />
-<p class="caption">
-Figure 3.2: The percent of crimes that are reported (the day of the report, even if not the day of the incident) each day of the month for all agencies reporting to NIBRS in 2019.
+Figure 5.1: The age of all offenders reported in the 2019 NIBRS data. Approximately 39% of offenders have an unknown age are an not shown in the figure.
 </p>
 </div>
 </div>
-<div id="hour-of-incident" class="section level3" number="3.1.2">
-<h3><span class="header-section-number">3.1.2</span> Hour of incident</h3>
-<p>An extremely important aspect of crime data is when exactly the crime occurs. If, for example, crime always spikes when the local high school ends their day that would likely indicate that high school students are involved with crime (both as victims-offenders). In my own research on daylight saving time-crime I only care about the sunset hours, which is when daylight saving time would affect outdoor lighting. When crime happens also would affect police behavior as they’d likely increase patrol during times of elevated crime. Luckily NIBRS data does have the time of each incident, though it’s only at the hour level.</p>
-<div class="figure" style="text-align: center"><span id="fig:administrativeHours"></span>
-<img src="administrative_files/figure-html/administrativeHours-1.png" alt="The percent of crimes that are reported each hour for all agencies reporting to NIBRS in 2019." width="90%" />
+<div id="sex" class="section level4" number="5.1.1.2">
+<h4><span class="header-section-number">5.1.1.2</span> Sex</h4>
+<div class="figure" style="text-align: center"><span id="fig:offenderSex"></span>
+<img src="offender_files/figure-html/offenderSex-1.png" alt="The sex of all offenders reported in the 2019 NIBRS data." width="90%" />
 <p class="caption">
-Figure 3.3: The percent of crimes that are reported each hour for all agencies reporting to NIBRS in 2019.
+Figure 5.2: The sex of all offenders reported in the 2019 NIBRS data.
 </p>
 </div>
 </div>
-<div id="exceptional-clearance" class="section level3" number="3.1.3">
-<h3><span class="header-section-number">3.1.3</span> Exceptional clearance</h3>
-<div class="figure" style="text-align: center"><span id="fig:administrativeExceptionalClearances"></span>
-<img src="administrative_files/figure-html/administrativeExceptionalClearances-1.png" alt="The percent of crimes that are reported each hour for all agencies reporting to NIBRS in 2019." width="90%" />
+<div id="race" class="section level4" number="5.1.1.3">
+<h4><span class="header-section-number">5.1.1.3</span> Race</h4>
+<div class="figure" style="text-align: center"><span id="fig:offenderRace"></span>
+<img src="offender_files/figure-html/offenderRace-1.png" alt="The race of all offenders reported in the 2019 NIBRS data." width="90%" />
 <p class="caption">
-Figure 3.4: The percent of crimes that are reported each hour for all agencies reporting to NIBRS in 2019.
-</p>
-</div>
-</div>
-<div id="number-of-other-segments" class="section level3" number="3.1.4">
-<h3><span class="header-section-number">3.1.4</span> Number of other segments</h3>
-<div id="offense-segments" class="section level4" number="3.1.4.1">
-<h4><span class="header-section-number">3.1.4.1</span> Offense segments</h4>
-<div class="figure" style="text-align: center"><span id="fig:administrativeOffenseSegments"></span>
-<img src="administrative_files/figure-html/administrativeOffenseSegments-1.png" alt="The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019." width="90%" />
-<p class="caption">
-Figure 3.5: The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019.
-</p>
-</div>
-</div>
-<div id="victim-segments" class="section level4" number="3.1.4.2">
-<h4><span class="header-section-number">3.1.4.2</span> Victim segments</h4>
-<div class="figure" style="text-align: center"><span id="fig:administrativeVictimSegments"></span>
-<img src="administrative_files/figure-html/administrativeVictimSegments-1.png" alt="The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019." width="90%" />
-<p class="caption">
-Figure 3.6: The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019.
-</p>
-</div>
-</div>
-<div id="offender-segments" class="section level4" number="3.1.4.3">
-<h4><span class="header-section-number">3.1.4.3</span> Offender segments</h4>
-<div class="figure" style="text-align: center"><span id="fig:administrativeOffenderSegments"></span>
-<img src="administrative_files/figure-html/administrativeOffenderSegments-1.png" alt="The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019." width="90%" />
-<p class="caption">
-Figure 3.7: The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019.
-</p>
-</div>
-</div>
-<div id="arrestee-segments" class="section level4" number="3.1.4.4">
-<h4><span class="header-section-number">3.1.4.4</span> Arrestee segments</h4>
-<div class="figure" style="text-align: center"><span id="fig:administrativeArresteeSegments"></span>
-<img src="administrative_files/figure-html/administrativeArresteeSegments-1.png" alt="The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019." width="90%" />
-<p class="caption">
-Figure 3.8: The percent of crimes that are reported each day of the month for all agencies reporting to NIBRS in 2019.
+Figure 5.3: The race of all offenders reported in the 2019 NIBRS data.
 </p>
 </div>
 
@@ -370,8 +327,8 @@ Figure 3.8: The percent of crimes that are reported each day of the month for al
           </div>
         </div>
       </div>
-<a href="overview-of-the-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="offense-segment-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="offense-segment-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="victim-segment-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -393,7 +350,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/jacobkap/nibrsbook/edit/main/administrative.Rmd",
+"link": "https://github.com/jacobkap/nibrsbook/edit/main/offender.Rmd",
 "text": "Edit"
 },
 "history": {

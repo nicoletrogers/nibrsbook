@@ -26,6 +26,8 @@ rm(nibrs_group_b_arrest_report_segment_segment_2019)
 gc()
 ```
 
+
+
 ## Important variables
 
 ### Crime arrested for (excluding Group B arrests)
