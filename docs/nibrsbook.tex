@@ -125,7 +125,7 @@
 
 \title{National Incident-Based Reporting System (NIBRS) Data: A Practitioner's Guide}
 \author{Jacob Kaplan}
-\date{2021-06-06}
+\date{2021-06-07}
 
 \begin{document}
 \maketitle
@@ -259,8 +259,12 @@ A major benefit of UCR data is that you have very limited choices. If you wanted
 
 Consider, for example, that you want to measure rape in a city. Even if we somehow solve the issue of victims not reporting their rapes, we still have a few different ways of even measuring rape. Let's use an incident where four men rape a single woman as an example. If you're interested in measuring robbery you could do so in several different ways, each of which addresses a different part of crime measurement and will lead to different answers to your questions: the number of crime incidents, the number of victims, the number of offenders, and the number of crimes. First, we can follow the old UCR measure of incident-level and say that this is one rape since only one crime incident occurred (even though there were multiple offenders). Second, we could look at the victim-level, which again is one rape as there was only one victim. Or at the offender-level, which now has four rapes since each offender would be responsible the robbery. Finally we could look at the offense-level. This data actually makes it unclear what act each offender actually committed so we'd likely measure it as one offense per offender in each incident.\footnote{For four people involved in a rape, do we care if all four actually committed the crime? Does it matter if only three committed the rape and one merely stood by?}
 
+Since this data includes multiple crimes in each criminal incident, unlike the UCR which includes only the most serious crime per incident, we can also measure crime in its relationship to other crimes. In the above example we're interested in rapes. The UCR method would measure it as the number of rapes in incidents where rape is the most serious charge (``most serious'' is based on the FBI's hierarchy of offenses, following what they call the Hierarchy Rule) but this understand crimes where rape happened alongside another, more serious, offense. So we can also look at incidents where any offense that occurred was a rape. Using this method we can examine how often rape - or any crime we're interested in - co-occurs with other offenses, which provides more information on how crime happens that looking at one crime alone. In most cases, however, only one offense occurs per criminal incident, so the opportunity to explore co-occurrence is relatively limited.
+
 \hypertarget{crimes-included-in-nibrs}{%
 \section{Crimes included in NIBRS}\label{crimes-included-in-nibrs}}
+
+NIBRS data contains far more crime categories than in the UCR data
 
 \hypertarget{group-a-crimes}{%
 \subsection{Group A crimes}\label{group-a-crimes}}
@@ -405,6 +409,8 @@ Consider, for example, that you want to measure rape in a city. Even if we someh
 \hypertarget{differences-from-ucr-data}{%
 \section{Differences from UCR data}\label{differences-from-ucr-data}}
 
+While NIBRS data is a far more expansive and detailed dataset than the UCR data, in most cases you can convert NIBRS to UCR which allows for continuation of data over time. So the switch from UCR to NIBRS adds a lot of information but loses relatively little. That relatively little amount of difference, however, can impact the types of questions we can ask so they are detailed below.
+
 \hypertarget{nibrs-does-not-have-unfounded-crimes}{%
 \subsection{NIBRS does not have unfounded crimes}\label{nibrs-does-not-have-unfounded-crimes}}
 
@@ -421,8 +427,20 @@ Negative numbers in UCR data are because when a crime is reported and then later
 \hypertarget{less-information-on-assaults-against-officers}{%
 \subsection{Less information on assaults against officers}\label{less-information-on-assaults-against-officers}}
 
+One of the UCR datasets, the \href{https://ucrbook.com/leoka.html}{Law Enforcement Officers Killed and Assaulted (LEOKA)} has monthly information on the number of police officers killed and assaulted for each reporting agency. For officers killed it only tells us how many officers were killed ``feloniously'' which basically means they were murdered or killed accidentally, such as in a car crash. While still only monthly counts, the info on assaults is far more detailed. It includes, for example, the type of call the officer was on during the assault (e.g.~responding to a robbery, transporting a prisoner), the hour it occurred, what weapon the offender used, and whether the officer was injured. The data also included information on how many people were employee\d by the agency as of Halloween of that year, with breakdowns by if that employee is a sworn officer or not, and by the gender of the employee. NIBRS data keeps some of this info. We know if the victim of a crime is a police officer, what injuries they sustained, and any weapon the offender was using. We don't have any info on the call type the officer was on or information about the number of employees in that department with the same breakdown as in LEOKA. So, assuming that agencies that reported data to LEOKA report at the same rate in NIBRS, we'd still be losing information about assaults on police officers. The FBI has said that they're retiring UCR data after 2020, and LEOKA is one of the UCR datasets so assumably this dataset would also be retired, leaving just NIBRS for information on crimes against police officers.
+
 \hypertarget{a-summary-of-each-segment-file}{%
 \section{A summary of each segment file}\label{a-summary-of-each-segment-file}}
+
+NIBRS data is often discussed - and is used - as if it was a single file with all of this information available. But it comes as multiple different files that each provide different information about a criminal incident, including at different levels of analysis so users must clean each segment before merging them together. In this section we'll discuss each of the segments and how they are related to each other. First, keep in mind that NIBRS is at its core an incident-level dataset (hence the ``Incident-Based'' part of its name). Everything that we have stems from the incident, even though we can get more detailed and look at, for example, individual victims in an incident or even offenses within an incident. Figure \ref{fig:segmentFlowchart} shows the seven segments and how they relate to each other.\footnote{There are also segments called ``batch headers'' which provide information about the agency such as the population under its jurisdiction but we won't cover those since they are agency-level and the same across each incident}. There are also three segments called ``window segments'' - there is one for arrestees, one of exceptional clearances, and one for property - that do not have an associated segment with them, they only have the information available in the given window segment. We'll talk about window segments more at the end of this section.
+
+The first two boxes in Figure \ref{fig:segmentFlowchart}, colored in orange, are not part of NIBRS but are part of the data generating process. First, obviously, a crime has to occur. The police then have to learn about the crime. This can happen in two ways. First, they can discover it themselves while on patrol. This is common in crimes such as drug possession or sale as well as any crime that occurs outdoors which is largely where police are able to observe behavior. The second way is that the victim or witness to a crime reports it. So if they call the police to report a crime, the police learn about it from that call. Alongside being report (or discovered) to the police, agencies must then report the crime to NIBRS. All crimes that occur in that agency's jurisdiction \emph{should} be reported, but that's not always the case. Since reporting is voluntary (at least nationally, though some states do require agencies to report data), agencies are free to report as many or as few crimes as they wish. This often occurs when agencies report only parts of the year, excluding certain months, so you should ensure that the agency reported data for each month you're interested in.
+
+Once a crime occurs and is reported to the police, it can be recorded to NIBRS in two ways, depending on the type of crime that occurred. If it is one of the Group B crimes, then we only get a Group B Arrestee Segment which is the same as the normal arrestee segment which we discuss in more detail below as well as in Chapter \ref{arrestee}. In this segment we have useful variables including the type of arrest (e.g.~arrested by a warrant), what crime was committed, demographics of the arrestee, and weapon use. However, we're missing a wealth of information that is available in the other segments. When the crime is one of the Group A crimes, we get all of this additional information.
+
+For Group A crimes, we get every other segment, starting with the Administrative Segment. The Administrative Segment is largely a meta-segment - it provides information about other segments. The Administrative Segment is the only incident-level segment of the collection and provides information that is consistent across every offense in the incident such as the incident date and time (in hours of the day). It also includes the type of exceptional clearance for the incident, if the incident was exceptionally cleared. The key part of this segment, however, is that it tells you how many of the Offense, Offender, Victim, and Property segments that are associated with this incident. There are always at least one of these segments per incident, but can potentially be multiple of each segment. These other segments do exactly what their name suggests, providing information about the offenses, offender, victims, and stolen or damaged property for each crime incident.
+
+At the bottom is the Arrestee Segment which is only available when a person was arrested for that incident. This provides a bit more detailed data than the Offender Segment for everyone who was arrested for the incident. Now, in reality arrestees aren't necessarily a subset of offenders as some people arrestee may not be the ones included in the offender data. Consider, for example a crime where police initially think two people committed it but end up arresting three people for the crime. The third person would be in the arrestee file but not the offender file. However, in this data there is never a case where there are more arrestees than offenders so it appears that if an offender is arrested who wasn't previously known to the police, they add a corresponding offender segment row for that arrestee.
 
 \begin{figure}
 
@@ -436,11 +454,15 @@ Negative numbers in UCR data are because when a crime is reported and then later
 \hypertarget{administrative-segment}{%
 \subsection{Administrative Segment}\label{administrative-segment}}
 
+The Administrative Segment provides information about the incident itself, such as how many victims or offenders there were. In practice this means that it tells us how many other segments - offense, victim, offender, and arrestee segments - there are for this particular incident. It also has several important variables at the incident-level such as what hour of the day the incident occurred and whether the incident date variable is actually just the date the incident was reported. Finally, it tells us whether the case was cleared exceptionally and, if so, what type of exceptional clearance it was. This can tell us, for example, how many crimes was cleared because the offender died or the victim refused to cooperate. As the UCR data doesn't differentiate between normal clearances (i.e.~arrest the offender) and exceptional clearances, this provides a far deeper understanding of case outcomes.
+
 \hypertarget{offense-segment}{%
 \subsection{Offense Segment}\label{offense-segment}}
 
 \hypertarget{offender-segment}{%
 \subsection{Offender Segment}\label{offender-segment}}
+
+As might be expected, the Offender Segment provides information about who the offender is for each incident, though this is limited to only demographic variables. So we know the age, sex, and race of each offender but nothing else. This means that important variables such as criminal history, ethnicity, socioeconomic status, and motive are missing. In the Victim Segment we learn about the relationship between the victim and offender, and in the Offense Segment we learn which weapon (if any) the offender used. So there is some other data on the offender in other segments but it's quite limited. This data has one row per offender so incidents with multiple offenders have multiple rows. In cases where there is no information about the offender there will be a single row where all of the offender variables will be ``unknown.'' In these cases having a single row for the offender is merely a placeholder and doesn't necessarily mean that there was only one offender for that incident. However, there's no indicator for when this is a placeholder and when there was actually one offender but whose demographic info is unknown.
 
 \hypertarget{victim-segment}{%
 \subsection{Victim Segment}\label{victim-segment}}
@@ -798,7 +820,7 @@ This variable only tells you if the weapon is automatic
 \hypertarget{offender-segment-1}{%
 \chapter{Offender Segment}\label{offender-segment-1}}
 
-As might be expected, the Offender Segment provides information about who the offender is for each incident, though this is limited to only demographic variables. So we know the age, sex, and race of each offender but nothing else. This means that important variables such as criminal history, ethnicity, socioeconomic status, and motive are missing. In the Victim Segment we learn about the relationship between the victim and offender, and in the Offense Segment we learn which weapon (if any) the offender used. So there is some other data on the offender in other segments but its quite limited. This data has one row per offender so incidents with multiple offenders have multiple rows. In cases where there is no information about the offender there will be a single row where all of the offender variables will be ``unknown''. In these cases having a single row for the offender is merely a placeholder and doesn't necessarily mean that there was only one offender for that incident.
+As might be expected, the Offender Segment provides information about who the offender is for each incident, though this is limited to only demographic variables. So we know the age, sex, and race of each offender but nothing else. This means that important variables such as criminal history, ethnicity, socioeconomic status, and motive are missing. In the Victim Segment we learn about the relationship between the victim and offender, and in the Offense Segment we learn which weapon (if any) the offender used. So there is some other data on the offender in other segments but it's quite limited. This data has one row per offender so incidents with multiple offenders have multiple rows. In cases where there is no information about the offender there will be a single row where all of the offender variables will be ``unknown.'' In these cases having a single row for the offender is merely a placeholder and doesn't necessarily mean that there was only one offender for that incident. However, there's no indicator for when this is a placeholder and when there was actually one offender but whose demographic info is unknown.
 
 \hypertarget{important-variables-2}{%
 \section{Important variables}\label{important-variables-2}}
@@ -1018,8 +1040,8 @@ victim\$resident\_status\_of\_victim
 \caption{The ethnicity of all victims reported in the 2019 NIBRS data.}\label{fig:victimEthnicity}
 \end{figure}
 
-\hypertarget{arrestee-group-b-arrestee-and-window-arrestee-segment}{%
-\chapter{Arrestee, Group B Arrestee, and Window Arrestee Segment}\label{arrestee-group-b-arrestee-and-window-arrestee-segment}}
+\hypertarget{arrestee}{%
+\chapter{Arrestee, Group B Arrestee, and Window Arrestee Segment}\label{arrestee}}
 
 \hypertarget{important-variables-4}{%
 \section{Important variables}\label{important-variables-4}}

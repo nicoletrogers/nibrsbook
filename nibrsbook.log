@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.19)  6 JUN 2021 15:07
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.19)  7 JUN 2021 23:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -964,16 +964,6 @@ Package hyperref Warning: Difference (2) between bookmark levels is greater
 (hyperref)                than one, level fixed on input line 256.
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 271--273
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 273--275
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 275--277
 
  []
@@ -1013,7 +1003,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 289--291
 
  []
 
-
+[18]
 Underfull \hbox (badness 10000) in paragraph at lines 291--293
 
  []
@@ -1038,7 +1028,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 299--301
 
  []
 
-[18]
+
 Underfull \hbox (badness 10000) in paragraph at lines 301--303
 
  []
@@ -1109,6 +1099,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 327--329
  []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[19]
 Underfull \hbox (badness 10000) in paragraph at lines 329--331
 
  []
@@ -1134,9 +1127,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 337--339
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[19]
 Underfull \hbox (badness 10000) in paragraph at lines 339--341
 
  []
@@ -1187,12 +1177,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 357--359
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 361--363
+Underfull \hbox (badness 10000) in paragraph at lines 359--361
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 363--365
+Underfull \hbox (badness 10000) in paragraph at lines 361--363
 
  []
 
@@ -1207,6 +1197,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 367--369
  []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[20]
 Underfull \hbox (badness 10000) in paragraph at lines 369--371
 
  []
@@ -1217,11 +1210,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 371--373
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 384--386
+Underfull \hbox (badness 10000) in paragraph at lines 373--375
 
  []
 
-[20]
+
+Underfull \hbox (badness 10000) in paragraph at lines 375--377
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 388--390
 
  []
@@ -1241,65 +1239,73 @@ Underfull \hbox (badness 10000) in paragraph at lines 400--402
 
  []
 
-[21]
+
+Underfull \hbox (badness 10000) in paragraph at lines 404--406
+
+ []
+
+[21] [22] [23]
 File: images/segments_flowchart.png Graphic file (type bmp)
 <images/segments_flowchart.png>
-[22]
+
+Underfull \vbox (badness 3769) has occurred while \output is active []
+
+[24] [25] [26]
 File: nibrsbook_files/figure-latex/agenciesReporting-1.pdf Graphic file (type p
 df)
 <use nibrsbook_files/figure-latex/agenciesReporting-1.pdf>
-[23]
 File: nibrsbook_files/figure-latex/agenciesReportingMap-1.pdf Graphic file (typ
 e pdf)
 <use nibrsbook_files/figure-latex/agenciesReportingMap-1.pdf>
-[24]
+[27]
 File: nibrsbook_files/figure-latex/agenciesReportingMapPercent-1.pdf Graphic fi
 le (type pdf)
 <use nibrsbook_files/figure-latex/agenciesReportingMapPercent-1.pdf>
 
-LaTeX Warning: Reference `fig:agenciesReportingTable' on page 25 undefined on i
-nput line 495.
+LaTeX Warning: Reference `fig:agenciesReportingTable' on page 28 undefined on i
+nput line 517.
 
+[28]
 File: nibrsbook_files/figure-latex/agenciesReportingTable-1.png Graphic file (t
 ype bmp)
 <nibrsbook_files/figure-latex/agenciesReportingTable-1.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[25]
+[29]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[26] [27]
+[30] [31]
 File: images/nibrs_ascii.png Graphic file (type bmp)
 <images/nibrs_ascii.png>
-[28] [29] [30]
+[32] [33] [34]
 Chapter 3.
 File: nibrsbook_files/figure-latex/administrativeMonthDay-1.pdf Graphic file (t
 ype pdf)
 <use nibrsbook_files/figure-latex/administrativeMonthDay-1.pdf>
 
-LaTeX Warning: Float too large for page by 42.00905pt on input line 550.
+LaTeX Warning: Float too large for page by 42.00905pt on input line 572.
 
 File: nibrsbook_files/figure-latex/administrativeMonthDayReport-1.pdf Graphic f
 ile (type pdf)
 <use nibrsbook_files/figure-latex/administrativeMonthDayReport-1.pdf>
 
-LaTeX Warning: Float too large for page by 42.00905pt on input line 559.
+LaTeX Warning: Float too large for page by 42.00905pt on input line 581.
 
-[31
+[35
 
 ]
 Overfull \hbox (44.73586pt too wide) has occurred while \output is active
-\TU/lmr/m/n/12 32 \TU/lmr/m/sl/12 CHAPTER 3.  ADMINISTRATIVE AND WINDOW EXCEPTI
+\TU/lmr/m/n/12 36 \TU/lmr/m/sl/12 CHAPTER 3.  ADMINISTRATIVE AND WINDOW EXCEPTI
 ONAL CLEARANCE SEGMENT
  []
 
-[32] [33]
+[36] [37]
 File: nibrsbook_files/figure-latex/administrativeHours-1.pdf Graphic file (type
  pdf)
 <use nibrsbook_files/figure-latex/administrativeHours-1.pdf>
 
-LaTeX Warning: Float too large for page by 39.24905pt on input line 573.
+LaTeX Warning: Float too large for page by 39.24905pt on input line 595.
 
 File: nibrsbook_files/figure-latex/administrativeExceptionalClearances-1.pdf Gr
 aphic file (type pdf)
@@ -1318,18 +1324,6 @@ File: nibrsbook_files/figure-latex/administrativeArresteeSegments-1.pdf Graphic
 <use nibrsbook_files/figure-latex/administrativeArresteeSegments-1.pdf>
 
 Overfull \hbox (44.73586pt too wide) has occurred while \output is active
-\TU/lmr/m/n/12 34 \TU/lmr/m/sl/12 CHAPTER 3.  ADMINISTRATIVE AND WINDOW EXCEPTI
-ONAL CLEARANCE SEGMENT
- []
-
-[34] [35]
-Overfull \hbox (44.73586pt too wide) has occurred while \output is active
-\TU/lmr/m/n/12 36 \TU/lmr/m/sl/12 CHAPTER 3.  ADMINISTRATIVE AND WINDOW EXCEPTI
-ONAL CLEARANCE SEGMENT
- []
-
-[36] [37]
-Overfull \hbox (44.73586pt too wide) has occurred while \output is active
 \TU/lmr/m/n/12 38 \TU/lmr/m/sl/12 CHAPTER 3.  ADMINISTRATIVE AND WINDOW EXCEPTI
 ONAL CLEARANCE SEGMENT
  []
@@ -1340,7 +1334,19 @@ Overfull \hbox (44.73586pt too wide) has occurred while \output is active
 ONAL CLEARANCE SEGMENT
  []
 
-[40]
+[40] [41]
+Overfull \hbox (44.73586pt too wide) has occurred while \output is active
+\TU/lmr/m/n/12 42 \TU/lmr/m/sl/12 CHAPTER 3.  ADMINISTRATIVE AND WINDOW EXCEPTI
+ONAL CLEARANCE SEGMENT
+ []
+
+[42] [43]
+Overfull \hbox (44.73586pt too wide) has occurred while \output is active
+\TU/lmr/m/n/12 44 \TU/lmr/m/sl/12 CHAPTER 3.  ADMINISTRATIVE AND WINDOW EXCEPTI
+ONAL CLEARANCE SEGMENT
+ []
+
+[44]
 Chapter 4.
 File: nibrsbook_files/figure-latex/offenseCrimeCategories-1.png Graphic file (t
 ype bmp)
@@ -1348,13 +1354,13 @@ ype bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[41
+[45
 
-] [42]
+] [46]
 File: nibrsbook_files/figure-latex/offenseCrimeSubcategories-1.png Graphic file
  (type bmp)
 <nibrsbook_files/figure-latex/offenseCrimeSubcategories-1.png>
-[43]
+[47]
 File: nibrsbook_files/figure-latex/offenseCrimeSubcategoriesAnimalAbuse-1.png G
 raphic file (type bmp)
 <nibrsbook_files/figure-latex/offenseCrimeSubcategoriesAnimalAbuse-1.png>
@@ -1370,10 +1376,10 @@ File: nibrsbook_files/figure-latex/offenseLocation-1.png Graphic file (type bmp
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[44] [45] [46] [47]
+[48] [49] [50] [51]
 File: nibrsbook_files/figure-latex/offenseWeapon-1.png Graphic file (type bmp)
 <nibrsbook_files/figure-latex/offenseWeapon-1.png>
-[48]
+[52]
 File: nibrsbook_files/figure-latex/offenseAutomaticWeapon-1.pdf Graphic file (t
 ype pdf)
 <use nibrsbook_files/figure-latex/offenseAutomaticWeapon-1.pdf>
@@ -1383,25 +1389,25 @@ pe bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[49] [50]
+[53] [54]
 File: nibrsbook_files/figure-latex/offenseBiasMotivationBiases-1.png Graphic fi
 le (type bmp)
 <nibrsbook_files/figure-latex/offenseBiasMotivationBiases-1.png>
-[51]
+[55]
 Chapter 5.
 File: nibrsbook_files/figure-latex/offenderAge-1.pdf Graphic file (type pdf)
 <use nibrsbook_files/figure-latex/offenderAge-1.pdf>
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 3930) has occurred while \output is active []
 
-[52
+[56
 
 ]
 File: nibrsbook_files/figure-latex/offenderSex-1.pdf Graphic file (type pdf)
 <use nibrsbook_files/figure-latex/offenderSex-1.pdf>
 File: nibrsbook_files/figure-latex/offenderRace-1.pdf Graphic file (type pdf)
 <use nibrsbook_files/figure-latex/offenderRace-1.pdf>
-[53] [54] [55]
+[57] [58] [59]
 Chapter 6.
 File: nibrsbook_files/figure-latex/victimCrimeCategory-1.png Graphic file (type
  bmp)
@@ -1409,9 +1415,9 @@ File: nibrsbook_files/figure-latex/victimCrimeCategory-1.png Graphic file (type
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[56
+[60
 
-] [57]
+] [61]
 File: nibrsbook_files/figure-latex/victimType-1.pdf Graphic file (type pdf)
 <use nibrsbook_files/figure-latex/victimType-1.pdf>
 File: nibrsbook_files/figure-latex/victimInjury-1.pdf Graphic file (type pdf)
@@ -1431,14 +1437,14 @@ bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[58] [59] [60] [61] [62]
+[62] [63] [64] [65] [66]
 File: nibrsbook_files/figure-latex/victimRelationshipPolice-1.png Graphic file 
 (type bmp)
 <nibrsbook_files/figure-latex/victimRelationshipPolice-1.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[63]
+[67]
 File: nibrsbook_files/figure-latex/victimResidenceStatus-1.pdf Graphic file (ty
 pe pdf)
 <use nibrsbook_files/figure-latex/victimResidenceStatus-1.pdf>
@@ -1451,7 +1457,7 @@ le (type pdf)
 File: nibrsbook_files/figure-latex/victimAggAssault-1.png Graphic file (type bm
 p)
 <nibrsbook_files/figure-latex/victimAggAssault-1.png>
-[64] [65] [66] [67]
+[68] [69] [70] [71]
 File: nibrsbook_files/figure-latex/victimJustifiableHomicide-1.pdf Graphic file
  (type pdf)
 <use nibrsbook_files/figure-latex/victimJustifiableHomicide-1.pdf>
@@ -1464,22 +1470,22 @@ File: nibrsbook_files/figure-latex/victimRace-1.pdf Graphic file (type pdf)
 File: nibrsbook_files/figure-latex/victimEthnicity-1.pdf Graphic file (type pdf
 )
 <use nibrsbook_files/figure-latex/victimEthnicity-1.pdf>
-[68] [69] [70] [71] [72]
+[72] [73] [74] [75] [76]
 Chapter 7.
 File: nibrsbook_files/figure-latex/arresteeCrime-1.png Graphic file (type bmp)
 <nibrsbook_files/figure-latex/arresteeCrime-1.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[73
+[77
 
 ]
 Overfull \hbox (33.60785pt too wide) has occurred while \output is active
-\TU/lmr/m/n/12 74 \TU/lmr/m/sl/12 CHAPTER 7.  ARRESTEE, GROUP B ARRESTEE, AND W
+\TU/lmr/m/n/12 78 \TU/lmr/m/sl/12 CHAPTER 7.  ARRESTEE, GROUP B ARRESTEE, AND W
 INDOW ARRESTEE SEGMENT
  []
 
-[74]
+[78]
 File: nibrsbook_files/figure-latex/GrouBarresteeCrime-1.png Graphic file (type 
 bmp)
 <nibrsbook_files/figure-latex/GrouBarresteeCrime-1.png>
@@ -1509,27 +1515,7 @@ type pdf)
 <use nibrsbook_files/figure-latex/arresteeResidenceStatus-1.pdf>
 File: nibrsbook_files/figure-latex/arresteeAge-1.pdf Graphic file (type pdf)
 <use nibrsbook_files/figure-latex/arresteeAge-1.pdf>
-[75]
-Overfull \hbox (33.60785pt too wide) has occurred while \output is active
-\TU/lmr/m/n/12 76 \TU/lmr/m/sl/12 CHAPTER 7.  ARRESTEE, GROUP B ARRESTEE, AND W
-INDOW ARRESTEE SEGMENT
- []
-
-[76] [77]
-Overfull \hbox (33.60785pt too wide) has occurred while \output is active
-\TU/lmr/m/n/12 78 \TU/lmr/m/sl/12 CHAPTER 7.  ARRESTEE, GROUP B ARRESTEE, AND W
-INDOW ARRESTEE SEGMENT
- []
-
-[78] [79]
-File: nibrsbook_files/figure-latex/arresteeSex-1.pdf Graphic file (type pdf)
-<use nibrsbook_files/figure-latex/arresteeSex-1.pdf>
-File: nibrsbook_files/figure-latex/arresteeRace-1.pdf Graphic file (type pdf)
-<use nibrsbook_files/figure-latex/arresteeRace-1.pdf>
-File: nibrsbook_files/figure-latex/arresteeEthnicity-1.pdf Graphic file (type p
-df)
-<use nibrsbook_files/figure-latex/arresteeEthnicity-1.pdf>
-
+[79]
 Overfull \hbox (33.60785pt too wide) has occurred while \output is active
 \TU/lmr/m/n/12 80 \TU/lmr/m/sl/12 CHAPTER 7.  ARRESTEE, GROUP B ARRESTEE, AND W
 INDOW ARRESTEE SEGMENT
@@ -1542,6 +1528,14 @@ INDOW ARRESTEE SEGMENT
  []
 
 [82] [83]
+File: nibrsbook_files/figure-latex/arresteeSex-1.pdf Graphic file (type pdf)
+<use nibrsbook_files/figure-latex/arresteeSex-1.pdf>
+File: nibrsbook_files/figure-latex/arresteeRace-1.pdf Graphic file (type pdf)
+<use nibrsbook_files/figure-latex/arresteeRace-1.pdf>
+File: nibrsbook_files/figure-latex/arresteeEthnicity-1.pdf Graphic file (type p
+df)
+<use nibrsbook_files/figure-latex/arresteeEthnicity-1.pdf>
+
 Overfull \hbox (33.60785pt too wide) has occurred while \output is active
 \TU/lmr/m/n/12 84 \TU/lmr/m/sl/12 CHAPTER 7.  ARRESTEE, GROUP B ARRESTEE, AND W
 INDOW ARRESTEE SEGMENT
@@ -1553,7 +1547,19 @@ Overfull \hbox (33.60785pt too wide) has occurred while \output is active
 INDOW ARRESTEE SEGMENT
  []
 
-[86]
+[86] [87]
+Overfull \hbox (33.60785pt too wide) has occurred while \output is active
+\TU/lmr/m/n/12 88 \TU/lmr/m/sl/12 CHAPTER 7.  ARRESTEE, GROUP B ARRESTEE, AND W
+INDOW ARRESTEE SEGMENT
+ []
+
+[88] [89]
+Overfull \hbox (33.60785pt too wide) has occurred while \output is active
+\TU/lmr/m/n/12 90 \TU/lmr/m/sl/12 CHAPTER 7.  ARRESTEE, GROUP B ARRESTEE, AND W
+INDOW ARRESTEE SEGMENT
+ []
+
+[90]
 Chapter 8.
 File: nibrsbook_files/figure-latex/propertyDescription-1.png Graphic file (type
  bmp)
@@ -1561,9 +1567,9 @@ File: nibrsbook_files/figure-latex/propertyDescription-1.png Graphic file (type
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[87
+[91
 
-] [88]
+] [92]
 File: nibrsbook_files/figure-latex/propertyTypeLoss-1.pdf Graphic file (type pd
 f)
 <use nibrsbook_files/figure-latex/propertyTypeLoss-1.pdf>
@@ -1581,12 +1587,12 @@ File: nibrsbook_files/figure-latex/propertyDrugs-1.png Graphic file (type bmp)
 
 Underfull \vbox (badness 6477) has occurred while \output is active []
 
-[89] [90] [91] [92]
+[93] [94] [95] [96]
 File: nibrsbook_files/figure-latex/propertyAllGramMeasures-1.pdf Graphic file (
 type pdf)
 <use nibrsbook_files/figure-latex/propertyAllGramMeasures-1.pdf>
 No file nibrsbook.bbl.
-[93] [94] (./nibrsbook.aux)
+[97] [98] (./nibrsbook.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1595,11 +1601,11 @@ Package rerunfilecheck Info: File `nibrsbook.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  17570 strings out of 478918
- 331526 string characters out of 5865075
+ 331481 string characters out of 5865075
  802084 words of memory out of 5000000
  37118 multiletter control sequences out of 15000+600000
  407970 words of font info for 74 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  98i,8n,122p,1722b,400s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on nibrsbook.pdf (94 pages).
+Output written on nibrsbook.pdf (98 pages).

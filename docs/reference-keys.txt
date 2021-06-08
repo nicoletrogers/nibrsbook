@@ -131,7 +131,7 @@ age-1
 sex-1
 race-1
 ethnicity
-arrestee-group-b-arrestee-and-window-arrestee-segment
+arrestee
 important-variables-4
 crime-arrested-for-excluding-group-b-arrests
 group-b-crimes-arrested-for
