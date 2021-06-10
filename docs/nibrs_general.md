@@ -121,7 +121,7 @@ While NIBRS data is a far more expansive and detailed dataset than the UCR data,
 ### NIBRS does not have unfounded crimes
 
 In UCR data, which provides monthly counts of crimes (as well as more detailed info on hate crimes and homicides, and monthly counts of arrests), there is a count of "unfounded" crimes in each month. An unfounded crime is just one which was previously reported and then new evidence finds out that it never actually occurred (or that it isn't for the crime that was reported). For example, if you misplace your wallet but think it is stolen you may call the police and report it stolen. This would be recorded in UCR data as a theft. If you then find your wallet and tell the police, then it would be changed to an unfounded crime since the reported theft never actually happened. NIBRS data does not include unfounded data at all so you don't know how many reported crimes turn out to not be true. In practice, this doesn't matter too much as unfounded crimes are very, constituting generally under 2% of each crime type. The major exception is in rape, where some agencies report that over 10% of rapes in certain years are unfounded. For more on this issue with rape, please see this section of my UCR book [here](https://ucrbook.com/offensesKnown.html#unfounded-crimes). 
- Given that UCR data already has major issue with rape data, including both changes in the definition of rape in 2013 and evidence that the number of cleared rapes is greatly exaggerated (see [here](https://www.propublica.org/article/when-it-comes-to-rape-just-because-a-case-is-cleared-does-not-mean-solved) for more info on this), losing unfounded rapes means losing a not insignificant number of likely real rapes. 
+Given that UCR data already has major issue with rape data, including both changes in the definition of rape in 2013 and evidence that the number of cleared rapes is greatly exaggerated (see [here](https://www.propublica.org/article/when-it-comes-to-rape-just-because-a-case-is-cleared-does-not-mean-solved) for more info on this), losing unfounded rapes means losing a not insignificant number of likely real rapes. 
 
 Unfounded crimes are also a way that the UCR used to identify justifiable homicides and when police killed someone. But that way was not always used properly and NIBRS data already includes justifiable homicide as a crime category so this isn't a problem.
 
@@ -213,59 +213,59 @@ For ease of reference, Table \@ref(tab:agenciesReportingTable) shows the number 
 
 Table: (\#tab:agenciesReportingTable)The number of agencies in each state reporting to NIBRS and to UCR in 2019. Also shows NIBRS reporting in each state as a percent of UCR reporting.
 
-|State                | NIBRS Agencies| UCR Agencies| \% of UCR Agencies|
-|:--------------------|--------------:|------------:|------------------:|
-|Alabama              |              1|          352|               0.00|
-|Alaska               |              0|           33|               0.00|
-|Arizona              |             11|          114|               0.10|
-|Arkansas             |            277|          278|               1.00|
-|California           |              0|          738|               0.00|
-|Colorado             |            217|          222|               0.98|
-|Connecticut          |            100|          107|               0.93|
-|Delaware             |             60|           63|               0.95|
-|District of Columbia |              1|            3|               0.33|
-|Florida              |              0|          678|               0.00|
-|Georgia              |            251|          522|               0.48|
-|Hawaii               |              1|            3|               0.33|
-|Idaho                |            104|          108|               0.96|
-|Illinois             |              1|          739|               0.00|
-|Indiana              |            180|          289|               0.62|
-|Iowa                 |            240|          246|               0.98|
-|Kansas               |            343|          376|               0.91|
-|Kentucky             |            389|          413|               0.94|
-|Louisiana            |             30|          188|               0.16|
-|Maine                |             39|          135|               0.29|
-|Maryland             |              2|          156|               0.01|
-|Massachusetts        |            317|          363|               0.87|
-|Michigan             |            616|          650|               0.95|
-|Minnesota            |            153|          409|               0.37|
-|Mississippi          |             26|           79|               0.33|
-|Missouri             |             80|          576|               0.14|
-|Montana              |             95|          103|               0.92|
-|Nebraska             |            113|          236|               0.48|
-|Nevada               |              4|           62|               0.06|
-|New Hampshire        |            187|          188|               0.99|
-|New Jersey           |              0|          578|               0.00|
-|New Mexico           |              4|          121|               0.03|
-|New York             |              0|          572|               0.00|
-|North Carolina       |            320|          333|               0.96|
-|North Dakota         |            106|          110|               0.96|
-|Ohio                 |            529|          604|               0.88|
-|Oklahoma             |            381|          437|               0.87|
-|Oregon               |            184|          208|               0.88|
-|Pennsylvania         |             21|         1477|               0.01|
-|Rhode Island         |             47|           49|               0.96|
-|South Carolina       |            306|          405|               0.76|
-|South Dakota         |            115|          129|               0.89|
-|Tennessee            |            443|          465|               0.95|
-|Texas                |            619|         1053|               0.59|
-|Utah                 |             88|          129|               0.68|
-|Vermont              |             86|           89|               0.97|
-|Virginia             |            411|          415|               0.99|
-|Washington           |            231|          257|               0.90|
-|West Virginia        |            221|          240|               0.92|
-|Wisconsin            |            215|          428|               0.50|
-|Wyoming              |              5|           55|               0.09|
+|State                | NIBRS Agencies| UCR Agencies| \% of UCR Agencies|percent |
+|:--------------------|--------------:|------------:|------------------:|:-------|
+|Alabama              |              1|          352|               0.28|\%      |
+|Alaska               |              0|           33|               0.00|\%      |
+|Arizona              |             11|          114|               9.65|\%      |
+|Arkansas             |            277|          278|              99.64|\%      |
+|California           |              0|          738|               0.00|\%      |
+|Colorado             |            217|          222|              97.75|\%      |
+|Connecticut          |            100|          107|              93.46|\%      |
+|Delaware             |             60|           63|              95.24|\%      |
+|District of Columbia |              1|            3|              33.33|\%      |
+|Florida              |              0|          678|               0.00|\%      |
+|Georgia              |            251|          522|              48.08|\%      |
+|Hawaii               |              1|            3|              33.33|\%      |
+|Idaho                |            104|          108|              96.30|\%      |
+|Illinois             |              1|          739|               0.14|\%      |
+|Indiana              |            180|          289|              62.28|\%      |
+|Iowa                 |            240|          246|              97.56|\%      |
+|Kansas               |            343|          376|              91.22|\%      |
+|Kentucky             |            389|          413|              94.19|\%      |
+|Louisiana            |             30|          188|              15.96|\%      |
+|Maine                |             39|          135|              28.89|\%      |
+|Maryland             |              2|          156|               1.28|\%      |
+|Massachusetts        |            317|          363|              87.33|\%      |
+|Michigan             |            616|          650|              94.77|\%      |
+|Minnesota            |            153|          409|              37.41|\%      |
+|Mississippi          |             26|           79|              32.91|\%      |
+|Missouri             |             80|          576|              13.89|\%      |
+|Montana              |             95|          103|              92.23|\%      |
+|Nebraska             |            113|          236|              47.88|\%      |
+|Nevada               |              4|           62|               6.45|\%      |
+|New Hampshire        |            187|          188|              99.47|\%      |
+|New Jersey           |              0|          578|               0.00|\%      |
+|New Mexico           |              4|          121|               3.31|\%      |
+|New York             |              0|          572|               0.00|\%      |
+|North Carolina       |            320|          333|              96.10|\%      |
+|North Dakota         |            106|          110|              96.36|\%      |
+|Ohio                 |            529|          604|              87.58|\%      |
+|Oklahoma             |            381|          437|              87.19|\%      |
+|Oregon               |            184|          208|              88.46|\%      |
+|Pennsylvania         |             21|         1477|               1.42|\%      |
+|Rhode Island         |             47|           49|              95.92|\%      |
+|South Carolina       |            306|          405|              75.56|\%      |
+|South Dakota         |            115|          129|              89.15|\%      |
+|Tennessee            |            443|          465|              95.27|\%      |
+|Texas                |            619|         1053|              58.78|\%      |
+|Utah                 |             88|          129|              68.22|\%      |
+|Vermont              |             86|           89|              96.63|\%      |
+|Virginia             |            411|          415|              99.04|\%      |
+|Washington           |            231|          257|              89.88|\%      |
+|West Virginia        |            221|          240|              92.08|\%      |
+|Wisconsin            |            215|          428|              50.23|\%      |
+|Wyoming              |              5|           55|               9.09|\%      |
 
 \setstretch{1.15}
 ## How to identify a particular agency (ORI codes)
