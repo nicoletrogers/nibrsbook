@@ -22,34 +22,47 @@ This segment provides information about the offense that occurred, and each inci
 
 ### Crime category
 
-```{r offenseCrimeCategories, fig.cap = "The number and percent of crimes reported from all agencies in 2019, by crime category."}
+```{r offenseCrimeCategories}
 
 temp <- make_frequency_table(offense,
                              "ucr_offense_code",
                              c("Crime Category",
-                               "# of Offenses",
-                               "% of Offenses"))
-datatable(temp, options = list(pageLength = 100)) %>%
-  formatPercentage('% of Offenses', 2) %>% 
-  formatRound('# of Offenses', digits = 0) %>%
-  formatStyle(1, `text-align` = 'left')
+                               "\\# of Offenses",
+                               "\\% of Offenses"))
+
+knitr::kable(temp, 
+             format = "markdown",
+             digits = 2, 
+             align = c("l", "r", "r"),
+             booktabs = TRUE, 
+             longtable = TRUE,
+             escape = FALSE,
+             caption = "The number and percent of crimes reported from all agencies in 2019, by crime category.") %>%
+  kable_styling(bootstrap_options = "striped", full_width = FALSE, latex_options = c("hold_position", "repeat_header"))
 ```
 
+\setstretch{1.15}
 ### Offense subtype
 
-```{r offenseCrimeSubcategories, fig.cap = "The number and percent of crime subtypes. This breakdown is only available for a subset of offenses."}
+```{r offenseCrimeSubcategories}
 
 temp <- make_frequency_table(offense,
                              "type_criminal_activity_1",
                              c("Crime Subcategory",
-                               "# of Offenses",
-                               "% of Offenses"))
-datatable(temp, options = list(pageLength = 100)) %>%
-  formatPercentage('% of Offenses', 2) %>%
-  formatRound('# of Offenses', digits = 0) %>%
-  formatStyle(1, `text-align` = 'left') 
+                               "\\# of Offenses",
+                               "\\% of Offenses"))
+knitr::kable(temp, 
+             format = "markdown",
+             digits = 2, 
+             align = c("l", "r", "r"),
+             booktabs = TRUE, 
+             longtable = TRUE,
+             escape = FALSE,
+             caption = "The number and percent of crime subtypes. This breakdown is only available for a subset of offenses.") %>%
+  kable_styling(bootstrap_options = "striped", full_width = FALSE, latex_options = c("hold_position", "repeat_header"))
 ```
 
+\setstretch{1.15}
 * Aggravated Assault
 * Animal Cruelty
 * Counterfeiting/Forgery
@@ -70,19 +83,25 @@ datatable(temp, options = list(pageLength = 100)) %>%
 * Stolen Property Offenses (Receiving, Selling, Etc.)
 * Weapon Law Violations
 
-```{r offenseCrimeSubcategoriesAnimalAbuse, fig.cap = "The number and percent of crime subtypes for animal abuse."}
+```{r offenseCrimeSubcategoriesAnimalAbuse}
 
 temp <- make_frequency_table(offense[offense$ucr_offense_code %in% "animal cruelty", ],
                              "type_criminal_activity_1",
                              c("Crime Subcategory",
-                               "# of Offenses",
-                               "% of Offenses"))
-datatable(temp, options = list(pageLength = 100)) %>%
-  formatPercentage('% of Offenses', 2) %>%
-  formatRound('# of Offenses', digits = 0) %>%
-  formatStyle(1, `text-align` = 'left')
+                               "\\# of Offenses",
+                               "\\% of Offenses"))
+knitr::kable(temp, 
+             format = "markdown",
+             digits = 2, 
+             align = c("l", "r", "r"),
+             booktabs = TRUE, 
+             longtable = TRUE,
+             escape = FALSE,
+             caption = "The number and percent of crime subtypes for animal abuse.") %>%
+  kable_styling(bootstrap_options = "striped", full_width = FALSE, latex_options = c("hold_position", "repeat_header"))
 ```
 
+\setstretch{1.15}
 ### Drug, alcohol, or computer use
 
 ```{r offenseDrugAlcoholComputer, fig.cap = "The distribution of drug, alcohol, or computer use for all offenses in 2019."}
@@ -102,34 +121,46 @@ crimeutils::make_barplots("offender_suspected_of_using_1", count = FALSE, ylab =
 
 ### Crime location
 
-```{r offenseLocation, fig.cap = "The location of crimes for all offenses reported in 2019."}
+```{r offenseLocation}
 
 temp <- make_frequency_table(offense,
                              "location_type",
                              c("Crime Location",
-                               "# of Offenses",
-                               "% of Offenses"))
-datatable(temp, options = list(pageLength = 100)) %>%
-  formatPercentage('% of Offenses', 2) %>%
-  formatRound('# of Offenses', digits = 0) %>%
-  formatStyle(1, `text-align` = 'left')
+                               "\\# of Offenses",
+                               "\\% of Offenses"))
+knitr::kable(temp, 
+             format = "markdown",
+             digits = 2, 
+             align = c("l", "r", "r"),
+             booktabs = TRUE, 
+             longtable = TRUE,
+             escape = FALSE,
+             caption = "The location of crimes for all offenses reported in 2019.") %>%
+  kable_styling(bootstrap_options = "striped", full_width = FALSE, latex_options = c("hold_position", "repeat_header"))
 ```
 
+\setstretch{1.15}
 ### Weapons
 
-```{r offenseWeapon, fig.cap = "The weapon used by an offender in the crime for all offenses reported in 2019. The use means that it was part of the crime though may not have been physically discharged. For example, pointing a gun at someone even without firing the gun is still using it."}
+```{r offenseWeapon}
 
 temp <- make_frequency_table(offense,
                              "type_weapon_force_involved_1",
                              c("Weapon Used",
-                               "# of Offenses",
-                               "% of Offenses"))
-datatable(temp, options = list(pageLength = 100)) %>%
-  formatPercentage('% of Offenses', 2) %>%
-  formatRound('# of Offenses', digits = 0) %>%
-  formatStyle(1, `text-align` = 'left')
+                               "\\# of Offenses",
+                               "\\% of Offenses"))
+knitr::kable(temp, 
+             format = "markdown",
+             digits = 2, 
+             align = c("l", "r", "r"),
+             booktabs = TRUE, 
+             longtable = TRUE,
+             escape = FALSE,
+             caption = "The weapon used by an offender in the crime for all offenses reported in 2019. The use means that it was part of the crime though may not have been physically discharged. For example, pointing a gun at someone even without firing the gun is still using it.") %>%
+  kable_styling(bootstrap_options = "striped", full_width = FALSE, latex_options = c("hold_position", "repeat_header"))
 ```
 
+\setstretch{1.15}
 * Aggravated Assault
 * Extortion/Blackmail
 * Fondling (Incident Liberties/Child Molest)
@@ -183,30 +214,43 @@ ggplot(temp, aes(x = type_weapon_force_involved_1, y = automatic_weapon)) +
 
 ### Hate crime indicator (bias motivation)
 
-```{r offenseBiasMotivation, fig.cap = "The bias motivation (i.e. if hate crime or not and what type of hate crime) for all offenses reported in 2019."}
+```{r offenseBiasMotivation}
 
 temp <- make_frequency_table(offense,
                              "bias_motivation",
                              c("Bias Motivation",
-                               "# of Offenses",
-                               "% of Offenses"))
-datatable(temp, options = list(pageLength = 100)) %>%
-  formatPercentage('% of Offenses', 2) %>%
-  formatRound('# of Offenses', digits = 0) %>%
-  formatStyle(1, `text-align` = 'left')
+                               "\\# of Offenses",
+                               "\\% of Offenses"))
+knitr::kable(temp, 
+             format = "markdown",
+             digits = 2, 
+             align = c("l", "r", "r"),
+             booktabs = TRUE, 
+             longtable = TRUE,
+             escape = FALSE,
+             caption = "The bias motivation (i.e. if hate crime or not and what type of hate crime) for all offenses reported in 2019.") %>%
+  kable_styling(bootstrap_options = "striped", full_width = FALSE, latex_options = c("hold_position", "repeat_header"))
 ```
 
+\setstretch{1.15}
 
-```{r offenseBiasMotivationBiases, fig.cap = "The bias motivation (i.e. if hate crime or not and what type of hate crime) for all offenses reported in 2019 that were classifed as hate crimes. For easier viewing of how hate crimes are broken down, this excludes all offenses where there was no bias motivation."}
+```{r offenseBiasMotivationBiases}
 
 temp <- make_frequency_table(offense[!offense$bias_motivation %in% c("no bias motivation",
                                                                      "unknown bias motivation"),],
                              "bias_motivation",
                              c("Bias Motivation",
-                               "# of Offenses",
-                               "% of Offenses"))
-datatable(temp, options = list(pageLength = 100)) %>%
-  formatPercentage('% of Offenses', 2) %>%
-  formatRound('# of Offenses', digits = 0) %>%
-  formatStyle(1, `text-align` = 'left')
+                               "\\# of Offenses",
+                               "\\% of Offenses"))
+knitr::kable(temp, 
+             format = "markdown",
+             digits = 2, 
+             align = c("l", "r", "r"),
+             booktabs = TRUE, 
+             longtable = TRUE,
+             escape = FALSE,
+             caption = "The bias motivation (i.e. if hate crime or not and what type of hate crime) for all offenses reported in 2019 that were classifed as hate crimes. For easier viewing of how hate crimes are broken down, this excludes all offenses where there was no bias motivation.") %>%
+  kable_styling(bootstrap_options = "striped", full_width = FALSE, latex_options = c("hold_position", "repeat_header"))
 ```
+
+\setstretch{1.15}

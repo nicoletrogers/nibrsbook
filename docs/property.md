@@ -12,16 +12,82 @@ For drug offenses it includes the drugs seized by police. For these offenses, th
 
 ### Description of property
 
-<div class="figure" style="text-align: center">
 
-```{=html}
-<div id="htmlwidget-65f187a87685e28515e3" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-65f187a87685e28515e3">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60","61","62","63","64","65","66","67","68"],["Other","Drugs/Narcotics","Automobiles","Money","Vehicle Parts/Accessories","Clothes/Furs","Drug/Narcotic Equipment","Purses/Handbags/Wallets","Merchandise","Credit/Debit Cards","Tools - Power/Hand","Consumable Goods","Portible Electronic Communications","Computer Hardware/Software","Household Goods","Identity Documents","Radios/Tvs/Vcrs","Jewelry/Precious Metals","Firearms","Bicycles","Trucks","Negotiable Instruments","Identity - Intangible","Structures - Single Occupancy Dwellings","Alcohol","Documents - Personal Or Business","Building Materials","Office-Type Equipment","Lawn/Yard/Garden Equipment","Other Motor Vehicles","Nonnegotiable Instruments","Structures - Other","Trailers","Recreational/Sports Equipment","Structures - Commercial/Business","Structures - Other Dwellings","Photographic/Optical Equipment","Recordings - Audio/Visual","Camping/Hunting/Fishing Equipment/Supplies","Heavy Construction/Industrial Equipment","Fuel","Weapons - Other","Pending Inventory (Of Property)","Firearm Accessories","Collections/Collectibles","Structures - Public/Community","Musical Instruments","Recreational Vehicles","Metals, Non-Precious","Medical/Medical Lab Equipment","Farm Equipment","Pets","Structures - Storage","Artistic Supplies/Accessories","Watercraft","Explosives","Chemicals","Gambling Equipment","Watercraft Equipment/Parts/Accessories","Law Enforcement Equipment","Livestock","Crops","Buses","Logging Equipment","Structures - Industrial Manufacturing","Special Category","Aircraft Parts/Accessories","Aircraft"],[1005616,714797,645115,637046,328970,312506,292097,291694,266945,242981,240156,236104,201787,192970,192923,185098,169518,123742,117039,89936,83796,73327,71331,64507,64339,62883,54091,53707,48398,46222,41596,33265,30124,29946,27401,23936,23579,23358,22040,17546,17013,16690,14262,14053,12763,11351,10047,10020,9951,9212,8831,8071,7019,4705,3775,3671,3549,3226,2628,2610,2114,2094,1962,1437,1398,1277,761,455],[0.132888317841175,0.0944576965043502,0.0852494860504505,0.084183198484759,0.0434721304356847,0.041296475648035,0.0385995041610851,0.0385462492485838,0.0352757633193113,0.0321090121451594,0.0317356991729102,0.0312002428318293,0.0266653822057498,0.0255002492937778,0.025494038423089,0.024459994526505,0.0224011569662777,0.0163520332078077,0.0154662573306444,0.0118846992821951,0.011073321707112,0.00968988329773976,0.0094261195127453,0.00852435394721315,0.0085021533881555,0.0083097485429892,0.00714791928563887,0.00709717515064995,0.00639561105519125,0.00610806095692074,0.00549675270572617,0.00439584283959951,0.00398077167293238,0.00395724965202606,0.00362093761153964,0.00316305108097561,0.00311587489297811,0.00308667058612251,0.00291250191446785,0.00231863695967572,0.00224820304314163,0.0022055198254296,0.00188466888857262,0.00185705033593542,0.00168658175745704,0.00149999134442489,0.00132767271935837,0.00132410477236696,0.00131498668561114,0.00121733065499446,0.00116698295856015,0.00106655185806125,0.00092753407158121,0.000621747799799059,0.000498851847872783,0.000485108644646619,0.00046898681009285,0.000426303592380821,0.000347280173830377,0.000344901542502772,0.000279357034808759,0.000276714111111419,0.00025927081470898,0.000189894067653825,0.000184740366444014,0.000168750678075111,0.000100563246683758,6.01265141144679e-05]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Property<\/th>\n      <th># of Property Stolen<\/th>\n      <th>% of Property Stolen<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":100,"columnDefs":[{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 0, 3, \",\", \".\");\n  }"},{"targets":3,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatPercentage(data, 2, 3, \",\", \".\");\n  }"},{"className":"dt-right","targets":[2,3]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'text-align':'left'});\n}"}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render","options.rowCallback"],"jsHooks":[]}</script>
-```
+Table: (\#tab:propertyDescription)The number and percent of property stolen (including forcibly taken such as during a robbery) in a crime or seized by police (generally in drug arrests) for all offenses in 2019. Each offense can have multiple items stolen/seized.
 
-<p class="caption">(\#fig:propertyDescription)The number and percent of property stolen (including forcibly taken such as during a robbery) in a crime or seized by police (generally in drug arrests) for all offenses in 2019. Each offense can have multiple items stolen/seized.</p>
-</div>
+|Property                                   | # of Property Stolen| % of Property Stolen|
+|:------------------------------------------|--------------------:|--------------------:|
+|Other                                      |            1,005,616|              13.29\%|
+|Drugs/Narcotics                            |              714,797|               9.45\%|
+|Automobiles                                |              645,115|               8.52\%|
+|Money                                      |              637,046|               8.42\%|
+|Vehicle Parts/Accessories                  |              328,970|               4.35\%|
+|Clothes/Furs                               |              312,506|               4.13\%|
+|Drug/Narcotic Equipment                    |              292,097|               3.86\%|
+|Purses/Handbags/Wallets                    |              291,694|               3.85\%|
+|Merchandise                                |              266,945|               3.53\%|
+|Credit/Debit Cards                         |              242,981|               3.21\%|
+|Tools - Power/Hand                         |              240,156|               3.17\%|
+|Consumable Goods                           |              236,104|               3.12\%|
+|Portible Electronic Communications         |              201,787|               2.67\%|
+|Computer Hardware/Software                 |              192,970|               2.55\%|
+|Household Goods                            |              192,923|               2.55\%|
+|Identity Documents                         |              185,098|               2.45\%|
+|Radios/Tvs/Vcrs                            |              169,518|               2.24\%|
+|Jewelry/Precious Metals                    |              123,742|               1.64\%|
+|Firearms                                   |              117,039|               1.55\%|
+|Bicycles                                   |               89,936|               1.19\%|
+|Trucks                                     |               83,796|               1.11\%|
+|Negotiable Instruments                     |               73,327|               0.97\%|
+|Identity - Intangible                      |               71,331|               0.94\%|
+|Structures - Single Occupancy Dwellings    |               64,507|               0.85\%|
+|Alcohol                                    |               64,339|               0.85\%|
+|Documents - Personal Or Business           |               62,883|               0.83\%|
+|Building Materials                         |               54,091|               0.71\%|
+|Office-Type Equipment                      |               53,707|               0.71\%|
+|Lawn/Yard/Garden Equipment                 |               48,398|               0.64\%|
+|Other Motor Vehicles                       |               46,222|               0.61\%|
+|Nonnegotiable Instruments                  |               41,596|               0.55\%|
+|Structures - Other                         |               33,265|               0.44\%|
+|Trailers                                   |               30,124|               0.40\%|
+|Recreational/Sports Equipment              |               29,946|               0.40\%|
+|Structures - Commercial/Business           |               27,401|               0.36\%|
+|Structures - Other Dwellings               |               23,936|               0.32\%|
+|Photographic/Optical Equipment             |               23,579|               0.31\%|
+|Recordings - Audio/Visual                  |               23,358|               0.31\%|
+|Camping/Hunting/Fishing Equipment/Supplies |               22,040|               0.29\%|
+|Heavy Construction/Industrial Equipment    |               17,546|               0.23\%|
+|Fuel                                       |               17,013|               0.22\%|
+|Weapons - Other                            |               16,690|               0.22\%|
+|Pending Inventory (Of Property)            |               14,262|               0.19\%|
+|Firearm Accessories                        |               14,053|               0.19\%|
+|Collections/Collectibles                   |               12,763|               0.17\%|
+|Structures - Public/Community              |               11,351|               0.15\%|
+|Musical Instruments                        |               10,047|               0.13\%|
+|Recreational Vehicles                      |               10,020|               0.13\%|
+|Metals, Non-Precious                       |                9,951|               0.13\%|
+|Medical/Medical Lab Equipment              |                9,212|               0.12\%|
+|Farm Equipment                             |                8,831|               0.12\%|
+|Pets                                       |                8,071|               0.11\%|
+|Structures - Storage                       |                7,019|               0.09\%|
+|Artistic Supplies/Accessories              |                4,705|               0.06\%|
+|Watercraft                                 |                3,775|               0.05\%|
+|Explosives                                 |                3,671|               0.05\%|
+|Chemicals                                  |                3,549|               0.05\%|
+|Gambling Equipment                         |                3,226|               0.04\%|
+|Watercraft Equipment/Parts/Accessories     |                2,628|               0.03\%|
+|Law Enforcement Equipment                  |                2,610|               0.03\%|
+|Livestock                                  |                2,114|               0.03\%|
+|Crops                                      |                2,094|               0.03\%|
+|Buses                                      |                1,962|               0.03\%|
+|Logging Equipment                          |                1,437|               0.02\%|
+|Structures - Industrial Manufacturing      |                1,398|               0.02\%|
+|Special Category                           |                1,277|               0.02\%|
+|Aircraft Parts/Accessories                 |                  761|               0.01\%|
+|Aircraft                                   |                  455|               0.01\%|
+|Total                                      |            7,567,377|                100\%|
 
+\setstretch{1.15}
 
 ### Type of property loss
 
@@ -59,16 +125,30 @@ For drug offenses it includes the drugs seized by police. For these offenses, th
 
 #### Suspected drug type
 
-<div class="figure" style="text-align: center">
 
-```{=html}
-<div id="htmlwidget-7606a529974bf2dd3811" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-7606a529974bf2dd3811">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16"],["Marijuana","Amphetamines/Methamphetamines","Heroin","Cocaine (All Forms Except Crack)","Crack Cocaine","Unknown Type Drug","Other Narcotics: Codeine, Demerol, Dihydromorphinone Or Dilaudid, Hydrocodone Or Percodan, Methadone, Etc.","Pcp","Hashish","Other Hallucinogrens: Bmda (White Acid), Dmt, Mda, Mdma, Mescaline Or Peyote, Psilocybin, Stp, Etc.","Other Depressants: Glutethimide Or Doriden, Methaqualone Or Quaalude, Pentazocine Or Talwin, Etc.","Other Stimulants: Adipex, Fastine And Ionamin (Derivatives of Phentermine), Benzedrine, Didrex, Methylphenidate Or Ritalin, Phenmetrazine Or Preludin, Tenuate, Etc.","Opium","Lsd","Morphine","Barbiturates"],[455429,201716,82437,49699,49646,39836,37401,30348,7046,6256,5165,3368,2984,1624,1297,1276],[0.466853847352408,0.206776227847894,0.0845050065195463,0.0509457442533684,0.0508914147005519,0.0408353219999836,0.03833923782813,0.0311093069599232,0.00722275526689137,0.00641293740415447,0.00529456868485579,0.0034524893186049,0.00305885633216063,0.00166473950517053,0.00132953641515159,0.00130800961120542]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Drug Type<\/th>\n      <th># of Drugs<\/th>\n      <th>% of Drugs<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":100,"columnDefs":[{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 0, 3, \",\", \".\");\n  }"},{"targets":3,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatPercentage(data, 2, 3, \",\", \".\");\n  }"},{"className":"dt-right","targets":[2,3]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'text-align':'left'});\n}"}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render","options.rowCallback"],"jsHooks":[]}</script>
-```
+Table: (\#tab:propertyDrugs)The number and percent of drugs seized by police by type of drug.
 
-<p class="caption">(\#fig:propertyDrugs)The number and percent of drugs seized by police by type of drug.</p>
-</div>
+|Drug Type                                                                                                                                                            | \# of Drugs| \% of Drugs|
+|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------:|-----------:|
+|Marijuana                                                                                                                                                            |     455,429|     46.69\%|
+|Amphetamines/Methamphetamines                                                                                                                                        |     201,716|     20.68\%|
+|Heroin                                                                                                                                                               |      82,437|      8.45\%|
+|Cocaine (All Forms Except Crack)                                                                                                                                     |      49,699|      5.09\%|
+|Crack Cocaine                                                                                                                                                        |      49,646|      5.09\%|
+|Unknown Type Drug                                                                                                                                                    |      39,836|      4.08\%|
+|Other Narcotics: Codeine, Demerol, Dihydromorphinone Or Dilaudid, Hydrocodone Or Percodan, Methadone, Etc.                                                           |      37,401|      3.83\%|
+|Pcp                                                                                                                                                                  |      30,348|      3.11\%|
+|Hashish                                                                                                                                                              |       7,046|      0.72\%|
+|Other Hallucinogrens: Bmda (White Acid), Dmt, Mda, Mdma, Mescaline Or Peyote, Psilocybin, Stp, Etc.                                                                  |       6,256|      0.64\%|
+|Other Depressants: Glutethimide Or Doriden, Methaqualone Or Quaalude, Pentazocine Or Talwin, Etc.                                                                    |       5,165|      0.53\%|
+|Other Stimulants: Adipex, Fastine And Ionamin (Derivatives of Phentermine), Benzedrine, Didrex, Methylphenidate Or Ritalin, Phenmetrazine Or Preludin, Tenuate, Etc. |       3,368|      0.35\%|
+|Opium                                                                                                                                                                |       2,984|      0.31\%|
+|Lsd                                                                                                                                                                  |       1,624|      0.17\%|
+|Morphine                                                                                                                                                             |       1,297|      0.13\%|
+|Barbiturates                                                                                                                                                         |       1,276|      0.13\%|
+|Total                                                                                                                                                                |     975,528|       100\%|
 
+\setstretch{1.15}
 
 #### Amount of drugs
 

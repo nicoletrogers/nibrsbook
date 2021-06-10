@@ -10,28 +10,91 @@ This segment provides information about the offense that occurred, and each inci
 
 ### Crime category
 
-<div class="figure" style="text-align: center">
 
-```{=html}
-<div id="htmlwidget-1f6d39b877f5d7277efe" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1f6d39b877f5d7277efe">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52"],["Simple Assault","Destruction/Damage/Vandalism of Property","All Other Larceny","Drug/Narcotic Violations","Theft From Motor Vehicle","Shoplifting","Burglary/Breaking And Entering","Drug Equipment Violations","Motor Vehicle Theft","Intimidation","Aggravated Assault","Theft From Building","False Pretenses/Swindle/Confidence Game","Credit Card/Atm Fraud","Weapon Law Violations","Counterfeiting/Forgery","Theft of Motor Vehicle Parts/Accessories","Robbery","Identity Theft","Stolen Property Offenses (Receiving, Selling, Etc.)","Impersonation","Fondling (Incident Liberties/Child Molest)","Rape","Embezzlement","Kidnapping/Abduction","Pornography/Obscene Material","Arson","Wire Fraud","Sodomy","Animal Cruelty","Pocket-Picking","Purse-Snatching","Prostitution","Murder/Nonnegligent Manslaughter","Extortion/Blackmail","Statutory Rape","Theft From Coin-Operated Machine Or Device","Sexual Assault With An Object","Hacking/Computer Invasion","Assisting Or Promoting Prostitution","Purchasing Prostitution","Welfare Fraud","Human Trafficking - Commercial Sex Acts","Incest","Operating/Promoting/Assisting Gambling","Negligent Manslaughter","Bribery","Gambling Equipment Violations","Justifiable Homicide","Betting/Wagering","Human Trafficking - Involuntary Servitude","Sports Tampering"],[944601,821523,810138,710822,550202,487848,476554,327715,304964,279040,271444,212507,195003,134527,134182,112766,111384,92935,68515,58449,57920,46141,46049,24166,22757,19814,15500,15373,11046,9956,9527,7487,7309,6095,5583,5430,4617,4599,2765,2283,1159,940,915,762,613,561,544,351,300,260,142,7],[0.127029258656095,0.110477818315808,0.108946771757738,0.0955908279754548,0.073990766652905,0.0656054458727638,0.0640866369288161,0.0440708759576605,0.0410113379477656,0.0375250971948968,0.0365035926138602,0.0285777875200542,0.0262238622717046,0.0180910935720251,0.0180446982217805,0.0151646900454405,0.0149788396859102,0.0124978315216734,0.0092138476000156,0.00786017920708329,0.00778903967004165,0.00620500827719944,0.0061926361838009,0.00324982618553568,0.00306034488555141,0.00266457237607398,0.002084428779103,0.00206734991104196,0.00148545808348204,0.00133887567256448,0.00128118406312995,0.00100684633994478,0.000982909028804116,0.000819651187653727,0.000750797798305292,0.000730222469066405,0.000620890817620551,0.00061847019065127,0.00037183519833676,0.000307016187270461,0.000155861480966476,0.000126410519506891,0.000123048537605112,0.000102473208366225,8.24357962316217e-05,7.54428738759213e-05,7.31567261827116e-05,4.72022259009775e-05,4.03437828213483e-05,3.49646117785019e-05,1.90960572021049e-05,9.41354932498127e-07]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Crime Category<\/th>\n      <th># of Offenses<\/th>\n      <th>% of Offenses<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":100,"columnDefs":[{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 0, 3, \",\", \".\");\n  }"},{"targets":3,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatPercentage(data, 2, 3, \",\", \".\");\n  }"},{"className":"dt-right","targets":[2,3]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'text-align':'left'});\n}"}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render","options.rowCallback"],"jsHooks":[]}</script>
-```
+Table: (\#tab:offenseCrimeCategories)The number and percent of crimes reported from all agencies in 2019, by crime category.
 
-<p class="caption">(\#fig:offenseCrimeCategories)The number and percent of crimes reported from all agencies in 2019, by crime category.</p>
-</div>
+|Crime Category                                      | \# of Offenses| \% of Offenses|
+|:---------------------------------------------------|--------------:|--------------:|
+|Simple Assault                                      |        944,601|        12.70\%|
+|Destruction/Damage/Vandalism of Property            |        821,523|        11.05\%|
+|All Other Larceny                                   |        810,138|        10.89\%|
+|Drug/Narcotic Violations                            |        710,822|         9.56\%|
+|Theft From Motor Vehicle                            |        550,202|         7.40\%|
+|Shoplifting                                         |        487,848|         6.56\%|
+|Burglary/Breaking And Entering                      |        476,554|         6.41\%|
+|Drug Equipment Violations                           |        327,715|         4.41\%|
+|Motor Vehicle Theft                                 |        304,964|         4.10\%|
+|Intimidation                                        |        279,040|         3.75\%|
+|Aggravated Assault                                  |        271,444|         3.65\%|
+|Theft From Building                                 |        212,507|         2.86\%|
+|False Pretenses/Swindle/Confidence Game             |        195,003|         2.62\%|
+|Credit Card/Atm Fraud                               |        134,527|         1.81\%|
+|Weapon Law Violations                               |        134,182|         1.80\%|
+|Counterfeiting/Forgery                              |        112,766|         1.52\%|
+|Theft of Motor Vehicle Parts/Accessories            |        111,384|         1.50\%|
+|Robbery                                             |         92,935|         1.25\%|
+|Identity Theft                                      |         68,515|         0.92\%|
+|Stolen Property Offenses (Receiving, Selling, Etc.) |         58,449|         0.79\%|
+|Impersonation                                       |         57,920|         0.78\%|
+|Fondling (Incident Liberties/Child Molest)          |         46,141|         0.62\%|
+|Rape                                                |         46,049|         0.62\%|
+|Embezzlement                                        |         24,166|         0.32\%|
+|Kidnapping/Abduction                                |         22,757|         0.31\%|
+|Pornography/Obscene Material                        |         19,814|         0.27\%|
+|Arson                                               |         15,500|         0.21\%|
+|Wire Fraud                                          |         15,373|         0.21\%|
+|Sodomy                                              |         11,046|         0.15\%|
+|Animal Cruelty                                      |          9,956|         0.13\%|
+|Pocket-Picking                                      |          9,527|         0.13\%|
+|Purse-Snatching                                     |          7,487|         0.10\%|
+|Prostitution                                        |          7,309|         0.10\%|
+|Murder/Nonnegligent Manslaughter                    |          6,095|         0.08\%|
+|Extortion/Blackmail                                 |          5,583|         0.08\%|
+|Statutory Rape                                      |          5,430|         0.07\%|
+|Theft From Coin-Operated Machine Or Device          |          4,617|         0.06\%|
+|Sexual Assault With An Object                       |          4,599|         0.06\%|
+|Hacking/Computer Invasion                           |          2,765|         0.04\%|
+|Assisting Or Promoting Prostitution                 |          2,283|         0.03\%|
+|Purchasing Prostitution                             |          1,159|         0.02\%|
+|Welfare Fraud                                       |            940|         0.01\%|
+|Human Trafficking - Commercial Sex Acts             |            915|         0.01\%|
+|Incest                                              |            762|         0.01\%|
+|Operating/Promoting/Assisting Gambling              |            613|         0.01\%|
+|Negligent Manslaughter                              |            561|         0.01\%|
+|Bribery                                             |            544|         0.01\%|
+|Gambling Equipment Violations                       |            351|         0.00\%|
+|Justifiable Homicide                                |            300|         0.00\%|
+|Betting/Wagering                                    |            260|         0.00\%|
+|Human Trafficking - Involuntary Servitude           |            142|         0.00\%|
+|Sports Tampering                                    |              7|         0.00\%|
+|Total                                               |      7,436,090|          100\%|
 
+\setstretch{1.15}
 ### Offense subtype
 
-<div class="figure" style="text-align: center">
 
-```{=html}
-<div id="htmlwidget-709f35cdb0f18fd0bad3" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-709f35cdb0f18fd0bad3">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15"],["Possessing/Concealing","None/Unknown Gang Involvement (Mutually Exclusive)","Distributing/Selling","Using/Consuming","Buying/Receiving","Cultivating/Manufacturing/Publishing","Operating/Promoting/Assisting","Transporting/Transmitting/Importing","Simple/Gross Neglect (Unintentionally, Intentionally, Or Knowingly Failing To Provide Food, Water, Shelter, Veterinary Care, Hoarding, Etc.)","Other Gang","Exploiting Children","Intentional Abuse And Torture (Tormenting, Mutilating, Poisoning, Or Abandonment)","Juvenile Gang Involvement","Animal Sexual Abuse (Bestiality)","Organized Abuse (Dog Fighting And Cock Fighting)"],[1074646,1040062,100708,90049,46692,26289,12446,7821,6996,6482,5448,2770,2582,104,86],[0.443485649648128,0.429213500766142,0.0415602466344858,0.0371614831908966,0.0192688866411547,0.0108489625826548,0.00513622383140178,0.00322757565365526,0.00288711408681399,0.0026749962136547,0.00224828438321364,0.00114312550321251,0.00106554153404141,4.29187914563543e-05,3.54905390889083e-05]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Crime Subcategory<\/th>\n      <th># of Offenses<\/th>\n      <th>% of Offenses<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":100,"columnDefs":[{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 0, 3, \",\", \".\");\n  }"},{"targets":3,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatPercentage(data, 2, 3, \",\", \".\");\n  }"},{"className":"dt-right","targets":[2,3]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'text-align':'left'});\n}"}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render","options.rowCallback"],"jsHooks":[]}</script>
-```
+Table: (\#tab:offenseCrimeSubcategories)The number and percent of crime subtypes. This breakdown is only available for a subset of offenses.
 
-<p class="caption">(\#fig:offenseCrimeSubcategories)The number and percent of crime subtypes. This breakdown is only available for a subset of offenses.</p>
-</div>
+|Crime Subcategory                                                                                                                            | \# of Offenses| \% of Offenses|
+|:--------------------------------------------------------------------------------------------------------------------------------------------|--------------:|--------------:|
+|Possessing/Concealing                                                                                                                        |      1,074,646|        44.35\%|
+|None/Unknown Gang Involvement (Mutually Exclusive)                                                                                           |      1,040,062|        42.92\%|
+|Distributing/Selling                                                                                                                         |        100,708|         4.16\%|
+|Using/Consuming                                                                                                                              |         90,049|         3.72\%|
+|Buying/Receiving                                                                                                                             |         46,692|         1.93\%|
+|Cultivating/Manufacturing/Publishing                                                                                                         |         26,289|         1.08\%|
+|Operating/Promoting/Assisting                                                                                                                |         12,446|         0.51\%|
+|Transporting/Transmitting/Importing                                                                                                          |          7,821|         0.32\%|
+|Simple/Gross Neglect (Unintentionally, Intentionally, Or Knowingly Failing To Provide Food, Water, Shelter, Veterinary Care, Hoarding, Etc.) |          6,996|         0.29\%|
+|Other Gang                                                                                                                                   |          6,482|         0.27\%|
+|Exploiting Children                                                                                                                          |          5,448|         0.22\%|
+|Intentional Abuse And Torture (Tormenting, Mutilating, Poisoning, Or Abandonment)                                                            |          2,770|         0.11\%|
+|Juvenile Gang Involvement                                                                                                                    |          2,582|         0.11\%|
+|Animal Sexual Abuse (Bestiality)                                                                                                             |            104|         0.00\%|
+|Organized Abuse (Dog Fighting And Cock Fighting)                                                                                             |             86|         0.00\%|
+|Total                                                                                                                                        |      2,423,181|          100\%|
 
+\setstretch{1.15}
 * Aggravated Assault
 * Animal Cruelty
 * Counterfeiting/Forgery
@@ -52,16 +115,18 @@ This segment provides information about the offense that occurred, and each inci
 * Stolen Property Offenses (Receiving, Selling, Etc.)
 * Weapon Law Violations
 
-<div class="figure" style="text-align: center">
 
-```{=html}
-<div id="htmlwidget-656b4b2203544e4dd7a1" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-656b4b2203544e4dd7a1">{"x":{"filter":"none","data":[["1","2","3","4"],["Simple/Gross Neglect (Unintentionally, Intentionally, Or Knowingly Failing To Provide Food, Water, Shelter, Veterinary Care, Hoarding, Etc.)","Intentional Abuse And Torture (Tormenting, Mutilating, Poisoning, Or Abandonment)","Animal Sexual Abuse (Bestiality)","Organized Abuse (Dog Fighting And Cock Fighting)"],[6996,2770,104,86],[0.702691844114102,0.278224186420249,0.0104459622338288,0.00863800723182001]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Crime Subcategory<\/th>\n      <th># of Offenses<\/th>\n      <th>% of Offenses<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":100,"columnDefs":[{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 0, 3, \",\", \".\");\n  }"},{"targets":3,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatPercentage(data, 2, 3, \",\", \".\");\n  }"},{"className":"dt-right","targets":[2,3]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'text-align':'left'});\n}"}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render","options.rowCallback"],"jsHooks":[]}</script>
-```
+Table: (\#tab:offenseCrimeSubcategoriesAnimalAbuse)The number and percent of crime subtypes for animal abuse.
 
-<p class="caption">(\#fig:offenseCrimeSubcategoriesAnimalAbuse)The number and percent of crime subtypes for animal abuse.</p>
-</div>
+|Crime Subcategory                                                                                                                            | \# of Offenses| \% of Offenses|
+|:--------------------------------------------------------------------------------------------------------------------------------------------|--------------:|--------------:|
+|Simple/Gross Neglect (Unintentionally, Intentionally, Or Knowingly Failing To Provide Food, Water, Shelter, Veterinary Care, Hoarding, Etc.) |          6,996|        70.27\%|
+|Intentional Abuse And Torture (Tormenting, Mutilating, Poisoning, Or Abandonment)                                                            |          2,770|        27.82\%|
+|Animal Sexual Abuse (Bestiality)                                                                                                             |            104|         1.04\%|
+|Organized Abuse (Dog Fighting And Cock Fighting)                                                                                             |             86|         0.86\%|
+|Total                                                                                                                                        |          9,956|          100\%|
 
+\setstretch{1.15}
 ### Drug, alcohol, or computer use
 
 <div class="figure" style="text-align: center">
@@ -76,28 +141,87 @@ This segment provides information about the offense that occurred, and each inci
 
 ### Crime location
 
-<div class="figure" style="text-align: center">
 
-```{=html}
-<div id="htmlwidget-923ef8a1b097f76e5f45" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-923ef8a1b097f76e5f45">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46"],["Residence/Home","Highway/Road/Alley","Parking Lot/Garage","Department/Discount Store","Other/Unknown","Convenience Store","Grocery/Supermarket","Commercial/Office Building","Specialty Store (Tv, Fur, Etc.)","Restaurant","School - Elementary/Secondary","Hotel/Motel/Etc.","Service/Gas Station","Drug Store/Doctors Office/Hospital","Bank/Savings And Loan","Government/Public Building","Bar/Nightclub","Park/Playground","Field/Woods","School - College/University","Jail/Prison","Construction Site","Rental Storage Facility","Shopping Mall","School/College","Cyberspace","Air/Bus/Train Terminal","Church/Synagogue/Temple","Auto Dealership New/Used","Liquor Store","Industrial Site","Gambling Facility/Casino/Race Track","Shelter - Mission/Homeless","Community Center","Lake/Waterway","Farm Facility","Arena/Stadium/Fairgrounds/Coliseum","Camp/Campground","Abandoned/Condemned Structure","Atm Separate From Bank","Daycare Facility","Amusement Park","Dock/Wharf/Freight/Model Terminal","Rest Area","Tribal Lands","Military Installation"],[3001159,1188722,637986,373338,349477,174952,171702,159915,144856,132347,119901,118313,103901,74861,67959,59118,55220,54226,40011,36947,35363,34744,34630,32532,31330,29830,28409,26470,20643,15237,11044,9688,7252,7191,7020,5992,5256,5251,4705,4597,4260,3429,3383,2236,414,273],[0.40359368969445,0.159858474009863,0.0857958954235358,0.0502062239698551,0.0469974139635212,0.0235274183072018,0.0230903606599705,0.0215052534329197,0.0194801300145641,0.01779792875019,0.0161241996802083,0.0159106465898073,0.0139725312630697,0.0100672530859632,0.00913907712252003,0.0079501458427749,0.00742594562464951,0.00729227322423478,0.00538065031488323,0.00496860581300119,0.00475559063970447,0.00467234796781642,0.00465701733034431,0.00437487980914701,0.00421323571930948,0.00401151680520273,0.00382042175390561,0.00355966643760363,0.00277605569593698,0.00204906072949628,0.0014851891249299,0.00130283522657741,0.00097524371006806,0.000967040474227719,0.000944044518019551,0.000805799822218397,0.000706823075030023,0.000706150678649667,0.000632724993914813,0.000618201232099127,0.000572881716063146,0.000461129437648011,0.000454943390948738,0.000300695661295116,5.56744202934607e-05,3.6712842367427e-05]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Crime Location<\/th>\n      <th># of Offenses<\/th>\n      <th>% of Offenses<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":100,"columnDefs":[{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 0, 3, \",\", \".\");\n  }"},{"targets":3,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatPercentage(data, 2, 3, \",\", \".\");\n  }"},{"className":"dt-right","targets":[2,3]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'text-align':'left'});\n}"}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render","options.rowCallback"],"jsHooks":[]}</script>
-```
+Table: (\#tab:offenseLocation)The location of crimes for all offenses reported in 2019.
 
-<p class="caption">(\#fig:offenseLocation)The location of crimes for all offenses reported in 2019.</p>
-</div>
+|Crime Location                      | \# of Offenses| \% of Offenses|
+|:-----------------------------------|--------------:|--------------:|
+|Residence/Home                      |      3,001,159|        40.36\%|
+|Highway/Road/Alley                  |      1,188,722|        15.99\%|
+|Parking Lot/Garage                  |        637,986|         8.58\%|
+|Department/Discount Store           |        373,338|         5.02\%|
+|Other/Unknown                       |        349,477|         4.70\%|
+|Convenience Store                   |        174,952|         2.35\%|
+|Grocery/Supermarket                 |        171,702|         2.31\%|
+|Commercial/Office Building          |        159,915|         2.15\%|
+|Specialty Store (Tv, Fur, Etc.)     |        144,856|         1.95\%|
+|Restaurant                          |        132,347|         1.78\%|
+|School - Elementary/Secondary       |        119,901|         1.61\%|
+|Hotel/Motel/Etc.                    |        118,313|         1.59\%|
+|Service/Gas Station                 |        103,901|         1.40\%|
+|Drug Store/Doctors Office/Hospital  |         74,861|         1.01\%|
+|Bank/Savings And Loan               |         67,959|         0.91\%|
+|Government/Public Building          |         59,118|         0.80\%|
+|Bar/Nightclub                       |         55,220|         0.74\%|
+|Park/Playground                     |         54,226|         0.73\%|
+|Field/Woods                         |         40,011|         0.54\%|
+|School - College/University         |         36,947|         0.50\%|
+|Jail/Prison                         |         35,363|         0.48\%|
+|Construction Site                   |         34,744|         0.47\%|
+|Rental Storage Facility             |         34,630|         0.47\%|
+|Shopping Mall                       |         32,532|         0.44\%|
+|School/College                      |         31,330|         0.42\%|
+|Cyberspace                          |         29,830|         0.40\%|
+|Air/Bus/Train Terminal              |         28,409|         0.38\%|
+|Church/Synagogue/Temple             |         26,470|         0.36\%|
+|Auto Dealership New/Used            |         20,643|         0.28\%|
+|Liquor Store                        |         15,237|         0.20\%|
+|Industrial Site                     |         11,044|         0.15\%|
+|Gambling Facility/Casino/Race Track |          9,688|         0.13\%|
+|Shelter - Mission/Homeless          |          7,252|         0.10\%|
+|Community Center                    |          7,191|         0.10\%|
+|Lake/Waterway                       |          7,020|         0.09\%|
+|Farm Facility                       |          5,992|         0.08\%|
+|Arena/Stadium/Fairgrounds/Coliseum  |          5,256|         0.07\%|
+|Camp/Campground                     |          5,251|         0.07\%|
+|Abandoned/Condemned Structure       |          4,705|         0.06\%|
+|Atm Separate From Bank              |          4,597|         0.06\%|
+|Daycare Facility                    |          4,260|         0.06\%|
+|Amusement Park                      |          3,429|         0.05\%|
+|Dock/Wharf/Freight/Model Terminal   |          3,383|         0.05\%|
+|Rest Area                           |          2,236|         0.03\%|
+|Tribal Lands                        |            414|         0.01\%|
+|Military Installation               |            273|         0.00\%|
+|Total                               |      7,436,090|          100\%|
 
+\setstretch{1.15}
 ### Weapons
 
-<div class="figure" style="text-align: center">
 
-```{=html}
-<div id="htmlwidget-d97dc1356a7b32b02648" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-d97dc1356a7b32b02648">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17"],["Personal Weapons (Hands, Feet, Teeth, Etc.)","None","Handgun","Other","Knife/Cutting Instrument (Ice Pick, Screwdriver, Ax, Etc.)","Firearm (Type Not Stated)","Unknown","Blunt Object (Club, Hammer, Etc.)","Motor Vehicle","Rifle","Shotgun","Asphyxiation (By Drowning, Strangulation, Suffocation, Gas, Etc.)","Other Firearm","Drugs/Narcotics/Sleeping Pills","Explosives","Fire/Incendiary Device","Poison (Include Gas)"],[918134,161623,149146,90385,71311,58920,57430,36536,17278,7696,5896,4984,4633,1239,949,715,475],[0.578406778593253,0.101819384508772,0.0939591142470155,0.0569408133051942,0.0449245598009261,0.0371184678867295,0.0361797965162063,0.0230169779821715,0.0108848080133556,0.00484833212587016,0.00371436671181529,0.00313982423536082,0.00291870097962012,0.000780546193341103,0.000597851765521152,0.000450436261694018,0.000299240873153369]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Weapon Used<\/th>\n      <th># of Offenses<\/th>\n      <th>% of Offenses<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":100,"columnDefs":[{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 0, 3, \",\", \".\");\n  }"},{"targets":3,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatPercentage(data, 2, 3, \",\", \".\");\n  }"},{"className":"dt-right","targets":[2,3]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'text-align':'left'});\n}"}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render","options.rowCallback"],"jsHooks":[]}</script>
-```
+Table: (\#tab:offenseWeapon)The weapon used by an offender in the crime for all offenses reported in 2019. The use means that it was part of the crime though may not have been physically discharged. For example, pointing a gun at someone even without firing the gun is still using it.
 
-<p class="caption">(\#fig:offenseWeapon)The weapon used by an offender in the crime for all offenses reported in 2019. The use means that it was part of the crime though may not have been physically discharged. For example, pointing a gun at someone even without firing the gun is still using it.</p>
-</div>
+|Weapon Used                                                       | \# of Offenses| \% of Offenses|
+|:-----------------------------------------------------------------|--------------:|--------------:|
+|Personal Weapons (Hands, Feet, Teeth, Etc.)                       |        918,134|        57.84\%|
+|None                                                              |        161,623|        10.18\%|
+|Handgun                                                           |        149,146|         9.40\%|
+|Other                                                             |         90,385|         5.69\%|
+|Knife/Cutting Instrument (Ice Pick, Screwdriver, Ax, Etc.)        |         71,311|         4.49\%|
+|Firearm (Type Not Stated)                                         |         58,920|         3.71\%|
+|Unknown                                                           |         57,430|         3.62\%|
+|Blunt Object (Club, Hammer, Etc.)                                 |         36,536|         2.30\%|
+|Motor Vehicle                                                     |         17,278|         1.09\%|
+|Rifle                                                             |          7,696|         0.48\%|
+|Shotgun                                                           |          5,896|         0.37\%|
+|Asphyxiation (By Drowning, Strangulation, Suffocation, Gas, Etc.) |          4,984|         0.31\%|
+|Other Firearm                                                     |          4,633|         0.29\%|
+|Drugs/Narcotics/Sleeping Pills                                    |          1,239|         0.08\%|
+|Explosives                                                        |            949|         0.06\%|
+|Fire/Incendiary Device                                            |            715|         0.05\%|
+|Poison (Include Gas)                                              |            475|         0.03\%|
+|Total                                                             |      1,587,350|          100\%|
 
+\setstretch{1.15}
 * Aggravated Assault
 * Extortion/Blackmail
 * Fondling (Incident Liberties/Child Molest)
@@ -125,23 +249,90 @@ This variable only tells you if the weapon is automatic
 
 ### Hate crime indicator (bias motivation)
 
-<div class="figure" style="text-align: center">
 
-```{=html}
-<div id="htmlwidget-048878266cbe4aff7c5d" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-048878266cbe4aff7c5d">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36"],["No Bias Motivation","Unknown Bias Motivation","Anti-Black","Anti-White","Anti-Male Homosexual (Gay)","Anti-Hispanic","Anti-Jewish","Anti-Homosexual (Both Gay And Lesbian)","Anti-Other Ethnicity/National Origin","Anti-American Indian Or Alaskan Native","Anti-Mental Disability","Anti-Asian/Pacific Islander","Anti-Multi-Racial Group","Anti-Islamic (Muslim)","Anti-Female Homosexual (Lesbian)","Anti-Transgender","Anti-Sikh","Anti-Arab","Anti-Other Religion","Anti-Gender Non-Conforming","Anti-Female","Anti-Eastern Orthodox (Greek, Russian, Etc.)","Anti-Physical Disability","Anti-Catholic","Anti-Other Christian","Anti-Native Hawaiian Or Other Pacific Islander","Anti-Protestant","Anti-Multi-Religious Group","Anti-Bisexual","Anti-Male","Anti-Heterosexual","Anti-Mormon","Anti-Hindu","Anti-Buddhist","Anti-Atheism/Agnosticism","Anti-Jehovahs Witness"],[7372214,59360,1309,573,357,310,249,213,210,125,107,101,97,86,70,68,66,64,63,59,51,50,44,42,40,30,26,25,22,17,12,7,7,6,5,5],[0.991410001761678,0.00798268982758412,0.00017603337237715,7.70566251887753e-05,4.80091015574045e-05,4.16885755820599e-05,3.34853397417191e-05,2.86440858031573e-05,2.82406479749438e-05,1.68099095088951e-05,1.43892825396142e-05,1.35824068831873e-05,1.30444897789026e-05,1.15652177421199e-05,9.41354932498127e-06,9.14459077283895e-06,8.87563222069663e-06,8.60667366855431e-06,8.47219439248315e-06,7.9342772881985e-06,6.85844307962921e-06,6.72396380355805e-06,5.91708814713109e-06,5.64812959498876e-06,5.37917104284644e-06,4.03437828213483e-06,3.49646117785019e-06,3.36198190177903e-06,2.95854407356554e-06,2.28614769320974e-06,1.61375131285393e-06,9.41354932498127e-07,9.41354932498127e-07,8.06875656426966e-07,6.72396380355805e-07,6.72396380355805e-07]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Bias Motivation<\/th>\n      <th># of Offenses<\/th>\n      <th>% of Offenses<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":100,"columnDefs":[{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 0, 3, \",\", \".\");\n  }"},{"targets":3,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatPercentage(data, 2, 3, \",\", \".\");\n  }"},{"className":"dt-right","targets":[2,3]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'text-align':'left'});\n}"}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render","options.rowCallback"],"jsHooks":[]}</script>
-```
+Table: (\#tab:offenseBiasMotivation)The bias motivation (i.e. if hate crime or not and what type of hate crime) for all offenses reported in 2019.
 
-<p class="caption">(\#fig:offenseBiasMotivation)The bias motivation (i.e. if hate crime or not and what type of hate crime) for all offenses reported in 2019.</p>
-</div>
+|Bias Motivation                                | \# of Offenses| \% of Offenses|
+|:----------------------------------------------|--------------:|--------------:|
+|No Bias Motivation                             |      7,372,214|        99.14\%|
+|Unknown Bias Motivation                        |         59,360|         0.80\%|
+|Anti-Black                                     |          1,309|         0.02\%|
+|Anti-White                                     |            573|         0.01\%|
+|Anti-Male Homosexual (Gay)                     |            357|         0.00\%|
+|Anti-Hispanic                                  |            310|         0.00\%|
+|Anti-Jewish                                    |            249|         0.00\%|
+|Anti-Homosexual (Both Gay And Lesbian)         |            213|         0.00\%|
+|Anti-Other Ethnicity/National Origin           |            210|         0.00\%|
+|Anti-American Indian Or Alaskan Native         |            125|         0.00\%|
+|Anti-Mental Disability                         |            107|         0.00\%|
+|Anti-Asian/Pacific Islander                    |            101|         0.00\%|
+|Anti-Multi-Racial Group                        |             97|         0.00\%|
+|Anti-Islamic (Muslim)                          |             86|         0.00\%|
+|Anti-Female Homosexual (Lesbian)               |             70|         0.00\%|
+|Anti-Transgender                               |             68|         0.00\%|
+|Anti-Sikh                                      |             66|         0.00\%|
+|Anti-Arab                                      |             64|         0.00\%|
+|Anti-Other Religion                            |             63|         0.00\%|
+|Anti-Gender Non-Conforming                     |             59|         0.00\%|
+|Anti-Female                                    |             51|         0.00\%|
+|Anti-Eastern Orthodox (Greek, Russian, Etc.)   |             50|         0.00\%|
+|Anti-Physical Disability                       |             44|         0.00\%|
+|Anti-Catholic                                  |             42|         0.00\%|
+|Anti-Other Christian                           |             40|         0.00\%|
+|Anti-Native Hawaiian Or Other Pacific Islander |             30|         0.00\%|
+|Anti-Protestant                                |             26|         0.00\%|
+|Anti-Multi-Religious Group                     |             25|         0.00\%|
+|Anti-Bisexual                                  |             22|         0.00\%|
+|Anti-Male                                      |             17|         0.00\%|
+|Anti-Heterosexual                              |             12|         0.00\%|
+|Anti-Mormon                                    |              7|         0.00\%|
+|Anti-Hindu                                     |              7|         0.00\%|
+|Anti-Buddhist                                  |              6|         0.00\%|
+|Anti-Atheism/Agnosticism                       |              5|         0.00\%|
+|Anti-Jehovahs Witness                          |              5|         0.00\%|
+|Total                                          |      7,436,090|          100\%|
+
+\setstretch{1.15}
 
 
-<div class="figure" style="text-align: center">
+Table: (\#tab:offenseBiasMotivationBiases)The bias motivation (i.e. if hate crime or not and what type of hate crime) for all offenses reported in 2019 that were classifed as hate crimes. For easier viewing of how hate crimes are broken down, this excludes all offenses where there was no bias motivation.
 
-```{=html}
-<div id="htmlwidget-b3a9b57082526e3305a8" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-b3a9b57082526e3305a8">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34"],["Anti-Black","Anti-White","Anti-Male Homosexual (Gay)","Anti-Hispanic","Anti-Jewish","Anti-Homosexual (Both Gay And Lesbian)","Anti-Other Ethnicity/National Origin","Anti-American Indian Or Alaskan Native","Anti-Mental Disability","Anti-Asian/Pacific Islander","Anti-Multi-Racial Group","Anti-Islamic (Muslim)","Anti-Female Homosexual (Lesbian)","Anti-Transgender","Anti-Sikh","Anti-Arab","Anti-Other Religion","Anti-Gender Non-Conforming","Anti-Female","Anti-Eastern Orthodox (Greek, Russian, Etc.)","Anti-Physical Disability","Anti-Catholic","Anti-Other Christian","Anti-Native Hawaiian Or Other Pacific Islander","Anti-Protestant","Anti-Multi-Religious Group","Anti-Bisexual","Anti-Male","Anti-Heterosexual","Anti-Mormon","Anti-Hindu","Anti-Buddhist","Anti-Atheism/Agnosticism","Anti-Jehovahs Witness"],[1309,573,357,310,249,213,210,125,107,101,97,86,70,68,66,64,63,59,51,50,44,42,40,30,26,25,22,17,12,7,7,6,5,5],[0.28985828166519,0.12688219663419,0.079052258635961,0.0686448184233835,0.0551372896368468,0.0471656333038087,0.0465013286093888,0.0276793622674934,0.0236935341009743,0.0223649247121346,0.0214791851195748,0.0190434012400354,0.0155004428697963,0.0150575730735164,0.0146147032772365,0.0141718334809566,0.0139503985828167,0.0130646589902569,0.0112931798051373,0.0110717449069973,0.00974313551815766,0.00930026572187777,0.00885739592559787,0.00664304694419841,0.00575730735163862,0.00553587245349867,0.00487156775907883,0.0037643932683791,0.00265721877767936,0.00155004428697963,0.00155004428697963,0.00132860938883968,0.00110717449069973,0.00110717449069973]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Bias Motivation<\/th>\n      <th># of Offenses<\/th>\n      <th>% of Offenses<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":100,"columnDefs":[{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 0, 3, \",\", \".\");\n  }"},{"targets":3,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatPercentage(data, 2, 3, \",\", \".\");\n  }"},{"className":"dt-right","targets":[2,3]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'text-align':'left'});\n}"}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render","options.rowCallback"],"jsHooks":[]}</script>
-```
+|Bias Motivation                                | \# of Offenses| \% of Offenses|
+|:----------------------------------------------|--------------:|--------------:|
+|Anti-Black                                     |          1,309|        28.99\%|
+|Anti-White                                     |            573|        12.69\%|
+|Anti-Male Homosexual (Gay)                     |            357|         7.91\%|
+|Anti-Hispanic                                  |            310|         6.86\%|
+|Anti-Jewish                                    |            249|         5.51\%|
+|Anti-Homosexual (Both Gay And Lesbian)         |            213|         4.72\%|
+|Anti-Other Ethnicity/National Origin           |            210|         4.65\%|
+|Anti-American Indian Or Alaskan Native         |            125|         2.77\%|
+|Anti-Mental Disability                         |            107|         2.37\%|
+|Anti-Asian/Pacific Islander                    |            101|         2.24\%|
+|Anti-Multi-Racial Group                        |             97|         2.15\%|
+|Anti-Islamic (Muslim)                          |             86|         1.90\%|
+|Anti-Female Homosexual (Lesbian)               |             70|         1.55\%|
+|Anti-Transgender                               |             68|         1.51\%|
+|Anti-Sikh                                      |             66|         1.46\%|
+|Anti-Arab                                      |             64|         1.42\%|
+|Anti-Other Religion                            |             63|         1.40\%|
+|Anti-Gender Non-Conforming                     |             59|         1.31\%|
+|Anti-Female                                    |             51|         1.13\%|
+|Anti-Eastern Orthodox (Greek, Russian, Etc.)   |             50|         1.11\%|
+|Anti-Physical Disability                       |             44|         0.97\%|
+|Anti-Catholic                                  |             42|         0.93\%|
+|Anti-Other Christian                           |             40|         0.89\%|
+|Anti-Native Hawaiian Or Other Pacific Islander |             30|         0.66\%|
+|Anti-Protestant                                |             26|         0.58\%|
+|Anti-Multi-Religious Group                     |             25|         0.55\%|
+|Anti-Bisexual                                  |             22|         0.49\%|
+|Anti-Male                                      |             17|         0.38\%|
+|Anti-Heterosexual                              |             12|         0.27\%|
+|Anti-Mormon                                    |              7|         0.16\%|
+|Anti-Hindu                                     |              7|         0.16\%|
+|Anti-Buddhist                                  |              6|         0.13\%|
+|Anti-Atheism/Agnosticism                       |              5|         0.11\%|
+|Anti-Jehovahs Witness                          |              5|         0.11\%|
+|Total                                          |          4,516|          100\%|
 
-<p class="caption">(\#fig:offenseBiasMotivationBiases)The bias motivation (i.e. if hate crime or not and what type of hate crime) for all offenses reported in 2019 that were classifed as hate crimes. For easier viewing of how hate crimes are broken down, this excludes all offenses where there was no bias motivation.</p>
-</div>
+\setstretch{1.15}

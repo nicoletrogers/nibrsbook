@@ -208,19 +208,66 @@ Since the number of agencies in a state is partially just a factor of population
 <p class="caption">(\#fig:agenciesReportingMapPercent)Agencies in each state reporting at least one crime to NIBRS in 2019 as a percent of agencies that reported UCR Offenses Known and Clearances by Arrests data in 2019.</p>
 </div>
 
-For ease of reference, Table \@ref(fig:agenciesReportingTable) shows the number of agencies in each state reporting to NIBRS and to UCR in 2019, and the percent shown in Figure \@ref(fig:agenciesReportingMapPercent). If you're reading this on your phone or computer you can search or sort the table.
-
-<div class="figure" style="text-align: center">
-
-```{=html}
-<div id="htmlwidget-7fb3101e9f8a9d80486f" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-7fb3101e9f8a9d80486f">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51"],["Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut","Delaware","District of Columbia","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire","New Jersey","New Mexico","New York","North Carolina","North Dakota","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming"],[1,0,11,277,0,217,100,60,1,0,251,1,104,1,180,240,343,389,30,39,2,317,616,153,26,80,95,113,4,187,0,4,0,320,106,529,381,184,21,47,306,115,443,619,88,86,411,231,221,215,5],[352,33,114,278,738,222,107,63,3,678,522,3,108,739,289,246,376,413,188,135,156,363,650,409,79,576,103,236,62,188,578,121,572,333,110,604,437,208,1477,49,405,129,465,1053,129,89,415,257,240,428,55],[0.00284090909090909,0,0.0964912280701754,0.996402877697842,0,0.977477477477477,0.934579439252337,0.952380952380952,0.333333333333333,0,0.480842911877395,0.333333333333333,0.962962962962963,0.0013531799729364,0.622837370242215,0.975609756097561,0.912234042553192,0.941888619854721,0.159574468085106,0.288888888888889,0.0128205128205128,0.8732782369146,0.947692307692308,0.374083129584352,0.329113924050633,0.138888888888889,0.922330097087379,0.478813559322034,0.0645161290322581,0.99468085106383,0,0.0330578512396694,0,0.960960960960961,0.963636363636364,0.875827814569536,0.871853546910755,0.884615384615385,0.014218009478673,0.959183673469388,0.755555555555556,0.891472868217054,0.952688172043011,0.587844254510921,0.682170542635659,0.966292134831461,0.990361445783133,0.898832684824903,0.920833333333333,0.502336448598131,0.0909090909090909]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>State<\/th>\n      <th>NIBRS Agencies<\/th>\n      <th>UCR Agencies<\/th>\n      <th>% of UCR Agencies<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":100,"columnDefs":[{"targets":4,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatPercentage(data, 2, 3, \",\", \".\");\n  }"},{"className":"dt-right","targets":[2,3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'text-align':'left'});\n}"}},"evals":["options.columnDefs.0.render","options.rowCallback"],"jsHooks":[]}</script>
-```
-
-<p class="caption">(\#fig:agenciesReportingTable)The number of agencies in each state reporting to NIBRS and to UCR in 2019. Also shows NIBRS reporting in each state as a percent of UCR reporting.</p>
-</div>
+For ease of reference, Table \@ref(tab:agenciesReportingTable) shows the number of agencies in each state reporting to NIBRS and to UCR in 2019, and the percent shown in Figure \@ref(fig:agenciesReportingMapPercent). 
 
 
+Table: (\#tab:agenciesReportingTable)The number of agencies in each state reporting to NIBRS and to UCR in 2019. Also shows NIBRS reporting in each state as a percent of UCR reporting.
+
+|State                | NIBRS Agencies| UCR Agencies| \% of UCR Agencies|
+|:--------------------|--------------:|------------:|------------------:|
+|Alabama              |              1|          352|               0.00|
+|Alaska               |              0|           33|               0.00|
+|Arizona              |             11|          114|               0.10|
+|Arkansas             |            277|          278|               1.00|
+|California           |              0|          738|               0.00|
+|Colorado             |            217|          222|               0.98|
+|Connecticut          |            100|          107|               0.93|
+|Delaware             |             60|           63|               0.95|
+|District of Columbia |              1|            3|               0.33|
+|Florida              |              0|          678|               0.00|
+|Georgia              |            251|          522|               0.48|
+|Hawaii               |              1|            3|               0.33|
+|Idaho                |            104|          108|               0.96|
+|Illinois             |              1|          739|               0.00|
+|Indiana              |            180|          289|               0.62|
+|Iowa                 |            240|          246|               0.98|
+|Kansas               |            343|          376|               0.91|
+|Kentucky             |            389|          413|               0.94|
+|Louisiana            |             30|          188|               0.16|
+|Maine                |             39|          135|               0.29|
+|Maryland             |              2|          156|               0.01|
+|Massachusetts        |            317|          363|               0.87|
+|Michigan             |            616|          650|               0.95|
+|Minnesota            |            153|          409|               0.37|
+|Mississippi          |             26|           79|               0.33|
+|Missouri             |             80|          576|               0.14|
+|Montana              |             95|          103|               0.92|
+|Nebraska             |            113|          236|               0.48|
+|Nevada               |              4|           62|               0.06|
+|New Hampshire        |            187|          188|               0.99|
+|New Jersey           |              0|          578|               0.00|
+|New Mexico           |              4|          121|               0.03|
+|New York             |              0|          572|               0.00|
+|North Carolina       |            320|          333|               0.96|
+|North Dakota         |            106|          110|               0.96|
+|Ohio                 |            529|          604|               0.88|
+|Oklahoma             |            381|          437|               0.87|
+|Oregon               |            184|          208|               0.88|
+|Pennsylvania         |             21|         1477|               0.01|
+|Rhode Island         |             47|           49|               0.96|
+|South Carolina       |            306|          405|               0.76|
+|South Dakota         |            115|          129|               0.89|
+|Tennessee            |            443|          465|               0.95|
+|Texas                |            619|         1053|               0.59|
+|Utah                 |             88|          129|               0.68|
+|Vermont              |             86|           89|               0.97|
+|Virginia             |            411|          415|               0.99|
+|Washington           |            231|          257|               0.90|
+|West Virginia        |            221|          240|               0.92|
+|Wisconsin            |            215|          428|               0.50|
+|Wyoming              |              5|           55|               0.09|
+
+\setstretch{1.15}
 ## How to identify a particular agency (ORI codes)
 
 In the UCR and other FBI data sets, agencies are identified using **OR**iginating Agency **I**dentifiers or an ORI. An ORI is a unique ID code used to identify an agency.^[I will refer to this an "ORI", "ORI code", and "ORI number", all of which mean the same thing.] If we used the agency's name we'd end up with some duplicates since there can be multiple agencies in the country (and in a state, those this is very rare) with the same name. For example, if you looked for the Philadelphia Police Department using the agency name, you'd find both the "Philadelphia Police Department" in Pennsylvania and the one in Mississippi. Each ORI is a 9-digit value starting with the state abbreviation (for some reason the FBI incorrectly puts the abbreviation for Nebraska as NB instead of NE) followed by 7 numbers. In the UCR data (another FBI data set) the ORI uses only a 7-digit code - with only the 5 numbers following the state abbreviation instead of 7. So the NIBRS ORI codes are sometimes called ORI9. For nearly all agencies, the only difference between the UCR ORI and the NIBRS ORI is that the NIBRS ORI has "00" at the end so it is technically 9 characters long but isn't any more specific than the 7-character UCR ORI code. 

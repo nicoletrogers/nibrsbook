@@ -5,12 +5,13 @@ date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
 lof: yes
+lot: yes
 bibliography: [book.bib]
 biblio-style: apalike
 link-citations: yes
 description: "This is a comprehensive guide to using the FBI's National Incident-Based Reporting System (NIBRS) Data, an incident-level dataset which provides detailed information on every crime reported to the police, including victim and offender traits and characteristics of the crime."
 graphics: yes
-always_allow_html: yes 
+always_allow_html: true 
 colorlinks: yes
 url: "https://nibrsbook.com"
 fontsize: 12pt
@@ -18,6 +19,7 @@ github-repo: "jacobkap/nibrsbook"
 classoption: openany
 linestretch: 1.15
 geometry: margin=1in
+tables: yes
 ---
 
 ```{r, echo=FALSE}
@@ -44,7 +46,6 @@ options(
 # bookdown::render_book("index.Rmd", "bookdown::pdf_book", output_file = "nibrsbook.pdf")
 # bookdown::render_book("index.Rmd", "bookdown::epub_book", output_file = "nibrsbook.epub")
 # bookdown::render_book("index.Rmd", "bookdown::gitbook")
-
 ```
 
 # Preface 

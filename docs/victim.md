@@ -12,17 +12,67 @@ One highly interesting variable is the relationship between the victim and the o
 
 ### Crime category
 
-<div class="figure" style="text-align: center">
 
-```{=html}
-<div id="htmlwidget-c6d3de5402f5c0098d0f" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-c6d3de5402f5c0098d0f">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52"],["Simple Assault","All Other Larceny","Drug/Narcotic Violations","Destruction/Damage/Vandalism of Property","Theft From Motor Vehicle","Burglary/Breaking And Entering","Shoplifting","Aggravated Assault","Intimidation","Motor Vehicle Theft","Theft From Building","False Pretenses/Swindle/Confidence Game","Robbery","Credit Card/Atm Fraud","Counterfeiting/Forgery","Theft of Motor Vehicle Parts/Accessories","Drug Equipment Violations","Weapon Law Violations","Identity Theft","Stolen Property Offenses (Receiving, Selling, Etc.)","Impersonation","Fondling (Incident Liberties/Child Molest)","Rape","Embezzlement","Pornography/Obscene Material","Arson","Wire Fraud","Sodomy","Kidnapping/Abduction","Animal Cruelty","Pocket-Picking","Purse-Snatching","Murder/Nonnegligent Manslaughter","Prostitution","Statutory Rape","Extortion/Blackmail","Theft From Coin-Operated Machine Or Device","Sexual Assault With An Object","Hacking/Computer Invasion","Assisting Or Promoting Prostitution","Purchasing Prostitution","Human Trafficking - Commercial Sex Acts","Incest","Welfare Fraud","Negligent Manslaughter","Operating/Promoting/Assisting Gambling","Bribery","Justifiable Homicide","Betting/Wagering","Gambling Equipment Violations","Human Trafficking - Involuntary Servitude","Sports Tampering"],[1062299,820257,710870,681090,614794,551161,498696,336840,313809,312692,212308,190933,125835,125001,111637,111376,108595,95283,63639,55445,55367,50697,47233,24310,19703,17406,15162,11027,10066,9807,9712,7595,6590,6464,5591,5334,4791,4480,2162,1787,1061,854,849,785,597,567,449,308,249,219,176,5],[0.143090556889898,0.110487754316663,0.0957534405815331,0.0917421059345258,0.0828121045323098,0.0742408064264329,0.0671738261626573,0.0453719933679626,0.0422697419154702,0.0421192831914706,0.0285976640777978,0.0257184740818347,0.0169498420183398,0.016837503096392,0.0150373863662844,0.0150022299410706,0.0146276321689642,0.0128345197841099,0.00857210629955995,0.00746838312637065,0.00745787660849064,0.0068288325251621,0.00636223537213211,0.00327453140593508,0.00265397335627885,0.0023445698746074,0.00204230543713647,0.001485325290549,0.00135587960230944,0.00132099257498993,0.00130819617500788,0.00102303850382875,0.000887666061913293,0.000870693994568669,0.000753101813680914,0.000718484184255767,0.000645342655937267,0.000603451283364424,0.000291219123802206,0.000240707018609872,0.000142915582957512,0.000115032900891343,0.000114359406155446,0.000105738673535954,8.04152714661967e-05,7.63743030508099e-05,6.0479827283622e-05,4.14872757313042e-05,3.35400378477102e-05,2.94990694323234e-05,2.37070147036024e-05,6.73494735897795e-07]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Crime Category<\/th>\n      <th># of Victims<\/th>\n      <th>% of Victims<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":100,"columnDefs":[{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 0, 3, \",\", \".\");\n  }"},{"targets":3,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatPercentage(data, 2, 3, \",\", \".\");\n  }"},{"className":"dt-right","targets":[2,3]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'text-align':'left'});\n}"}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render","options.rowCallback"],"jsHooks":[]}</script>
-```
+Table: (\#tab:victimCrimeCategory)The number and percent of crimes committed against each victim. For victims with multiple crimes committed against them, this shows the most serious crime.
 
-<p class="caption">(\#fig:victimCrimeCategory)The number and percent of crimes committed against each victim. For victims with multiple crimes committed against them, this shows the most serious crime.</p>
-</div>
+|Crime Category                                      | \# of Victims| \% of Victims|
+|:---------------------------------------------------|-------------:|-------------:|
+|Simple Assault                                      |     1,062,299|       14.31\%|
+|All Other Larceny                                   |       820,257|       11.05\%|
+|Drug/Narcotic Violations                            |       710,870|        9.58\%|
+|Destruction/Damage/Vandalism of Property            |       681,090|        9.17\%|
+|Theft From Motor Vehicle                            |       614,794|        8.28\%|
+|Burglary/Breaking And Entering                      |       551,161|        7.42\%|
+|Shoplifting                                         |       498,696|        6.72\%|
+|Aggravated Assault                                  |       336,840|        4.54\%|
+|Intimidation                                        |       313,809|        4.23\%|
+|Motor Vehicle Theft                                 |       312,692|        4.21\%|
+|Theft From Building                                 |       212,308|        2.86\%|
+|False Pretenses/Swindle/Confidence Game             |       190,933|        2.57\%|
+|Robbery                                             |       125,835|        1.69\%|
+|Credit Card/Atm Fraud                               |       125,001|        1.68\%|
+|Counterfeiting/Forgery                              |       111,637|        1.50\%|
+|Theft of Motor Vehicle Parts/Accessories            |       111,376|        1.50\%|
+|Drug Equipment Violations                           |       108,595|        1.46\%|
+|Weapon Law Violations                               |        95,283|        1.28\%|
+|Identity Theft                                      |        63,639|        0.86\%|
+|Stolen Property Offenses (Receiving, Selling, Etc.) |        55,445|        0.75\%|
+|Impersonation                                       |        55,367|        0.75\%|
+|Fondling (Incident Liberties/Child Molest)          |        50,697|        0.68\%|
+|Rape                                                |        47,233|        0.64\%|
+|Embezzlement                                        |        24,310|        0.33\%|
+|Pornography/Obscene Material                        |        19,703|        0.27\%|
+|Arson                                               |        17,406|        0.23\%|
+|Wire Fraud                                          |        15,162|        0.20\%|
+|Sodomy                                              |        11,027|        0.15\%|
+|Kidnapping/Abduction                                |        10,066|        0.14\%|
+|Animal Cruelty                                      |         9,807|        0.13\%|
+|Pocket-Picking                                      |         9,712|        0.13\%|
+|Purse-Snatching                                     |         7,595|        0.10\%|
+|Murder/Nonnegligent Manslaughter                    |         6,590|        0.09\%|
+|Prostitution                                        |         6,464|        0.09\%|
+|Statutory Rape                                      |         5,591|        0.08\%|
+|Extortion/Blackmail                                 |         5,334|        0.07\%|
+|Theft From Coin-Operated Machine Or Device          |         4,791|        0.06\%|
+|Sexual Assault With An Object                       |         4,480|        0.06\%|
+|Hacking/Computer Invasion                           |         2,162|        0.03\%|
+|Assisting Or Promoting Prostitution                 |         1,787|        0.02\%|
+|Purchasing Prostitution                             |         1,061|        0.01\%|
+|Human Trafficking - Commercial Sex Acts             |           854|        0.01\%|
+|Incest                                              |           849|        0.01\%|
+|Welfare Fraud                                       |           785|        0.01\%|
+|Negligent Manslaughter                              |           597|        0.01\%|
+|Operating/Promoting/Assisting Gambling              |           567|        0.01\%|
+|Bribery                                             |           449|        0.01\%|
+|Justifiable Homicide                                |           308|        0.00\%|
+|Betting/Wagering                                    |           249|        0.00\%|
+|Gambling Equipment Violations                       |           219|        0.00\%|
+|Human Trafficking - Involuntary Servitude           |           176|        0.00\%|
+|Sports Tampering                                    |             5|        0.00\%|
+|Total                                               |     7,423,963|         100\%|
 
 
+\setstretch{1.15}
 ### Victim type
 
 <div class="figure" style="text-align: center">
@@ -56,25 +106,72 @@ One highly interesting variable is the relationship between the victim and the o
 
 ### Relationship to offender
 
-<div class="figure" style="text-align: center">
 
-```{=html}
-<div id="htmlwidget-5f8e61eeb98d4252fa47" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-5f8e61eeb98d4252fa47">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27"],["Relationship Unknown","Victim Was Boyfriend/Girlfriend","Victim Was Acquaintance","Victim Was Stranger","Victim Was Otherwise Known","Victim Was Spouse","Victim Was Parent","Victim Was Other Family Member","Victim Was Child","Victim Was Sibling","Victim Was Friend","Victim Was Offender","Victim Was Neighbor","Victim Was Ex-Relationship (Ex-Boyfriend/Ex-Girlfriend)","Victim Was Ex-Spouse","Victim Was Common-Law Spouse","Victim Was Step-Child","Victim Was In-Law","Victim Was Grandparent","Victim Was Step-Parent","Victim Was Child of Boyfriend/Girlfriend","Victim Was Employee","Victim Was Employer","Victim Was In A Homosexual Relationship With The Offender","Victim Was Grandchild","Victim Was Step-Sibling","Victim Was Babysittee (The Baby)"],[436858,317314,286790,282912,210300,119859,80730,69761,69669,56121,54207,52615,36082,24865,24575,13824,11066,10238,8881,8621,8273,6816,6231,5370,5287,2780,1512],[0.197534135452986,0.143479910307534,0.129677869482903,0.127924353747156,0.0950913767992414,0.0541966587340955,0.0365036940038172,0.0315438399281592,0.0315022402768728,0.0253762394548275,0.0245107858400213,0.0237909310047175,0.0163152023664776,0.0112432101003953,0.0111120807648186,0.00625079977590449,0.0050037145775578,0.00462931771598019,0.00401572285950577,0.00389815862760942,0.00374080342491738,0.00308199155617513,0.00281747203440834,0.00242815355878234,0.00239062343860005,0.00125703294104561,0.000683681225489553]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Crime Category<\/th>\n      <th># of Victims<\/th>\n      <th>% of Victims<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":100,"columnDefs":[{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 0, 3, \",\", \".\");\n  }"},{"targets":3,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatPercentage(data, 2, 3, \",\", \".\");\n  }"},{"className":"dt-right","targets":[2,3]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'text-align':'left'});\n}"}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render","options.rowCallback"],"jsHooks":[]}</script>
-```
+Table: (\#tab:victimRelationship)The distribution of the relationship between the victim and the offender. Only individual and law enforcement officer victims have this variable available.
 
-<p class="caption">(\#fig:victimRelationship)The distribution of the relationship between the victim and the offender. Only individual and law enforcement officer victims have this variable available.</p>
-</div>
+|Crime Category                                            | \# of Victims| \% of Victims|
+|:---------------------------------------------------------|-------------:|-------------:|
+|Relationship Unknown                                      |       436,858|       19.75\%|
+|Victim Was Boyfriend/Girlfriend                           |       317,314|       14.35\%|
+|Victim Was Acquaintance                                   |       286,790|       12.97\%|
+|Victim Was Stranger                                       |       282,912|       12.79\%|
+|Victim Was Otherwise Known                                |       210,300|        9.51\%|
+|Victim Was Spouse                                         |       119,859|        5.42\%|
+|Victim Was Parent                                         |        80,730|        3.65\%|
+|Victim Was Other Family Member                            |        69,761|        3.15\%|
+|Victim Was Child                                          |        69,669|        3.15\%|
+|Victim Was Sibling                                        |        56,121|        2.54\%|
+|Victim Was Friend                                         |        54,207|        2.45\%|
+|Victim Was Offender                                       |        52,615|        2.38\%|
+|Victim Was Neighbor                                       |        36,082|        1.63\%|
+|Victim Was Ex-Relationship (Ex-Boyfriend/Ex-Girlfriend)   |        24,865|        1.12\%|
+|Victim Was Ex-Spouse                                      |        24,575|        1.11\%|
+|Victim Was Common-Law Spouse                              |        13,824|        0.63\%|
+|Victim Was Step-Child                                     |        11,066|        0.50\%|
+|Victim Was In-Law                                         |        10,238|        0.46\%|
+|Victim Was Grandparent                                    |         8,881|        0.40\%|
+|Victim Was Step-Parent                                    |         8,621|        0.39\%|
+|Victim Was Child of Boyfriend/Girlfriend                  |         8,273|        0.37\%|
+|Victim Was Employee                                       |         6,816|        0.31\%|
+|Victim Was Employer                                       |         6,231|        0.28\%|
+|Victim Was In A Homosexual Relationship With The Offender |         5,370|        0.24\%|
+|Victim Was Grandchild                                     |         5,287|        0.24\%|
+|Victim Was Step-Sibling                                   |         2,780|        0.13\%|
+|Victim Was Babysittee (The Baby)                          |         1,512|        0.07\%|
+|Total                                                     |     2,211,557|         100\%|
 
-<div class="figure" style="text-align: center">
+\setstretch{1.15}
 
-```{=html}
-<div id="htmlwidget-171dd09ccc66bbeb5aa1" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-171dd09ccc66bbeb5aa1">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22"],["Victim Was Stranger","Victim Was Otherwise Known","Relationship Unknown","Victim Was Acquaintance","Victim Was Employee","Victim Was Boyfriend/Girlfriend","Victim Was Spouse","Victim Was Friend","Victim Was In-Law","Victim Was Other Family Member","Victim Was Parent","Victim Was Neighbor","Victim Was Ex-Relationship (Ex-Boyfriend/Ex-Girlfriend)","Victim Was Step-Sibling","Victim Was Offender","Victim Was Child","Victim Was Sibling","Victim Was Ex-Spouse","Victim Was Common-Law Spouse","Victim Was Employer","Victim Was Step-Parent","Victim Was Babysittee (The Baby)"],[19779,6294,6225,1085,52,40,16,15,13,11,9,9,8,6,6,4,4,4,3,2,2,1],[0.588871025366202,0.187388352983208,0.185334047874241,0.0323032035250685,0.0015481719661784,0.00119090151244492,0.000476360604977968,0.000446588067166845,0.000387042991544599,0.000327497915922353,0.000267952840300107,0.000267952840300107,0.000238180302488984,0.000178635226866738,0.000178635226866738,0.000119090151244492,0.000119090151244492,0.000119090151244492,8.93176134333691e-05,5.9545075622246e-05,5.9545075622246e-05,2.9772537811123e-05]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Crime Category<\/th>\n      <th># of Victims<\/th>\n      <th>% of Victims<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":100,"columnDefs":[{"targets":2,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 0, 3, \",\", \".\");\n  }"},{"targets":3,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatPercentage(data, 2, 3, \",\", \".\");\n  }"},{"className":"dt-right","targets":[2,3]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'text-align':'left'});\n}"}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render","options.rowCallback"],"jsHooks":[]}</script>
-```
 
-<p class="caption">(\#fig:victimRelationshipPolice)The distribution of the relationship between the victim and the offender for law enforcement officer victims.</p>
-</div>
+Table: (\#tab:victimRelationshipPolice)The distribution of the relationship between the victim and the offender for law enforcement officer victims.
+
+|Crime Category                                          | \# of Victims| \% of Victims|
+|:-------------------------------------------------------|-------------:|-------------:|
+|Victim Was Stranger                                     |        19,779|       58.89\%|
+|Victim Was Otherwise Known                              |         6,294|       18.74\%|
+|Relationship Unknown                                    |         6,225|       18.53\%|
+|Victim Was Acquaintance                                 |         1,085|        3.23\%|
+|Victim Was Employee                                     |            52|        0.15\%|
+|Victim Was Boyfriend/Girlfriend                         |            40|        0.12\%|
+|Victim Was Spouse                                       |            16|        0.05\%|
+|Victim Was Friend                                       |            15|        0.04\%|
+|Victim Was In-Law                                       |            13|        0.04\%|
+|Victim Was Other Family Member                          |            11|        0.03\%|
+|Victim Was Parent                                       |             9|        0.03\%|
+|Victim Was Neighbor                                     |             9|        0.03\%|
+|Victim Was Ex-Relationship (Ex-Boyfriend/Ex-Girlfriend) |             8|        0.02\%|
+|Victim Was Step-Sibling                                 |             6|        0.02\%|
+|Victim Was Offender                                     |             6|        0.02\%|
+|Victim Was Child                                        |             4|        0.01\%|
+|Victim Was Sibling                                      |             4|        0.01\%|
+|Victim Was Ex-Spouse                                    |             4|        0.01\%|
+|Victim Was Common-Law Spouse                            |             3|        0.01\%|
+|Victim Was Employer                                     |             2|        0.01\%|
+|Victim Was Step-Parent                                  |             2|        0.01\%|
+|Victim Was Babysittee (The Baby)                        |             1|        0.00\%|
+|Total                                                   |        33,588|         100\%|
+
+\setstretch{1.15}
 
 ### Residence status
 
@@ -99,17 +196,31 @@ victim$resident_status_of_victim
 
 ### Aggravated assault and homicide circumstances
 
-<div class="figure" style="text-align: center">
 
-```{=html}
-<div id="htmlwidget-6c0de85f8c08ffc76499" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-6c0de85f8c08ffc76499">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17"],["Argument","Unknown Circumstances","Other Circumstances","Lovers Quarrel","Assault On Law Enforcement Officer(S)","Other Felony Involved","Drug Dealing","Gangland","Juvenile Gang","Other Negligent Killings","Criminal Killed By Private Citizen","Criminal Killed By Police Officer","Other Negligent Weapon Handling","Child Playing With Weapon","Mercy Killing","Gun-Cleaning Accident","Hunting Accident"],["Aggravated Assault/Murder","Aggravated Assault/Murder","Aggravated Assault/Murder","Aggravated Assault/Murder","Aggravated Assault/Murder","Aggravated Assault/Murder","Aggravated Assault/Murder","Aggravated Assault/Murder","Aggravated Assault/Murder","Negligent Manslaughter","Justifiable Homicide","Justifiable Homicide","Negligent Manslaughter","Negligent Manslaughter","Aggravated Assault/Murder","Negligent Manslaughter","Negligent Manslaughter"],[147027,82432,64605,32249,9695,4007,1718,1420,588,490,181,127,86,18,6,2,1],[0.426595522440026,0.239174587700057,0.187449949514293,0.0935697457145178,0.0281298237062312,0.0116262200712603,0.00498473822870606,0.00412009795387812,0.00170606873019742,0.00142172394183118,0.000525167415247844,0.000368487633903183,0.000249527059178534,5.22265937815536e-05,1.74088645938512e-05,5.80295486461706e-06,2.90147743230853e-06]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Circumstance<\/th>\n      <th>Crime Category<\/th>\n      <th># of Victims<\/th>\n      <th>% of Victims<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":100,"columnDefs":[{"targets":3,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatRound(data, 0, 3, \",\", \".\");\n  }"},{"targets":4,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatPercentage(data, 2, 3, \",\", \".\");\n  }"},{"className":"dt-right","targets":[3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'text-align':'left'});\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'text-align':'left'});\n}"}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render","options.rowCallback"],"jsHooks":[]}</script>
-```
+Table: (\#tab:victimAggAssault)The distribution of circumstances for aggravated assault and homicides.
 
-<p class="caption">(\#fig:victimAggAssault)The distribution of circumstances for aggravated assault and homicides.</p>
-</div>
+|Circumstance                          |            Crime Category| \# of Victims|\% of Victims |
+|:-------------------------------------|-------------------------:|-------------:|:-------------|
+|Argument                              | Aggravated Assault/Murder|       147,027|42.66\%       |
+|Unknown Circumstances                 | Aggravated Assault/Murder|        82,432|23.92\%       |
+|Other Circumstances                   | Aggravated Assault/Murder|        64,605|18.74\%       |
+|Lovers Quarrel                        | Aggravated Assault/Murder|        32,249|9.36\%        |
+|Assault On Law Enforcement Officer(S) | Aggravated Assault/Murder|         9,695|2.81\%        |
+|Other Felony Involved                 | Aggravated Assault/Murder|         4,007|1.16\%        |
+|Drug Dealing                          | Aggravated Assault/Murder|         1,718|0.50\%        |
+|Gangland                              | Aggravated Assault/Murder|         1,420|0.41\%        |
+|Juvenile Gang                         | Aggravated Assault/Murder|           588|0.17\%        |
+|Other Negligent Killings              |    Negligent Manslaughter|           490|0.14\%        |
+|Criminal Killed By Private Citizen    |      Justifiable Homicide|           181|0.05\%        |
+|Criminal Killed By Police Officer     |      Justifiable Homicide|           127|0.04\%        |
+|Other Negligent Weapon Handling       |    Negligent Manslaughter|            86|0.02\%        |
+|Child Playing With Weapon             |    Negligent Manslaughter|            18|0.01\%        |
+|Mercy Killing                         | Aggravated Assault/Murder|             6|0.00\%        |
+|Gun-Cleaning Accident                 |    Negligent Manslaughter|             2|0.00\%        |
+|Hunting Accident                      |    Negligent Manslaughter|             1|0.00\%        |
+|Total                                 | Aggravated Assault/Murder|       344,652|100\%         |
 
-
+\setstretch{1.15}
 
 ### Justifiable homicide circumstance
 

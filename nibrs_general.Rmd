@@ -272,19 +272,28 @@ admin_map %>%
 
 ```
 
-For ease of reference, Table \@ref(fig:agenciesReportingTable) shows the number of agencies in each state reporting to NIBRS and to UCR in 2019, and the percent shown in Figure \@ref(fig:agenciesReportingMapPercent). If you're reading this on your phone or computer you can search or sort the table.
+For ease of reference, Table \@ref(tab:agenciesReportingTable) shows the number of agencies in each state reporting to NIBRS and to UCR in 2019, and the percent shown in Figure \@ref(fig:agenciesReportingMapPercent). 
 
 ```{r agenciesReportingTable, fig.cap = "The number of agencies in each state reporting to NIBRS and to UCR in 2019. Also shows NIBRS reporting in each state as a percent of UCR reporting."}
 admin_map$percent <- admin_map$percent / 100
 admin_map$state <- capitalize_words(admin_map$state)
 admin_map <- admin_map %>% arrange(state)
-names(admin_map) <- c("State", "NIBRS Agencies", "UCR Agencies", "% of UCR Agencies")
-datatable(admin_map, options = list(pageLength = 100)) %>%
-  formatPercentage('% of UCR Agencies', 2) %>%
-  formatStyle(1, `text-align` = 'left')
+names(admin_map) <- c("State", "NIBRS Agencies", "UCR Agencies", "\\% of UCR Agencies")
+
+
+knitr::kable(admin_map, 
+             format = "markdown",
+             digits = 2, 
+             align = c("l", "r", "r", "r"),
+             booktabs = TRUE, 
+             longtable = TRUE,
+             escape = FALSE,
+             caption = "The number of agencies in each state reporting to NIBRS and to UCR in 2019. Also shows NIBRS reporting in each state as a percent of UCR reporting.") %>%
+  kable_styling(bootstrap_options = "striped", full_width = FALSE, latex_options = c("hold_position", "repeat_header"))
+
 ```
 
-
+\setstretch{1.15}
 ## How to identify a particular agency (ORI codes)
 
 In the UCR and other FBI data sets, agencies are identified using **OR**iginating Agency **I**dentifiers or an ORI. An ORI is a unique ID code used to identify an agency.^[I will refer to this an "ORI", "ORI code", and "ORI number", all of which mean the same thing.] If we used the agency's name we'd end up with some duplicates since there can be multiple agencies in the country (and in a state, those this is very rare) with the same name. For example, if you looked for the Philadelphia Police Department using the agency name, you'd find both the "Philadelphia Police Department" in Pennsylvania and the one in Mississippi. Each ORI is a 9-digit value starting with the state abbreviation (for some reason the FBI incorrectly puts the abbreviation for Nebraska as NB instead of NE) followed by 7 numbers. In the UCR data (another FBI data set) the ORI uses only a 7-digit code - with only the 5 numbers following the state abbreviation instead of 7. So the NIBRS ORI codes are sometimes called ORI9. For nearly all agencies, the only difference between the UCR ORI and the NIBRS ORI is that the NIBRS ORI has "00" at the end so it is technically 9 characters long but isn't any more specific than the 7-character UCR ORI code. 

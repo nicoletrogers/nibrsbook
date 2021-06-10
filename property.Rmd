@@ -23,18 +23,24 @@ For drug offenses it includes the drugs seized by police. For these offenses, th
 
 ### Description of property
 
-```{r propertyDescription, fig.cap = "The number and percent of property stolen (including forcibly taken such as during a robbery) in a crime or seized by police (generally in drug arrests) for all offenses in 2019. Each offense can have multiple items stolen/seized."}
+```{r propertyDescription}
 temp <- make_frequency_table(property,
                              "property_description",
                              c("Property",
                                "# of Property Stolen",
                                "% of Property Stolen"))
-datatable(temp, options = list(pageLength = 100)) %>%
-  formatPercentage('% of Property Stolen', 2) %>%
-  formatRound('# of Property Stolen', digits = 0) %>%
-  formatStyle(1, `text-align` = 'left')
+knitr::kable(temp, 
+             format = "markdown",
+             digits = 2, 
+             align = c("l", "r", "r"),
+             booktabs = TRUE, 
+             longtable = TRUE,
+             escape = FALSE,
+             caption = "The number and percent of property stolen (including forcibly taken such as during a robbery) in a crime or seized by police (generally in drug arrests) for all offenses in 2019. Each offense can have multiple items stolen/seized.") %>%
+  kable_styling(bootstrap_options = "striped", full_width = FALSE, latex_options = c("hold_position", "repeat_header"))
 ```
 
+\setstretch{1.15}
 
 ### Type of property loss
 
@@ -133,18 +139,24 @@ ggplot(temp, aes(x = days_until_recovery, y = proportion)) +
 
 #### Suspected drug type
 
-```{r propertyDrugs, fig.cap = "The number and percent of drugs seized by police by type of drug."}
+```{r propertyDrugs}
 temp <- make_frequency_table(property,
                              "suspected_drug_type_1",
                              c("Drug Type",
-                               "# of Drugs",
-                               "% of Drugs"))
-datatable(temp, options = list(pageLength = 100)) %>%
-  formatPercentage('% of Drugs', 2) %>%
-  formatRound('# of Drugs', digits = 0) %>%
-  formatStyle(1, `text-align` = 'left')
+                               "\\# of Drugs",
+                               "\\% of Drugs"))
+knitr::kable(temp, 
+             format = "markdown",
+             digits = 2, 
+             align = c("l", "r", "r"),
+             booktabs = TRUE, 
+             longtable = TRUE,
+             escape = FALSE,
+             caption = "The number and percent of drugs seized by police by type of drug.") %>%
+  kable_styling(bootstrap_options = "striped", full_width = FALSE, latex_options = c("hold_position", "repeat_header"))
 ```
 
+\setstretch{1.15}
 
 #### Amount of drugs
 

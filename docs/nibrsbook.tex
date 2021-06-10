@@ -117,6 +117,13 @@
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{5}
+\usepackage{booktabs}
+\usepackage{tabu}
+\usepackage{longtable}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{pdflscape}
+\usepackage{booktabs}
 \ifluatex
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
@@ -125,7 +132,7 @@
 
 \title{National Incident-Based Reporting System (NIBRS) Data: A Practitioner's Guide}
 \author{Jacob Kaplan}
-\date{2021-06-08}
+\date{2021-06-09}
 
 \begin{document}
 \maketitle
@@ -135,6 +142,7 @@
 \setcounter{tocdepth}{2}
 \tableofcontents
 }
+\listoftables
 \listoffigures
 \setstretch{1.15}
 \hypertarget{preface}{%
@@ -540,11 +548,73 @@ Since the number of agencies in a state is partially just a factor of population
 \caption{Agencies in each state reporting at least one crime to NIBRS in 2019 as a percent of agencies that reported UCR Offenses Known and Clearances by Arrests data in 2019.}\label{fig:agenciesReportingMapPercent}
 \end{figure}
 
-For ease of reference, Table \ref{fig:agenciesReportingTable} shows the number of agencies in each state reporting to NIBRS and to UCR in 2019, and the percent shown in Figure \ref{fig:agenciesReportingMapPercent}. If you're reading this on your phone or computer you can search or sort the table.
+For ease of reference, Table \ref{tab:agenciesReportingTable} shows the number of agencies in each state reporting to NIBRS and to UCR in 2019, and the percent shown in Figure \ref{fig:agenciesReportingMapPercent}.
 
-\textbackslash begin\{figure\}
+\begin{longtable}[]{@{}lrrr@{}}
+\caption{\label{tab:agenciesReportingTable}The number of agencies in each state reporting to NIBRS and to UCR in 2019. Also shows NIBRS reporting in each state as a percent of UCR reporting.}\tabularnewline
+\toprule
+State & NIBRS Agencies & UCR Agencies & \% of UCR Agencies\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+State & NIBRS Agencies & UCR Agencies & \% of UCR Agencies\tabularnewline
+\midrule
+\endhead
+Alabama & 1 & 352 & 0.00\tabularnewline
+Alaska & 0 & 33 & 0.00\tabularnewline
+Arizona & 11 & 114 & 0.10\tabularnewline
+Arkansas & 277 & 278 & 1.00\tabularnewline
+California & 0 & 738 & 0.00\tabularnewline
+Colorado & 217 & 222 & 0.98\tabularnewline
+Connecticut & 100 & 107 & 0.93\tabularnewline
+Delaware & 60 & 63 & 0.95\tabularnewline
+District of Columbia & 1 & 3 & 0.33\tabularnewline
+Florida & 0 & 678 & 0.00\tabularnewline
+Georgia & 251 & 522 & 0.48\tabularnewline
+Hawaii & 1 & 3 & 0.33\tabularnewline
+Idaho & 104 & 108 & 0.96\tabularnewline
+Illinois & 1 & 739 & 0.00\tabularnewline
+Indiana & 180 & 289 & 0.62\tabularnewline
+Iowa & 240 & 246 & 0.98\tabularnewline
+Kansas & 343 & 376 & 0.91\tabularnewline
+Kentucky & 389 & 413 & 0.94\tabularnewline
+Louisiana & 30 & 188 & 0.16\tabularnewline
+Maine & 39 & 135 & 0.29\tabularnewline
+Maryland & 2 & 156 & 0.01\tabularnewline
+Massachusetts & 317 & 363 & 0.87\tabularnewline
+Michigan & 616 & 650 & 0.95\tabularnewline
+Minnesota & 153 & 409 & 0.37\tabularnewline
+Mississippi & 26 & 79 & 0.33\tabularnewline
+Missouri & 80 & 576 & 0.14\tabularnewline
+Montana & 95 & 103 & 0.92\tabularnewline
+Nebraska & 113 & 236 & 0.48\tabularnewline
+Nevada & 4 & 62 & 0.06\tabularnewline
+New Hampshire & 187 & 188 & 0.99\tabularnewline
+New Jersey & 0 & 578 & 0.00\tabularnewline
+New Mexico & 4 & 121 & 0.03\tabularnewline
+New York & 0 & 572 & 0.00\tabularnewline
+North Carolina & 320 & 333 & 0.96\tabularnewline
+North Dakota & 106 & 110 & 0.96\tabularnewline
+Ohio & 529 & 604 & 0.88\tabularnewline
+Oklahoma & 381 & 437 & 0.87\tabularnewline
+Oregon & 184 & 208 & 0.88\tabularnewline
+Pennsylvania & 21 & 1477 & 0.01\tabularnewline
+Rhode Island & 47 & 49 & 0.96\tabularnewline
+South Carolina & 306 & 405 & 0.76\tabularnewline
+South Dakota & 115 & 129 & 0.89\tabularnewline
+Tennessee & 443 & 465 & 0.95\tabularnewline
+Texas & 619 & 1053 & 0.59\tabularnewline
+Utah & 88 & 129 & 0.68\tabularnewline
+Vermont & 86 & 89 & 0.97\tabularnewline
+Virginia & 411 & 415 & 0.99\tabularnewline
+Washington & 231 & 257 & 0.90\tabularnewline
+West Virginia & 221 & 240 & 0.92\tabularnewline
+Wisconsin & 215 & 428 & 0.50\tabularnewline
+Wyoming & 5 & 55 & 0.09\tabularnewline
+\bottomrule
+\end{longtable}
 
-\{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/agenciesReportingTable-1}
+\setstretch{1.15}
 
 \hypertarget{how-to-identify-a-particular-agency-ori-codes}{%
 \section{How to identify a particular agency (ORI codes)}\label{how-to-identify-a-particular-agency-ori-codes}}
@@ -694,16 +764,215 @@ This segment provides information about the offense that occurred, and each inci
 \hypertarget{crime-category}{%
 \subsection{Crime category}\label{crime-category}}
 
-\textbackslash begin\{figure\}
+\begin{longtable}[]{@{}lrr@{}}
+\caption{\label{tab:offenseCrimeCategories}The number and percent of crimes reported from all agencies in 2019, by crime category.}\tabularnewline
+\toprule
+Crime Category & \# of Offenses & \% of Offenses\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+Crime Category & \# of Offenses & \% of Offenses\tabularnewline
+\midrule
+\endhead
+Simple Assault & 944,601 & 12.70\%\tabularnewline
+Destruction/Damage/Vandalism of Property & 821,523 & 11.05\%\tabularnewline
+All Other Larceny & 810,138 & 10.89\%\tabularnewline
+Drug/Narcotic Violations & 710,822 & 9.56\%\tabularnewline
+Theft From Motor Vehicle & 550,202 & 7.40\%\tabularnewline
+Shoplifting & 487,848 & 6.56\%\tabularnewline
+Burglary/Breaking And Entering & 476,554 & 6.41\%\tabularnewline
+Drug Equipment Violations & 327,715 & 4.41\%\tabularnewline
+Motor Vehicle Theft & 304,964 & 4.10\%\tabularnewline
+Intimidation & 279,040 & 3.75\%\tabularnewline
+Aggravated Assault & 271,444 & 3.65\%\tabularnewline
+Theft From Building & 212,507 & 2.86\%\tabularnewline
+False Pretenses/Swindle/Confidence Game & 195,003 & 2.62\%\tabularnewline
+Credit Card/Atm Fraud & 134,527 & 1.81\%\tabularnewline
+Weapon Law Violations & 134,182 & 1.80\%\tabularnewline
+Counterfeiting/Forgery & 112,766 & 1.52\%\tabularnewline
+Theft of Motor Vehicle Parts/Accessories & 111,384 & 1.50\%\tabularnewline
+Robbery & 92,935 & 1.25\%\tabularnewline
+Identity Theft & 68,515 & 0.92\%\tabularnewline
+Stolen Property Offenses (Receiving, Selling, Etc.) & 58,449 & 0.79\%\tabularnewline
+Impersonation & 57,920 & 0.78\%\tabularnewline
+Fondling (Incident Liberties/Child Molest) & 46,141 & 0.62\%\tabularnewline
+Rape & 46,049 & 0.62\%\tabularnewline
+Embezzlement & 24,166 & 0.32\%\tabularnewline
+Kidnapping/Abduction & 22,757 & 0.31\%\tabularnewline
+Pornography/Obscene Material & 19,814 & 0.27\%\tabularnewline
+Arson & 15,500 & 0.21\%\tabularnewline
+Wire Fraud & 15,373 & 0.21\%\tabularnewline
+Sodomy & 11,046 & 0.15\%\tabularnewline
+Animal Cruelty & 9,956 & 0.13\%\tabularnewline
+Pocket-Picking & 9,527 & 0.13\%\tabularnewline
+Purse-Snatching & 7,487 & 0.10\%\tabularnewline
+Prostitution & 7,309 & 0.10\%\tabularnewline
+Murder/Nonnegligent Manslaughter & 6,095 & 0.08\%\tabularnewline
+Extortion/Blackmail & 5,583 & 0.08\%\tabularnewline
+Statutory Rape & 5,430 & 0.07\%\tabularnewline
+Theft From Coin-Operated Machine Or Device & 4,617 & 0.06\%\tabularnewline
+Sexual Assault With An Object & 4,599 & 0.06\%\tabularnewline
+Hacking/Computer Invasion & 2,765 & 0.04\%\tabularnewline
+Assisting Or Promoting Prostitution & 2,283 & 0.03\%\tabularnewline
+Purchasing Prostitution & 1,159 & 0.02\%\tabularnewline
+Welfare Fraud & 940 & 0.01\%\tabularnewline
+Human Trafficking - Commercial Sex Acts & 915 & 0.01\%\tabularnewline
+Incest & 762 & 0.01\%\tabularnewline
+Operating/Promoting/Assisting Gambling & 613 & 0.01\%\tabularnewline
+Negligent Manslaughter & 561 & 0.01\%\tabularnewline
+Bribery & 544 & 0.01\%\tabularnewline
+Gambling Equipment Violations & 351 & 0.00\%\tabularnewline
+Justifiable Homicide & 300 & 0.00\%\tabularnewline
+Betting/Wagering & 260 & 0.00\%\tabularnewline
+Human Trafficking - Involuntary Servitude & 142 & 0.00\%\tabularnewline
+Sports Tampering & 7 & 0.00\%\tabularnewline
+Total & 7,436,090 & 100\%\tabularnewline
+\bottomrule
+\end{longtable}
 
-\{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/offenseCrimeCategories-1}
+\setstretch{1.15}
 
 \hypertarget{offense-subtype}{%
 \subsection{Offense subtype}\label{offense-subtype}}
 
-\textbackslash begin\{figure\}
+\begin{longtable}[]{@{}lrr@{}}
+\caption{\label{tab:offenseCrimeSubcategories}The number and percent of crime subtypes. This breakdown is only available for a subset of offenses.}\tabularnewline
+\toprule
+\begin{minipage}[b]{(\columnwidth - 2\tabcolsep) * \real{0.82}}\raggedright
+Crime Subcategory\strut
+\end{minipage} & \begin{minipage}[b]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+\# of Offenses\strut
+\end{minipage} & \begin{minipage}[b]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+\% of Offenses\strut
+\end{minipage}\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+\begin{minipage}[b]{(\columnwidth - 2\tabcolsep) * \real{0.82}}\raggedright
+Crime Subcategory\strut
+\end{minipage} & \begin{minipage}[b]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+\# of Offenses\strut
+\end{minipage} & \begin{minipage}[b]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+\% of Offenses\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.82}}\raggedright
+Possessing/Concealing\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+1,074,646\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+44.35\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.82}}\raggedright
+None/Unknown Gang Involvement (Mutually Exclusive)\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+1,040,062\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+42.92\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.82}}\raggedright
+Distributing/Selling\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+100,708\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+4.16\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.82}}\raggedright
+Using/Consuming\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+90,049\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+3.72\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.82}}\raggedright
+Buying/Receiving\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+46,692\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+1.93\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.82}}\raggedright
+Cultivating/Manufacturing/Publishing\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+26,289\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+1.08\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.82}}\raggedright
+Operating/Promoting/Assisting\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+12,446\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+0.51\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.82}}\raggedright
+Transporting/Transmitting/Importing\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+7,821\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+0.32\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.82}}\raggedright
+Simple/Gross Neglect (Unintentionally, Intentionally, Or Knowingly Failing To Provide Food, Water, Shelter, Veterinary Care, Hoarding, Etc.)\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+6,996\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+0.29\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.82}}\raggedright
+Other Gang\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+6,482\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+0.27\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.82}}\raggedright
+Exploiting Children\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+5,448\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+0.22\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.82}}\raggedright
+Intentional Abuse And Torture (Tormenting, Mutilating, Poisoning, Or Abandonment)\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+2,770\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+0.11\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.82}}\raggedright
+Juvenile Gang Involvement\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+2,582\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+0.11\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.82}}\raggedright
+Animal Sexual Abuse (Bestiality)\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+104\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+0.00\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.82}}\raggedright
+Organized Abuse (Dog Fighting And Cock Fighting)\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+86\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+0.00\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.82}}\raggedright
+Total\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+2,423,181\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+100\%\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
 
-\{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/offenseCrimeSubcategories-1}
+\setstretch{1.15}
 
 \begin{itemize}
 \tightlist
@@ -747,9 +1016,67 @@ This segment provides information about the offense that occurred, and each inci
   Weapon Law Violations
 \end{itemize}
 
-\textbackslash begin\{figure\}
+\begin{longtable}[]{@{}lrr@{}}
+\caption{\label{tab:offenseCrimeSubcategoriesAnimalAbuse}The number and percent of crime subtypes for animal abuse.}\tabularnewline
+\toprule
+\begin{minipage}[b]{(\columnwidth - 2\tabcolsep) * \real{0.82}}\raggedright
+Crime Subcategory\strut
+\end{minipage} & \begin{minipage}[b]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+\# of Offenses\strut
+\end{minipage} & \begin{minipage}[b]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+\% of Offenses\strut
+\end{minipage}\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+\begin{minipage}[b]{(\columnwidth - 2\tabcolsep) * \real{0.82}}\raggedright
+Crime Subcategory\strut
+\end{minipage} & \begin{minipage}[b]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+\# of Offenses\strut
+\end{minipage} & \begin{minipage}[b]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+\% of Offenses\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.82}}\raggedright
+Simple/Gross Neglect (Unintentionally, Intentionally, Or Knowingly Failing To Provide Food, Water, Shelter, Veterinary Care, Hoarding, Etc.)\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+6,996\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+70.27\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.82}}\raggedright
+Intentional Abuse And Torture (Tormenting, Mutilating, Poisoning, Or Abandonment)\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+2,770\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+27.82\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.82}}\raggedright
+Animal Sexual Abuse (Bestiality)\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+104\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+1.04\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.82}}\raggedright
+Organized Abuse (Dog Fighting And Cock Fighting)\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+86\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+0.86\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.82}}\raggedright
+Total\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+9,956\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.09}}\raggedleft
+100\%\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
 
-\{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/offenseCrimeSubcategoriesAnimalAbuse-1}
+\setstretch{1.15}
 
 \hypertarget{drug-alcohol-or-computer-use}{%
 \subsection{Drug, alcohol, or computer use}\label{drug-alcohol-or-computer-use}}
@@ -775,16 +1102,223 @@ This segment provides information about the offense that occurred, and each inci
 \hypertarget{crime-location}{%
 \subsection{Crime location}\label{crime-location}}
 
-\textbackslash begin\{figure\}
+\begin{longtable}[]{@{}lrr@{}}
+\caption{\label{tab:offenseLocation}The location of crimes for all offenses reported in 2019.}\tabularnewline
+\toprule
+Crime Location & \# of Offenses & \% of Offenses\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+Crime Location & \# of Offenses & \% of Offenses\tabularnewline
+\midrule
+\endhead
+Residence/Home & 3,001,159 & 40.36\%\tabularnewline
+Highway/Road/Alley & 1,188,722 & 15.99\%\tabularnewline
+Parking Lot/Garage & 637,986 & 8.58\%\tabularnewline
+Department/Discount Store & 373,338 & 5.02\%\tabularnewline
+Other/Unknown & 349,477 & 4.70\%\tabularnewline
+Convenience Store & 174,952 & 2.35\%\tabularnewline
+Grocery/Supermarket & 171,702 & 2.31\%\tabularnewline
+Commercial/Office Building & 159,915 & 2.15\%\tabularnewline
+Specialty Store (Tv, Fur, Etc.) & 144,856 & 1.95\%\tabularnewline
+Restaurant & 132,347 & 1.78\%\tabularnewline
+School - Elementary/Secondary & 119,901 & 1.61\%\tabularnewline
+Hotel/Motel/Etc. & 118,313 & 1.59\%\tabularnewline
+Service/Gas Station & 103,901 & 1.40\%\tabularnewline
+Drug Store/Doctors Office/Hospital & 74,861 & 1.01\%\tabularnewline
+Bank/Savings And Loan & 67,959 & 0.91\%\tabularnewline
+Government/Public Building & 59,118 & 0.80\%\tabularnewline
+Bar/Nightclub & 55,220 & 0.74\%\tabularnewline
+Park/Playground & 54,226 & 0.73\%\tabularnewline
+Field/Woods & 40,011 & 0.54\%\tabularnewline
+School - College/University & 36,947 & 0.50\%\tabularnewline
+Jail/Prison & 35,363 & 0.48\%\tabularnewline
+Construction Site & 34,744 & 0.47\%\tabularnewline
+Rental Storage Facility & 34,630 & 0.47\%\tabularnewline
+Shopping Mall & 32,532 & 0.44\%\tabularnewline
+School/College & 31,330 & 0.42\%\tabularnewline
+Cyberspace & 29,830 & 0.40\%\tabularnewline
+Air/Bus/Train Terminal & 28,409 & 0.38\%\tabularnewline
+Church/Synagogue/Temple & 26,470 & 0.36\%\tabularnewline
+Auto Dealership New/Used & 20,643 & 0.28\%\tabularnewline
+Liquor Store & 15,237 & 0.20\%\tabularnewline
+Industrial Site & 11,044 & 0.15\%\tabularnewline
+Gambling Facility/Casino/Race Track & 9,688 & 0.13\%\tabularnewline
+Shelter - Mission/Homeless & 7,252 & 0.10\%\tabularnewline
+Community Center & 7,191 & 0.10\%\tabularnewline
+Lake/Waterway & 7,020 & 0.09\%\tabularnewline
+Farm Facility & 5,992 & 0.08\%\tabularnewline
+Arena/Stadium/Fairgrounds/Coliseum & 5,256 & 0.07\%\tabularnewline
+Camp/Campground & 5,251 & 0.07\%\tabularnewline
+Abandoned/Condemned Structure & 4,705 & 0.06\%\tabularnewline
+Atm Separate From Bank & 4,597 & 0.06\%\tabularnewline
+Daycare Facility & 4,260 & 0.06\%\tabularnewline
+Amusement Park & 3,429 & 0.05\%\tabularnewline
+Dock/Wharf/Freight/Model Terminal & 3,383 & 0.05\%\tabularnewline
+Rest Area & 2,236 & 0.03\%\tabularnewline
+Tribal Lands & 414 & 0.01\%\tabularnewline
+Military Installation & 273 & 0.00\%\tabularnewline
+Total & 7,436,090 & 100\%\tabularnewline
+\bottomrule
+\end{longtable}
 
-\{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/offenseLocation-1}
+\setstretch{1.15}
 
 \hypertarget{weapons}{%
 \subsection{Weapons}\label{weapons}}
 
-\textbackslash begin\{figure\}
+\begin{longtable}[]{@{}lrr@{}}
+\caption{\label{tab:offenseWeapon}The weapon used by an offender in the crime for all offenses reported in 2019. The use means that it was part of the crime though may not have been physically discharged. For example, pointing a gun at someone even without firing the gun is still using it.}\tabularnewline
+\toprule
+\begin{minipage}[b]{(\columnwidth - 2\tabcolsep) * \real{0.69}}\raggedright
+Weapon Used\strut
+\end{minipage} & \begin{minipage}[b]{(\columnwidth - 2\tabcolsep) * \real{0.16}}\raggedleft
+\# of Offenses\strut
+\end{minipage} & \begin{minipage}[b]{(\columnwidth - 2\tabcolsep) * \real{0.16}}\raggedleft
+\% of Offenses\strut
+\end{minipage}\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+\begin{minipage}[b]{(\columnwidth - 2\tabcolsep) * \real{0.69}}\raggedright
+Weapon Used\strut
+\end{minipage} & \begin{minipage}[b]{(\columnwidth - 2\tabcolsep) * \real{0.16}}\raggedleft
+\# of Offenses\strut
+\end{minipage} & \begin{minipage}[b]{(\columnwidth - 2\tabcolsep) * \real{0.16}}\raggedleft
+\% of Offenses\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.69}}\raggedright
+Personal Weapons (Hands, Feet, Teeth, Etc.)\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.16}}\raggedleft
+918,134\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.16}}\raggedleft
+57.84\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.69}}\raggedright
+None\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.16}}\raggedleft
+161,623\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.16}}\raggedleft
+10.18\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.69}}\raggedright
+Handgun\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.16}}\raggedleft
+149,146\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.16}}\raggedleft
+9.40\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.69}}\raggedright
+Other\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.16}}\raggedleft
+90,385\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.16}}\raggedleft
+5.69\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.69}}\raggedright
+Knife/Cutting Instrument (Ice Pick, Screwdriver, Ax, Etc.)\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.16}}\raggedleft
+71,311\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.16}}\raggedleft
+4.49\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.69}}\raggedright
+Firearm (Type Not Stated)\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.16}}\raggedleft
+58,920\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.16}}\raggedleft
+3.71\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.69}}\raggedright
+Unknown\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.16}}\raggedleft
+57,430\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.16}}\raggedleft
+3.62\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.69}}\raggedright
+Blunt Object (Club, Hammer, Etc.)\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.16}}\raggedleft
+36,536\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.16}}\raggedleft
+2.30\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.69}}\raggedright
+Motor Vehicle\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.16}}\raggedleft
+17,278\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.16}}\raggedleft
+1.09\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.69}}\raggedright
+Rifle\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.16}}\raggedleft
+7,696\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.16}}\raggedleft
+0.48\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.69}}\raggedright
+Shotgun\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.16}}\raggedleft
+5,896\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.16}}\raggedleft
+0.37\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.69}}\raggedright
+Asphyxiation (By Drowning, Strangulation, Suffocation, Gas, Etc.)\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.16}}\raggedleft
+4,984\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.16}}\raggedleft
+0.31\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.69}}\raggedright
+Other Firearm\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.16}}\raggedleft
+4,633\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.16}}\raggedleft
+0.29\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.69}}\raggedright
+Drugs/Narcotics/Sleeping Pills\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.16}}\raggedleft
+1,239\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.16}}\raggedleft
+0.08\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.69}}\raggedright
+Explosives\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.16}}\raggedleft
+949\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.16}}\raggedleft
+0.06\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.69}}\raggedright
+Fire/Incendiary Device\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.16}}\raggedleft
+715\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.16}}\raggedleft
+0.05\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.69}}\raggedright
+Poison (Include Gas)\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.16}}\raggedleft
+475\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.16}}\raggedleft
+0.03\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.69}}\raggedright
+Total\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.16}}\raggedleft
+1,587,350\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.16}}\raggedleft
+100\%\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
 
-\{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/offenseWeapon-1}
+\setstretch{1.15}
 
 \begin{itemize}
 \tightlist
@@ -837,13 +1371,107 @@ This variable only tells you if the weapon is automatic
 \hypertarget{hate-crime-indicator-bias-motivation}{%
 \subsection{Hate crime indicator (bias motivation)}\label{hate-crime-indicator-bias-motivation}}
 
-\textbackslash begin\{figure\}
+\begin{longtable}[]{@{}lrr@{}}
+\caption{\label{tab:offenseBiasMotivation}The bias motivation (i.e.~if hate crime or not and what type of hate crime) for all offenses reported in 2019.}\tabularnewline
+\toprule
+Bias Motivation & \# of Offenses & \% of Offenses\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+Bias Motivation & \# of Offenses & \% of Offenses\tabularnewline
+\midrule
+\endhead
+No Bias Motivation & 7,372,214 & 99.14\%\tabularnewline
+Unknown Bias Motivation & 59,360 & 0.80\%\tabularnewline
+Anti-Black & 1,309 & 0.02\%\tabularnewline
+Anti-White & 573 & 0.01\%\tabularnewline
+Anti-Male Homosexual (Gay) & 357 & 0.00\%\tabularnewline
+Anti-Hispanic & 310 & 0.00\%\tabularnewline
+Anti-Jewish & 249 & 0.00\%\tabularnewline
+Anti-Homosexual (Both Gay And Lesbian) & 213 & 0.00\%\tabularnewline
+Anti-Other Ethnicity/National Origin & 210 & 0.00\%\tabularnewline
+Anti-American Indian Or Alaskan Native & 125 & 0.00\%\tabularnewline
+Anti-Mental Disability & 107 & 0.00\%\tabularnewline
+Anti-Asian/Pacific Islander & 101 & 0.00\%\tabularnewline
+Anti-Multi-Racial Group & 97 & 0.00\%\tabularnewline
+Anti-Islamic (Muslim) & 86 & 0.00\%\tabularnewline
+Anti-Female Homosexual (Lesbian) & 70 & 0.00\%\tabularnewline
+Anti-Transgender & 68 & 0.00\%\tabularnewline
+Anti-Sikh & 66 & 0.00\%\tabularnewline
+Anti-Arab & 64 & 0.00\%\tabularnewline
+Anti-Other Religion & 63 & 0.00\%\tabularnewline
+Anti-Gender Non-Conforming & 59 & 0.00\%\tabularnewline
+Anti-Female & 51 & 0.00\%\tabularnewline
+Anti-Eastern Orthodox (Greek, Russian, Etc.) & 50 & 0.00\%\tabularnewline
+Anti-Physical Disability & 44 & 0.00\%\tabularnewline
+Anti-Catholic & 42 & 0.00\%\tabularnewline
+Anti-Other Christian & 40 & 0.00\%\tabularnewline
+Anti-Native Hawaiian Or Other Pacific Islander & 30 & 0.00\%\tabularnewline
+Anti-Protestant & 26 & 0.00\%\tabularnewline
+Anti-Multi-Religious Group & 25 & 0.00\%\tabularnewline
+Anti-Bisexual & 22 & 0.00\%\tabularnewline
+Anti-Male & 17 & 0.00\%\tabularnewline
+Anti-Heterosexual & 12 & 0.00\%\tabularnewline
+Anti-Mormon & 7 & 0.00\%\tabularnewline
+Anti-Hindu & 7 & 0.00\%\tabularnewline
+Anti-Buddhist & 6 & 0.00\%\tabularnewline
+Anti-Atheism/Agnosticism & 5 & 0.00\%\tabularnewline
+Anti-Jehovahs Witness & 5 & 0.00\%\tabularnewline
+Total & 7,436,090 & 100\%\tabularnewline
+\bottomrule
+\end{longtable}
 
-\{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/offenseBiasMotivation-1}
+\setstretch{1.15}
 
-\textbackslash begin\{figure\}
+\begin{longtable}[]{@{}lrr@{}}
+\caption{\label{tab:offenseBiasMotivationBiases}The bias motivation (i.e.~if hate crime or not and what type of hate crime) for all offenses reported in 2019 that were classifed as hate crimes. For easier viewing of how hate crimes are broken down, this excludes all offenses where there was no bias motivation.}\tabularnewline
+\toprule
+Bias Motivation & \# of Offenses & \% of Offenses\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+Bias Motivation & \# of Offenses & \% of Offenses\tabularnewline
+\midrule
+\endhead
+Anti-Black & 1,309 & 28.99\%\tabularnewline
+Anti-White & 573 & 12.69\%\tabularnewline
+Anti-Male Homosexual (Gay) & 357 & 7.91\%\tabularnewline
+Anti-Hispanic & 310 & 6.86\%\tabularnewline
+Anti-Jewish & 249 & 5.51\%\tabularnewline
+Anti-Homosexual (Both Gay And Lesbian) & 213 & 4.72\%\tabularnewline
+Anti-Other Ethnicity/National Origin & 210 & 4.65\%\tabularnewline
+Anti-American Indian Or Alaskan Native & 125 & 2.77\%\tabularnewline
+Anti-Mental Disability & 107 & 2.37\%\tabularnewline
+Anti-Asian/Pacific Islander & 101 & 2.24\%\tabularnewline
+Anti-Multi-Racial Group & 97 & 2.15\%\tabularnewline
+Anti-Islamic (Muslim) & 86 & 1.90\%\tabularnewline
+Anti-Female Homosexual (Lesbian) & 70 & 1.55\%\tabularnewline
+Anti-Transgender & 68 & 1.51\%\tabularnewline
+Anti-Sikh & 66 & 1.46\%\tabularnewline
+Anti-Arab & 64 & 1.42\%\tabularnewline
+Anti-Other Religion & 63 & 1.40\%\tabularnewline
+Anti-Gender Non-Conforming & 59 & 1.31\%\tabularnewline
+Anti-Female & 51 & 1.13\%\tabularnewline
+Anti-Eastern Orthodox (Greek, Russian, Etc.) & 50 & 1.11\%\tabularnewline
+Anti-Physical Disability & 44 & 0.97\%\tabularnewline
+Anti-Catholic & 42 & 0.93\%\tabularnewline
+Anti-Other Christian & 40 & 0.89\%\tabularnewline
+Anti-Native Hawaiian Or Other Pacific Islander & 30 & 0.66\%\tabularnewline
+Anti-Protestant & 26 & 0.58\%\tabularnewline
+Anti-Multi-Religious Group & 25 & 0.55\%\tabularnewline
+Anti-Bisexual & 22 & 0.49\%\tabularnewline
+Anti-Male & 17 & 0.38\%\tabularnewline
+Anti-Heterosexual & 12 & 0.27\%\tabularnewline
+Anti-Mormon & 7 & 0.16\%\tabularnewline
+Anti-Hindu & 7 & 0.16\%\tabularnewline
+Anti-Buddhist & 6 & 0.13\%\tabularnewline
+Anti-Atheism/Agnosticism & 5 & 0.11\%\tabularnewline
+Anti-Jehovahs Witness & 5 & 0.11\%\tabularnewline
+Total & 4,516 & 100\%\tabularnewline
+\bottomrule
+\end{longtable}
 
-\{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/offenseBiasMotivationBiases-1}
+\setstretch{1.15}
 
 \hypertarget{offender-segment-1}{%
 \chapter{Offender Segment}\label{offender-segment-1}}
@@ -905,9 +1533,73 @@ One highly interesting variable is the relationship between the victim and the o
 \hypertarget{crime-category-1}{%
 \subsection{Crime category}\label{crime-category-1}}
 
-\textbackslash begin\{figure\}
+\begin{longtable}[]{@{}lrr@{}}
+\caption{\label{tab:victimCrimeCategory}The number and percent of crimes committed against each victim. For victims with multiple crimes committed against them, this shows the most serious crime.}\tabularnewline
+\toprule
+Crime Category & \# of Victims & \% of Victims\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+Crime Category & \# of Victims & \% of Victims\tabularnewline
+\midrule
+\endhead
+Simple Assault & 1,062,299 & 14.31\%\tabularnewline
+All Other Larceny & 820,257 & 11.05\%\tabularnewline
+Drug/Narcotic Violations & 710,870 & 9.58\%\tabularnewline
+Destruction/Damage/Vandalism of Property & 681,090 & 9.17\%\tabularnewline
+Theft From Motor Vehicle & 614,794 & 8.28\%\tabularnewline
+Burglary/Breaking And Entering & 551,161 & 7.42\%\tabularnewline
+Shoplifting & 498,696 & 6.72\%\tabularnewline
+Aggravated Assault & 336,840 & 4.54\%\tabularnewline
+Intimidation & 313,809 & 4.23\%\tabularnewline
+Motor Vehicle Theft & 312,692 & 4.21\%\tabularnewline
+Theft From Building & 212,308 & 2.86\%\tabularnewline
+False Pretenses/Swindle/Confidence Game & 190,933 & 2.57\%\tabularnewline
+Robbery & 125,835 & 1.69\%\tabularnewline
+Credit Card/Atm Fraud & 125,001 & 1.68\%\tabularnewline
+Counterfeiting/Forgery & 111,637 & 1.50\%\tabularnewline
+Theft of Motor Vehicle Parts/Accessories & 111,376 & 1.50\%\tabularnewline
+Drug Equipment Violations & 108,595 & 1.46\%\tabularnewline
+Weapon Law Violations & 95,283 & 1.28\%\tabularnewline
+Identity Theft & 63,639 & 0.86\%\tabularnewline
+Stolen Property Offenses (Receiving, Selling, Etc.) & 55,445 & 0.75\%\tabularnewline
+Impersonation & 55,367 & 0.75\%\tabularnewline
+Fondling (Incident Liberties/Child Molest) & 50,697 & 0.68\%\tabularnewline
+Rape & 47,233 & 0.64\%\tabularnewline
+Embezzlement & 24,310 & 0.33\%\tabularnewline
+Pornography/Obscene Material & 19,703 & 0.27\%\tabularnewline
+Arson & 17,406 & 0.23\%\tabularnewline
+Wire Fraud & 15,162 & 0.20\%\tabularnewline
+Sodomy & 11,027 & 0.15\%\tabularnewline
+Kidnapping/Abduction & 10,066 & 0.14\%\tabularnewline
+Animal Cruelty & 9,807 & 0.13\%\tabularnewline
+Pocket-Picking & 9,712 & 0.13\%\tabularnewline
+Purse-Snatching & 7,595 & 0.10\%\tabularnewline
+Murder/Nonnegligent Manslaughter & 6,590 & 0.09\%\tabularnewline
+Prostitution & 6,464 & 0.09\%\tabularnewline
+Statutory Rape & 5,591 & 0.08\%\tabularnewline
+Extortion/Blackmail & 5,334 & 0.07\%\tabularnewline
+Theft From Coin-Operated Machine Or Device & 4,791 & 0.06\%\tabularnewline
+Sexual Assault With An Object & 4,480 & 0.06\%\tabularnewline
+Hacking/Computer Invasion & 2,162 & 0.03\%\tabularnewline
+Assisting Or Promoting Prostitution & 1,787 & 0.02\%\tabularnewline
+Purchasing Prostitution & 1,061 & 0.01\%\tabularnewline
+Human Trafficking - Commercial Sex Acts & 854 & 0.01\%\tabularnewline
+Incest & 849 & 0.01\%\tabularnewline
+Welfare Fraud & 785 & 0.01\%\tabularnewline
+Negligent Manslaughter & 597 & 0.01\%\tabularnewline
+Operating/Promoting/Assisting Gambling & 567 & 0.01\%\tabularnewline
+Bribery & 449 & 0.01\%\tabularnewline
+Justifiable Homicide & 308 & 0.00\%\tabularnewline
+Betting/Wagering & 249 & 0.00\%\tabularnewline
+Gambling Equipment Violations & 219 & 0.00\%\tabularnewline
+Human Trafficking - Involuntary Servitude & 176 & 0.00\%\tabularnewline
+Sports Tampering & 5 & 0.00\%\tabularnewline
+Total & 7,423,963 & 100\%\tabularnewline
+\bottomrule
+\end{longtable}
 
-\{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/victimCrimeCategory-1}
+\setstretch{1.15}
 
 \hypertarget{victim-type}{%
 \subsection{Victim type}\label{victim-type}}
@@ -963,13 +1655,86 @@ One highly interesting variable is the relationship between the victim and the o
 \hypertarget{relationship-to-offender}{%
 \subsection{Relationship to offender}\label{relationship-to-offender}}
 
-\textbackslash begin\{figure\}
+\begin{longtable}[]{@{}lrr@{}}
+\caption{\label{tab:victimRelationship}The distribution of the relationship between the victim and the offender. Only individual and law enforcement officer victims have this variable available.}\tabularnewline
+\toprule
+Crime Category & \# of Victims & \% of Victims\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+Crime Category & \# of Victims & \% of Victims\tabularnewline
+\midrule
+\endhead
+Relationship Unknown & 436,858 & 19.75\%\tabularnewline
+Victim Was Boyfriend/Girlfriend & 317,314 & 14.35\%\tabularnewline
+Victim Was Acquaintance & 286,790 & 12.97\%\tabularnewline
+Victim Was Stranger & 282,912 & 12.79\%\tabularnewline
+Victim Was Otherwise Known & 210,300 & 9.51\%\tabularnewline
+Victim Was Spouse & 119,859 & 5.42\%\tabularnewline
+Victim Was Parent & 80,730 & 3.65\%\tabularnewline
+Victim Was Other Family Member & 69,761 & 3.15\%\tabularnewline
+Victim Was Child & 69,669 & 3.15\%\tabularnewline
+Victim Was Sibling & 56,121 & 2.54\%\tabularnewline
+Victim Was Friend & 54,207 & 2.45\%\tabularnewline
+Victim Was Offender & 52,615 & 2.38\%\tabularnewline
+Victim Was Neighbor & 36,082 & 1.63\%\tabularnewline
+Victim Was Ex-Relationship (Ex-Boyfriend/Ex-Girlfriend) & 24,865 & 1.12\%\tabularnewline
+Victim Was Ex-Spouse & 24,575 & 1.11\%\tabularnewline
+Victim Was Common-Law Spouse & 13,824 & 0.63\%\tabularnewline
+Victim Was Step-Child & 11,066 & 0.50\%\tabularnewline
+Victim Was In-Law & 10,238 & 0.46\%\tabularnewline
+Victim Was Grandparent & 8,881 & 0.40\%\tabularnewline
+Victim Was Step-Parent & 8,621 & 0.39\%\tabularnewline
+Victim Was Child of Boyfriend/Girlfriend & 8,273 & 0.37\%\tabularnewline
+Victim Was Employee & 6,816 & 0.31\%\tabularnewline
+Victim Was Employer & 6,231 & 0.28\%\tabularnewline
+Victim Was In A Homosexual Relationship With The Offender & 5,370 & 0.24\%\tabularnewline
+Victim Was Grandchild & 5,287 & 0.24\%\tabularnewline
+Victim Was Step-Sibling & 2,780 & 0.13\%\tabularnewline
+Victim Was Babysittee (The Baby) & 1,512 & 0.07\%\tabularnewline
+Total & 2,211,557 & 100\%\tabularnewline
+\bottomrule
+\end{longtable}
 
-\{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/victimRelationship-1}
+\setstretch{1.15}
 
-\textbackslash begin\{figure\}
+\begin{longtable}[]{@{}lrr@{}}
+\caption{\label{tab:victimRelationshipPolice}The distribution of the relationship between the victim and the offender for law enforcement officer victims.}\tabularnewline
+\toprule
+Crime Category & \# of Victims & \% of Victims\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+Crime Category & \# of Victims & \% of Victims\tabularnewline
+\midrule
+\endhead
+Victim Was Stranger & 19,779 & 58.89\%\tabularnewline
+Victim Was Otherwise Known & 6,294 & 18.74\%\tabularnewline
+Relationship Unknown & 6,225 & 18.53\%\tabularnewline
+Victim Was Acquaintance & 1,085 & 3.23\%\tabularnewline
+Victim Was Employee & 52 & 0.15\%\tabularnewline
+Victim Was Boyfriend/Girlfriend & 40 & 0.12\%\tabularnewline
+Victim Was Spouse & 16 & 0.05\%\tabularnewline
+Victim Was Friend & 15 & 0.04\%\tabularnewline
+Victim Was In-Law & 13 & 0.04\%\tabularnewline
+Victim Was Other Family Member & 11 & 0.03\%\tabularnewline
+Victim Was Parent & 9 & 0.03\%\tabularnewline
+Victim Was Neighbor & 9 & 0.03\%\tabularnewline
+Victim Was Ex-Relationship (Ex-Boyfriend/Ex-Girlfriend) & 8 & 0.02\%\tabularnewline
+Victim Was Step-Sibling & 6 & 0.02\%\tabularnewline
+Victim Was Offender & 6 & 0.02\%\tabularnewline
+Victim Was Child & 4 & 0.01\%\tabularnewline
+Victim Was Sibling & 4 & 0.01\%\tabularnewline
+Victim Was Ex-Spouse & 4 & 0.01\%\tabularnewline
+Victim Was Common-Law Spouse & 3 & 0.01\%\tabularnewline
+Victim Was Employer & 2 & 0.01\%\tabularnewline
+Victim Was Step-Parent & 2 & 0.01\%\tabularnewline
+Victim Was Babysittee (The Baby) & 1 & 0.00\%\tabularnewline
+Total & 33,588 & 100\%\tabularnewline
+\bottomrule
+\end{longtable}
 
-\{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/victimRelationshipPolice-1}
+\setstretch{1.15}
 
 \hypertarget{residence-status}{%
 \subsection{Residence status}\label{residence-status}}
@@ -1008,9 +1773,38 @@ victim\$resident\_status\_of\_victim
 \hypertarget{aggravated-assault-and-homicide-circumstances}{%
 \subsection{Aggravated assault and homicide circumstances}\label{aggravated-assault-and-homicide-circumstances}}
 
-\textbackslash begin\{figure\}
+\begin{longtable}[]{@{}lrrl@{}}
+\caption{\label{tab:victimAggAssault}The distribution of circumstances for aggravated assault and homicides.}\tabularnewline
+\toprule
+Circumstance & Crime Category & \# of Victims & \% of Victims\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+Circumstance & Crime Category & \# of Victims & \% of Victims\tabularnewline
+\midrule
+\endhead
+Argument & Aggravated Assault/Murder & 147,027 & 42.66\%\tabularnewline
+Unknown Circumstances & Aggravated Assault/Murder & 82,432 & 23.92\%\tabularnewline
+Other Circumstances & Aggravated Assault/Murder & 64,605 & 18.74\%\tabularnewline
+Lovers Quarrel & Aggravated Assault/Murder & 32,249 & 9.36\%\tabularnewline
+Assault On Law Enforcement Officer(S) & Aggravated Assault/Murder & 9,695 & 2.81\%\tabularnewline
+Other Felony Involved & Aggravated Assault/Murder & 4,007 & 1.16\%\tabularnewline
+Drug Dealing & Aggravated Assault/Murder & 1,718 & 0.50\%\tabularnewline
+Gangland & Aggravated Assault/Murder & 1,420 & 0.41\%\tabularnewline
+Juvenile Gang & Aggravated Assault/Murder & 588 & 0.17\%\tabularnewline
+Other Negligent Killings & Negligent Manslaughter & 490 & 0.14\%\tabularnewline
+Criminal Killed By Private Citizen & Justifiable Homicide & 181 & 0.05\%\tabularnewline
+Criminal Killed By Police Officer & Justifiable Homicide & 127 & 0.04\%\tabularnewline
+Other Negligent Weapon Handling & Negligent Manslaughter & 86 & 0.02\%\tabularnewline
+Child Playing With Weapon & Negligent Manslaughter & 18 & 0.01\%\tabularnewline
+Mercy Killing & Aggravated Assault/Murder & 6 & 0.00\%\tabularnewline
+Gun-Cleaning Accident & Negligent Manslaughter & 2 & 0.00\%\tabularnewline
+Hunting Accident & Negligent Manslaughter & 1 & 0.00\%\tabularnewline
+Total & Aggravated Assault/Murder & 344,652 & 100\%\tabularnewline
+\bottomrule
+\end{longtable}
 
-\{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/victimAggAssault-1}
+\setstretch{1.15}
 
 \hypertarget{justifiable-homicide-circumstance}{%
 \subsection{Justifiable homicide circumstance}\label{justifiable-homicide-circumstance}}
@@ -1083,16 +1877,113 @@ The Arrestee Segment has information that is largely available in other segments
 \hypertarget{crime-arrested-for-excluding-group-b-arrests}{%
 \subsection{Crime arrested for (excluding Group B arrests)}\label{crime-arrested-for-excluding-group-b-arrests}}
 
-\textbackslash begin\{figure\}
+As Table \ref{tab:arresteeCrime} shows\ldots{}
 
-\{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/arresteeCrime-1}
+\begin{longtable}[]{@{}lrr@{}}
+\caption{\label{tab:arresteeCrime}The number and percent of arrests for Group A crimes for all arrests reported to NIBRS in 2019.}\tabularnewline
+\toprule
+Crime Category & \# of Offenses & \% of Offenses\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+Crime Category & \# of Offenses & \% of Offenses\tabularnewline
+\midrule
+\endhead
+Drug/Narcotic Violations & 523,732 & 25.82\%\tabularnewline
+Simple Assault & 385,695 & 19.02\%\tabularnewline
+Shoplifting & 228,355 & 11.26\%\tabularnewline
+Aggravated Assault & 127,192 & 6.27\%\tabularnewline
+All Other Larceny & 104,244 & 5.14\%\tabularnewline
+Drug Equipment Violations & 95,730 & 4.72\%\tabularnewline
+Destruction/Damage/Vandalism of Property & 69,153 & 3.41\%\tabularnewline
+Burglary/Breaking And Entering & 56,613 & 2.79\%\tabularnewline
+Intimidation & 52,972 & 2.61\%\tabularnewline
+Weapon Law Violations & 51,907 & 2.56\%\tabularnewline
+All Other Offenses & 49,288 & 2.43\%\tabularnewline
+Stolen Property Offenses (Receiving, Selling, Etc.) & 32,953 & 1.62\%\tabularnewline
+Motor Vehicle Theft & 28,489 & 1.40\%\tabularnewline
+Robbery & 25,590 & 1.26\%\tabularnewline
+False Pretenses/Swindle/Confidence Game & 23,183 & 1.14\%\tabularnewline
+Theft From Motor Vehicle & 18,780 & 0.93\%\tabularnewline
+Counterfeiting/Forgery & 18,022 & 0.89\%\tabularnewline
+Theft From Building & 15,899 & 0.78\%\tabularnewline
+Disorderly Conduct & 11,413 & 0.56\%\tabularnewline
+Driving Under The Influence & 10,084 & 0.50\%\tabularnewline
+Impersonation & 9,429 & 0.46\%\tabularnewline
+Kidnapping/Abduction & 8,941 & 0.44\%\tabularnewline
+Credit Card/Atm Fraud & 6,846 & 0.34\%\tabularnewline
+Fondling (Incident Liberties/Child Molest) & 6,659 & 0.33\%\tabularnewline
+Trespass of Real Property & 6,439 & 0.32\%\tabularnewline
+Rape & 6,406 & 0.32\%\tabularnewline
+Embezzlement & 6,327 & 0.31\%\tabularnewline
+Prostitution & 5,492 & 0.27\%\tabularnewline
+Murder/Nonnegligent Manslaughter & 4,788 & 0.24\%\tabularnewline
+Liquor Law Violations & 4,267 & 0.21\%\tabularnewline
+Identity Theft & 3,802 & 0.19\%\tabularnewline
+Drunkenness & 3,753 & 0.19\%\tabularnewline
+Pocket-Picking & 3,137 & 0.15\%\tabularnewline
+Pornography/Obscene Material & 3,055 & 0.15\%\tabularnewline
+Arson & 3,016 & 0.15\%\tabularnewline
+Family Offenses, Nonviolent & 2,498 & 0.12\%\tabularnewline
+Theft of Motor Vehicle Parts/Accessories & 2,026 & 0.10\%\tabularnewline
+Animal Cruelty & 1,852 & 0.09\%\tabularnewline
+Assisting Or Promoting Prostitution & 1,442 & 0.07\%\tabularnewline
+Sodomy & 1,374 & 0.07\%\tabularnewline
+Statutory Rape & 1,137 & 0.06\%\tabularnewline
+Purse-Snatching & 866 & 0.04\%\tabularnewline
+Curfew/Loitering/Vagrancy Violations & 840 & 0.04\%\tabularnewline
+Sexual Assault With An Object & 647 & 0.03\%\tabularnewline
+Purchasing Prostitution & 609 & 0.03\%\tabularnewline
+Theft From Coin-Operated Machine Or Device & 426 & 0.02\%\tabularnewline
+Negligent Manslaughter & 327 & 0.02\%\tabularnewline
+Operating/Promoting/Assisting Gambling & 262 & 0.01\%\tabularnewline
+Betting/Wagering & 262 & 0.01\%\tabularnewline
+Extortion/Blackmail & 254 & 0.01\%\tabularnewline
+Welfare Fraud & 241 & 0.01\%\tabularnewline
+Human Trafficking - Commercial Sex Acts & 232 & 0.01\%\tabularnewline
+Bribery & 230 & 0.01\%\tabularnewline
+Bad Checks & 210 & 0.01\%\tabularnewline
+Wire Fraud & 180 & 0.01\%\tabularnewline
+Incest & 150 & 0.01\%\tabularnewline
+Runaway & 90 & 0.00\%\tabularnewline
+Gambling Equipment Violations & 89 & 0.00\%\tabularnewline
+Hacking/Computer Invasion & 66 & 0.00\%\tabularnewline
+Peeping Tom & 39 & 0.00\%\tabularnewline
+Human Trafficking - Involuntary Servitude & 27 & 0.00\%\tabularnewline
+Sports Tampering & 1 & 0.00\%\tabularnewline
+Total & 2,028,028 & 100\%\tabularnewline
+\bottomrule
+\end{longtable}
 
 \hypertarget{group-b-crimes-arrested-for}{%
-\subsection{Group B Crimes arrested for}\label{group-b-crimes-arrested-for}}
+\subsection{Group B crimes arrested for}\label{group-b-crimes-arrested-for}}
 
-\textbackslash begin\{figure\}
+\begin{longtable}[]{@{}lrr@{}}
+\caption{\label{tab:GroupBarresteeCrime}The number and percent of arrests for Group B crimes for all arrests reported to NIBRS in 2019.}\tabularnewline
+\toprule
+Crime Category & \# of Offenses & \% of Offenses\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+Crime Category & \# of Offenses & \% of Offenses\tabularnewline
+\midrule
+\endhead
+All Other Offenses & 1,095,755 & 57.26\%\tabularnewline
+Driving Under The Influence & 351,926 & 18.39\%\tabularnewline
+Disorderly Conduct & 117,707 & 6.15\%\tabularnewline
+Drunkenness & 116,343 & 6.08\%\tabularnewline
+Trespass of Real Property & 108,546 & 5.67\%\tabularnewline
+Liquor Law Violations & 68,862 & 3.60\%\tabularnewline
+Family Offenses, Nonviolent & 31,251 & 1.63\%\tabularnewline
+Runaway & 9,535 & 0.50\%\tabularnewline
+Curfew/Loitering/Vagrancy Violations & 9,360 & 0.49\%\tabularnewline
+Bad Checks & 3,911 & 0.20\%\tabularnewline
+Peeping Tom & 414 & 0.02\%\tabularnewline
+Total & 1,913,610 & 100\%\tabularnewline
+\bottomrule
+\end{longtable}
 
-\{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/GrouBarresteeCrime-1}
+The Arrestee Segment has information that is largely available in other segments. For example, it has information on the arrestee's age, sex, and race which is the same as in the Offender Segment for that individual, and adds only ethnicity and residency status (of the city, not as a United States citizen) to the available demographics variables. It also says the crime the arrestee was arrested for, the weapon used and if the weapon (if it is a firearm) was an automatic weapon, all of which is available in the Offense Segment. There are a few new variables, however, including the date of the arrest and the type of arrest. The type of arrest is simply whether the person was arrested by police who viewed the crime, if the arrest followed an arrest warrant or a previous arrest (i.e.~arrested for a different crime and then police find out you also committed this one so consider you arrested for this one too), and whether the person was cited by police and ordered to appear in court but not formally taken into custody. Finally, for juvenile arrestees it says whether arrestees were ``handled within the department'' which means they were released without formal sanctions or were ``referred to other authorities'' such as juvenile or criminal court, a welfare agency, or probation or parole department (for those on probation or parole).
 
 \hypertarget{arrest-date}{%
 \subsection{Arrest date}\label{arrest-date}}
@@ -1252,9 +2143,89 @@ For drug offenses it includes the drugs seized by police. For these offenses, th
 \hypertarget{description-of-property}{%
 \subsection{Description of property}\label{description-of-property}}
 
-\textbackslash begin\{figure\}
+\begin{longtable}[]{@{}lrr@{}}
+\caption{\label{tab:propertyDescription}The number and percent of property stolen (including forcibly taken such as during a robbery) in a crime or seized by police (generally in drug arrests) for all offenses in 2019. Each offense can have multiple items stolen/seized.}\tabularnewline
+\toprule
+Property & \# of Property Stolen & \% of Property Stolen\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+Property & \# of Property Stolen & \% of Property Stolen\tabularnewline
+\midrule
+\endhead
+Other & 1,005,616 & 13.29\%\tabularnewline
+Drugs/Narcotics & 714,797 & 9.45\%\tabularnewline
+Automobiles & 645,115 & 8.52\%\tabularnewline
+Money & 637,046 & 8.42\%\tabularnewline
+Vehicle Parts/Accessories & 328,970 & 4.35\%\tabularnewline
+Clothes/Furs & 312,506 & 4.13\%\tabularnewline
+Drug/Narcotic Equipment & 292,097 & 3.86\%\tabularnewline
+Purses/Handbags/Wallets & 291,694 & 3.85\%\tabularnewline
+Merchandise & 266,945 & 3.53\%\tabularnewline
+Credit/Debit Cards & 242,981 & 3.21\%\tabularnewline
+Tools - Power/Hand & 240,156 & 3.17\%\tabularnewline
+Consumable Goods & 236,104 & 3.12\%\tabularnewline
+Portible Electronic Communications & 201,787 & 2.67\%\tabularnewline
+Computer Hardware/Software & 192,970 & 2.55\%\tabularnewline
+Household Goods & 192,923 & 2.55\%\tabularnewline
+Identity Documents & 185,098 & 2.45\%\tabularnewline
+Radios/Tvs/Vcrs & 169,518 & 2.24\%\tabularnewline
+Jewelry/Precious Metals & 123,742 & 1.64\%\tabularnewline
+Firearms & 117,039 & 1.55\%\tabularnewline
+Bicycles & 89,936 & 1.19\%\tabularnewline
+Trucks & 83,796 & 1.11\%\tabularnewline
+Negotiable Instruments & 73,327 & 0.97\%\tabularnewline
+Identity - Intangible & 71,331 & 0.94\%\tabularnewline
+Structures - Single Occupancy Dwellings & 64,507 & 0.85\%\tabularnewline
+Alcohol & 64,339 & 0.85\%\tabularnewline
+Documents - Personal Or Business & 62,883 & 0.83\%\tabularnewline
+Building Materials & 54,091 & 0.71\%\tabularnewline
+Office-Type Equipment & 53,707 & 0.71\%\tabularnewline
+Lawn/Yard/Garden Equipment & 48,398 & 0.64\%\tabularnewline
+Other Motor Vehicles & 46,222 & 0.61\%\tabularnewline
+Nonnegotiable Instruments & 41,596 & 0.55\%\tabularnewline
+Structures - Other & 33,265 & 0.44\%\tabularnewline
+Trailers & 30,124 & 0.40\%\tabularnewline
+Recreational/Sports Equipment & 29,946 & 0.40\%\tabularnewline
+Structures - Commercial/Business & 27,401 & 0.36\%\tabularnewline
+Structures - Other Dwellings & 23,936 & 0.32\%\tabularnewline
+Photographic/Optical Equipment & 23,579 & 0.31\%\tabularnewline
+Recordings - Audio/Visual & 23,358 & 0.31\%\tabularnewline
+Camping/Hunting/Fishing Equipment/Supplies & 22,040 & 0.29\%\tabularnewline
+Heavy Construction/Industrial Equipment & 17,546 & 0.23\%\tabularnewline
+Fuel & 17,013 & 0.22\%\tabularnewline
+Weapons - Other & 16,690 & 0.22\%\tabularnewline
+Pending Inventory (Of Property) & 14,262 & 0.19\%\tabularnewline
+Firearm Accessories & 14,053 & 0.19\%\tabularnewline
+Collections/Collectibles & 12,763 & 0.17\%\tabularnewline
+Structures - Public/Community & 11,351 & 0.15\%\tabularnewline
+Musical Instruments & 10,047 & 0.13\%\tabularnewline
+Recreational Vehicles & 10,020 & 0.13\%\tabularnewline
+Metals, Non-Precious & 9,951 & 0.13\%\tabularnewline
+Medical/Medical Lab Equipment & 9,212 & 0.12\%\tabularnewline
+Farm Equipment & 8,831 & 0.12\%\tabularnewline
+Pets & 8,071 & 0.11\%\tabularnewline
+Structures - Storage & 7,019 & 0.09\%\tabularnewline
+Artistic Supplies/Accessories & 4,705 & 0.06\%\tabularnewline
+Watercraft & 3,775 & 0.05\%\tabularnewline
+Explosives & 3,671 & 0.05\%\tabularnewline
+Chemicals & 3,549 & 0.05\%\tabularnewline
+Gambling Equipment & 3,226 & 0.04\%\tabularnewline
+Watercraft Equipment/Parts/Accessories & 2,628 & 0.03\%\tabularnewline
+Law Enforcement Equipment & 2,610 & 0.03\%\tabularnewline
+Livestock & 2,114 & 0.03\%\tabularnewline
+Crops & 2,094 & 0.03\%\tabularnewline
+Buses & 1,962 & 0.03\%\tabularnewline
+Logging Equipment & 1,437 & 0.02\%\tabularnewline
+Structures - Industrial Manufacturing & 1,398 & 0.02\%\tabularnewline
+Special Category & 1,277 & 0.02\%\tabularnewline
+Aircraft Parts/Accessories & 761 & 0.01\%\tabularnewline
+Aircraft & 455 & 0.01\%\tabularnewline
+Total & 7,567,377 & 100\%\tabularnewline
+\bottomrule
+\end{longtable}
 
-\{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/propertyDescription-1}
+\setstretch{1.15}
 
 \hypertarget{type-of-property-loss}{%
 \subsection{Type of property loss}\label{type-of-property-loss}}
@@ -1307,9 +2278,151 @@ For drug offenses it includes the drugs seized by police. For these offenses, th
 \hypertarget{suspected-drug-type}{%
 \subsubsection{Suspected drug type}\label{suspected-drug-type}}
 
-\textbackslash begin\{figure\}
+\begin{longtable}[]{@{}lrr@{}}
+\caption{\label{tab:propertyDrugs}The number and percent of drugs seized by police by type of drug.}\tabularnewline
+\toprule
+\begin{minipage}[b]{(\columnwidth - 2\tabcolsep) * \real{0.87}}\raggedright
+Drug Type\strut
+\end{minipage} & \begin{minipage}[b]{(\columnwidth - 2\tabcolsep) * \real{0.06}}\raggedleft
+\# of Drugs\strut
+\end{minipage} & \begin{minipage}[b]{(\columnwidth - 2\tabcolsep) * \real{0.06}}\raggedleft
+\% of Drugs\strut
+\end{minipage}\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+\begin{minipage}[b]{(\columnwidth - 2\tabcolsep) * \real{0.87}}\raggedright
+Drug Type\strut
+\end{minipage} & \begin{minipage}[b]{(\columnwidth - 2\tabcolsep) * \real{0.06}}\raggedleft
+\# of Drugs\strut
+\end{minipage} & \begin{minipage}[b]{(\columnwidth - 2\tabcolsep) * \real{0.06}}\raggedleft
+\% of Drugs\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.87}}\raggedright
+Marijuana\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.06}}\raggedleft
+455,429\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.06}}\raggedleft
+46.69\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.87}}\raggedright
+Amphetamines/Methamphetamines\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.06}}\raggedleft
+201,716\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.06}}\raggedleft
+20.68\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.87}}\raggedright
+Heroin\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.06}}\raggedleft
+82,437\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.06}}\raggedleft
+8.45\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.87}}\raggedright
+Cocaine (All Forms Except Crack)\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.06}}\raggedleft
+49,699\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.06}}\raggedleft
+5.09\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.87}}\raggedright
+Crack Cocaine\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.06}}\raggedleft
+49,646\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.06}}\raggedleft
+5.09\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.87}}\raggedright
+Unknown Type Drug\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.06}}\raggedleft
+39,836\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.06}}\raggedleft
+4.08\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.87}}\raggedright
+Other Narcotics: Codeine, Demerol, Dihydromorphinone Or Dilaudid, Hydrocodone Or Percodan, Methadone, Etc.\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.06}}\raggedleft
+37,401\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.06}}\raggedleft
+3.83\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.87}}\raggedright
+Pcp\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.06}}\raggedleft
+30,348\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.06}}\raggedleft
+3.11\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.87}}\raggedright
+Hashish\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.06}}\raggedleft
+7,046\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.06}}\raggedleft
+0.72\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.87}}\raggedright
+Other Hallucinogrens: Bmda (White Acid), Dmt, Mda, Mdma, Mescaline Or Peyote, Psilocybin, Stp, Etc.\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.06}}\raggedleft
+6,256\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.06}}\raggedleft
+0.64\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.87}}\raggedright
+Other Depressants: Glutethimide Or Doriden, Methaqualone Or Quaalude, Pentazocine Or Talwin, Etc.\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.06}}\raggedleft
+5,165\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.06}}\raggedleft
+0.53\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.87}}\raggedright
+Other Stimulants: Adipex, Fastine And Ionamin (Derivatives of Phentermine), Benzedrine, Didrex, Methylphenidate Or Ritalin, Phenmetrazine Or Preludin, Tenuate, Etc.\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.06}}\raggedleft
+3,368\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.06}}\raggedleft
+0.35\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.87}}\raggedright
+Opium\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.06}}\raggedleft
+2,984\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.06}}\raggedleft
+0.31\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.87}}\raggedright
+Lsd\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.06}}\raggedleft
+1,624\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.06}}\raggedleft
+0.17\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.87}}\raggedright
+Morphine\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.06}}\raggedleft
+1,297\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.06}}\raggedleft
+0.13\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.87}}\raggedright
+Barbiturates\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.06}}\raggedleft
+1,276\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.06}}\raggedleft
+0.13\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.87}}\raggedright
+Total\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.06}}\raggedleft
+975,528\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 2\tabcolsep) * \real{0.06}}\raggedleft
+100\%\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
 
-\{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/propertyDrugs-1}
+\setstretch{1.15}
 
 \hypertarget{amount-of-drugs}{%
 \subsubsection{Amount of drugs}\label{amount-of-drugs}}

@@ -1,16 +1,17 @@
 --- 
 title: "National Incident-Based Reporting System (NIBRS) Data: A Practitioner's Guide"
 author: "Jacob Kaplan"
-date: "2021-06-08"
+date: "2021-06-09"
 site: bookdown::bookdown_site
 documentclass: book
 lof: yes
+lot: yes
 bibliography: [book.bib]
 biblio-style: apalike
 link-citations: yes
 description: "This is a comprehensive guide to using the FBI's National Incident-Based Reporting System (NIBRS) Data, an incident-level dataset which provides detailed information on every crime reported to the police, including victim and offender traits and characteristics of the crime."
 graphics: yes
-always_allow_html: yes 
+always_allow_html: true 
 colorlinks: yes
 url: "https://nibrsbook.com"
 fontsize: 12pt
@@ -18,6 +19,7 @@ github-repo: "jacobkap/nibrsbook"
 classoption: openany
 linestretch: 1.15
 geometry: margin=1in
+tables: yes
 ---
 
 

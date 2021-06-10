@@ -1,25 +1,25 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.4.19)  8 JUN 2021 22:37
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.6.8)  9 JUN 2021 18:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **nibrsbook.tex
 (./nibrsbook.tex
-LaTeX2e <2020-10-01> patch level 4
-L3 programming layer <2021-02-18> (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf
+LaTeX2e <2021-06-01>
+L3 programming layer <2021-06-01> (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf
 -dist/tex/latex/base/book.cls
-Document Class: book 2020/04/10 v1.4m Standard LaTeX document class
+Document Class: book 2021/02/12 v1.4n Standard LaTeX document class
 (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/bk12.clo
-File: bk12.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+File: bk12.clo 2021/02/12 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count175
-\c@chapter=\count176
-\c@section=\count177
-\c@subsection=\count178
-\c@subsubsection=\count179
-\c@paragraph=\count180
-\c@subparagraph=\count181
-\c@figure=\count182
-\c@table=\count183
+\c@part=\count178
+\c@chapter=\count179
+\c@section=\count180
+\c@subsection=\count181
+\c@subsubsection=\count182
+\c@paragraph=\count183
+\c@subparagraph=\count184
+\c@figure=\count185
+\c@table=\count186
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
@@ -64,7 +64,7 @@ Package: setspace 2011/12/19 v6.7a set line spacing
 )
 (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsmath.st
 y
-Package: amsmath 2020/09/23 v2.17i AMS math features
+Package: amsmath 2021/04/20 v2.17j AMS math features
 \@mathmargin=\skip49
 For additional information on amsmath, use the `?' option.
 
@@ -74,7 +74,7 @@ Package: amstext 2000/06/29 v2.01 AMS text
 
 (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks15
+\@emptytoks=\toks16
 \ex@=\dimen139
 ))
 (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsbsy.sty
@@ -84,41 +84,41 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count184
+\inf@bad=\count187
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count185
-\leftroot@=\count186
+\uproot@=\count188
+\leftroot@=\count189
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count187
-\DOTSCASE@=\count188
+\classnum@=\count190
+\DOTSCASE@=\count191
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
-\Mathstrutbox@=\box47
-\strutbox@=\box48
+\Mathstrutbox@=\box50
+\strutbox@=\box51
 \big@size=\dimen141
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count189
-\c@MaxMatrixCols=\count190
+\macc@depth=\count192
+\c@MaxMatrixCols=\count193
 \dotsspace@=\muskip16
-\c@parentequation=\count191
-\dspbrk@lvl=\count192
-\tag@help=\toks16
-\row@=\count193
-\column@=\count194
-\maxfields@=\count195
-\andhelp@=\toks17
+\c@parentequation=\count194
+\dspbrk@lvl=\count195
+\tag@help=\toks17
+\row@=\count196
+\column@=\count197
+\maxfields@=\count198
+\andhelp@=\toks18
 \eqnshift@=\dimen142
 \alignsep@=\dimen143
 \tagshift@=\dimen144
 \tagwidth@=\dimen145
 \totwidth@=\dimen146
 \lineht@=\dimen147
-\@envbody=\toks18
+\@envbody=\toks19
 \multlinegap=\skip50
 \multlinetaggap=\skip51
-\mathdisplay@stack=\toks19
+\mathdisplay@stack=\toks20
 LaTeX Info: Redefining \[ on input line 2923.
 LaTeX Info: Redefining \] on input line 2924.
 )
@@ -135,20 +135,20 @@ Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/unicode-math/unico
 de-math.sty
 (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2021-02-18 L3 programming layer (loader) 
+Package: expl3 2021-06-01 L3 programming layer (loader) 
 
 (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3backend/l3backen
 d-xetex.def
-File: l3backend-xetex.def 2021-03-18 L3 backend support: XeTeX
+File: l3backend-xetex.def 2021-05-07 L3 backend support: XeTeX
 (|extractbb --version)
-\c__kernel_sys_dvipdfmx_version_int=\count196
-\l__color_backend_stack_int=\count197
-\g__color_backend_stack_int=\count198
-\g__graphics_track_int=\count199
-\l__pdf_internal_box=\box49
-\g__pdf_backend_object_int=\count266
-\g__pdf_backend_annotation_int=\count267
-\g__pdf_backend_link_int=\count268
+\c__kernel_sys_dvipdfmx_version_int=\count199
+\l__color_backend_stack_int=\count266
+\g__color_backend_stack_int=\count267
+\g__graphics_track_int=\count268
+\l__pdf_internal_box=\box52
+\g__pdf_backend_object_int=\count269
+\g__pdf_backend_annotation_int=\count270
+\g__pdf_backend_link_int=\count271
 ))
 Package: unicode-math 2020/01/31 v0.8q Unicode maths in XeLaTeX and LuaLaTeX
 
@@ -159,13 +159,11 @@ TeX
 
 (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3packages/xparse/
 xparse.sty
-(c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3packages/xparse/
-xparse-2020-10-01.sty
-(c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3packages/xparse/
-xparse-generic.tex)))
+Package: xparse 2021-06-01 L3 Experimental document command parser
+)
 (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3packages/l3keys2
 e/l3keys2e.sty
-Package: l3keys2e 2021-03-12 LaTeX2e option processing using LaTeX3 keys
+Package: l3keys2e 2021-06-01 LaTeX2e option processing using LaTeX3 keys
 )
 (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fontspec/fontspec.
 sty
@@ -175,34 +173,34 @@ Package: fontspec 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTeX
 xetex.sty
 Package: fontspec-xetex 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTe
 X
-\l__fontspec_script_int=\count269
-\l__fontspec_language_int=\count270
-\l__fontspec_strnum_int=\count271
-\l__fontspec_tmp_int=\count272
-\l__fontspec_tmpa_int=\count273
-\l__fontspec_tmpb_int=\count274
-\l__fontspec_tmpc_int=\count275
-\l__fontspec_em_int=\count276
-\l__fontspec_emdef_int=\count277
-\l__fontspec_strong_int=\count278
-\l__fontspec_strongdef_int=\count279
+\l__fontspec_script_int=\count272
+\l__fontspec_language_int=\count273
+\l__fontspec_strnum_int=\count274
+\l__fontspec_tmp_int=\count275
+\l__fontspec_tmpa_int=\count276
+\l__fontspec_tmpb_int=\count277
+\l__fontspec_tmpc_int=\count278
+\l__fontspec_em_int=\count279
+\l__fontspec_emdef_int=\count280
+\l__fontspec_strong_int=\count281
+\l__fontspec_strongdef_int=\count282
 \l__fontspec_tmpa_dim=\dimen148
 \l__fontspec_tmpb_dim=\dimen149
 \l__fontspec_tmpc_dim=\dimen150
 (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 )
 (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fontspec/fontspec.
 cfg))) (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/fix-cm
 .sty
-Package: fix-cm 2015/01/14 v1.1t fixes to LaTeX
+Package: fix-cm 2020/11/24 v1.1t fixes to LaTeX
 (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/ts1enc.def
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
 ))
-\g__um_fam_int=\count280
-\g__um_fonts_used_int=\count281
-\l__um_primecount_int=\count282
+\g__um_fam_int=\count283
+\g__um_fonts_used_int=\count284
+\l__um_primecount_int=\count285
 \g__um_primekern_muskip=\muskip17
 
 (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/unicode-math/unico
@@ -241,7 +239,7 @@ File: x11nam.def 2016/05/11 v2.12 Predefined colors according to Unix/X11 (UK)
 ))
 (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.
 sty
-Package: hyperref 2021-02-27 v7.00k Hypertext links for LaTeX
+Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
 
 (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.
 sty
@@ -263,7 +261,7 @@ Package pdftexcmds Info: \pdfdraftmode not found.
 (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/keyval.st
 y
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks20
+\KV@toks@=\toks21
 )
 (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/kvsetkeys/kvsetk
 eys.sty
@@ -294,16 +292,16 @@ s.sty
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
 \@linkdim=\dimen151
-\Hy@linkcounter=\count283
-\Hy@pagecounter=\count284
+\Hy@linkcounter=\count286
+\Hy@pagecounter=\count287
 
 (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.de
 f
-File: pd1enc.def 2021-02-27 v7.00k Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
 )
 (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref-
 langpatches.def
-File: hyperref-langpatches.def 2021-02-27 v7.00k Hyperref: patches for babel la
+File: hyperref-langpatches.def 2021-06-07 v7.00m Hyperref: patches for babel la
 nguages
 )
 (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.
@@ -314,10 +312,10 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 s.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count285
+\Hy@SavedSpaceFactor=\count288
 
 (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2021-02-27 v7.00k Hyperref: PDF Unicode definition (HO)
+File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
 )
 Package hyperref Info: Option `unicode' set `true' on input line 4073.
 Package hyperref Info: Hyper figures OFF on input line 4192.
@@ -327,7 +325,7 @@ Package hyperref Info: Plain pages OFF on input line 4207.
 Package hyperref Info: Backreferencing OFF on input line 4212.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4445.
-\c@Hy@tempcnt=\count286
+\c@Hy@tempcnt=\count289
 (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -344,45 +342,44 @@ tcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count287
+\Fld@menulength=\count290
 \Field@Width=\dimen153
 \Fld@charsize=\dimen154
-Package hyperref Info: Hyper figures OFF on input line 6075.
-Package hyperref Info: Link nesting OFF on input line 6080.
-Package hyperref Info: Hyper index ON on input line 6083.
-Package hyperref Info: backreferencing OFF on input line 6090.
-Package hyperref Info: Link coloring OFF on input line 6095.
-Package hyperref Info: Link coloring with OCG OFF on input line 6100.
-Package hyperref Info: PDF/A mode OFF on input line 6105.
-LaTeX Info: Redefining \ref on input line 6145.
-LaTeX Info: Redefining \pageref on input line 6149.
+Package hyperref Info: Hyper figures OFF on input line 6076.
+Package hyperref Info: Link nesting OFF on input line 6081.
+Package hyperref Info: Hyper index ON on input line 6084.
+Package hyperref Info: backreferencing OFF on input line 6091.
+Package hyperref Info: Link coloring OFF on input line 6096.
+Package hyperref Info: Link coloring with OCG OFF on input line 6101.
+Package hyperref Info: PDF/A mode OFF on input line 6106.
+LaTeX Info: Redefining \ref on input line 6146.
+LaTeX Info: Redefining \pageref on input line 6150.
 
 (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/atbegshi-ltx.
 sty
-Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
-ge
-with kernel methods
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
 )
-\Hy@abspage=\count288
-\c@Item=\count289
-\c@Hfootnote=\count290
+\Hy@abspage=\count291
+\c@Item=\count292
+\c@Hfootnote=\count293
 )
 Package hyperref Info: Driver (autodetected): hxetex.
 
 (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hxetex.de
 f
-File: hxetex.def 2021-02-27 v7.00k Hyperref driver for XeTeX
+File: hxetex.def 2021-06-07 v7.00m Hyperref driver for XeTeX
 
 (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/stringenc/string
 enc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
-\pdfm@box=\box50
-\c@Hy@AnnotLevel=\count291
-\HyField@AnnotCount=\count292
-\Fld@listcount=\count293
-\c@bookmark@seq@number=\count294
+\pdfm@box=\box53
+\c@Hy@AnnotLevel=\count294
+\HyField@AnnotCount=\count295
+\Fld@listcount=\count296
+\c@bookmark@seq@number=\count297
 
 (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rer
 unfilecheck.sty
@@ -412,9 +409,9 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
 (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count295
-\Gm@cntv=\count296
-\c@Gm@tempcnt=\count297
+\Gm@cnth=\count298
+\Gm@cntv=\count299
+\c@Gm@tempcnt=\count300
 \Gm@bindingoffset=\dimen155
 \Gm@wd@mp=\dimen156
 \Gm@odd@mp=\dimen157
@@ -423,16 +420,16 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutheight=\dimen160
 \Gm@layouthoffset=\dimen161
 \Gm@layoutvoffset=\dimen162
-\Gm@dimlist=\toks21
+\Gm@dimlist=\toks22
 )
 (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fancyvrb/fancyvrb.
 sty
 Package: fancyvrb 2021/01/20 v3.7 verbatim text (tvz,hv)
-\FV@CodeLineNo=\count298
+\FV@CodeLineNo=\count301
 \FV@InFile=\read2
-\FV@TabBox=\box51
-\c@FancyVerbLine=\count299
-\FV@StepNumber=\count300
+\FV@TabBox=\box54
+\c@FancyVerbLine=\count302
+\FV@StepNumber=\count303
 \FV@OutFile=\write3
 ) (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/framed/framed.st
 y
@@ -445,22 +442,23 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 )
 (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/longtable.st
 y
-Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
+Package: longtable 2021-05-07 v4.16 Multi-page Table package (DPC)
 \LTleft=\skip54
 \LTright=\skip55
 \LTpre=\skip56
 \LTpost=\skip57
-\LTchunksize=\count301
+\LTchunksize=\count304
 \LTcapwidth=\dimen167
-\LT@head=\box52
-\LT@firsthead=\box53
-\LT@foot=\box54
-\LT@lastfoot=\box55
-\LT@cols=\count302
-\LT@rows=\count303
-\c@LT@tables=\count304
-\c@LT@chunks=\count305
-\LT@p@ftn=\toks22
+\LT@head=\box55
+\LT@firsthead=\box56
+\LT@foot=\box57
+\LT@lastfoot=\box58
+\LT@gbox=\box59
+\LT@cols=\count305
+\LT@rows=\count306
+\c@LT@tables=\count307
+\c@LT@chunks=\count308
+\LT@p@ftn=\toks23
 )
 (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.
 sty
@@ -475,44 +473,44 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \cmidrulesep=\dimen175
 \cmidrulekern=\dimen176
 \defaultaddspace=\dimen177
-\@cmidla=\count306
-\@cmidlb=\count307
+\@cmidla=\count309
+\@cmidlb=\count310
 \@aboverulesep=\dimen178
 \@belowrulesep=\dimen179
-\@thisruleclass=\count308
-\@lastruleclass=\count309
+\@thisruleclass=\count311
+\@lastruleclass=\count312
 \@thisrulewidth=\dimen180
 ) (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count310
-\calc@Bcount=\count311
+\calc@Acount=\count313
+\calc@Bcount=\count314
 \calc@Adimen=\dimen181
 \calc@Bdimen=\dimen182
 \calc@Askip=\skip58
 \calc@Bskip=\skip59
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count312
+\calc@Ccount=\count315
 \calc@Cskip=\skip60
 )
 (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.
 sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count313
+\etb@tempcnta=\count316
 )
 (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/mdwtools/footnote.
 sty
 Package: footnote 1997/01/28 1.13 Save footnotes around boxes
-\fn@notes=\box56
+\fn@notes=\box60
 \fn@width=\dimen183
 )
 (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/graphicx.
 sty
-Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 2020/12/05 v1.2c Enhanced LaTeX Graphics (DPC,SPQR)
 
 (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/graphics.
 sty
-Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
 (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
@@ -520,54 +518,135 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 ics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: xetex.def on input line 105.
+Package graphics Info: Driver file: xetex.def on input line 107.
 )
 \Gin@req@height=\dimen184
 \Gin@req@width=\dimen185
+) (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tabu/tabu.sty
+Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
+(c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/array.sty
+Package: array 2021/04/20 v2.5e Tabular extension package (FMi)
+\col@sep=\dimen186
+\ar@mcellbox=\box61
+\extrarowheight=\dimen187
+\NC@list=\toks24
+\extratabsurround=\skip61
+\backup@length=\skip62
+\ar@cellbox=\box62
+)
+(c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/varwidth/varwidth.
+sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box63
+\sift@deathcycles=\count317
+\@vwid@loff=\dimen188
+\@vwid@roff=\dimen189
+)
+\c@taburow=\count318
+\tabu@nbcols=\count319
+\tabu@cnt=\count320
+\tabu@Xcol=\count321
+\tabu@alloc=\count322
+\tabu@nested=\count323
+\tabu@target=\dimen190
+\tabu@spreadtarget=\dimen191
+\tabu@naturalX=\dimen192
+\tabucolX=\dimen193
+\tabu@Xsum=\dimen194
+\extrarowdepth=\dimen195
+\abovetabulinesep=\dimen196
+\belowtabulinesep=\dimen197
+\tabustrutrule=\dimen198
+\tabu@thebody=\toks25
+\tabu@footnotes=\toks26
+\tabu@box=\box64
+\tabu@arstrutbox=\box65
+\tabu@hleads=\box66
+\tabu@vleads=\box67
+\tabu@cellskip=\skip63
+)
+(c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/listings/listings.
+sty
+\lst@mode=\count324
+\lst@gtempboxa=\box68
+\lst@token=\toks27
+\lst@length=\count325
+\lst@currlwidth=\dimen199
+\lst@column=\count326
+\lst@pos=\count327
+\lst@lostspace=\dimen256
+\lst@width=\dimen257
+\lst@newlines=\count328
+\lst@lineno=\count329
+\lst@maxwidth=\dimen258
+
+(c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/listings/lstmisc.s
+ty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count330
+\lst@skipnumbers=\count331
+\lst@framebox=\box69
+)
+(c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/listings/listings.
+cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+
+(c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pdflscape/pdflscap
+e.sty
+Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
+
+(c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/lscape.st
+y
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
+
 ) (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/natbib/natbib.st
 y
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip61
-\bibsep=\skip62
+\bibhang=\skip64
+\bibsep=\skip65
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count314
+\c@NAT@ctr=\count332
 ) (./nibrsbook.aux)
 \openout1 = `nibrsbook.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 130.
+(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 137.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 130.
+(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 137.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 130.
+(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 137.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 130.
+(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 137.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> TU/lmss/bx/n on input line 130.
+(Font)                  OT1/lmss/bx/n --> TU/lmss/bx/n on input line 137.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 130.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 137.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/bx/n on input line 130.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/bx/n on input line 137.
 
 Package fontspec Info: latinmodern-math scale = 0.9999970497384594.
 
@@ -596,7 +675,7 @@ pt=math;language=dflt;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(0)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 130.
+(Font)              scaled to size 12.0pt on input line 137.
 
 Package fontspec Info: latinmodern-math scale = 0.9999970497384594.
 
@@ -635,18 +714,18 @@ pt=math;language=dflt;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 130.
+(Font)              scaled to size 12.0pt on input line 137.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 130.
+(Font)              `operators' in the math version `normal' on input line 137.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/lmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input
- line 130.
+ line 137.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 130.
+(Font)              `operators' in the math version `bold' on input line 137.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on inpu
-t line 130.
+t line 137.
 
 Package fontspec Info: latinmodern-math scale = 0.9999970497384594.
 
@@ -733,15 +812,15 @@ t=math;language=dflt;"
 (fontspec)             \fontdimen 21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 130.
+(Font)              `symbols' in the math version `normal' on input line 137.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
 (Font)                  OMS/lmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on inpu
-t line 130.
+t line 137.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 130.
+(Font)              `symbols' in the math version `bold' on input line 137.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on inpu
-t line 130.
+t line 137.
 
 Package fontspec Info: latinmodern-math scale = 0.9999970497384594.
 
@@ -811,17 +890,17 @@ pt=math;language=dflt;"
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
 (Font)              `largesymbols' in the math version `normal' on input line 1
-30.
+37.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/m/n on inpu
-t line 130.
+t line 137.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 130
+(Font)              `largesymbols' in the math version `bold' on input line 137
 .
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/b/n on inpu
-t line 130.
-Package hyperref Info: Link coloring ON on input line 130.
+t line 137.
+Package hyperref Info: Link coloring ON on input line 137.
 
 (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.s
 ty
@@ -835,11 +914,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count315
+\c@section@level=\count333
 )
-LaTeX Info: Redefining \ref on input line 130.
-LaTeX Info: Redefining \pageref on input line 130.
-LaTeX Info: Redefining \nameref on input line 130.
+LaTeX Info: Redefining \ref on input line 137.
+LaTeX Info: Redefining \pageref on input line 137.
+LaTeX Info: Redefining \nameref on input line 137.
 (./nibrsbook.out) (./nibrsbook.out)
 \@outlinefile=\write4
 \openout4 = `nibrsbook.out'.
@@ -878,29 +957,30 @@ LaTeX Info: Redefining \nameref on input line 130.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+\c@lstlisting=\count334
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 132.
+(Font)              scaled to size 14.4pt on input line 139.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 132.
+(Font)              scaled to size 10.0pt on input line 139.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 132.
+(Font)              scaled to size 7.0pt on input line 139.
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-32.
+39.
 (c:/Users/jkkap/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 14.4013pt on input line 132.
+(Font)              scaled to size 14.4013pt on input line 139.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.00092pt on input line 132.
+(Font)              scaled to size 10.00092pt on input line 139.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.00064pt on input line 132.
+(Font)              scaled to size 7.00064pt on input line 139.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 14.39845pt on input line 132.
+(Font)              scaled to size 14.39845pt on input line 139.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 132.
+(Font)              scaled to size 9.99893pt on input line 139.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 132.
+(Font)              scaled to size 6.99925pt on input line 139.
 [1
 
 
@@ -927,63 +1007,49 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 \tf@toc=\write5
 \openout5 = `nibrsbook.toc'.
 
-[4] (./nibrsbook.lof [5
+[4] (./nibrsbook.lot [5
 
-] [6]
+])
+\tf@lot=\write6
+\openout6 = `nibrsbook.lot'.
+
+[6] (./nibrsbook.lof [7
+
+] [8]
 Underfull \hbox (badness 1810) in paragraph at lines 55--55
  [][] [][][]\TU/lmr/m/n/12 The incident-level distribution of the value of prop
 erty stolen. As 
  []
 
 )
-\tf@lof=\write6
-\openout6 = `nibrsbook.lof'.
+\tf@lof=\write7
+\openout7 = `nibrsbook.lof'.
 
-[7]
+[9]
 Chapter 1.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 143.
+(Font)              scaled to size 5.0pt on input line 151.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.00046pt on input line 143.
+(Font)              scaled to size 5.00046pt on input line 151.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 143.
-[8
+(Font)              scaled to size 4.99947pt on input line 151.
+[10
 
-] [9] [10] [11] [12]
+] [11] [12] [13] [14]
 File: images/edit_button.png Graphic file (type bmp)
 <images/edit_button.png>
-[13] [14
+[15] [16
 
 ]
 Chapter 2.
-[15
+[17
 
-] [16]
+] [18]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 256.
+(hyperref)                than one, level fixed on input line 264.
 
-[17] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 283--285
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 285--287
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 287--289
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 289--291
-
- []
-
-
+[19] [20]
 Underfull \hbox (badness 10000) in paragraph at lines 291--293
 
  []
@@ -1008,7 +1074,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 299--301
 
  []
 
-[19]
+
 Underfull \hbox (badness 10000) in paragraph at lines 301--303
 
  []
@@ -1028,7 +1094,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 307--309
 
  []
 
-
+[21]
 Underfull \hbox (badness 10000) in paragraph at lines 309--311
 
  []
@@ -1104,9 +1170,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 337--339
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[20]
 Underfull \hbox (badness 10000) in paragraph at lines 339--341
 
  []
@@ -1127,6 +1190,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 345--347
  []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[22]
 Underfull \hbox (badness 10000) in paragraph at lines 347--349
 
  []
@@ -1187,6 +1253,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 369--371
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 371--373
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 373--375
 
  []
@@ -1202,14 +1273,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 377--379
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[21]
-Underfull \hbox (badness 10000) in paragraph at lines 379--381
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 381--383
 
  []
@@ -1220,12 +1283,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 383--385
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 400--402
+Underfull \hbox (badness 10000) in paragraph at lines 385--387
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 404--406
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 387--389
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 389--391
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 391--393
 
  []
 
@@ -1234,77 +1310,74 @@ Underfull \hbox (badness 10000) in paragraph at lines 408--410
 
  []
 
-[22]
+
 Underfull \hbox (badness 10000) in paragraph at lines 412--414
 
  []
 
-[23] [24] [25]
+
+Underfull \hbox (badness 10000) in paragraph at lines 416--418
+
+ []
+
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 420--422
+
+ []
+
+[25] [26] [27]
 File: images/segments_flowchart.png Graphic file (type bmp)
 <images/segments_flowchart.png>
 
 Underfull \vbox (badness 3579) has occurred while \output is active []
 
-[26] [27] [28]
+[28] [29] [30]
 Underfull \vbox (badness 2478) has occurred while \output is active []
 
-[29]
+[31]
 File: nibrsbook_files/figure-latex/agenciesReporting-1.pdf Graphic file (type p
 df)
 <use nibrsbook_files/figure-latex/agenciesReporting-1.pdf>
-[30]
+[32]
 File: nibrsbook_files/figure-latex/agenciesReportingMap-1.pdf Graphic file (typ
 e pdf)
 <use nibrsbook_files/figure-latex/agenciesReportingMap-1.pdf>
-[31]
+[33]
 File: nibrsbook_files/figure-latex/agenciesReportingMapPercent-1.pdf Graphic fi
 le (type pdf)
 <use nibrsbook_files/figure-latex/agenciesReportingMapPercent-1.pdf>
-
-LaTeX Warning: Reference `fig:agenciesReportingTable' on page 32 undefined on i
-nput line 543.
-
-File: nibrsbook_files/figure-latex/agenciesReportingTable-1.png Graphic file (t
-ype bmp)
-<nibrsbook_files/figure-latex/agenciesReportingTable-1.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[32]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[33] [34]
+[34] [35] [36] [37]
 File: images/nibrs_ascii.png Graphic file (type bmp)
 <images/nibrs_ascii.png>
-[35] [36] [37]
+[38] [39]
 Chapter 3.
 File: nibrsbook_files/figure-latex/administrativeMonthDay-1.pdf Graphic file (t
 ype pdf)
 <use nibrsbook_files/figure-latex/administrativeMonthDay-1.pdf>
 
-LaTeX Warning: Float too large for page by 42.00905pt on input line 598.
+LaTeX Warning: Float too large for page by 42.02826pt on input line 668.
 
 File: nibrsbook_files/figure-latex/administrativeMonthDayReport-1.pdf Graphic f
 ile (type pdf)
 <use nibrsbook_files/figure-latex/administrativeMonthDayReport-1.pdf>
 
-LaTeX Warning: Float too large for page by 42.00905pt on input line 607.
+LaTeX Warning: Float too large for page by 42.02826pt on input line 677.
 
-[38
-
-] [39]
-Overfull \hbox (44.73586pt too wide) has occurred while \output is active
-\TU/lmr/m/n/12 40 \TU/lmr/m/sl/12 CHAPTER 3.  ADMINISTRATIVE AND WINDOW EXCEPTI
-ONAL CLEARANCE SEGMENT
- []
-
-[40]
 File: nibrsbook_files/figure-latex/administrativeHours-1.pdf Graphic file (type
  pdf)
 <use nibrsbook_files/figure-latex/administrativeHours-1.pdf>
 
-LaTeX Warning: Float too large for page by 39.24905pt on input line 621.
+LaTeX Warning: Float too large for page by 39.26826pt on input line 691.
 
+[40
+
+] [41]
+Overfull \hbox (44.73586pt too wide) has occurred while \output is active
+\TU/lmr/m/n/12 42 \TU/lmr/m/sl/12 CHAPTER 3.  ADMINISTRATIVE AND WINDOW EXCEPTI
+ONAL CLEARANCE SEGMENT
+ []
+
+[42]
 File: nibrsbook_files/figure-latex/administrativeExceptionalClearances-1.pdf Gr
 aphic file (type pdf)
 <use nibrsbook_files/figure-latex/administrativeExceptionalClearances-1.pdf>
@@ -1320,13 +1393,7 @@ File: nibrsbook_files/figure-latex/administrativeOffenderSegments-1.pdf Graphic
 File: nibrsbook_files/figure-latex/administrativeArresteeSegments-1.pdf Graphic
  file (type pdf)
 <use nibrsbook_files/figure-latex/administrativeArresteeSegments-1.pdf>
-[41]
-Overfull \hbox (44.73586pt too wide) has occurred while \output is active
-\TU/lmr/m/n/12 42 \TU/lmr/m/sl/12 CHAPTER 3.  ADMINISTRATIVE AND WINDOW EXCEPTI
-ONAL CLEARANCE SEGMENT
- []
-
-[42] [43]
+[43]
 Overfull \hbox (44.73586pt too wide) has occurred while \output is active
 \TU/lmr/m/n/12 44 \TU/lmr/m/sl/12 CHAPTER 3.  ADMINISTRATIVE AND WINDOW EXCEPTI
 ONAL CLEARANCE SEGMENT
@@ -1339,78 +1406,145 @@ ONAL CLEARANCE SEGMENT
  []
 
 [46] [47]
+Overfull \hbox (44.73586pt too wide) has occurred while \output is active
+\TU/lmr/m/n/12 48 \TU/lmr/m/sl/12 CHAPTER 3.  ADMINISTRATIVE AND WINDOW EXCEPTI
+ONAL CLEARANCE SEGMENT
+ []
+
+[48] [49]
 Chapter 4.
-File: nibrsbook_files/figure-latex/offenseCrimeCategories-1.png Graphic file (t
-ype bmp)
-<nibrsbook_files/figure-latex/offenseCrimeCategories-1.png>
+[50
 
-Underfull \vbox (badness 5417) has occurred while \output is active []
+] [51]
+Overfull \hbox (1.03172pt too wide) in paragraph at lines 844--845
+ \TU/lmr/m/n/12 Offenses|
+ []
 
-[48
 
-] [49]
-File: nibrsbook_files/figure-latex/offenseCrimeSubcategories-1.png Graphic file
- (type bmp)
-<nibrsbook_files/figure-latex/offenseCrimeSubcategories-1.png>
-[50]
-File: nibrsbook_files/figure-latex/offenseCrimeSubcategoriesAnimalAbuse-1.png G
-raphic file (type bmp)
-<nibrsbook_files/figure-latex/offenseCrimeSubcategoriesAnimalAbuse-1.png>
+Overfull \hbox (1.03172pt too wide) in paragraph at lines 846--847
+ \TU/lmr/m/n/12 Offenses|
+ []
+
+
+Overfull \hbox (12.00003pt too wide) in alignment at lines 838--849
+ [] [] [] 
+ []
+
+
+Overfull \hbox (1.03172pt too wide) in paragraph at lines 854--855
+ \TU/lmr/m/n/12 Offenses|
+ []
+
+
+Overfull \hbox (1.03172pt too wide) in paragraph at lines 856--857
+ \TU/lmr/m/n/12 Offenses|
+ []
+
+
+Overfull \hbox (12.00003pt too wide) in alignment at lines 849--859
+ [] [] [] 
+ []
+
+
+Overfull \hbox (6.49173pt too wide) in paragraph at lines 863--864
+ []\TU/lmr/m/n/12 1,074,646|
+ []
+
+
+Overfull \hbox (6.49173pt too wide) in paragraph at lines 870--871
+ []\TU/lmr/m/n/12 1,040,062|
+ []
+
+
+Overfull \hbox (6.49173pt too wide) in paragraph at lines 968--969
+ []\TU/lmr/m/n/12 2,423,181|
+ []
+
+
+Overfull \hbox (12.00003pt too wide) in alignment at lines 859--973
+ [] [] [] 
+ []
+
+[52]
+Overfull \hbox (1.03172pt too wide) in paragraph at lines 1025--1026
+ \TU/lmr/m/n/12 Offenses|
+ []
+
+
+Overfull \hbox (1.03172pt too wide) in paragraph at lines 1027--1028
+ \TU/lmr/m/n/12 Offenses|
+ []
+
+
+Overfull \hbox (12.00003pt too wide) in alignment at lines 1019--1030
+ [] [] [] 
+ []
+
+
+Overfull \hbox (1.03172pt too wide) in paragraph at lines 1035--1036
+ \TU/lmr/m/n/12 Offenses|
+ []
+
+
+Overfull \hbox (1.03172pt too wide) in paragraph at lines 1037--1038
+ \TU/lmr/m/n/12 Offenses|
+ []
+
+
+Overfull \hbox (12.00003pt too wide) in alignment at lines 1030--1040
+ [] [] [] 
+ []
+
+
+Overfull \hbox (12.00003pt too wide) in alignment at lines 1040--1077
+ [] [] [] 
+ []
+
+[53]
 File: nibrsbook_files/figure-latex/offenseDrugAlcoholComputer-1.pdf Graphic fil
 e (type pdf)
 <use nibrsbook_files/figure-latex/offenseDrugAlcoholComputer-1.pdf>
 File: nibrsbook_files/figure-latex/offenseDrugAlcoholComputerAny-1.pdf Graphic 
 file (type pdf)
 <use nibrsbook_files/figure-latex/offenseDrugAlcoholComputerAny-1.pdf>
-File: nibrsbook_files/figure-latex/offenseLocation-1.png Graphic file (type bmp
-)
-<nibrsbook_files/figure-latex/offenseLocation-1.png>
+[54] [55] [56]
+Overfull \hbox (16.58206pt too wide) in alignment at lines 1170--1181
+ [] [] [] 
+ []
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[51] [52] [53] [54]
-File: nibrsbook_files/figure-latex/offenseWeapon-1.png Graphic file (type bmp)
-<nibrsbook_files/figure-latex/offenseWeapon-1.png>
-[55]
+Overfull \hbox (16.58206pt too wide) in alignment at lines 1181--1191
+ [] [] [] 
+ []
+
+
+Overfull \hbox (16.58206pt too wide) in alignment at lines 1191--1319
+ [] [] [] 
+ []
+
+[57]
 File: nibrsbook_files/figure-latex/offenseAutomaticWeapon-1.pdf Graphic file (t
 ype pdf)
 <use nibrsbook_files/figure-latex/offenseAutomaticWeapon-1.pdf>
-File: nibrsbook_files/figure-latex/offenseBiasMotivation-1.png Graphic file (ty
-pe bmp)
-<nibrsbook_files/figure-latex/offenseBiasMotivation-1.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[56] [57]
-File: nibrsbook_files/figure-latex/offenseBiasMotivationBiases-1.png Graphic fi
-le (type bmp)
-<nibrsbook_files/figure-latex/offenseBiasMotivationBiases-1.png>
-[58]
+[58] [59] [60] [61]
 Chapter 5.
 File: nibrsbook_files/figure-latex/offenderAge-1.pdf Graphic file (type pdf)
 <use nibrsbook_files/figure-latex/offenderAge-1.pdf>
 
 Underfull \vbox (badness 3930) has occurred while \output is active []
 
-[59
+[62
 
 ]
 File: nibrsbook_files/figure-latex/offenderSex-1.pdf Graphic file (type pdf)
 <use nibrsbook_files/figure-latex/offenderSex-1.pdf>
 File: nibrsbook_files/figure-latex/offenderRace-1.pdf Graphic file (type pdf)
 <use nibrsbook_files/figure-latex/offenderRace-1.pdf>
-[60] [61] [62]
+[63] [64] [65]
 Chapter 6.
-[63
+[66
 
-]
-File: nibrsbook_files/figure-latex/victimCrimeCategory-1.png Graphic file (type
- bmp)
-<nibrsbook_files/figure-latex/victimCrimeCategory-1.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[64] [65]
+] [67]
 File: nibrsbook_files/figure-latex/victimType-1.pdf Graphic file (type pdf)
 <use nibrsbook_files/figure-latex/victimType-1.pdf>
 File: nibrsbook_files/figure-latex/victimInjury-1.pdf Graphic file (type pdf)
@@ -1424,20 +1558,22 @@ pdf)
 File: nibrsbook_files/figure-latex/victimInjuryPoliceExcludeNone-1.pdf Graphic 
 file (type pdf)
 <use nibrsbook_files/figure-latex/victimInjuryPoliceExcludeNone-1.pdf>
-File: nibrsbook_files/figure-latex/victimRelationship-1.png Graphic file (type 
-bmp)
-<nibrsbook_files/figure-latex/victimRelationship-1.png>
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \hbox (11.93709pt too wide) in alignment at lines 1658--1663
+ [] [] [] 
+ []
 
-[66] [67] [68] [69] [70]
-File: nibrsbook_files/figure-latex/victimRelationshipPolice-1.png Graphic file 
-(type bmp)
-<nibrsbook_files/figure-latex/victimRelationshipPolice-1.png>
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \hbox (11.93709pt too wide) in alignment at lines 1663--1667
+ [] [] [] 
+ []
 
-[71]
+
+Overfull \hbox (11.93709pt too wide) in alignment at lines 1667--1697
+ [] [] [] 
+ []
+
+[68] [69] [70] [71] [72] [73] [74]
 File: nibrsbook_files/figure-latex/victimResidenceStatus-1.pdf Graphic file (ty
 pe pdf)
 <use nibrsbook_files/figure-latex/victimResidenceStatus-1.pdf>
@@ -1447,10 +1583,22 @@ c file (type pdf)
 File: nibrsbook_files/figure-latex/victimResidenceStatusPolice-1.pdf Graphic fi
 le (type pdf)
 <use nibrsbook_files/figure-latex/victimResidenceStatusPolice-1.pdf>
-File: nibrsbook_files/figure-latex/victimAggAssault-1.png Graphic file (type bm
-p)
-<nibrsbook_files/figure-latex/victimAggAssault-1.png>
-[72] [73] [74] [75]
+
+Overfull \hbox (49.6891pt too wide) in alignment at lines 1776--1781
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (49.6891pt too wide) in alignment at lines 1781--1785
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (49.6891pt too wide) in alignment at lines 1785--1805
+ [] [] [] [] 
+ []
+
+[75] [76] [77] [78]
 File: nibrsbook_files/figure-latex/victimJustifiableHomicide-1.pdf Graphic file
  (type pdf)
 <use nibrsbook_files/figure-latex/victimJustifiableHomicide-1.pdf>
@@ -1463,22 +1611,17 @@ File: nibrsbook_files/figure-latex/victimRace-1.pdf Graphic file (type pdf)
 File: nibrsbook_files/figure-latex/victimEthnicity-1.pdf Graphic file (type pdf
 )
 <use nibrsbook_files/figure-latex/victimEthnicity-1.pdf>
-[76] [77] [78] [79] [80]
+[79] [80] [81] [82] [83]
 Chapter 7.
-File: nibrsbook_files/figure-latex/arresteeCrime-1.png Graphic file (type bmp)
-<nibrsbook_files/figure-latex/arresteeCrime-1.png>
-[81
+[84
 
-]
+] [85]
 Overfull \hbox (33.60785pt too wide) has occurred while \output is active
-\TU/lmr/m/n/12 82 \TU/lmr/m/sl/12 CHAPTER 7.  ARRESTEE, GROUP B ARRESTEE, AND W
+\TU/lmr/m/n/12 86 \TU/lmr/m/sl/12 CHAPTER 7.  ARRESTEE, GROUP B ARRESTEE, AND W
 INDOW ARRESTEE SEGMENT
  []
 
-[82]
-File: nibrsbook_files/figure-latex/GrouBarresteeCrime-1.png Graphic file (type 
-bmp)
-<nibrsbook_files/figure-latex/GrouBarresteeCrime-1.png>
+[86]
 File: nibrsbook_files/figure-latex/arrestsDaysUntilArrest-1.pdf Graphic file (t
 ype pdf)
 <use nibrsbook_files/figure-latex/arrestsDaysUntilArrest-1.pdf>
@@ -1494,38 +1637,7 @@ File: nibrsbook_files/figure-latex/arresteeWeaponArmed-1.pdf Graphic file (type
 File: nibrsbook_files/figure-latex/arresteeAutomaticWeapon-1.pdf Graphic file (
 type pdf)
 <use nibrsbook_files/figure-latex/arresteeAutomaticWeapon-1.pdf>
-File: nibrsbook_files/figure-latex/arresteeTypeOfArrest-1.pdf Graphic file (typ
-e pdf)
-<use nibrsbook_files/figure-latex/arresteeTypeOfArrest-1.pdf>
-File: nibrsbook_files/figure-latex/arresteeJuvenileDisposition-1.pdf Graphic fi
-le (type pdf)
-<use nibrsbook_files/figure-latex/arresteeJuvenileDisposition-1.pdf>
-File: nibrsbook_files/figure-latex/arresteeResidenceStatus-1.pdf Graphic file (
-type pdf)
-<use nibrsbook_files/figure-latex/arresteeResidenceStatus-1.pdf>
-File: nibrsbook_files/figure-latex/arresteeAge-1.pdf Graphic file (type pdf)
-<use nibrsbook_files/figure-latex/arresteeAge-1.pdf>
-[83]
-Overfull \hbox (33.60785pt too wide) has occurred while \output is active
-\TU/lmr/m/n/12 84 \TU/lmr/m/sl/12 CHAPTER 7.  ARRESTEE, GROUP B ARRESTEE, AND W
-INDOW ARRESTEE SEGMENT
- []
-
-[84] [85]
-Overfull \hbox (33.60785pt too wide) has occurred while \output is active
-\TU/lmr/m/n/12 86 \TU/lmr/m/sl/12 CHAPTER 7.  ARRESTEE, GROUP B ARRESTEE, AND W
-INDOW ARRESTEE SEGMENT
- []
-
-[86] [87]
-File: nibrsbook_files/figure-latex/arresteeSex-1.pdf Graphic file (type pdf)
-<use nibrsbook_files/figure-latex/arresteeSex-1.pdf>
-File: nibrsbook_files/figure-latex/arresteeRace-1.pdf Graphic file (type pdf)
-<use nibrsbook_files/figure-latex/arresteeRace-1.pdf>
-File: nibrsbook_files/figure-latex/arresteeEthnicity-1.pdf Graphic file (type p
-df)
-<use nibrsbook_files/figure-latex/arresteeEthnicity-1.pdf>
-
+[87]
 Overfull \hbox (33.60785pt too wide) has occurred while \output is active
 \TU/lmr/m/n/12 88 \TU/lmr/m/sl/12 CHAPTER 7.  ARRESTEE, GROUP B ARRESTEE, AND W
 INDOW ARRESTEE SEGMENT
@@ -1538,6 +1650,25 @@ INDOW ARRESTEE SEGMENT
  []
 
 [90] [91]
+File: nibrsbook_files/figure-latex/arresteeTypeOfArrest-1.pdf Graphic file (typ
+e pdf)
+<use nibrsbook_files/figure-latex/arresteeTypeOfArrest-1.pdf>
+File: nibrsbook_files/figure-latex/arresteeJuvenileDisposition-1.pdf Graphic fi
+le (type pdf)
+<use nibrsbook_files/figure-latex/arresteeJuvenileDisposition-1.pdf>
+File: nibrsbook_files/figure-latex/arresteeResidenceStatus-1.pdf Graphic file (
+type pdf)
+<use nibrsbook_files/figure-latex/arresteeResidenceStatus-1.pdf>
+File: nibrsbook_files/figure-latex/arresteeAge-1.pdf Graphic file (type pdf)
+<use nibrsbook_files/figure-latex/arresteeAge-1.pdf>
+File: nibrsbook_files/figure-latex/arresteeSex-1.pdf Graphic file (type pdf)
+<use nibrsbook_files/figure-latex/arresteeSex-1.pdf>
+File: nibrsbook_files/figure-latex/arresteeRace-1.pdf Graphic file (type pdf)
+<use nibrsbook_files/figure-latex/arresteeRace-1.pdf>
+File: nibrsbook_files/figure-latex/arresteeEthnicity-1.pdf Graphic file (type p
+df)
+<use nibrsbook_files/figure-latex/arresteeEthnicity-1.pdf>
+
 Overfull \hbox (33.60785pt too wide) has occurred while \output is active
 \TU/lmr/m/n/12 92 \TU/lmr/m/sl/12 CHAPTER 7.  ARRESTEE, GROUP B ARRESTEE, AND W
 INDOW ARRESTEE SEGMENT
@@ -1549,14 +1680,38 @@ Overfull \hbox (33.60785pt too wide) has occurred while \output is active
 INDOW ARRESTEE SEGMENT
  []
 
-[94]
-Chapter 8.
-File: nibrsbook_files/figure-latex/propertyDescription-1.png Graphic file (type
- bmp)
-<nibrsbook_files/figure-latex/propertyDescription-1.png>
-[95
+[94] [95]
+Overfull \hbox (33.60785pt too wide) has occurred while \output is active
+\TU/lmr/m/n/12 96 \TU/lmr/m/sl/12 CHAPTER 7.  ARRESTEE, GROUP B ARRESTEE, AND W
+INDOW ARRESTEE SEGMENT
+ []
 
-] [96]
+[96] [97]
+Overfull \hbox (33.60785pt too wide) has occurred while \output is active
+\TU/lmr/m/n/12 98 \TU/lmr/m/sl/12 CHAPTER 7.  ARRESTEE, GROUP B ARRESTEE, AND W
+INDOW ARRESTEE SEGMENT
+ []
+
+[98]
+Chapter 8.
+
+Overfull \hbox (17.5531pt too wide) in alignment at lines 2146--2151
+ [] [] [] 
+ []
+
+
+Overfull \hbox (17.5531pt too wide) in alignment at lines 2151--2155
+ [] [] [] 
+ []
+
+
+Overfull \hbox (17.5531pt too wide) in alignment at lines 2155--2226
+ [] [] [] 
+ []
+
+[99
+
+] [100] [101]
 File: nibrsbook_files/figure-latex/propertyTypeLoss-1.pdf Graphic file (type pd
 f)
 <use nibrsbook_files/figure-latex/propertyTypeLoss-1.pdf>
@@ -1569,30 +1724,182 @@ e (type pdf)
 File: nibrsbook_files/figure-latex/propertyDaysUntilRecovered-1.pdf Graphic fil
 e (type pdf)
 <use nibrsbook_files/figure-latex/propertyDaysUntilRecovered-1.pdf>
-File: nibrsbook_files/figure-latex/propertyDrugs-1.png Graphic file (type bmp)
-<nibrsbook_files/figure-latex/propertyDrugs-1.png>
 
-Underfull \vbox (badness 6477) has occurred while \output is active []
+Overfull \hbox (3.12383pt too wide) in paragraph at lines 2287--2288
+ \TU/lmr/m/n/12 Drugs|
+ []
 
-[97] [98] [99] [100]
+
+Overfull \hbox (3.12383pt too wide) in paragraph at lines 2289--2290
+ \TU/lmr/m/n/12 Drugs|
+ []
+
+
+Overfull \hbox (7.418pt too wide) in alignment at lines 2281--2292
+ [] [] [] 
+ []
+
+
+Overfull \hbox (3.12383pt too wide) in paragraph at lines 2297--2298
+ \TU/lmr/m/n/12 Drugs|
+ []
+
+
+Overfull \hbox (3.12383pt too wide) in paragraph at lines 2299--2300
+ \TU/lmr/m/n/12 Drugs|
+ []
+
+
+Overfull \hbox (7.418pt too wide) in alignment at lines 2292--2302
+ [] [] [] 
+ []
+
+
+Overfull \hbox (11.07983pt too wide) in paragraph at lines 2306--2307
+ []\TU/lmr/m/n/12 455,429|
+ []
+
+
+Overfull \hbox (9.11183pt too wide) in paragraph at lines 2308--2309
+ []\TU/lmr/m/n/12 46.69%|
+ []
+
+
+Overfull \hbox (11.07983pt too wide) in paragraph at lines 2313--2314
+ []\TU/lmr/m/n/12 201,716|
+ []
+
+
+Overfull \hbox (9.11183pt too wide) in paragraph at lines 2315--2316
+ []\TU/lmr/m/n/12 20.68%|
+ []
+
+
+Overfull \hbox (5.19983pt too wide) in paragraph at lines 2320--2321
+ []\TU/lmr/m/n/12 82,437|
+ []
+
+
+Overfull \hbox (3.23183pt too wide) in paragraph at lines 2322--2323
+ []\TU/lmr/m/n/12 8.45%|
+ []
+
+
+Overfull \hbox (5.19983pt too wide) in paragraph at lines 2327--2328
+ []\TU/lmr/m/n/12 49,699|
+ []
+
+
+Overfull \hbox (3.23183pt too wide) in paragraph at lines 2329--2330
+ []\TU/lmr/m/n/12 5.09%|
+ []
+
+
+Overfull \hbox (5.19983pt too wide) in paragraph at lines 2334--2335
+ []\TU/lmr/m/n/12 49,646|
+ []
+
+
+Overfull \hbox (3.23183pt too wide) in paragraph at lines 2336--2337
+ []\TU/lmr/m/n/12 5.09%|
+ []
+
+
+Overfull \hbox (5.19983pt too wide) in paragraph at lines 2341--2342
+ []\TU/lmr/m/n/12 39,836|
+ []
+
+
+Overfull \hbox (3.23183pt too wide) in paragraph at lines 2343--2344
+ []\TU/lmr/m/n/12 4.08%|
+ []
+
+
+Overfull \hbox (5.19983pt too wide) in paragraph at lines 2348--2349
+ []\TU/lmr/m/n/12 37,401|
+ []
+
+
+Overfull \hbox (3.23183pt too wide) in paragraph at lines 2350--2351
+ []\TU/lmr/m/n/12 3.83%|
+ []
+
+
+Overfull \hbox (5.19983pt too wide) in paragraph at lines 2355--2356
+ []\TU/lmr/m/n/12 30,348|
+ []
+
+
+Overfull \hbox (3.23183pt too wide) in paragraph at lines 2357--2358
+ []\TU/lmr/m/n/12 3.11%|
+ []
+
+
+Overfull \hbox (3.23183pt too wide) in paragraph at lines 2364--2365
+ []\TU/lmr/m/n/12 0.72%|
+ []
+
+
+Overfull \hbox (3.23183pt too wide) in paragraph at lines 2371--2372
+ []\TU/lmr/m/n/12 0.64%|
+ []
+
+
+Overfull \hbox (3.23183pt too wide) in paragraph at lines 2378--2379
+ []\TU/lmr/m/n/12 0.53%|
+ []
+
+
+Overfull \hbox (3.23183pt too wide) in paragraph at lines 2385--2386
+ []\TU/lmr/m/n/12 0.35%|
+ []
+
+
+Overfull \hbox (3.23183pt too wide) in paragraph at lines 2392--2393
+ []\TU/lmr/m/n/12 0.31%|
+ []
+
+
+Overfull \hbox (3.23183pt too wide) in paragraph at lines 2399--2400
+ []\TU/lmr/m/n/12 0.17%|
+ []
+
+
+Overfull \hbox (3.23183pt too wide) in paragraph at lines 2406--2407
+ []\TU/lmr/m/n/12 0.13%|
+ []
+
+
+Overfull \hbox (3.23183pt too wide) in paragraph at lines 2413--2414
+ []\TU/lmr/m/n/12 0.13%|
+ []
+
+
+Overfull \hbox (11.07983pt too wide) in paragraph at lines 2418--2419
+ []\TU/lmr/m/n/12 975,528|
+ []
+
+
+Overfull \hbox (7.418pt too wide) in alignment at lines 2302--2423
+ [] [] [] 
+ []
+
+[102] [103] [104] [105] [106]
 File: nibrsbook_files/figure-latex/propertyAllGramMeasures-1.pdf Graphic file (
 type pdf)
 <use nibrsbook_files/figure-latex/propertyAllGramMeasures-1.pdf>
 No file nibrsbook.bbl.
-[101] [102] (./nibrsbook.aux)
-
-LaTeX Warning: There were undefined references.
-
+[107] (./nibrsbook.aux)
 Package rerunfilecheck Info: File `nibrsbook.out' has not changed.
-(rerunfilecheck)             Checksum: 3A365DA5A20BB0D8DAC3C54251E348A1;13272.
+(rerunfilecheck)             Checksum: 4DEF83DE7605E706B44931F6E5E8D4C8;13272.
  ) 
 Here is how much of TeX's memory you used:
- 17570 strings out of 478918
- 331481 string characters out of 5865075
- 802089 words of memory out of 5000000
- 37118 multiletter control sequences out of 15000+600000
+ 19726 strings out of 478468
+ 365744 string characters out of 5857149
+ 856920 words of memory out of 5000000
+ 39715 multiletter control sequences out of 15000+600000
  407970 words of font info for 74 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 98i,8n,122p,1722b,400s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 87i,8n,120p,1722b,449s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on nibrsbook.pdf (102 pages).
+Output written on nibrsbook.pdf (107 pages).
