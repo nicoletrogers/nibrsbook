@@ -74,7 +74,8 @@ where-to-find-the-data-used-in-this-book
 recommended-reading
 how-to-contribute-to-this-book
 overview-of-the-data
-choosing-a-unit-of-analysis
+problems-with-nibrs
+nibrs-allows-for-different-units-of-analysis
 crimes-included-in-nibrs
 group-a-crimes
 group-b-crimes
@@ -89,9 +90,9 @@ offender-segment
 victim-segment
 arrestee-and-group-b-arrestee-segment
 property-segment
-window-segments
+window
 which-agencies-report-data
-how-to-identify-a-particular-agency-ori-codes
+ori
 the-data-as-you-get-it-from-the-fbi
 administrative-and-window-exceptional-clearance-segment
 important-variables
