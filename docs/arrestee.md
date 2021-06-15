@@ -115,8 +115,8 @@ The Arrestee Segment has information that is largely available in other segments
 ### Arrest date
 
 <div class="figure" style="text-align: center">
-<img src="arrestee_files/figure-html/arrestsDaysUntilArrest-1.png" alt="The distribution of the number of days from the incident to the arrest date. In 2019 the maxiumum days from incident to arrest was 461 days. Zero days means that the arrest occurred on the same day as the incident." width="90%" />
-<p class="caption">(\#fig:arrestsDaysUntilArrest)The distribution of the number of days from the incident to the arrest date. In 2019 the maxiumum days from incident to arrest was 461 days. Zero days means that the arrest occurred on the same day as the incident.</p>
+<img src="arrestee_files/figure-html/arrestsDaysUntilArrest-1.png" alt="The distribution of the number of days from the incident to the arrest date. In 2019 the maximum days from incident to arrest was 461 days. Zero days means that the arrest occurred on the same day as the incident." width="90%" />
+<p class="caption">(\#fig:arrestsDaysUntilArrest)The distribution of the number of days from the incident to the arrest date. In 2019 the maximum days from incident to arrest was 461 days. Zero days means that the arrest occurred on the same day as the incident.</p>
 </div>
 
 
@@ -153,8 +153,8 @@ This variable only tells you if the weapon is automatic
 ### Type of arrest
 
 <div class="figure" style="text-align: center">
-<img src="arrestee_files/figure-html/arresteeTypeOfArrest-1.png" alt="The distrubution of arrests by type of arrest. Previous Incident Report includes cases where an individual was arrested for a separate crime and are then reported as also arrested for this incident." width="90%" />
-<p class="caption">(\#fig:arresteeTypeOfArrest)The distrubution of arrests by type of arrest. Previous Incident Report includes cases where an individual was arrested for a separate crime and are then reported as also arrested for this incident.</p>
+<img src="arrestee_files/figure-html/arresteeTypeOfArrest-1.png" alt="The distribution of arrests by type of arrest. Previous Incident Report includes cases where an individual was arrested for a separate crime and are then reported as also arrested for this incident." width="90%" />
+<p class="caption">(\#fig:arresteeTypeOfArrest)The distribution of arrests by type of arrest. Previous Incident Report includes cases where an individual was arrested for a separate crime and are then reported as also arrested for this incident.</p>
 </div>
 
 ### Disposition for juvenile arrestees
@@ -168,8 +168,8 @@ This variable only tells you if the weapon is automatic
 ### Residence status
 
 <div class="figure" style="text-align: center">
-<img src="arrestee_files/figure-html/arresteeResidenceStatus-1.png" alt="The distrubution of residence status for all arrestees reported to NIBRS in 2019. Residence status is residence in the arresting agency's jurisdiction (e.g. do you live in the city you were arrested in?). It is unrelated to citizenship or immigration status." width="90%" />
-<p class="caption">(\#fig:arresteeResidenceStatus)The distrubution of residence status for all arrestees reported to NIBRS in 2019. Residence status is residence in the arresting agency's jurisdiction (e.g. do you live in the city you were arrested in?). It is unrelated to citizenship or immigration status.</p>
+<img src="arrestee_files/figure-html/arresteeResidenceStatus-1.png" alt="The distribution of residence status for all arrestees reported to NIBRS in 2019. Residence status is residence in the arresting agency's jurisdiction (e.g. do you live in the city you were arrested in?). It is unrelated to citizenship or immigration status." width="90%" />
+<p class="caption">(\#fig:arresteeResidenceStatus)The distribution of residence status for all arrestees reported to NIBRS in 2019. Residence status is residence in the arresting agency's jurisdiction (e.g. do you live in the city you were arrested in?). It is unrelated to citizenship or immigration status.</p>
 </div>
 
 ### Demographics

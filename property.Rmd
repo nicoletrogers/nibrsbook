@@ -106,7 +106,7 @@ ggplot(temp, aes(x = value_of_property_100, y = proportion)) +
 
 ### Date property was recovered
 
-```{r propertyDaysUntilRecovered, fig.cap = "The distribution of the number of days from the incident to the property recovered date. In 2019 the maxiumum days from incident to arrest was 450 days. Zero days means that the arrest occurred on the same day as the incident. "}
+```{r propertyDaysUntilRecovered, fig.cap = "The distribution of the number of days from the incident to the property recovered date. In 2019 the maximum days from incident to arrest was 450 days. Zero days means that the arrest occurred on the same day as the incident. "}
 property$days_until_recovery <- as.numeric(ymd(property$date_recovered) - ymd(property$incident_date))
 max_days <- max(property$days_until_recovery, na.rm = TRUE)
 temp <- 

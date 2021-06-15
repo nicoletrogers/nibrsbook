@@ -69,7 +69,7 @@ Table: (\#tab:offenseCrimeCategories)The number and percent of crimes reported f
 |Sports Tampering                                    |              7|         0.00\%|
 |Total                                               |      7,436,090|          100\%|
 
-\setstretch{1.15}
+
 ### Offense subtype
 
 
@@ -94,7 +94,7 @@ Table: (\#tab:offenseCrimeSubcategories)The number and percent of crime subtypes
 |Organized Abuse (Dog Fighting And Cock Fighting)                                                                                             |             86|         0.00\%|
 |Total                                                                                                                                        |      2,423,181|          100\%|
 
-\setstretch{1.15}
+
 * Aggravated Assault
 * Animal Cruelty
 * Counterfeiting/Forgery
@@ -126,7 +126,7 @@ Table: (\#tab:offenseCrimeSubcategoriesAnimalAbuse)The number and percent of cri
 |Organized Abuse (Dog Fighting And Cock Fighting)                                                                                             |             86|         0.86\%|
 |Total                                                                                                                                        |          9,956|          100\%|
 
-\setstretch{1.15}
+
 ### Drug, alcohol, or computer use
 
 <div class="figure" style="text-align: center">
@@ -194,7 +194,6 @@ Table: (\#tab:offenseLocation)The location of crimes for all offenses reported i
 |Military Installation               |            273|         0.00\%|
 |Total                               |      7,436,090|          100\%|
 
-\setstretch{1.15}
 ### Weapons
 
 
@@ -221,7 +220,7 @@ Table: (\#tab:offenseWeapon)The weapon used by an offender in the crime for all 
 |Poison (Include Gas)                                              |            475|         0.03\%|
 |Total                                                             |      1,587,350|          100\%|
 
-\setstretch{1.15}
+
 * Aggravated Assault
 * Extortion/Blackmail
 * Fondling (Incident Liberties/Child Molest)
@@ -292,10 +291,9 @@ Table: (\#tab:offenseBiasMotivation)The bias motivation (i.e. if hate crime or n
 |Anti-Jehovahs Witness                          |              5|         0.00\%|
 |Total                                          |      7,436,090|          100\%|
 
-\setstretch{1.15}
 
 
-Table: (\#tab:offenseBiasMotivationBiases)The bias motivation (i.e. if hate crime or not and what type of hate crime) for all offenses reported in 2019 that were classifed as hate crimes. For easier viewing of how hate crimes are broken down, this excludes all offenses where there was no bias motivation.
+Table: (\#tab:offenseBiasMotivationBiases)The bias motivation (i.e. if hate crime or not and what type of hate crime) for all offenses reported in 2019 that were classified as hate crimes. For easier viewing of how hate crimes are broken down, this excludes all offenses where there was no bias motivation.
 
 |Bias Motivation                                | \# of Offenses| \% of Offenses|
 |:----------------------------------------------|--------------:|--------------:|
@@ -334,5 +332,3 @@ Table: (\#tab:offenseBiasMotivationBiases)The bias motivation (i.e. if hate crim
 |Anti-Atheism/Agnosticism                       |              5|         0.11\%|
 |Anti-Jehovahs Witness                          |              5|         0.11\%|
 |Total                                          |          4,516|          100\%|
-
-\setstretch{1.15}

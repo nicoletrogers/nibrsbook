@@ -152,9 +152,9 @@ The average American had, in 2019, about a 1 in 20,500 chance of being murdered,
 
 So why do people so frequently talk about crime as rates per total population? Why assume that everyone has equal risk of being a victim? The major reason, I think, is that the main FBI dataset on crime, the \href{https://ucrbook.com/}{Uniform Crime Reporting (UCR) System Data} doesn't provide any information about crime victims other than for homicide and hate crime victims.\footnote{There is a small amount of information available for property theft victims, but not enough to do these kinds of victimization rate calculations} Victimization surveys are nearly all at state or national levels so trying to use their results for specific city-level rates will have very high levels of imprecision, likely enough to make the results unhelpful. So by necessity people tend to assume equal risk since there's not good data to do so otherwise. Doing so, however, is a large mistake in my opinion. It both overstates and understates risk, often very drastically. For example, many murders are concentrated among young minority men in impoverished areas of urban cities. Their risk of being murdered is many times higher than you'd expect from simply dividing murders by city population overall. And the risk for other people in the city is far smaller than you'd expect from the naive risk value.
 
-While UCR data is the predominant dataset in criminology and the one that truly guides America's perceptions of crime, there is actually one that is far more detailed and allows us do a much better (though far from perfect) measure of crime victimization by a number of victim traits. This dataset, called the National Incident-Based Reporting System - and often called by its abbreviation NIBRS - provides demographics information about each victim of crime. Like the UCR this is a dataset from the FBI which standardizes information from agencies in the United States so it is comparable across agencies and over time (with some caveats). This data includes the age, race, gender, and the relationship of the victim to the offender for every known victim. We also have info about the offense such as which crimes occurred (and unlike the UCR, incidents can have multiple offenses), where and when it occurred, and what weapons (if any) we used. And we have demographic information about offenders, and whether they were arrested (including the type of arrest such as if the police had a warrant and arrested them or saw them committing the crime and arrested them at the scene). From this we can figure out victimization rates based on certain (though not all) victim characteristics.
+While UCR data is the predominant dataset in criminology and the one that truly guides America's perceptions of crime, there is actually one that is far more detailed and allows us do a much better (though far from perfect) measure of crime victimization by a number of victim traits. This dataset, called the National Incident-Based Reporting System - and often called by its abbreviation NIBRS - provides demographics information about each victim of crime. Like the UCR this is a dataset from the FBI which standardizes information from agencies in the United States so it is comparable across agencies and over time (with some caveats). This data includes the age, race, gender, and the relationship of the victim to the offender for every known victim. We also have info about the offense such as which crimes occurred (and unlike the UCR, incidents can have multiple offenses), where and when it occurred, and what weapons (if any) were used. And we have demographic information about offenders, and whether they were arrested (including the type of arrest such as if the police had a warrant and arrested them or saw them committing the crime and arrested them at the scene). From this we can figure out victimization rates based on certain (though not all) victim characteristics.
 
-Of course, the research opportunities from this highly detailed data extend far beyond mere victimization rates. Personally I've used the data to examine topics ranging from marijuana decriminalization and domestic violence injuries to daylight saving time's effect on crime clearance. As of this writing in early summer 2021, \href{https://scholar.google.com/scholar?as_ylo=2017\&q=NIBRS\&hl=en\&as_sdt=0,44}{Google Scholar has over 1,500 results for NIBRS research since 2017}. As the FBI has said that starting in 2021 NIBRS data will completely replace UCR data, this is crime dataset of the future (though I believe that UCR will still be heavily used for many years to come). For graduate students and early career researchers, this is likely the dataset that you'll use for your entire career.
+Of course, the research opportunities from this highly detailed data extend far beyond mere victimization rates. Personally I've used the data to examine topics ranging from marijuana decriminalization and domestic violence injuries to daylight saving time's effect on crime clearance. As of this writing in early summer 2021, \href{https://scholar.google.com/scholar?as_ylo=2017\&q=NIBRS\&hl=en\&as_sdt=0,44}{Google Scholar has over 1,500 results for NIBRS research since 2017}. As the FBI has said that starting in 2021 NIBRS data will completely replace UCR data, this is \emph{the} crime dataset of the future (though I believe that UCR will still be heavily used for many years to come). For graduate students and early career researchers, this is likely the dataset that you'll use for your entire career.
 
 \hypertarget{goal-of-the-book}{%
 \section{Goal of the book}\label{goal-of-the-book}}
@@ -198,7 +198,7 @@ This data is usually just called NIBRS, and generally there's no distinction bet
 \hypertarget{sources-of-nibrs-data}{%
 \section{Sources of NIBRS data}\label{sources-of-nibrs-data}}
 
-There are a few different sources of UCR data available today. First, and probably most commonly used, is the data put together by the \href{https://www.icpsr.umich.edu/web/pages/NACJD/index.html}{National Archive of Criminal Justice Data (NACJD)}). This a team out of the University of Michigan who manages a huge number of criminal justice datasets and makes them available to the public. If you have any questions about crime data - NIBRS or other crime data - I highly recommend you reach out to them for answers. They are extremely helpful and can likely quickly answer any question that you have. They have a collection of data and excellent documentation available for UCR data available on their site \href{https://www.icpsr.umich.edu/web/NACJD/series/128}{here}. They've also put together what they call ``Extract Files'' which are where they merged some of the NIBRS segments together, saving you the effort of doing so yourself. These extract files essentially take every potential unit of analysis - incident, victim, offender, and arrestee (some crimes have no victims, only arrestees) - and merge it with the segment which has info about the incident such as the time of day or the outcome, and information about the reporting agency. NACJD only has data through 2016 which means that the most recent years (NIBRS data is available through 2019) of data are (as of this writing) unavailable.
+There are a few different sources of NIBRS data available today. First, and probably most commonly used, is the data put together by the \href{https://www.icpsr.umich.edu/web/pages/NACJD/index.html}{National Archive of Criminal Justice Data (NACJD)}). This a team out of the University of Michigan who manages a huge number of criminal justice datasets and makes them available to the public. If you have any questions about crime data - NIBRS or other crime data - I highly recommend you reach out to them for answers. They are extremely helpful and can likely quickly answer any question that you have. They have a collection of data and excellent documentation available for UCR data available on their site \href{https://www.icpsr.umich.edu/web/NACJD/series/128}{here}. They've also put together what they call ``Extract Files'' which are where they merged some of the NIBRS segments together, saving you the effort of doing so yourself. These extract files essentially take every potential unit of analysis - incident, victim, offender, and arrestee (some crimes have no victims, only arrestees) - and merge it with the segment which has info about the incident such as the time of day or the outcome, and information about the reporting agency. NACJD only has data through 2016 which means that the most recent years (NIBRS data is available through 2019) of data are (as of this writing) unavailable.
 
 Next, and most usable for the general public - but limited for researchers - is the FBI's official website \href{https://crime-data-explorer.fr.cloud.gov/}{Crime Data Explorer}. On this site you can chose an agency and see annual crime data (NIBRS data is at the hourly-level so this is very aggregated data) for certain crimes (and not even all the crimes actually available in the data). This site has only a small subset of the available data and is already aggregated so you're dealing with a subset of data in a unit of analysis that you may not want. For example, this site lets you see the annual age of offenders for certain crimes in age brackets such as aged 20-29. NIBRS data provides the exact age (in years) of each offender so this website is much less useful than the full data. The crimes on this site are also limited to only the eight ``Index Crimes'' (murder, rape, robbery, aggravated assault, arson, burglary, theft, and motor vehicle theft) so are only a tiny share of the crimes actually reported in NIBRS data. For more on what Index Crimes are, please see \href{https://ucrbook.com/ucrGeneral.html\#indexCrimes}{here}. This data source is potentially okay for the general public but only provides a fraction of the data available in the actual data so is really not good for researchers.
 
@@ -232,7 +232,7 @@ If you have any questions, suggestions, or find any issues, please email me at j
 \chapter*{About the Author}\label{about-the-author}}
 
 
-\textbf{Jacob Kaplan} is the Chief Data Scientist at the Research on Policing Reform and Accountability \href{https://policingresearch.org/team/}{RoPRA} at Princeton University. He holds a PhD and a master's degree in criminology from the University of Pennsylvania and a bachelor's degree in criminal justice from California State University, Sacramento. He His current research portfolio includes evaluating police policy and reforms, place-based crime prevention, \href{https://doi.org/10.1177/0022427820984213}{measuring spatial crime concentration}, and simulating how firing `bad apples' affects police complaints and uses of force.
+\textbf{Jacob Kaplan} is the Chief Data Scientist at the Research on Policing Reform and Accountability \href{https://policingresearch.org/team/}{RoPRA} at Princeton University. He holds a PhD and a master's degree in criminology from the University of Pennsylvania and a bachelor's degree in criminal justice from California State University, Sacramento. His current research portfolio includes evaluating police policy and reforms, place-based crime prevention, \href{https://doi.org/10.1177/0022427820984213}{measuring spatial crime concentration}, and simulating how firing `bad apples' affects police complaints and uses of force.
 In the past he's written on the effect of \href{https://doi.org/10.1177/0886260520961876}{marijuana decriminalization on domestic violence}, how \href{https://doi.org/10.1111/1745-9133.12424}{increasing the number of police officers affects prison trends}, how outdoor lighting affects crime and \href{https://link.springer.com/article/10.1057/s41284-021-00296-0}{perception of safety}, and public perceptions of forensic science techniques. He is the author of several R packages that make it easier to work with data, including \href{https://jacobkap.github.io/fastDummies/}{fastDummies} and \href{https://jacobkap.github.io/asciiSetupReader/}{asciiSetupReader}. His \href{http://jacobdkaplan.com/}{website} allows for easy visualization of crime-related data and he has released over a \href{http://jacobdkaplan.com/data.html}{dozen crime data sets} (primarily FBI UCR data) on openICPSR that he has compiled, cleaned, and made available to the public. He is also the author of a \href{https://ucrbook.com/}{book on the FBI's Uniform Crime Reporting (UCR) Program data}.
 
 For a list of papers he has written (including working papers), please see \href{http://jacobdkaplan.com/research.html}{here}.
@@ -248,12 +248,12 @@ Nearly a century ago the FBI started collecting data on crime that occurred in t
 
 NIBRS data provides detailed information on every crime reported to the police, including victim and offender demographics, whether the offender was arrested (and the type of arrest it was), what date and time of day (by hour only) it happened on, the victim-offender relationship, and the crime location (as a location type, not the exact address). It also covers a far wider range of crimes than UCR data did. With the exception of UCR data on assaults against police officers, all NIBRS data can be converted back to UCR data, making it fully backwards compatible and, therefore, comparable to UCR data. In many ways NIBRS data is a massive improvement over UCR data. This data allows for a deeper understanding of crime and it has led to an explosion of research that allows a far more detailed analysis of crime and crime-policies than the blunt UCR data.
 
-However, there is a major limitation to this data: most agencies don't use it. \href{https://www.fbi.gov/news/pressrel/press-releases/fbi-releases-2019-nibrs-crime-data}{According to the FBI} only about 8,500 police agencies, covering about 45\% of the US population, reported NIBRS data in 2019 (the latest year currently available). This is fewer than half of the about 18,000 police agenices in the United States. This is an even larger problem than it seems as the agencies that do report - especially in earlier years of the data - are disproportionately small and rural. So we're missing out of data from most major cities. A number of states don't have any agencies reporting, making this data relatively biased at least in terms of geography and city size. \textbf{Even so, the FBI has said that they are moving entirely to NIBRS data starting in 2021, and will no longer even collect UCR data.} While NIBRS can be converted to UCR data, meaning we can have consistent statistics over time, for agencies that don't report to NIBRS, we have no information on their crimes. In effect, unless the majority of agencies suddenly switch to NIBRS - which, given that the high level of detail relative to UCR data makes moving to NIBRS a costly and timely switch - we will be flying blind for most crime in the country.
+However, there is a major limitation to this data: most agencies don't use it. \href{https://www.fbi.gov/news/pressrel/press-releases/fbi-releases-2019-nibrs-crime-data}{According to the FBI} only about 8,500 police agencies, covering about 45\% of the US population, reported NIBRS data in 2019 (the latest year currently available). This is fewer than half of the about 18,000 police agencies in the United States. This is an even larger problem than it seems as the agencies that do report - especially in earlier years of the data - are disproportionately small and rural. So we're missing out of data from most major cities. A number of states don't have any agencies reporting, making this data relatively biased at least in terms of geography and city size. \textbf{Even so, the FBI has said that they are moving entirely to NIBRS data starting in 2021, and will no longer even collect UCR data.} While NIBRS can be converted to UCR data, meaning we can have consistent statistics over time, for agencies that don't report to NIBRS, we have no information on their crimes. In effect, unless the majority of agencies suddenly switch to NIBRS - which, given that the high level of detail relative to UCR data makes moving to NIBRS a costly and timely switch - we will be flying blind for most crime in the country.
 
 \hypertarget{problems-with-nibrs}{%
 \section{Problems with NIBRS}\label{problems-with-nibrs}}
 
-There are three major problems with NIBRS data, with the first two related to the lack of reporting. First, we are potentially looking at a massive loss of data when UCR data ends in 2020 - it takes over a year for data to be released so even though I'm writing this in Spring 2021, 2019 UCR and NIBRS data are the latest years available. 2020 data won't be released by the FBI until September or October of this year. Considering the huge crime changes during 2020 - and the latest evidence suggests that the violent crime increase is continuing (and in places even accelerating) in 2021 - losing standardized crime data for most cities (and especially the largest cities) is a very bad thing. Moving the majority of agencies over to NIBRS so quickly may also risk the integrity of the data.\footnote{``Quickly'' is a bit is a misnomer as agencies were free to report to NIBRS since it began in 1991 and the FBI had announced many years ago that they'd only collect NIBRS in 2021. Still, given that the majority of agencies don't report to NIBRS and 2020 had a plague, the switch is likely to introduce issues and should be delayed.} As they rush to comply with the FBI's order that they only will accept NIBRS data, there will likely be more mistakes made and erroneous data included in NIBRS data. This will likely include both knowledge problems with agencies not understanding how to properly report data and the simply issue of typos leading to wrong info being entered. Though the FBI does do quality assurance checks, no check is full proof - and their checks in UCR data have still allowed clearly impossible data to be entered (e.g.~millions of arsons reported in a month in a small town). So while I always urge caution when using any data - caution that should be accompanied by a thorough examination of your data before using it - NIBRS data from 2020 and beyond merits extra attention.
+There are three major problems with NIBRS data, with the first two related to the lack of reporting. First, we are potentially looking at a massive loss of data when UCR data ends in 2020 - it takes over a year for data to be released so even though I'm writing this in Spring 2021, 2019 UCR and NIBRS data are the latest years available. 2020 data won't be released by the FBI until September or October of this year. Considering the huge crime changes during 2020 - and the latest evidence suggests that the violent crime increase is continuing (and in places even accelerating) in 2021 - losing standardized crime data for most cities (and especially the largest cities) is a very bad thing. Moving the majority of agencies over to NIBRS so quickly may also risk the integrity of the data.\footnote{``Quickly'' is a bit is a misnomer as agencies were free to report to NIBRS since it began in 1991 and the FBI had announced many years ago that they'd only collect NIBRS in 2021. Still, given that the majority of agencies don't report to NIBRS and 2020 had a plague, the switch is likely to introduce issues and should be delayed.} As they rush to comply with the FBI's order that they only will accept NIBRS data, there will likely be more mistakes made and erroneous data included in NIBRS data. This will likely include both knowledge problems with agencies not understanding how to properly report data and the simply issue of typos leading to wrong info being entered. Though the FBI does do quality assurance checks, no check is foolproof - and their checks in UCR data have still allowed clearly impossible data to be entered (e.g.~millions of arsons reported in a month in a small town). So while I always urge caution when using any data - caution that should be accompanied by a thorough examination of your data before using it - NIBRS data from 2020 and beyond merits extra attention.
 
 The second problem is that even if suddenly all agencies do start reporting in 2021, we'd only have a single year of data available. Even for agencies that already report, we generally don't have too many years of data for them. This really limits the kind of research since we can do since it's hard to know if a finding is based on a trend or is just a weird outlier without having many years of data available. For the agencies where 2020 is the first year, we'll likely to have to wait a few years to even figure out what ``normal'' crime is supposed to look like. This means that for the next several years at least we'll be mostly using NIBRS data as UCR-like datasets, aggregated to the month- or year-level so we can compare it with UCR data from the past. Luckily, this problem will be alleviated the longer we wait as more years of data will become available.
 
@@ -282,7 +282,7 @@ The crimes included in NIBRS are broken into two categories: Group A and Group B
 
 The first set of crimes included are Group A crimes and these are really the main crimes included in NIBRS. For each of these crimes we have full data on the victim, the offender, the offense, any property stolen or damaged (or for drug crimes, seized by the police), and info about the arrestee (if any). Of course, not all of this data may be available (e.g.~information on the offender is unknown) so there can be significant amounts of missing data, but each crime incident does have corresponding files with this information.
 
-The complete list of Group A crimes is below. I've bolded the Index Crimes which are a flawed,but ubiquitous measure of crime used in the UCR crime data as the main measure of crime in the United States. The Index Crimes are murder, rape (sexual assault with an object and sodomy are only considered rape using the FBI new definition that began in 2013), aggravated assault, robbery (these four are the ``Violent Index Crimes''), burglary, motor vehicle theft, and theft (these are the ``Property Index Crimes''. Theft here is broken down into several types of theft like purse-snatching and shoplifting. In the UCR crime dataset it is only ``theft''.). Arson is also technically an Index Crime (arson is considered a property crime) but is generally excluded. Using Index Crimes as your measure of crime is a bad idea (see \href{https://www.propublica.org/article/the-secret-irs-files-trove-of-never-before-seen-records-reveal-how-the-wealthiest-avoid-income-tax}{here for more on this}) but it's good that all of the Index Crimes are available in NIBRS so we have continuity of data from when agencies move from UCR to NIBRS.
+The complete list of Group A crimes is below. I've bolded the Index Crimes which are a flawed, but ubiquitous measure of crime used in the UCR crime data as the main measure of crime in the United States. The Index Crimes are murder, rape (sexual assault with an object and sodomy are only considered rape using the FBI new definition that began in 2013), aggravated assault, robbery (these four are the ``Violent Index Crimes''), burglary, motor vehicle theft, and theft (these are the ``Property Index Crimes''. Theft here is broken down into several types of theft like purse-snatching and shoplifting. In the UCR crime dataset it is only ``theft''.). Arson is also technically an Index Crime (arson is considered a property crime) but is generally excluded. Using Index Crimes as your measure of crime is a bad idea (see \href{https://www.propublica.org/article/the-secret-irs-files-trove-of-never-before-seen-records-reveal-how-the-wealthiest-avoid-income-tax}{here for more on this}) but it's good that all of the Index Crimes are available in NIBRS so we have continuity of data from when agencies move from UCR to NIBRS.
 
 \begin{itemize}
 \tightlist
@@ -474,7 +474,7 @@ At the bottom is the Arrestee Segment which is only available when a person was 
 \hypertarget{administrative-segment}{%
 \subsection{Administrative Segment}\label{administrative-segment}}
 
-The Administrative Segment provides information about the incident itself, such as how many victims or offenders there were. In practice this means that it tells us how many other segments - offense, offender, victim, and arrestee segments - there are for this particular incident. It also has several important variables at the incident-level such as what hour of the day the incident occurred and whether the incident date variable is actually just the date the incident was reported. Finally, it tells us whether the case was cleared exceptionally and, if so, what type of exceptional clearance it was. This can tell us, for example, how many crimes was cleared because the offender died or the victim refused to cooperate. As the UCR data doesn't differentiate between normal clearances (i.e.~arrest the offender) and exceptional clearances, this provides a far deeper understanding of case outcomes.
+The Administrative Segment provides information about the incident itself, such as how many victims or offenders there were. In practice this means that it tells us how many other segments - offense, offender, victim, and arrestee segments - there are for this particular incident. It also has several important variables at the incident-level such as what hour of the day the incident occurred and whether the incident date variable is actually just the date the incident was reported. Finally, it tells us whether the case was cleared exceptionally and, if so, what type of exceptional clearance it was. This can tell us, for example, how many crimes were cleared because the offender died or the victim refused to cooperate. As the UCR data doesn't differentiate between normal clearances (i.e.~arrest the offender) and exceptional clearances, this provides a far deeper understanding of case outcomes.
 
 \hypertarget{offense-segment}{%
 \subsection{Offense Segment}\label{offense-segment}}
@@ -828,8 +828,6 @@ Total & 7,436,090 & 100\%\tabularnewline
 \bottomrule
 \end{longtable}
 
-\setstretch{1.15}
-
 \hypertarget{offense-subtype}{%
 \subsection{Offense subtype}\label{offense-subtype}}
 
@@ -970,8 +968,6 @@ Total\strut
 \bottomrule
 \end{longtable}
 
-\setstretch{1.15}
-
 \begin{itemize}
 \tightlist
 \item
@@ -1074,8 +1070,6 @@ Total\strut
 \bottomrule
 \end{longtable}
 
-\setstretch{1.15}
-
 \hypertarget{drug-alcohol-or-computer-use}{%
 \subsection{Drug, alcohol, or computer use}\label{drug-alcohol-or-computer-use}}
 
@@ -1159,8 +1153,6 @@ Military Installation & 273 & 0.00\%\tabularnewline
 Total & 7,436,090 & 100\%\tabularnewline
 \bottomrule
 \end{longtable}
-
-\setstretch{1.15}
 
 \hypertarget{weapons}{%
 \subsection{Weapons}\label{weapons}}
@@ -1316,8 +1308,6 @@ Total\strut
 \bottomrule
 \end{longtable}
 
-\setstretch{1.15}
-
 \begin{itemize}
 \tightlist
 \item
@@ -1419,10 +1409,8 @@ Total & 7,436,090 & 100\%\tabularnewline
 \bottomrule
 \end{longtable}
 
-\setstretch{1.15}
-
 \begin{longtable}[]{@{}lrr@{}}
-\caption{\label{tab:offenseBiasMotivationBiases}The bias motivation (i.e.~if hate crime or not and what type of hate crime) for all offenses reported in 2019 that were classifed as hate crimes. For easier viewing of how hate crimes are broken down, this excludes all offenses where there was no bias motivation.}\tabularnewline
+\caption{\label{tab:offenseBiasMotivationBiases}The bias motivation (i.e.~if hate crime or not and what type of hate crime) for all offenses reported in 2019 that were classified as hate crimes. For easier viewing of how hate crimes are broken down, this excludes all offenses where there was no bias motivation.}\tabularnewline
 \toprule
 Bias Motivation & \# of Offenses & \% of Offenses\tabularnewline
 \midrule
@@ -1468,8 +1456,6 @@ Anti-Jehovahs Witness & 5 & 0.11\%\tabularnewline
 Total & 4,516 & 100\%\tabularnewline
 \bottomrule
 \end{longtable}
-
-\setstretch{1.15}
 
 \hypertarget{offender-segment-1}{%
 \chapter{Offender Segment}\label{offender-segment-1}}
@@ -1608,7 +1594,7 @@ Total & 7,423,963 & 100\%\tabularnewline
 
 }
 
-\caption{The distribution of the type of victim. Victim types are mutuaully exclusive.}\label{fig:victimType}
+\caption{The distribution of the type of victim. Victim types are mutually exclusive.}\label{fig:victimType}
 \end{figure}
 
 \hypertarget{injury}{%
@@ -1747,7 +1733,7 @@ victim\$resident\_status\_of\_victim
 
 }
 
-\caption{The distrubution of residence status for all victims reported to NIBRS in 2019. Residence status is residence in the police agency's jurisdiction (e.g. do you live in the city you were victimized in?). It is unrelated to citizenship or immigration status.}\label{fig:victimResidenceStatus}
+\caption{The distribution of residence status for all victims reported to NIBRS in 2019. Residence status is residence in the police agency's jurisdiction (e.g. do you live in the city you were victimized in?). It is unrelated to citizenship or immigration status.}\label{fig:victimResidenceStatus}
 \end{figure}
 
 \begin{figure}
@@ -1756,7 +1742,7 @@ victim\$resident\_status\_of\_victim
 
 }
 
-\caption{The distrubution of residence status for all Individual (i.e. person who is not law enforcement officer) victims.}\label{fig:victimResidenceStatusIndividual}
+\caption{The distribution of residence status for all Individual (i.e. person who is not law enforcement officer) victims.}\label{fig:victimResidenceStatusIndividual}
 \end{figure}
 
 \begin{figure}
@@ -1765,7 +1751,7 @@ victim\$resident\_status\_of\_victim
 
 }
 
-\caption{The distrubution of residence status for all Law Enforcement Officer victims.}\label{fig:victimResidenceStatusPolice}
+\caption{The distribution of residence status for all Law Enforcement Officer victims.}\label{fig:victimResidenceStatusPolice}
 \end{figure}
 
 \hypertarget{aggravated-assault-and-homicide-circumstances}{%
@@ -1992,7 +1978,7 @@ The Arrestee Segment has information that is largely available in other segments
 
 }
 
-\caption{The distribution of the number of days from the incident to the arrest date. In 2019 the maxiumum days from incident to arrest was 461 days. Zero days means that the arrest occurred on the same day as the incident.}\label{fig:arrestsDaysUntilArrest}
+\caption{The distribution of the number of days from the incident to the arrest date. In 2019 the maximum days from incident to arrest was 461 days. Zero days means that the arrest occurred on the same day as the incident.}\label{fig:arrestsDaysUntilArrest}
 \end{figure}
 
 \begin{figure}
@@ -2050,7 +2036,7 @@ This variable only tells you if the weapon is automatic
 
 }
 
-\caption{The distrubution of arrests by type of arrest. Previous Incident Report includes cases where an individual was arrested for a separate crime and are then reported as also arrested for this incident.}\label{fig:arresteeTypeOfArrest}
+\caption{The distribution of arrests by type of arrest. Previous Incident Report includes cases where an individual was arrested for a separate crime and are then reported as also arrested for this incident.}\label{fig:arresteeTypeOfArrest}
 \end{figure}
 
 \hypertarget{disposition-for-juvenile-arrestees}{%
@@ -2074,7 +2060,7 @@ This variable only tells you if the weapon is automatic
 
 }
 
-\caption{The distrubution of residence status for all arrestees reported to NIBRS in 2019. Residence status is residence in the arresting agency's jurisdiction (e.g. do you live in the city you were arrested in?). It is unrelated to citizenship or immigration status.}\label{fig:arresteeResidenceStatus}
+\caption{The distribution of residence status for all arrestees reported to NIBRS in 2019. Residence status is residence in the arresting agency's jurisdiction (e.g. do you live in the city you were arrested in?). It is unrelated to citizenship or immigration status.}\label{fig:arresteeResidenceStatus}
 \end{figure}
 
 \hypertarget{demographics-1}{%
@@ -2267,7 +2253,7 @@ Total & 7,567,377 & 100\%\tabularnewline
 
 }
 
-\caption{The distribution of the number of days from the incident to the property recovered date. In 2019 the maxiumum days from incident to arrest was 450 days. Zero days means that the arrest occurred on the same day as the incident. }\label{fig:propertyDaysUntilRecovered}
+\caption{The distribution of the number of days from the incident to the property recovered date. In 2019 the maximum days from incident to arrest was 450 days. Zero days means that the arrest occurred on the same day as the incident. }\label{fig:propertyDaysUntilRecovered}
 \end{figure}
 
 \hypertarget{drugs}{%

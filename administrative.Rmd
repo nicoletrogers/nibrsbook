@@ -27,7 +27,7 @@ The Administrative Segment provides information about the incident itself, such 
 
 ### The incident report date
 
-```{r administrativeMonthDay, fig.cap = "The percent of crimes that occur (the day of the incident, even if the crime wasn't reported that day) each day of the month for all agencies reporting to NIBRS in 2019.", fig.height=15}
+```{r administrativeMonthDay, fig.cap = "The percent of crimes that occur (the day of the incident, even if the crime wasn't reported that day) each day of the month for all agencies reporting to NIBRS in 2019.", fig.height=13}
 
 administrative$mday <- lubridate::mday(administrative$incident_date)
 administrative$mday <- factor(administrative$mday, 
@@ -47,7 +47,7 @@ ggplot2::ggplot(aes(x = mday)) +
 ```
 
 
-```{r administrativeMonthDayReport, fig.cap = "The percent of crimes that are reported (the day of the report, even if not the day of the incident) each day of the month for all agencies reporting to NIBRS in 2019.", fig.height=15}
+```{r administrativeMonthDayReport, fig.cap = "The percent of crimes that are reported (the day of the report, even if not the day of the incident) each day of the month for all agencies reporting to NIBRS in 2019.", fig.height=13}
 
 administrative$mday <- mday(administrative$incident_date)
 administrative$mday <- factor(administrative$mday, 
@@ -70,7 +70,7 @@ ggplot2::ggplot(administrative[administrative$report_date_indicator %in% "report
 
 An extremely important aspect of crime data is when exactly the crime occurs. If, for example, crime always spikes when the local high school ends their day that would likely indicate that high school students are involved with crime (both as victims-offenders). In my own research on daylight saving time-crime I only care about the sunset hours, which is when daylight saving time would affect outdoor lighting. When crime happens also would affect police behavior as they'd likely increase patrol during times of elevated crime. Luckily NIBRS data does have the time of each incident, though it's only at the hour level.
 
-```{r administrativeHours, fig.cap = "The percent of crimes that are reported each hour for all agencies reporting to NIBRS in 2019.", fig.height=15}
+```{r administrativeHours, fig.cap = "The percent of crimes that are reported each hour for all agencies reporting to NIBRS in 2019.", fig.height=13}
 
 administrative$hour <- administrative$incident_date_hour
 administrative$hour <- gsub("on or between ", "",

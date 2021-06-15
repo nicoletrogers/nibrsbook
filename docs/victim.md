@@ -76,8 +76,8 @@ Table: (\#tab:victimCrimeCategory)The number and percent of crimes committed aga
 ### Victim type
 
 <div class="figure" style="text-align: center">
-<img src="victim_files/figure-html/victimType-1.png" alt="The distribution of the type of victim. Victim types are mutuaully exclusive." width="90%" />
-<p class="caption">(\#fig:victimType)The distribution of the type of victim. Victim types are mutuaully exclusive.</p>
+<img src="victim_files/figure-html/victimType-1.png" alt="The distribution of the type of victim. Victim types are mutually exclusive." width="90%" />
+<p class="caption">(\#fig:victimType)The distribution of the type of victim. Victim types are mutually exclusive.</p>
 </div>
 
 
@@ -180,18 +180,18 @@ Only for when victim is individual or law enforcement officer
 victim$resident_status_of_victim
 
 <div class="figure" style="text-align: center">
-<img src="victim_files/figure-html/victimResidenceStatus-1.png" alt="The distrubution of residence status for all victims reported to NIBRS in 2019. Residence status is residence in the police agency's jurisdiction (e.g. do you live in the city you were victimized in?). It is unrelated to citizenship or immigration status." width="90%" />
-<p class="caption">(\#fig:victimResidenceStatus)The distrubution of residence status for all victims reported to NIBRS in 2019. Residence status is residence in the police agency's jurisdiction (e.g. do you live in the city you were victimized in?). It is unrelated to citizenship or immigration status.</p>
+<img src="victim_files/figure-html/victimResidenceStatus-1.png" alt="The distribution of residence status for all victims reported to NIBRS in 2019. Residence status is residence in the police agency's jurisdiction (e.g. do you live in the city you were victimized in?). It is unrelated to citizenship or immigration status." width="90%" />
+<p class="caption">(\#fig:victimResidenceStatus)The distribution of residence status for all victims reported to NIBRS in 2019. Residence status is residence in the police agency's jurisdiction (e.g. do you live in the city you were victimized in?). It is unrelated to citizenship or immigration status.</p>
 </div>
 
 <div class="figure" style="text-align: center">
-<img src="victim_files/figure-html/victimResidenceStatusIndividual-1.png" alt="The distrubution of residence status for all Individual (i.e. person who is not law enforcement officer) victims." width="90%" />
-<p class="caption">(\#fig:victimResidenceStatusIndividual)The distrubution of residence status for all Individual (i.e. person who is not law enforcement officer) victims.</p>
+<img src="victim_files/figure-html/victimResidenceStatusIndividual-1.png" alt="The distribution of residence status for all Individual (i.e. person who is not law enforcement officer) victims." width="90%" />
+<p class="caption">(\#fig:victimResidenceStatusIndividual)The distribution of residence status for all Individual (i.e. person who is not law enforcement officer) victims.</p>
 </div>
 
 <div class="figure" style="text-align: center">
-<img src="victim_files/figure-html/victimResidenceStatusPolice-1.png" alt="The distrubution of residence status for all Law Enforcement Officer victims." width="90%" />
-<p class="caption">(\#fig:victimResidenceStatusPolice)The distrubution of residence status for all Law Enforcement Officer victims.</p>
+<img src="victim_files/figure-html/victimResidenceStatusPolice-1.png" alt="The distribution of residence status for all Law Enforcement Officer victims." width="90%" />
+<p class="caption">(\#fig:victimResidenceStatusPolice)The distribution of residence status for all Law Enforcement Officer victims.</p>
 </div>
 
 ### Aggravated assault and homicide circumstances

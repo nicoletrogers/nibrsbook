@@ -87,7 +87,7 @@ The Arrestee Segment has information that is largely available in other segments
 
 ### Arrest date
 
-```{r arrestsDaysUntilArrest, fig.cap = "The distribution of the number of days from the incident to the arrest date. In 2019 the maxiumum days from incident to arrest was 461 days. Zero days means that the arrest occurred on the same day as the incident."}
+```{r arrestsDaysUntilArrest, fig.cap = "The distribution of the number of days from the incident to the arrest date. In 2019 the maximum days from incident to arrest was 461 days. Zero days means that the arrest occurred on the same day as the incident."}
 arrestee$days_until_arrest <- as.numeric(ymd(arrestee$arrest_date) - ymd(arrestee$incident_date))
 
 temp <- 
@@ -189,7 +189,7 @@ ggplot(temp, aes(x = arrestee_weapon_1, y = automatic_weapon)) +
 
 ### Type of arrest
 
-```{r arresteeTypeOfArrest, fig.cap = "The distrubution of arrests by type of arrest. Previous Incident Report includes cases where an individual was arrested for a separate crime and are then reported as also arrested for this incident."}
+```{r arresteeTypeOfArrest, fig.cap = "The distribution of arrests by type of arrest. Previous Incident Report includes cases where an individual was arrested for a separate crime and are then reported as also arrested for this incident."}
 arrestee$arrest_type <- arrestee$type_of_arrest
 arrestee$arrest_type <- gsub(" \\(.*", "", arrestee$arrest_type)
 arrestee$arrest_type[arrestee$arrest_type == "taken into custody"] <- "Warrant/Previous Incident Report"
@@ -214,7 +214,7 @@ crimeutils::make_barplots("disposition_temp", count = FALSE, ylab = "% of Juveni
 
 ### Residence status
 
-```{r arresteeResidenceStatus, fig.cap = "The distrubution of residence status for all arrestees reported to NIBRS in 2019. Residence status is residence in the arresting agency's jurisdiction (e.g. do you live in the city you were arrested in?). It is unrelated to citizenship or immigration status."}
+```{r arresteeResidenceStatus, fig.cap = "The distribution of residence status for all arrestees reported to NIBRS in 2019. Residence status is residence in the arresting agency's jurisdiction (e.g. do you live in the city you were arrested in?). It is unrelated to citizenship or immigration status."}
 arrestee$resident_status_of_arrestee[is.na(arrestee$resident_status_of_arrestee)] <- "unknown"
 arrestee %>%
   mutate(resident_status_of_arrestee = capitalize_words(resident_status_of_arrestee)) %>%

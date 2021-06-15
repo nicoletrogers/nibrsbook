@@ -41,7 +41,7 @@ knitr::kable(temp,
   kable_styling(bootstrap_options = "striped", full_width = FALSE, latex_options = c("hold_position", "repeat_header"))
 ```
 
-\setstretch{1.15}
+
 ### Offense subtype
 
 ```{r offenseCrimeSubcategories}
@@ -62,7 +62,7 @@ knitr::kable(temp,
   kable_styling(bootstrap_options = "striped", full_width = FALSE, latex_options = c("hold_position", "repeat_header"))
 ```
 
-\setstretch{1.15}
+
 * Aggravated Assault
 * Animal Cruelty
 * Counterfeiting/Forgery
@@ -101,7 +101,7 @@ knitr::kable(temp,
   kable_styling(bootstrap_options = "striped", full_width = FALSE, latex_options = c("hold_position", "repeat_header"))
 ```
 
-\setstretch{1.15}
+
 ### Drug, alcohol, or computer use
 
 ```{r offenseDrugAlcoholComputer, fig.cap = "The distribution of drug, alcohol, or computer use for all offenses in 2019."}
@@ -139,7 +139,6 @@ knitr::kable(temp,
   kable_styling(bootstrap_options = "striped", full_width = FALSE, latex_options = c("hold_position", "repeat_header"))
 ```
 
-\setstretch{1.15}
 ### Weapons
 
 ```{r offenseWeapon}
@@ -160,7 +159,7 @@ knitr::kable(temp,
   kable_styling(bootstrap_options = "striped", full_width = FALSE, latex_options = c("hold_position", "repeat_header"))
 ```
 
-\setstretch{1.15}
+
 * Aggravated Assault
 * Extortion/Blackmail
 * Fondling (Incident Liberties/Child Molest)
@@ -232,7 +231,6 @@ knitr::kable(temp,
   kable_styling(bootstrap_options = "striped", full_width = FALSE, latex_options = c("hold_position", "repeat_header"))
 ```
 
-\setstretch{1.15}
 
 ```{r offenseBiasMotivationBiases}
 
@@ -249,8 +247,6 @@ knitr::kable(temp,
              booktabs = TRUE, 
              longtable = TRUE,
              escape = FALSE,
-             caption = "The bias motivation (i.e. if hate crime or not and what type of hate crime) for all offenses reported in 2019 that were classifed as hate crimes. For easier viewing of how hate crimes are broken down, this excludes all offenses where there was no bias motivation.") %>%
+             caption = "The bias motivation (i.e. if hate crime or not and what type of hate crime) for all offenses reported in 2019 that were classified as hate crimes. For easier viewing of how hate crimes are broken down, this excludes all offenses where there was no bias motivation.") %>%
   kable_styling(bootstrap_options = "striped", full_width = FALSE, latex_options = c("hold_position", "repeat_header"))
 ```
-
-\setstretch{1.15}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.6.8)  14 JUN 2021 16:04
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.6.8)  14 JUN 2021 21:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1414,18 +1414,23 @@ Chapter 4.
 [51
 
 ] [52]
+Overfull \hbox (1.03172pt too wide) in paragraph at lines 840--841
+ \TU/lmr/m/n/12 Offenses|
+ []
+
+
 Overfull \hbox (1.03172pt too wide) in paragraph at lines 842--843
  \TU/lmr/m/n/12 Offenses|
  []
 
 
-Overfull \hbox (1.03172pt too wide) in paragraph at lines 844--845
- \TU/lmr/m/n/12 Offenses|
+Overfull \hbox (12.00003pt too wide) in alignment at lines 834--845
+ [] [] [] 
  []
 
 
-Overfull \hbox (12.00003pt too wide) in alignment at lines 836--847
- [] [] [] 
+Overfull \hbox (1.03172pt too wide) in paragraph at lines 850--851
+ \TU/lmr/m/n/12 Offenses|
  []
 
 
@@ -1434,67 +1439,62 @@ Overfull \hbox (1.03172pt too wide) in paragraph at lines 852--853
  []
 
 
-Overfull \hbox (1.03172pt too wide) in paragraph at lines 854--855
- \TU/lmr/m/n/12 Offenses|
- []
-
-
-Overfull \hbox (12.00003pt too wide) in alignment at lines 847--857
+Overfull \hbox (12.00003pt too wide) in alignment at lines 845--855
  [] [] [] 
  []
 
 
-Overfull \hbox (6.49173pt too wide) in paragraph at lines 861--862
+Overfull \hbox (6.49173pt too wide) in paragraph at lines 859--860
  []\TU/lmr/m/n/12 1,074,646|
  []
 
 
-Overfull \hbox (6.49173pt too wide) in paragraph at lines 868--869
+Overfull \hbox (6.49173pt too wide) in paragraph at lines 866--867
  []\TU/lmr/m/n/12 1,040,062|
  []
 
 
-Overfull \hbox (6.49173pt too wide) in paragraph at lines 966--967
+Overfull \hbox (6.49173pt too wide) in paragraph at lines 964--965
  []\TU/lmr/m/n/12 2,423,181|
  []
 
 
-Overfull \hbox (12.00003pt too wide) in alignment at lines 857--971
+Overfull \hbox (12.00003pt too wide) in alignment at lines 855--969
  [] [] [] 
  []
 
 [53]
-Overfull \hbox (1.03172pt too wide) in paragraph at lines 1023--1024
+Overfull \hbox (1.03172pt too wide) in paragraph at lines 1019--1020
  \TU/lmr/m/n/12 Offenses|
  []
 
 
-Overfull \hbox (1.03172pt too wide) in paragraph at lines 1025--1026
+Overfull \hbox (1.03172pt too wide) in paragraph at lines 1021--1022
  \TU/lmr/m/n/12 Offenses|
  []
 
 
-Overfull \hbox (12.00003pt too wide) in alignment at lines 1017--1028
+Overfull \hbox (12.00003pt too wide) in alignment at lines 1013--1024
  [] [] [] 
  []
 
 
-Overfull \hbox (1.03172pt too wide) in paragraph at lines 1033--1034
+Overfull \hbox (1.03172pt too wide) in paragraph at lines 1029--1030
  \TU/lmr/m/n/12 Offenses|
  []
 
 
-Overfull \hbox (1.03172pt too wide) in paragraph at lines 1035--1036
+Overfull \hbox (1.03172pt too wide) in paragraph at lines 1031--1032
  \TU/lmr/m/n/12 Offenses|
  []
 
 
-Overfull \hbox (12.00003pt too wide) in alignment at lines 1028--1038
+Overfull \hbox (12.00003pt too wide) in alignment at lines 1024--1034
  [] [] [] 
  []
 
 
-Overfull \hbox (12.00003pt too wide) in alignment at lines 1038--1075
+Overfull \hbox (12.00003pt too wide) in alignment at lines 1034--1071
  [] [] [] 
  []
 
@@ -1506,17 +1506,17 @@ File: nibrsbook_files/figure-latex/offenseDrugAlcoholComputerAny-1.pdf Graphic
 file (type pdf)
 <use nibrsbook_files/figure-latex/offenseDrugAlcoholComputerAny-1.pdf>
 [55] [56] [57]
-Overfull \hbox (16.58206pt too wide) in alignment at lines 1168--1179
+Overfull \hbox (16.58206pt too wide) in alignment at lines 1160--1171
  [] [] [] 
  []
 
 
-Overfull \hbox (16.58206pt too wide) in alignment at lines 1179--1189
+Overfull \hbox (16.58206pt too wide) in alignment at lines 1171--1181
  [] [] [] 
  []
 
 
-Overfull \hbox (16.58206pt too wide) in alignment at lines 1189--1317
+Overfull \hbox (16.58206pt too wide) in alignment at lines 1181--1309
  [] [] [] 
  []
 
@@ -1557,17 +1557,17 @@ File: nibrsbook_files/figure-latex/victimInjuryPoliceExcludeNone-1.pdf Graphic
 file (type pdf)
 <use nibrsbook_files/figure-latex/victimInjuryPoliceExcludeNone-1.pdf>
 
-Overfull \hbox (11.93709pt too wide) in alignment at lines 1656--1661
+Overfull \hbox (11.93709pt too wide) in alignment at lines 1642--1647
  [] [] [] 
  []
 
 
-Overfull \hbox (11.93709pt too wide) in alignment at lines 1661--1665
+Overfull \hbox (11.93709pt too wide) in alignment at lines 1647--1651
  [] [] [] 
  []
 
 
-Overfull \hbox (11.93709pt too wide) in alignment at lines 1665--1695
+Overfull \hbox (11.93709pt too wide) in alignment at lines 1651--1681
  [] [] [] 
  []
 
@@ -1582,17 +1582,17 @@ File: nibrsbook_files/figure-latex/victimResidenceStatusPolice-1.pdf Graphic fi
 le (type pdf)
 <use nibrsbook_files/figure-latex/victimResidenceStatusPolice-1.pdf>
 
-Overfull \hbox (49.6891pt too wide) in alignment at lines 1774--1779
+Overfull \hbox (49.6891pt too wide) in alignment at lines 1760--1765
  [] [] [] [] 
  []
 
 
-Overfull \hbox (49.6891pt too wide) in alignment at lines 1779--1783
+Overfull \hbox (49.6891pt too wide) in alignment at lines 1765--1769
  [] [] [] [] 
  []
 
 
-Overfull \hbox (49.6891pt too wide) in alignment at lines 1783--1803
+Overfull \hbox (49.6891pt too wide) in alignment at lines 1769--1789
  [] [] [] [] 
  []
 
@@ -1693,17 +1693,17 @@ INDOW ARRESTEE SEGMENT
 [98] [99]
 Chapter 8.
 
-Overfull \hbox (17.5531pt too wide) in alignment at lines 2144--2149
+Overfull \hbox (17.5531pt too wide) in alignment at lines 2130--2135
  [] [] [] 
  []
 
 
-Overfull \hbox (17.5531pt too wide) in alignment at lines 2149--2153
+Overfull \hbox (17.5531pt too wide) in alignment at lines 2135--2139
  [] [] [] 
  []
 
 
-Overfull \hbox (17.5531pt too wide) in alignment at lines 2153--2224
+Overfull \hbox (17.5531pt too wide) in alignment at lines 2139--2210
  [] [] [] 
  []
 
@@ -1723,162 +1723,162 @@ File: nibrsbook_files/figure-latex/propertyDaysUntilRecovered-1.pdf Graphic fil
 e (type pdf)
 <use nibrsbook_files/figure-latex/propertyDaysUntilRecovered-1.pdf>
 
-Overfull \hbox (3.12383pt too wide) in paragraph at lines 2285--2286
+Overfull \hbox (3.12383pt too wide) in paragraph at lines 2271--2272
  \TU/lmr/m/n/12 Drugs|
  []
 
 
-Overfull \hbox (3.12383pt too wide) in paragraph at lines 2287--2288
+Overfull \hbox (3.12383pt too wide) in paragraph at lines 2273--2274
  \TU/lmr/m/n/12 Drugs|
  []
 
 
-Overfull \hbox (7.418pt too wide) in alignment at lines 2279--2290
+Overfull \hbox (7.418pt too wide) in alignment at lines 2265--2276
  [] [] [] 
  []
 
 
-Overfull \hbox (3.12383pt too wide) in paragraph at lines 2295--2296
+Overfull \hbox (3.12383pt too wide) in paragraph at lines 2281--2282
  \TU/lmr/m/n/12 Drugs|
  []
 
 
-Overfull \hbox (3.12383pt too wide) in paragraph at lines 2297--2298
+Overfull \hbox (3.12383pt too wide) in paragraph at lines 2283--2284
  \TU/lmr/m/n/12 Drugs|
  []
 
 
-Overfull \hbox (7.418pt too wide) in alignment at lines 2290--2300
+Overfull \hbox (7.418pt too wide) in alignment at lines 2276--2286
  [] [] [] 
  []
 
 
-Overfull \hbox (11.07983pt too wide) in paragraph at lines 2304--2305
+Overfull \hbox (11.07983pt too wide) in paragraph at lines 2290--2291
  []\TU/lmr/m/n/12 455,429|
  []
 
 
-Overfull \hbox (9.11183pt too wide) in paragraph at lines 2306--2307
+Overfull \hbox (9.11183pt too wide) in paragraph at lines 2292--2293
  []\TU/lmr/m/n/12 46.69%|
  []
 
 
-Overfull \hbox (11.07983pt too wide) in paragraph at lines 2311--2312
+Overfull \hbox (11.07983pt too wide) in paragraph at lines 2297--2298
  []\TU/lmr/m/n/12 201,716|
  []
 
 
-Overfull \hbox (9.11183pt too wide) in paragraph at lines 2313--2314
+Overfull \hbox (9.11183pt too wide) in paragraph at lines 2299--2300
  []\TU/lmr/m/n/12 20.68%|
  []
 
 
-Overfull \hbox (5.19983pt too wide) in paragraph at lines 2318--2319
+Overfull \hbox (5.19983pt too wide) in paragraph at lines 2304--2305
  []\TU/lmr/m/n/12 82,437|
  []
 
 
-Overfull \hbox (3.23183pt too wide) in paragraph at lines 2320--2321
+Overfull \hbox (3.23183pt too wide) in paragraph at lines 2306--2307
  []\TU/lmr/m/n/12 8.45%|
  []
 
 
-Overfull \hbox (5.19983pt too wide) in paragraph at lines 2325--2326
+Overfull \hbox (5.19983pt too wide) in paragraph at lines 2311--2312
  []\TU/lmr/m/n/12 49,699|
  []
 
 
-Overfull \hbox (3.23183pt too wide) in paragraph at lines 2327--2328
+Overfull \hbox (3.23183pt too wide) in paragraph at lines 2313--2314
  []\TU/lmr/m/n/12 5.09%|
  []
 
 
-Overfull \hbox (5.19983pt too wide) in paragraph at lines 2332--2333
+Overfull \hbox (5.19983pt too wide) in paragraph at lines 2318--2319
  []\TU/lmr/m/n/12 49,646|
  []
 
 
-Overfull \hbox (3.23183pt too wide) in paragraph at lines 2334--2335
+Overfull \hbox (3.23183pt too wide) in paragraph at lines 2320--2321
  []\TU/lmr/m/n/12 5.09%|
  []
 
 
-Overfull \hbox (5.19983pt too wide) in paragraph at lines 2339--2340
+Overfull \hbox (5.19983pt too wide) in paragraph at lines 2325--2326
  []\TU/lmr/m/n/12 39,836|
  []
 
 
-Overfull \hbox (3.23183pt too wide) in paragraph at lines 2341--2342
+Overfull \hbox (3.23183pt too wide) in paragraph at lines 2327--2328
  []\TU/lmr/m/n/12 4.08%|
  []
 
 
-Overfull \hbox (5.19983pt too wide) in paragraph at lines 2346--2347
+Overfull \hbox (5.19983pt too wide) in paragraph at lines 2332--2333
  []\TU/lmr/m/n/12 37,401|
  []
 
 
-Overfull \hbox (3.23183pt too wide) in paragraph at lines 2348--2349
+Overfull \hbox (3.23183pt too wide) in paragraph at lines 2334--2335
  []\TU/lmr/m/n/12 3.83%|
  []
 
 
-Overfull \hbox (5.19983pt too wide) in paragraph at lines 2353--2354
+Overfull \hbox (5.19983pt too wide) in paragraph at lines 2339--2340
  []\TU/lmr/m/n/12 30,348|
  []
 
 
-Overfull \hbox (3.23183pt too wide) in paragraph at lines 2355--2356
+Overfull \hbox (3.23183pt too wide) in paragraph at lines 2341--2342
  []\TU/lmr/m/n/12 3.11%|
  []
 
 
-Overfull \hbox (3.23183pt too wide) in paragraph at lines 2362--2363
+Overfull \hbox (3.23183pt too wide) in paragraph at lines 2348--2349
  []\TU/lmr/m/n/12 0.72%|
  []
 
 
-Overfull \hbox (3.23183pt too wide) in paragraph at lines 2369--2370
+Overfull \hbox (3.23183pt too wide) in paragraph at lines 2355--2356
  []\TU/lmr/m/n/12 0.64%|
  []
 
 
-Overfull \hbox (3.23183pt too wide) in paragraph at lines 2376--2377
+Overfull \hbox (3.23183pt too wide) in paragraph at lines 2362--2363
  []\TU/lmr/m/n/12 0.53%|
  []
 
 
-Overfull \hbox (3.23183pt too wide) in paragraph at lines 2383--2384
+Overfull \hbox (3.23183pt too wide) in paragraph at lines 2369--2370
  []\TU/lmr/m/n/12 0.35%|
  []
 
 
-Overfull \hbox (3.23183pt too wide) in paragraph at lines 2390--2391
+Overfull \hbox (3.23183pt too wide) in paragraph at lines 2376--2377
  []\TU/lmr/m/n/12 0.31%|
  []
 
 
-Overfull \hbox (3.23183pt too wide) in paragraph at lines 2397--2398
+Overfull \hbox (3.23183pt too wide) in paragraph at lines 2383--2384
  []\TU/lmr/m/n/12 0.17%|
  []
 
 
-Overfull \hbox (3.23183pt too wide) in paragraph at lines 2404--2405
+Overfull \hbox (3.23183pt too wide) in paragraph at lines 2390--2391
  []\TU/lmr/m/n/12 0.13%|
  []
 
 
-Overfull \hbox (3.23183pt too wide) in paragraph at lines 2411--2412
+Overfull \hbox (3.23183pt too wide) in paragraph at lines 2397--2398
  []\TU/lmr/m/n/12 0.13%|
  []
 
 
-Overfull \hbox (11.07983pt too wide) in paragraph at lines 2416--2417
+Overfull \hbox (11.07983pt too wide) in paragraph at lines 2402--2403
  []\TU/lmr/m/n/12 975,528|
  []
 
 
-Overfull \hbox (7.418pt too wide) in alignment at lines 2300--2421
+Overfull \hbox (7.418pt too wide) in alignment at lines 2286--2407
  [] [] [] 
  []
 
@@ -1894,7 +1894,7 @@ Package rerunfilecheck Info: File `nibrsbook.out' has not changed.
 Here is how much of TeX's memory you used:
  19728 strings out of 478468
  365744 string characters out of 5857149
- 856987 words of memory out of 5000000
+ 856984 words of memory out of 5000000
  39717 multiletter control sequences out of 15000+600000
  407970 words of font info for 74 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191

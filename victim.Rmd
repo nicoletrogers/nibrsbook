@@ -45,7 +45,7 @@ knitr::kable(temp,
 \setstretch{1.15}
 ### Victim type
 
-```{r victimType, fig.cap = "The distribution of the type of victim. Victim types are mutuaully exclusive."}
+```{r victimType, fig.cap = "The distribution of the type of victim. Victim types are mutually exclusive."}
 victim %>%
   mutate(type_of_victim = capitalize_words(type_of_victim)) %>%
   crimeutils::make_barplots("type_of_victim", count = FALSE, ylab = "% of victims") +
@@ -140,7 +140,7 @@ Only for when victim is individual or law enforcement officer
 
 victim$resident_status_of_victim
 
-```{r victimResidenceStatus, fig.cap = "The distrubution of residence status for all victims reported to NIBRS in 2019. Residence status is residence in the police agency's jurisdiction (e.g. do you live in the city you were victimized in?). It is unrelated to citizenship or immigration status."}
+```{r victimResidenceStatus, fig.cap = "The distribution of residence status for all victims reported to NIBRS in 2019. Residence status is residence in the police agency's jurisdiction (e.g. do you live in the city you were victimized in?). It is unrelated to citizenship or immigration status."}
 victim$resident_status_of_victim[is.na(victim$resident_status_of_victim)] <- "unknown"
 victim %>%
   filter(type_of_victim %in% c("individual",
@@ -150,7 +150,7 @@ victim %>%
   ggplot2::scale_y_continuous(labels = scales::percent)
 ```
 
-```{r victimResidenceStatusIndividual, fig.cap = "The distrubution of residence status for all Individual (i.e. person who is not law enforcement officer) victims."}
+```{r victimResidenceStatusIndividual, fig.cap = "The distribution of residence status for all Individual (i.e. person who is not law enforcement officer) victims."}
 victim %>%
   filter(type_of_victim %in% "individual") %>%
   mutate(resident_status_of_victim = capitalize_words(resident_status_of_victim)) %>%
@@ -158,7 +158,7 @@ victim %>%
   ggplot2::scale_y_continuous(labels = scales::percent)
 ```
 
-```{r victimResidenceStatusPolice, fig.cap = "The distrubution of residence status for all Law Enforcement Officer victims."}
+```{r victimResidenceStatusPolice, fig.cap = "The distribution of residence status for all Law Enforcement Officer victims."}
 victim %>%
   filter(type_of_victim %in% "law enforcement officer") %>%
   mutate(resident_status_of_victim = capitalize_words(resident_status_of_victim)) %>%
