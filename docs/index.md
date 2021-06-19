@@ -1,7 +1,7 @@
 --- 
 title: "National Incident-Based Reporting System (NIBRS) Data: A Practitioner's Guide"
 author: "Jacob Kaplan"
-date: "2021-06-16"
+date: "2021-06-19"
 site: bookdown::bookdown_site
 documentclass: book
 lof: yes

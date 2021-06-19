@@ -20,7 +20,15 @@ This segment provides information about the offense that occurred, and each inci
 
 ## Important variables
 
+In addition to the variables detailed below this segment has the tradition agency and incident identifiers: the ORI code, the agency state, the year of this data, and the incident number. It also has the date of the incident, which is also included in the Administrative Segment.^[Potentially some offenses could occur after the incident date. For example, if a incident happened at 11:50pm and it had multiple crimes involved, some of them may occur the follow day, such as at 12:01am.] 
+
 ### Crime category
+
+The first important variable in the Offense Segment is figuring out exactly what offense was committed. This tells you what crime occurred in the incident. There can be multiple crimes in a single incident so this provides info about each crime that occurred. To figure out which offenses belong together, just look at the incident number and the ORI. Within ORI, each incident number is a unique identifier for an incident. Each crime is mutually exclusive and crimes which are elements of another crime are counted only as the crime they are elements of. For example, robberies are basically theft plus assault/intimidation - it is the use of force or threat of force (assault or intimidation) to take property (theft). A case of robbery in this data would only count as robbery, not as robbery and theft and assault/intimidation. If there are these crimes together in an incident that's because that crime *also* occurred separately. For example, if someone is robbed and after the robbery is over (i.e. they hand over their belongings) they are then punched repeatedly, that could potentially be classified as a robbery and an assault. 
+
+Table \@ref(tab:offenseCrimeCategories) shows each possible crime in the data and how common it was in 2019. It's sorted by frequency instead of alphabetically so it's easier to see which crimes are most common. There were about 7.4 million crimes reported to NIBRS in 2019.  The most common crime is simple assault - which is an assault that didn't use a weapon and didn't result in serious injury - at 12.7% of crimes, or about 944k crimes. If you think this is odd because property crimes are more common than violent crimes, you'd be right. NIBRS data is pretty specific in its crime categories so it splits up certain crimes into a number of different categories. Theft is the most common crime committed in the United States. In NIBRS it's broken into several different types of theft so you need to combine them together to actually measure theft in its entirety. Of the top 6 most common crimes, theft crimes make up ranks 3, 5, and 6 (all other larceny, theft from motor vehicle, and shoplifting). 
+
+Though each agency is supposed to report the same crimes - using the exact same definition of the crimes so the data is consistent - that isn't always true in practice. For example, animal cruelty became a NIBRS crime in 2018 (before that it wasn't an option so agencies could not report it) and likely most agencies in the US have had at least one animal abuse crime since then. In 2018, however, reporting was concentrated in a small number of states, meaning that not all agencies reported that offense. The concentration in certain states suggests that this low reporting is due to agencies in certain states deciding (or not being able to, such as if having older reporting systems which don't have animal cruelty as an option) not to report that offense at all. Reporting has increased in 2019 (though still remaings highly concentrated), suggesting that over time more agencies begin reporting crimes as they are added. Therefore, I strongly suggest examining your data over time and across geographic areas to see if there are any biases before using it. 
 
 ```{r offenseCrimeCategories}
 
@@ -41,27 +49,9 @@ knitr::kable(temp,
   kable_styling(bootstrap_options = "striped", full_width = FALSE, latex_options = c("hold_position", "repeat_header"))
 ```
 
-
 ### Offense subtype
 
-```{r offenseCrimeSubcategories}
-
-temp <- make_frequency_table(offense,
-                             "type_criminal_activity_1",
-                             c("Crime Subcategory",
-                               "\\# of Offenses",
-                               "\\% of Offenses"))
-knitr::kable(temp, 
-             format = "markdown",
-             digits = 2, 
-             align = c("l", "r", "r"),
-             booktabs = TRUE, 
-             longtable = TRUE,
-             escape = FALSE,
-             caption = "The number and percent of crime subtypes. This breakdown is only available for a subset of offenses.") %>%
-  kable_styling(bootstrap_options = "striped", full_width = FALSE, latex_options = c("hold_position", "repeat_header"))
-```
-
+In addition to the broader crime committed, NIBRS does allow for a "subtype" of crime variable which gives us a bit more information about what crime occurred. This data is only available for the below subset of crimes.
 
 * Aggravated Assault
 * Animal Cruelty
@@ -82,6 +72,27 @@ knitr::kable(temp,
 * Sodomy
 * Stolen Property Offenses (Receiving, Selling, Etc.)
 * Weapon Law Violations
+
+```{r offenseCrimeSubcategories}
+
+temp <- make_frequency_table(offense,
+                             "type_criminal_activity_1",
+                             c("Crime Subcategory",
+                               "\\# of Offenses",
+                               "\\% of Offenses"))
+knitr::kable(temp, 
+             format = "markdown",
+             digits = 2, 
+             align = c("l", "r", "r"),
+             booktabs = TRUE, 
+             longtable = TRUE,
+             escape = FALSE,
+             caption = "The number and percent of crime subtypes. This breakdown is only available for a subset of offenses.") %>%
+  kable_styling(bootstrap_options = "striped", full_width = FALSE, latex_options = c("hold_position", "repeat_header"))
+```
+
+
+
 
 ```{r offenseCrimeSubcategoriesAnimalAbuse}
 
@@ -210,6 +221,47 @@ ggplot(temp, aes(x = type_weapon_force_involved_1, y = automatic_weapon)) +
   theme_crim()
 
 ```
+
+### Burglary info
+
+```{r offensePremisesEntered, fig.cap = "The distribution in the number of premises entered during burglaries. This info is only available for a very small subset of burglaries."}
+
+
+offense$number_of_premises_entered[offense$number_of_premises_entered >= 10] <- "10 or more"
+offense$number_of_premises_entered <- factor(offense$number_of_premises_entered, 
+                                                levels = rev(c(1:9, "10 or more")))
+
+offense %>%
+  filter(ucr_offense_code %in% "burglary/breaking and entering",
+         !is.na(number_of_premises_entered)) %>%
+  ggplot2::ggplot(aes(x = number_of_premises_entered)) + 
+  theme_crim() + 
+  ggplot2::coord_flip() +
+  ggplot2::xlab("Type of entry") +
+  ggplot2::geom_bar(ggplot2::aes_string(y = "(..count..)/sum(..count..)")) + 
+  crimeutils::theme_crim() +
+  ggplot2::scale_y_continuous(labels = scales::percent, 
+                              expand = c(0, 0)) +
+  ylab("% of Burglaries")
+```
+
+```{r offensesTypeOfEntry, fig.cap = "The percent of burglaries reported in 2019 where the burglary entered the structure forcibly or non-forcibly."}
+
+offense %>%
+  filter(ucr_offense_code %in% "burglary/breaking and entering") %>%
+  mutate(method_of_entry = capitalize_words(method_of_entry)) %>%
+ggplot2::ggplot(aes(x = method_of_entry)) + 
+  theme_crim() + 
+  ggplot2::coord_flip() +
+  ggplot2::xlab("Type of entry") +
+  ggplot2::geom_bar(ggplot2::aes_string(y = "(..count..)/sum(..count..)")) + 
+  crimeutils::theme_crim() +
+  ggplot2::scale_y_continuous(labels = scales::percent, 
+                              expand = c(0, 0)) +
+  ylab("% of Burglaries")
+```
+
+
 
 ### Hate crime indicator (bias motivation)
 

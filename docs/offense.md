@@ -8,7 +8,15 @@ This segment provides information about the offense that occurred, and each inci
 
 ## Important variables
 
+In addition to the variables detailed below this segment has the tradition agency and incident identifiers: the ORI code, the agency state, the year of this data, and the incident number. It also has the date of the incident, which is also included in the Administrative Segment.^[Potentially some offenses could occur after the incident date. For example, if a incident happened at 11:50pm and it had multiple crimes involved, some of them may occur the follow day, such as at 12:01am.] 
+
 ### Crime category
+
+The first important variable in the Offense Segment is figuring out exactly what offense was committed. This tells you what crime occurred in the incident. There can be multiple crimes in a single incident so this provides info about each crime that occurred. To figure out which offenses belong together, just look at the incident number and the ORI. Within ORI, each incident number is a unique identifier for an incident. Each crime is mutually exclusive and crimes which are elements of another crime are counted only as the crime they are elements of. For example, robberies are basically theft plus assault/intimidation - it is the use of force or threat of force (assault or intimidation) to take property (theft). A case of robbery in this data would only count as robbery, not as robbery and theft and assault/intimidation. If there are these crimes together in an incident that's because that crime *also* occurred separately. For example, if someone is robbed and after the robbery is over (i.e. they hand over their belongings) they are then punched repeatedly, that could potentially be classified as a robbery and an assault. 
+
+Table \@ref(tab:offenseCrimeCategories) shows each possible crime in the data and how common it was in 2019. It's sorted by frequency instead of alphabetically so it's easier to see which crimes are most common. There were about 7.4 million crimes reported to NIBRS in 2019.  The most common crime is simple assault - which is an assault that didn't use a weapon and didn't result in serious injury - at 12.7% of crimes, or about 944k crimes. If you think this is odd because property crimes are more common than violent crimes, you'd be right. NIBRS data is pretty specific in its crime categories so it splits up certain crimes into a number of different categories. Theft is the most common crime committed in the United States. In NIBRS it's broken into several different types of theft so you need to combine them together to actually measure theft in its entirety. Of the top 6 most common crimes, theft crimes make up ranks 3, 5, and 6 (all other larceny, theft from motor vehicle, and shoplifting). 
+
+Though each agency is supposed to report the same crimes - using the exact same definition of the crimes so the data is consistent - that isn't always true in practice. For example, animal cruelty became a NIBRS crime in 2018 (before that it wasn't an option so agencies could not report it) and likely most agencies in the US have had at least one animal abuse crime since then. In 2018, however, reporting was concentrated in a small number of states, meaning that not all agencies reported that offense. The concentration in certain states suggests that this low reporting is due to agencies in certain states deciding (or not being able to, such as if having older reporting systems which don't have animal cruelty as an option) not to report that offense at all. Reporting has increased in 2019 (though still remaings highly concentrated), suggesting that over time more agencies begin reporting crimes as they are added. Therefore, I strongly suggest examining your data over time and across geographic areas to see if there are any biases before using it. 
 
 
 Table: (\#tab:offenseCrimeCategories)The number and percent of crimes reported from all agencies in 2019, by crime category.
@@ -69,8 +77,29 @@ Table: (\#tab:offenseCrimeCategories)The number and percent of crimes reported f
 |Sports Tampering                                    |              7|         0.00\%|
 |Total                                               |      7,436,090|          100\%|
 
-
 ### Offense subtype
+
+In addition to the broader crime committed, NIBRS does allow for a "subtype" of crime variable which gives us a bit more information about what crime occurred. This data is only available for the below subset of crimes.
+
+* Aggravated Assault
+* Animal Cruelty
+* Counterfeiting/Forgery
+* Drug Equipment Violations
+* Drug/Narcotic Violations
+* Fondling (Incident Liberties/Child Molest)
+* Gambling Equipment Violations
+* Intimidation
+* Kidnapping/Abduction
+* Murder/Non-negligent Manslaughter
+* Negligent Manslaughter
+* Pornography/Obscene Material
+* Rape
+* Robbery
+* Sexual Assault With An Object
+* Simple Assault
+* Sodomy
+* Stolen Property Offenses (Receiving, Selling, Etc.)
+* Weapon Law Violations
 
 
 Table: (\#tab:offenseCrimeSubcategories)The number and percent of crime subtypes. This breakdown is only available for a subset of offenses.
@@ -95,25 +124,7 @@ Table: (\#tab:offenseCrimeSubcategories)The number and percent of crime subtypes
 |Total                                                                                                                                        |      2,423,181|          100\%|
 
 
-* Aggravated Assault
-* Animal Cruelty
-* Counterfeiting/Forgery
-* Drug Equipment Violations
-* Drug/Narcotic Violations
-* Fondling (Incident Liberties/Child Molest)
-* Gambling Equipment Violations
-* Intimidation
-* Kidnapping/Abduction
-* Murder/Non-negligent Manslaughter
-* Negligent Manslaughter
-* Pornography/Obscene Material
-* Rape
-* Robbery
-* Sexual Assault With An Object
-* Simple Assault
-* Sodomy
-* Stolen Property Offenses (Receiving, Selling, Etc.)
-* Weapon Law Violations
+
 
 
 Table: (\#tab:offenseCrimeSubcategoriesAnimalAbuse)The number and percent of crime subtypes for animal abuse.
@@ -245,6 +256,20 @@ This variable only tells you if the weapon is automatic
 <img src="offense_files/figure-html/offenseAutomaticWeapon-1.png" alt="The percent of firearms used that were fully automatic, for all offenses in 2019." width="90%" />
 <p class="caption">(\#fig:offenseAutomaticWeapon)The percent of firearms used that were fully automatic, for all offenses in 2019.</p>
 </div>
+
+### Burglary info
+
+<div class="figure" style="text-align: center">
+<img src="offense_files/figure-html/offensePremisesEntered-1.png" alt="The distribution in the number of premises entered during burglaries. This info is only available for a very small subset of burglaries." width="90%" />
+<p class="caption">(\#fig:offensePremisesEntered)The distribution in the number of premises entered during burglaries. This info is only available for a very small subset of burglaries.</p>
+</div>
+
+<div class="figure" style="text-align: center">
+<img src="offense_files/figure-html/offensesTypeOfEntry-1.png" alt="The percent of burglaries reported in 2019 where the burglary entered the structure forcibly or non-forcibly." width="90%" />
+<p class="caption">(\#fig:offensesTypeOfEntry)The percent of burglaries reported in 2019 where the burglary entered the structure forcibly or non-forcibly.</p>
+</div>
+
+
 
 ### Hate crime indicator (bias motivation)
 

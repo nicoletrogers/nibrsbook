@@ -6,7 +6,7 @@ fig:agenciesReportingMapPercent
 tab:agenciesReportingTable
 fig:ascii
 fig:administrativeIncidentMonth
-fig:administrativeMonthDay1
+fig:administrativeMonthDayIncident
 fig:administrativeMonthDayReport
 fig:administrativeHours
 fig:administrativeExceptionalClearances
@@ -24,6 +24,8 @@ fig:offenseDrugAlcoholComputerAny
 tab:offenseLocation
 tab:offenseWeapon
 fig:offenseAutomaticWeapon
+fig:offensePremisesEntered
+fig:offensesTypeOfEntry
 tab:offenseBiasMotivation
 tab:offenseBiasMotivationBiases
 fig:offenderAge
@@ -115,6 +117,7 @@ drug-alcohol-or-computer-use
 crime-location
 weapons
 automatic-weapons
+burglary-info
 hate-crime-indicator-bias-motivation
 offender-segment-1
 important-variables-2
