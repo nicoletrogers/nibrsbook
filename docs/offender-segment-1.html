@@ -205,12 +205,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="4.1.1" data-path="offense-segment-1.html"><a href="offense-segment-1.html#crime-category"><i class="fa fa-check"></i><b>4.1.1</b> Crime category</a></li>
 <li class="chapter" data-level="4.1.2" data-path="offense-segment-1.html"><a href="offense-segment-1.html#offense-subtype"><i class="fa fa-check"></i><b>4.1.2</b> Offense subtype</a></li>
-<li class="chapter" data-level="4.1.3" data-path="offense-segment-1.html"><a href="offense-segment-1.html#drug-alcohol-or-computer-use"><i class="fa fa-check"></i><b>4.1.3</b> Drug, alcohol, or computer use</a></li>
-<li class="chapter" data-level="4.1.4" data-path="offense-segment-1.html"><a href="offense-segment-1.html#crime-location"><i class="fa fa-check"></i><b>4.1.4</b> Crime location</a></li>
-<li class="chapter" data-level="4.1.5" data-path="offense-segment-1.html"><a href="offense-segment-1.html#weapons"><i class="fa fa-check"></i><b>4.1.5</b> Weapons</a></li>
-<li class="chapter" data-level="4.1.6" data-path="offense-segment-1.html"><a href="offense-segment-1.html#automatic-weapons"><i class="fa fa-check"></i><b>4.1.6</b> Automatic weapons</a></li>
-<li class="chapter" data-level="4.1.7" data-path="offense-segment-1.html"><a href="offense-segment-1.html#burglary-info"><i class="fa fa-check"></i><b>4.1.7</b> Burglary info</a></li>
-<li class="chapter" data-level="4.1.8" data-path="offense-segment-1.html"><a href="offense-segment-1.html#hate-crime-indicator-bias-motivation"><i class="fa fa-check"></i><b>4.1.8</b> Hate crime indicator (bias motivation)</a></li>
+<li class="chapter" data-level="4.1.3" data-path="offense-segment-1.html"><a href="offense-segment-1.html#offense-completed"><i class="fa fa-check"></i><b>4.1.3</b> Offense completed</a></li>
+<li class="chapter" data-level="4.1.4" data-path="offense-segment-1.html"><a href="offense-segment-1.html#drug-alcohol-or-computer-use"><i class="fa fa-check"></i><b>4.1.4</b> Drug, alcohol, or computer use</a></li>
+<li class="chapter" data-level="4.1.5" data-path="offense-segment-1.html"><a href="offense-segment-1.html#crime-location"><i class="fa fa-check"></i><b>4.1.5</b> Crime location</a></li>
+<li class="chapter" data-level="4.1.6" data-path="offense-segment-1.html"><a href="offense-segment-1.html#weapons"><i class="fa fa-check"></i><b>4.1.6</b> Weapons</a></li>
+<li class="chapter" data-level="4.1.7" data-path="offense-segment-1.html"><a href="offense-segment-1.html#automatic-weapons"><i class="fa fa-check"></i><b>4.1.7</b> Automatic weapons</a></li>
+<li class="chapter" data-level="4.1.8" data-path="offense-segment-1.html"><a href="offense-segment-1.html#burglary-info"><i class="fa fa-check"></i><b>4.1.8</b> Burglary info</a></li>
+<li class="chapter" data-level="4.1.9" data-path="offense-segment-1.html"><a href="offense-segment-1.html#hate-crime-indicator-bias-motivation"><i class="fa fa-check"></i><b>4.1.9</b> Hate crime indicator (bias motivation)</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="offender-segment-1.html"><a href="offender-segment-1.html"><i class="fa fa-check"></i><b>5</b> Offender Segment</a>
@@ -315,7 +316,7 @@ Figure 5.2: The sex of all offenders reported in the 2019 NIBRS data.
 <div id="race" class="section level4" number="5.1.1.3">
 <h4><span class="header-section-number">5.1.1.3</span> Race</h4>
 <p>The final variable available is the race of the offender. The only possible races are White, Black, American Indian/Alaskan Native, Asian/Pacific Islander, and Native Hawaiian/Other Pacific Islander. These categories are mutually exclusive so people cannot be labeled as mixed race, they must be put into one of the categories. Other than offenders who were arrested, and thus police can clearly see them and potentially ask them what race they are, this variable is likely a rough estimate of a person’s race.</p>
-<p>Figure <a href="offender-segment-1.html#fig:offenderRace">5.3</a> shows the breakdown in offender races for every offender in the 2019 data. The most common offender race is Unknown, with about 38.5% of offenders not having a known race. This 38.5% of actually an undercount as in cases where the agency doesn’t known anything about the offenders they’ll put down a single offender with “unknown” for every demographics variable. So there could potentially be multiple offenders represented when there is a row with a unknown offender race. This is also dependent on the type of crimes committed and when they are committed. For example, a daytime robbery would likely have a known offender race as the victim can clearly see (complexities about identifying people’s race aside) the race of the robber. A daytime burglary where no one is home would likely have an unknown offender race and there’d be no witnesses.<a href="#fn32" class="footnote-ref" id="fnref32"><sup>32</sup></a> Likewise, a robbery at night could have an unknown offender race because the darkness makes it harder to identify people.</p>
+<p>Figure <a href="offender-segment-1.html#fig:offenderRace">5.3</a> shows the breakdown in offender races for every offender in the 2019 data. The most common offender race is Unknown, with about 38.5% of offenders not having a known race. This 38.5% of actually an undercount as in cases where the agency doesn’t known anything about the offenders they’ll put down a single offender with “unknown” for every demographics variable. So there could potentially be multiple offenders represented when there is a row with a unknown offender race. This is also dependent on the type of crimes committed and when they are committed. For example, a daytime robbery would likely have a known offender race as the victim can clearly see (complexities about identifying people’s race aside) the race of the robber. A daytime burglary where no one is home would likely have an unknown offender race and there’d be no witnesses.<a href="#fn33" class="footnote-ref" id="fnref33"><sup>33</sup></a> Likewise, a robbery at night could have an unknown offender race because the darkness makes it harder to identify people.</p>
 <p>The next most common offender race is White at 38.7% followed by Black at 22.1%. The remaining races make up only a little over 1.5% of offenders, with American Indian/Alaskan Native at 0.77%, Asian/Pacific Islander at 0.63%, and Native Hawaiian/Other Pacific Islander at 0.24%.</p>
 <div class="figure" style="text-align: center"><span id="fig:offenderRace"></span>
 <img src="offender_files/figure-html/offenderRace-1.png" alt="The race of all offenders reported in the 2019 NIBRS data." width="90%" />
@@ -330,8 +331,8 @@ Figure 5.3: The race of all offenders reported in the 2019 NIBRS data.
 </div>
 <div class="footnotes">
 <hr />
-<ol start="32">
-<li id="fn32"><p>When NIBRS 2020 data comes out it’ll be interesting to see how people staying at home effects the amount of unknown offender info.<a href="offender-segment-1.html#fnref32" class="footnote-back">↩︎</a></p></li>
+<ol start="33">
+<li id="fn33"><p>When NIBRS 2020 data comes out it’ll be interesting to see how people staying at home effects the amount of unknown offender info.<a href="offender-segment-1.html#fnref33" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

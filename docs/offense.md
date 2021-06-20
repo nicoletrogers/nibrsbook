@@ -16,7 +16,7 @@ The first important variable in the Offense Segment is figuring out exactly what
 
 Table \@ref(tab:offenseCrimeCategories) shows each possible crime in the data and how common it was in 2019. It's sorted by frequency instead of alphabetically so it's easier to see which crimes are most common. There were about 7.4 million crimes reported to NIBRS in 2019.  The most common crime is simple assault - which is an assault that didn't use a weapon and didn't result in serious injury - at 12.7% of crimes, or about 944k crimes. If you think this is odd because property crimes are more common than violent crimes, you'd be right. NIBRS data is pretty specific in its crime categories so it splits up certain crimes into a number of different categories. Theft is the most common crime committed in the United States. In NIBRS it's broken into several different types of theft so you need to combine them together to actually measure theft in its entirety. Of the top 6 most common crimes, theft crimes make up ranks 3, 5, and 6 (all other larceny, theft from motor vehicle, and shoplifting). 
 
-Though each agency is supposed to report the same crimes - using the exact same definition of the crimes so the data is consistent - that isn't always true in practice. For example, animal cruelty became a NIBRS crime in 2018 (before that it wasn't an option so agencies could not report it) and likely most agencies in the US have had at least one animal abuse crime since then. In 2018, however, reporting was concentrated in a small number of states, meaning that not all agencies reported that offense. The concentration in certain states suggests that this low reporting is due to agencies in certain states deciding (or not being able to, such as if having older reporting systems which don't have animal cruelty as an option) not to report that offense at all. Reporting has increased in 2019 (though still remaings highly concentrated), suggesting that over time more agencies begin reporting crimes as they are added. Therefore, I strongly suggest examining your data over time and across geographic areas to see if there are any biases before using it. 
+Though each agency is supposed to report the same crimes - using the exact same definition of the crimes so the data is consistent - that isn't always true in practice. For example, animal cruelty became a NIBRS crime in 2018 (before that it wasn't an option so agencies could not report it) and likely most agencies in the US have had at least one animal abuse crime since then. In 2018, however, reporting was concentrated in a small number of states, meaning that not all agencies reported that offense. The concentration in certain states suggests that this low reporting is due to agencies in certain states deciding (or not being able to, such as if having older reporting systems which don't have animal cruelty as an option) not to report that offense at all. Reporting has increased in 2019 (though still remains highly concentrated), suggesting that over time more agencies begin reporting crimes as they are added. Therefore, I strongly suggest examining your data over time and across geographic areas to see if there are any biases before using it. 
 
 
 Table: (\#tab:offenseCrimeCategories)The number and percent of crimes reported from all agencies in 2019, by crime category.
@@ -79,7 +79,11 @@ Table: (\#tab:offenseCrimeCategories)The number and percent of crimes reported f
 
 ### Offense subtype
 
-In addition to the broader crime committed, NIBRS does allow for a "subtype" of crime variable which gives us a bit more information about what crime occurred. This data is only available for the below subset of crimes.
+In addition to the broader crime committed, NIBRS does allow for a "subtype" of crime variable which gives us a bit more information about what crime occurred (the variable is technically called the "type of criminal activity"). This is especially useful for certain crimes where it's not clear exactly what they're referring to from the crime category along. For example, for drug crimes we generally differentiate possession from sale or manufacturing. NIBRS combines everything into "drug/narcotic violations (crimes for drug materials such as syringes are classified as "drug equipment violations"). So we need to use the subtype variable to figure out what type of drug crime it is. Looking at the subtype we can see if the arrest is for "distributing/selling", "operating/promoting/assisting", "possessing/concealing", "transporting/transmitting/importing", or "using/consuming". There can be up to three subtypes per offense, so potentially an arrest can be related to something such as both possessing and selling drugs. 
+
+There are also some unexpected subtypes related to certain offenses. For example, there are a few dozen drug offenses that also have the subtype of "exploiting children". This subtype is generally for cases where a child is abused, but happens here for drug offenses that don't have any associated child abuse (or for some of them, doesn't have any other crime at all) offense. The reason, I believe, for this category is that these offenses occurred in public so could have been viewed by children, and were labeled as exploiting children for that reason. If you're studying crimes against children, pulling from this variable would likely overcount crimes so - as always - you should make sure that the data you carefully check your data to odd things like this.^[Whether children viewing a crime, even a drug crime, would count as a crime against children would, of course, depend on your definition.]
+
+This data is only available for the below subset of crimes, and isn't always present even for these crimes.
 
 * Aggravated Assault
 * Animal Cruelty
@@ -123,8 +127,7 @@ Table: (\#tab:offenseCrimeSubcategories)The number and percent of crime subtypes
 |Organized Abuse (Dog Fighting And Cock Fighting)                                                                                             |             86|         0.00\%|
 |Total                                                                                                                                        |      2,423,181|          100\%|
 
-
-
+We'll look in more detail about the subtype of offenses for animal cruelty. Table \@ref(tab:offenseCrimeSubcategories) shows each possible subtype for animal cruelty and how often they occur. There were about 10,000 cases of animal cruelty reporting to NIBRS in 2019 and over two-thirds are for neglect of the animal. Over a quarter are for torturing or abandoning the poor animal. And the remaining small share of offenses are for sexual abuse of the animal or for forcing them to fight other animals. These subtypes provide a lot more information about the crime that occurred, but still has some uncertainties. We don't, for example, know the type of animal involved or the severity of the abuse (other than that it was serious enough for police to become involved). Still, this is a large improvement in our understanding of this crime (and others which have subtypes), and an colossal improvement when compared with UCR data. 
 
 
 Table: (\#tab:offenseCrimeSubcategoriesAnimalAbuse)The number and percent of crime subtypes for animal abuse.
@@ -137,20 +140,99 @@ Table: (\#tab:offenseCrimeSubcategoriesAnimalAbuse)The number and percent of cri
 |Organized Abuse (Dog Fighting And Cock Fighting)                                                                                             |             86|         0.86\%|
 |Total                                                                                                                                        |          9,956|          100\%|
 
+### Offense completed
+
+For each offense, this segment also tells you if the offense was completed or only attempted. Some offenses, such as simple and aggravated assault or homicide, are only labeled as completed. This is because an attempted murder, for example, would be classified as aggravated assault. Since crimes in NIBRS are mutually exclusive, there cannot be both attempted murder and aggravated assault, so only aggravated assault is included. This does limit the data as it is important to know when an aggravated assault is done with the intent to kill the victim and when it's just to seriously harm the victim (though measuring this would likely be extremely imprecise since it requires knowing the motives of the offender). For other crimes, we do know if each crime was completed or not. In the vast majority of offenses they are completed. Table \@ref(tab:offensesCompleted) shows the percent of each crime category in 2019 NIBRS data that was completed or was only attempted.
+
+
+Table: (\#tab:offensesCompleted)The percent of crimes completed or attempted, by crime category.
+
+|Crime Category                                      | \% Completed| % Attempted|
+|:---------------------------------------------------|------------:|-----------:|
+|Aggravated Assault                                  |       100 \%|        0 \%|
+|All Other Larceny                                   |     99.01 \%|     0.99 \%|
+|Animal Cruelty                                      |     97.34 \%|     2.66 \%|
+|Arson                                               |     94.83 \%|     5.17 \%|
+|Assisting Or Promoting Prostitution                 |     95.84 \%|     4.16 \%|
+|Betting/Wagering                                    |     77.69 \%|    22.31 \%|
+|Bribery                                             |     84.74 \%|    15.26 \%|
+|Burglary/Breaking And Entering                      |      93.2 \%|      6.8 \%|
+|Counterfeiting/Forgery                              |     95.84 \%|     4.16 \%|
+|Credit Card/Atm Fraud                               |     95.83 \%|     4.17 \%|
+|Destruction/Damage/Vandalism of Property            |     99.52 \%|     0.48 \%|
+|Drug Equipment Violations                           |     99.85 \%|     0.15 \%|
+|Drug/Narcotic Violations                            |     99.67 \%|     0.33 \%|
+|Embezzlement                                        |     99.27 \%|     0.73 \%|
+|Extortion/Blackmail                                 |     53.88 \%|    46.12 \%|
+|False Pretenses/Swindle/Confidence Game             |     90.39 \%|     9.61 \%|
+|Fondling (Incident Liberties/Child Molest)          |     97.31 \%|     2.69 \%|
+|Gambling Equipment Violations                       |     95.16 \%|     4.84 \%|
+|Hacking/Computer Invasion                           |     91.21 \%|     8.79 \%|
+|Human Trafficking - Commercial Sex Acts             |     89.62 \%|    10.38 \%|
+|Human Trafficking - Involuntary Servitude           |     92.25 \%|     7.75 \%|
+|Identity Theft                                      |     96.21 \%|     3.79 \%|
+|Impersonation                                       |      93.6 \%|      6.4 \%|
+|Incest                                              |     97.24 \%|     2.76 \%|
+|Intimidation                                        |       100 \%|        0 \%|
+|Justifiable Homicide                                |       100 \%|        0 \%|
+|Kidnapping/Abduction                                |     94.52 \%|     5.48 \%|
+|Motor Vehicle Theft                                 |     97.16 \%|     2.84 \%|
+|Murder/Nonnegligent Manslaughter                    |       100 \%|        0 \%|
+|Negligent Manslaughter                              |       100 \%|        0 \%|
+|Operating/Promoting/Assisting Gambling              |     92.82 \%|     7.18 \%|
+|Pocket-Picking                                      |     99.13 \%|     0.87 \%|
+|Pornography/Obscene Material                        |     97.74 \%|     2.26 \%|
+|Prostitution                                        |     94.16 \%|     5.84 \%|
+|Purchasing Prostitution                             |     91.98 \%|     8.02 \%|
+|Purse-Snatching                                     |      97.4 \%|      2.6 \%|
+|Rape                                                |     96.66 \%|     3.34 \%|
+|Robbery                                             |     90.36 \%|     9.64 \%|
+|Sexual Assault With An Object                       |     97.83 \%|     2.17 \%|
+|Shoplifting                                         |     98.81 \%|     1.19 \%|
+|Simple Assault                                      |       100 \%|        0 \%|
+|Sodomy                                              |     97.12 \%|     2.88 \%|
+|Sports Tampering                                    |     85.71 \%|    14.29 \%|
+|Statutory Rape                                      |     97.73 \%|     2.27 \%|
+|Stolen Property Offenses (Receiving, Selling, Etc.) |     98.84 \%|     1.16 \%|
+|Theft From Building                                 |     99.38 \%|     0.62 \%|
+|Theft From Coin-Operated Machine Or Device          |     90.45 \%|     9.55 \%|
+|Theft From Motor Vehicle                            |     92.91 \%|     7.09 \%|
+|Theft of Motor Vehicle Parts/Accessories            |      98.8 \%|      1.2 \%|
+|Weapon Law Violations                               |     98.55 \%|     1.45 \%|
+|Welfare Fraud                                       |     92.45 \%|     7.55 \%|
+|Wire Fraud                                          |     89.44 \%|    10.56 \%|
 
 ### Drug, alcohol, or computer use
 
-<div class="figure" style="text-align: center">
-<img src="offense_files/figure-html/offenseDrugAlcoholComputer-1.png" alt="The distribution of drug, alcohol, or computer use for all offenses in 2019." width="90%" />
-<p class="caption">(\#fig:offenseDrugAlcoholComputer)The distribution of drug, alcohol, or computer use for all offenses in 2019.</p>
-</div>
+Intoxication, mainly by alcohol, is known to be a major correlate (and cause) of crime. Drunk people commit a lot of crime (even though most drunk people never commit crime). NIBRS tries to capture this by telling us if the offender is *suspected of using* drugs (just "drugs", we don't know which drug though we could look in the Property Segment to see what drug [if any] was recovered), alcohol, or "computer equipment" which also includes cell phones. For each offense there are three variables about usage of any of these so potentially the offender could have used all three. The data doesn't get any more specific than if the offender is *suspected of using* these items. So we don't know how intoxicated they are or what they used the computer equipment for. Just that they're suspected of using it. And suspected is key. We don't know for sure if they used it. If, for example, a victim says that their mugger was drunk, NIBRS will say they're suspected of using alcohol, even though there's no definitive proof such as a blood est or breathalyzer. Unless some past variables like offense subtype where it applies to only a subset of crimes, this variable is available for every crime. 
 
-<div class="figure" style="text-align: center">
-<img src="offense_files/figure-html/offenseDrugAlcoholComputerAny-1.png" alt="The distribution of drug, alcohol, or computer use for offenses where there was usage of one of these items. For easier viewing of how this variable is distributed, this figure excludes all offenses where there was no drug, alcohol, or computer use or the variable was NA." width="90%" />
-<p class="caption">(\#fig:offenseDrugAlcoholComputerAny)The distribution of drug, alcohol, or computer use for offenses where there was usage of one of these items. For easier viewing of how this variable is distributed, this figure excludes all offenses where there was no drug, alcohol, or computer use or the variable was NA.</p>
-</div>
+Figure \@ref(fig:offenseDrugAlcoholComputer) shows the distribution is suspected usage for all offenses in 2019 NIBRS. This is just from the first suspected use variable for simplicity of the graph, even though there are three variables on this topic. The most common outcome is "Not Applicable" at 87.6% of offenses. Not Applicable actually just means that the offender was not suspected of using drugs, alcohol, or computer equipment. I'm not sure why it's called that but that's how NIBRS calls "none of the above". Since Not Applicable is so common, Figure \@ref(fig:offenseDrugAlcoholComputerAny) shows the distribution when excluding that option.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/offenseDrugAlcoholComputer-1} 
+
+}
+
+\caption{The distribution of drug, alcohol, or computer use for all offenses in 2019.}(\#fig:offenseDrugAlcoholComputer)
+\end{figure}
+
+Drug usage is the most common thing offenders are suspected of using, at about 66% of all crimes where they are suspected of using anything. Again, we don't know what type of drug was used, only that it wasn't alcohol. Alcohol follows at 28% while computer equipment is only 6.1%. 
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/offenseDrugAlcoholComputerAny-1} 
+
+}
+
+\caption{The distribution of drug, alcohol, or computer use for offenses where there was usage of one of these items. For easier viewing of how this variable is distributed, this figure excludes all offenses where there was no drug, alcohol, or computer use or the variable was NA.}(\#fig:offenseDrugAlcoholComputerAny)
+\end{figure}
 
 ### Crime location
+
+My own research looks a lot at how the built environment affects behavior. For example, I have a few papers looking at how outdoor lighting affects crime. Outdoor lighting largely only effects outdoor crimes (since there are generally already lights indoors) so this variable in NIBRS has been crucial for my research. NIBRS tells us where each crime happened, giving more of a type of location rather than the precise location (e.g. coordinates) where it happened. Table \@ref(tab:offenseLocation) shows the 46 different location types where each offense could occur, sorted by most common to least common location. The most common place for a crime to occur is in someone's own home, at 40.4% of crimes. This makes a bit of sense as people spend a lot of time at home and certain crimes, such as burglary and domestic violence, happen a lot of the victim's own home. Crimes happening on a road or alley make up the second most common location at 16% and parking lot or garage follows at 8.6%. The remaining locations only make up 5% or fewer of offense locations.
+
+But keep in mind that some locations may be a overly specific location that fits well into a broader category that you're interested in. For example, if you care about crimes that happen in stores you'd look at "Bank/Savings and Loan", "Restaurant", "Bar/Nightclub" among other locations, which combined have a lot more offenses than any one individually. This is a recurring theme of NIBRS data - you have a lot of data and some of it is so specific that you need to do extra work to aggregate data into units you want.
 
 
 Table: (\#tab:offenseLocation)The location of crimes for all offenses reported in 2019.
@@ -208,6 +290,26 @@ Table: (\#tab:offenseLocation)The location of crimes for all offenses reported i
 ### Weapons
 
 
+
+* Aggravated Assault
+* Extortion/Blackmail
+* Fondling (Incident Liberties/Child Molest)
+* Human Trafficking - Commercial Sex Acts
+* Human Trafficking - Involuntary Servitude
+* Justifiable Homicide
+* Kidnapping/Abduction
+* Murder/Nonnegligent Manslaughter
+* Negligent Manslaughter
+* Rape
+* Robbery
+* Sexual Assault With An Object
+* Simple Assault
+* Sodomy
+* Weapon Law Violations
+
+Table \@ref(tab:offenseWeapon) shows the 
+
+
 Table: (\#tab:offenseWeapon)The weapon used by an offender in the crime for all offenses reported in 2019. The use means that it was part of the crime though may not have been physically discharged. For example, pointing a gun at someone even without firing the gun is still using it.
 
 |Weapon Used                                                       | \# of Offenses| \% of Offenses|
@@ -231,90 +333,51 @@ Table: (\#tab:offenseWeapon)The weapon used by an offender in the crime for all 
 |Poison (Include Gas)                                              |            475|         0.03\%|
 |Total                                                             |      1,587,350|          100\%|
 
-
-* Aggravated Assault
-* Extortion/Blackmail
-* Fondling (Incident Liberties/Child Molest)
-* Human Trafficking - Commercial Sex Acts
-* Human Trafficking - Involuntary Servitude
-* Justifiable Homicide
-* Kidnapping/Abduction
-* Murder/Nonnegligent Manslaughter
-* Negligent Manslaughter
-* Rape
-* Robbery
-* Sexual Assault With An Object
-* Simple Assault
-* Sodomy
-* Weapon Law Violations
-
 ### Automatic weapons
 
-This variable only tells you if the weapon is automatic 
+When the weapon involved was a firearm there is a variable which indicates that the firearm was fully automatic. To be clear, this means that when you pull the trigger once the gun will fire multiple bullets. Semi-automatic firearms are **not** automatic firearms. Of course, saying a gun is fully automatic requires either the policing seizing the gun or the gun being fired (and for witnesses to accurately determine that it is fully automatic). Since most crimes are never solved (and even those that lead to an arrest may not lead to the gun being seized - though some guns are seized even without an arrest, such as if the gun is left at the crime scene) and most gun crimes don't actually involve the gun being fired, this variable is likely very imprecise. Still, Figure \@ref(fig:offenseAutomaticWeapon) shows the percent of firearms used in offenses in 2019 that are reported to be fully automatic. Even though there can be up to three weapons used in an offense, this figure only looks at the first weapon. The most common guns to be automatic are rifles and handguns, both with about 4.5% of all uses being of an automatic weapon. The remaining categories are all under 3% of uses. 
 
-<div class="figure" style="text-align: center">
-<img src="offense_files/figure-html/offenseAutomaticWeapon-1.png" alt="The percent of firearms used that were fully automatic, for all offenses in 2019." width="90%" />
-<p class="caption">(\#fig:offenseAutomaticWeapon)The percent of firearms used that were fully automatic, for all offenses in 2019.</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/offenseAutomaticWeapon-1} 
+
+}
+
+\caption{The percent of firearms used that were fully automatic, for all offenses in 2019.}(\#fig:offenseAutomaticWeapon)
+\end{figure}
 
 ### Burglary info
 
-<div class="figure" style="text-align: center">
-<img src="offense_files/figure-html/offensePremisesEntered-1.png" alt="The distribution in the number of premises entered during burglaries. This info is only available for a very small subset of burglaries." width="90%" />
-<p class="caption">(\#fig:offensePremisesEntered)The distribution in the number of premises entered during burglaries. This info is only available for a very small subset of burglaries.</p>
-</div>
+\begin{figure}
 
-<div class="figure" style="text-align: center">
-<img src="offense_files/figure-html/offensesTypeOfEntry-1.png" alt="The percent of burglaries reported in 2019 where the burglary entered the structure forcibly or non-forcibly." width="90%" />
-<p class="caption">(\#fig:offensesTypeOfEntry)The percent of burglaries reported in 2019 where the burglary entered the structure forcibly or non-forcibly.</p>
-</div>
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/offensePremisesEntered-1} 
+
+}
+
+\caption{The distribution in the number of premises entered during burglaries. This info is only available for a very small subset of burglaries.}(\#fig:offensePremisesEntered)
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/offensesTypeOfEntry-1} 
+
+}
+
+\caption{The percent of burglaries reported in 2019 where the burglary entered the structure forcibly or non-forcibly.}(\#fig:offensesTypeOfEntry)
+\end{figure}
 
 
 
 ### Hate crime indicator (bias motivation)
 
 
-Table: (\#tab:offenseBiasMotivation)The bias motivation (i.e. if hate crime or not and what type of hate crime) for all offenses reported in 2019.
+Table: (\#tab:offenseBiasMotivation)The number and percent of offenders that had a bias motivataion or not for all offenses reported in 2019.
 
-|Bias Motivation                                | \# of Offenses| \% of Offenses|
-|:----------------------------------------------|--------------:|--------------:|
-|No Bias Motivation                             |      7,372,214|        99.14\%|
-|Unknown Bias Motivation                        |         59,360|         0.80\%|
-|Anti-Black                                     |          1,309|         0.02\%|
-|Anti-White                                     |            573|         0.01\%|
-|Anti-Male Homosexual (Gay)                     |            357|         0.00\%|
-|Anti-Hispanic                                  |            310|         0.00\%|
-|Anti-Jewish                                    |            249|         0.00\%|
-|Anti-Homosexual (Both Gay And Lesbian)         |            213|         0.00\%|
-|Anti-Other Ethnicity/National Origin           |            210|         0.00\%|
-|Anti-American Indian Or Alaskan Native         |            125|         0.00\%|
-|Anti-Mental Disability                         |            107|         0.00\%|
-|Anti-Asian/Pacific Islander                    |            101|         0.00\%|
-|Anti-Multi-Racial Group                        |             97|         0.00\%|
-|Anti-Islamic (Muslim)                          |             86|         0.00\%|
-|Anti-Female Homosexual (Lesbian)               |             70|         0.00\%|
-|Anti-Transgender                               |             68|         0.00\%|
-|Anti-Sikh                                      |             66|         0.00\%|
-|Anti-Arab                                      |             64|         0.00\%|
-|Anti-Other Religion                            |             63|         0.00\%|
-|Anti-Gender Non-Conforming                     |             59|         0.00\%|
-|Anti-Female                                    |             51|         0.00\%|
-|Anti-Eastern Orthodox (Greek, Russian, Etc.)   |             50|         0.00\%|
-|Anti-Physical Disability                       |             44|         0.00\%|
-|Anti-Catholic                                  |             42|         0.00\%|
-|Anti-Other Christian                           |             40|         0.00\%|
-|Anti-Native Hawaiian Or Other Pacific Islander |             30|         0.00\%|
-|Anti-Protestant                                |             26|         0.00\%|
-|Anti-Multi-Religious Group                     |             25|         0.00\%|
-|Anti-Bisexual                                  |             22|         0.00\%|
-|Anti-Male                                      |             17|         0.00\%|
-|Anti-Heterosexual                              |             12|         0.00\%|
-|Anti-Mormon                                    |              7|         0.00\%|
-|Anti-Hindu                                     |              7|         0.00\%|
-|Anti-Buddhist                                  |              6|         0.00\%|
-|Anti-Atheism/Agnosticism                       |              5|         0.00\%|
-|Anti-Jehovahs Witness                          |              5|         0.00\%|
-|Total                                          |      7,436,090|          100\%|
+|Bias Motivation    | \# of Offenses| \% of Offenses|
+|:------------------|--------------:|--------------:|
+|No Bias Motivation |      7,372,214|        99.14\%|
+|Bias Motivation    |         63,876|         0.86\%|
+|Total              |      7,436,090|          100\%|
 
 
 
