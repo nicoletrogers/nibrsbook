@@ -42,7 +42,6 @@ knitr::kable(temp,
 ```
 
 
-\setstretch{1.15}
 ### Victim type
 
 ```{r victimType, fig.cap = "The distribution of the type of victim. Victim types are mutually exclusive."}
@@ -111,8 +110,6 @@ knitr::kable(temp,
   kable_styling(bootstrap_options = "striped", full_width = FALSE, latex_options = c("hold_position", "repeat_header"))
 ```
 
-\setstretch{1.15}
-
 ```{r victimRelationshipPolice}
 temp <- 
   victim %>%
@@ -132,39 +129,6 @@ knitr::kable(temp,
   kable_styling(bootstrap_options = "striped", full_width = FALSE, latex_options = c("hold_position", "repeat_header"))
 ```
 
-\setstretch{1.15}
-
-### Residence status
-
-Only for when victim is individual or law enforcement officer
-
-victim$resident_status_of_victim
-
-```{r victimResidenceStatus, fig.cap = "The distribution of residence status for all victims reported to NIBRS in 2019. Residence status is residence in the police agency's jurisdiction (e.g. do you live in the city you were victimized in?). It is unrelated to citizenship or immigration status."}
-victim$resident_status_of_victim[is.na(victim$resident_status_of_victim)] <- "unknown"
-victim %>%
-  filter(type_of_victim %in% c("individual",
-                               "law enforcement officer")) %>%
-  mutate(resident_status_of_victim = capitalize_words(resident_status_of_victim)) %>%
-  crimeutils::make_barplots("resident_status_of_victim", count = FALSE, ylab = "% of victims") +
-  ggplot2::scale_y_continuous(labels = scales::percent)
-```
-
-```{r victimResidenceStatusIndividual, fig.cap = "The distribution of residence status for all Individual (i.e. person who is not law enforcement officer) victims."}
-victim %>%
-  filter(type_of_victim %in% "individual") %>%
-  mutate(resident_status_of_victim = capitalize_words(resident_status_of_victim)) %>%
-  crimeutils::make_barplots("resident_status_of_victim", count = FALSE, ylab = "% of victims") +
-  ggplot2::scale_y_continuous(labels = scales::percent)
-```
-
-```{r victimResidenceStatusPolice, fig.cap = "The distribution of residence status for all Law Enforcement Officer victims."}
-victim %>%
-  filter(type_of_victim %in% "law enforcement officer") %>%
-  mutate(resident_status_of_victim = capitalize_words(resident_status_of_victim)) %>%
-  crimeutils::make_barplots("resident_status_of_victim", count = FALSE, ylab = "% of victims") +
-  ggplot2::scale_y_continuous(labels = scales::percent)
-```
 
 ### Aggravated assault and homicide circumstances
 
@@ -177,13 +141,15 @@ temp <- make_frequency_table(victim[!is.na(victim$agg_assault_homicide_circumsta
                                "\\% of Victims")) 
 temp$agg_assault_homicide_circumsta_1 <- gsub(" \\(.*", "", temp$agg_assault_homicide_circumsta_1)
 temp$crime_category <- "Aggravated Assault/Murder"
-temp$crime_category[temp$agg_assault_homicide_circumsta_1 %in% c("Child Playing With Weapon",
-                                                                 "Gun-Cleaning Accident",
-                                                                 "Hunting Accident",
-                                                                 "Other Negligent Weapon Handling",
-                                                                 "Other Negligent Killings")] <- "Negligent Manslaughter"
-temp$crime_category[temp$agg_assault_homicide_circumsta_1 %in% c("Criminal Killed By Private Citizen",
-                                                                 "Criminal Killed By Police Officer")] <- "Justifiable Homicide"
+temp$crime_category[temp$agg_assault_homicide_circumsta_1 %in%
+                      c("Child Playing With Weapon",
+                        "Gun-Cleaning Accident",
+                        "Hunting Accident",
+                        "Other Negligent Weapon Handling",
+                        "Other Negligent Killings")] <- "Negligent Manslaughter"
+temp$crime_category[temp$agg_assault_homicide_circumsta_1 %in%
+                      c("Criminal Killed By Private Citizen",
+                        "Criminal Killed By Police Officer")] <- "Justifiable Homicide"
 temp <-
   temp %>%
   select(1, 4, 2:3)
@@ -201,7 +167,6 @@ knitr::kable(temp,
   kable_styling(bootstrap_options = "striped", full_width = FALSE, latex_options = c("hold_position", "repeat_header"))
 ```
 
-\setstretch{1.15}
 
 ### Justifiable homicide circumstance
 
@@ -222,7 +187,33 @@ victim %>%
   ggplot2::scale_y_continuous(labels = scales::percent)
 ```
 
-### Age
+### Demographics
+
+#### Residence status
+
+Only for when victim is individual or law enforcement officer
+
+
+```{r victimResidenceStatus, fig.cap = "The distribution of residence status for all victims reported to NIBRS in 2019. Residence status is residence in the police agency's jurisdiction (e.g. do you live in the city you were victimized in?). It is unrelated to citizenship or immigration status."}
+victim$resident_status_of_victim[is.na(victim$resident_status_of_victim)] <- "unknown"
+victim %>%
+  filter(type_of_victim %in% c("individual",
+                               "law enforcement officer")) %>%
+  mutate(resident_status_of_victim = capitalize_words(resident_status_of_victim)) %>%
+  crimeutils::make_barplots("resident_status_of_victim", count = FALSE, ylab = "% of victims") +
+  ggplot2::scale_y_continuous(labels = scales::percent)
+```
+
+
+```{r victimResidenceStatusPolice, fig.cap = "The distribution of residence status for all Law Enforcement Officer victims."}
+victim %>%
+  filter(type_of_victim %in% "law enforcement officer") %>%
+  mutate(resident_status_of_victim = capitalize_words(resident_status_of_victim)) %>%
+  crimeutils::make_barplots("resident_status_of_victim", count = FALSE, ylab = "% of victims") +
+  ggplot2::scale_y_continuous(labels = scales::percent)
+```
+
+#### Age
 
 ```{r victimAge, fig.cap = "The age of all victims reported in the 2019 NIBRS data."}
 victim$age_of_victim[victim$age_of_victim %in% "over 98 years old"] <- 99
@@ -231,37 +222,42 @@ victim$age_of_victim[victim$age_of_victim %in% c("under 24 hours (neonate)",
                                                  "1-6 days old")] <- 0
 victim$age_of_victim[victim$age_of_victim %in% "unknown"] <- NA
 victim$age_of_victim <- as.numeric(victim$age_of_victim)
-make_stat_count_plots(victim, "age_of_victim", count = FALSE, ylab = "% of victims") + xlab("Age")
+victim %>%
+  filter(type_of_victim %in% c("individual", "law enforcement officer")) %>%
+  make_stat_count_plots("age_of_victim", count = FALSE, ylab = "% of victims") + xlab("Age")
 
 ```
 
 
-### Sex
+#### Sex
 
 ```{r victimSex, fig.cap = "The sex of all victims reported in the 2019 NIBRS data."}
 victim$sex_of_victim[is.na(victim$sex_of_victim)] <- "unknown"
 victim %>%
+  filter(type_of_victim %in% c("individual", "law enforcement officer")) %>%
   mutate(sex_of_victim = capitalize_words(sex_of_victim)) %>%
   crimeutils::make_barplots("sex_of_victim", count = FALSE, ylab = "% of victims") +
   ggplot2::scale_y_continuous(labels = scales::percent)
 ```
 
 
-### Race
+#### Race
 
 ```{r victimRace, fig.cap = "The race of all victims reported in the 2019 NIBRS data."}
 victim$race_of_victim[is.na(victim$race_of_victim)] <- "unknown"
 victim %>%
+  filter(type_of_victim %in% c("individual", "law enforcement officer")) %>%
   mutate(race_of_victim = capitalize_words(race_of_victim)) %>%
   crimeutils::make_barplots("race_of_victim", count = FALSE, ylab = "% of victims") +
   ggplot2::scale_y_continuous(labels = scales::percent)
 ```
 
-### Ethnicity
+#### Ethnicity
 
 ```{r victimEthnicity, fig.cap = "The ethnicity of all victims reported in the 2019 NIBRS data."}
 victim$ethnicity_of_victim[is.na(victim$ethnicity_of_victim)] <- "unknown"
 victim %>%
+  filter(type_of_victim %in% c("individual", "law enforcement officer")) %>%
   mutate(ethnicity_of_victim = capitalize_words(ethnicity_of_victim)) %>%
   crimeutils::make_barplots("ethnicity_of_victim", count = FALSE, ylab = "% of victims") +
   ggplot2::scale_y_continuous(labels = scales::percent)

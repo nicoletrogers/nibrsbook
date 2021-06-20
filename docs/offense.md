@@ -204,29 +204,21 @@ Table: (\#tab:offensesCompleted)The percent of crimes completed or attempted, by
 
 ### Drug, alcohol, or computer use
 
-Intoxication, mainly by alcohol, is known to be a major correlate (and cause) of crime. Drunk people commit a lot of crime (even though most drunk people never commit crime). NIBRS tries to capture this by telling us if the offender is *suspected of using* drugs (just "drugs", we don't know which drug though we could look in the Property Segment to see what drug [if any] was recovered), alcohol, or "computer equipment" which also includes cell phones. For each offense there are three variables about usage of any of these so potentially the offender could have used all three. The data doesn't get any more specific than if the offender is *suspected of using* these items. So we don't know how intoxicated they are or what they used the computer equipment for. Just that they're suspected of using it. And suspected is key. We don't know for sure if they used it. If, for example, a victim says that their mugger was drunk, NIBRS will say they're suspected of using alcohol, even though there's no definitive proof such as a blood est or breathalyzer. Unless some past variables like offense subtype where it applies to only a subset of crimes, this variable is available for every crime. 
+Intoxication, mainly by alcohol, is known to be a major correlate (and cause) of crime. Drunk people commit a lot of crime (even though most drunk people never commit crime). NIBRS tries to capture this by telling us if the offender is *suspected of using* drugs (just "drugs", we don't know which drug though we could look in the Property Segment to see what drug [if any] was recovered), alcohol, or "computer equipment" which also includes cell phones. For each offense there are three variables about usage of any of these so potentially the offender could have used all three. The data doesn't get any more specific than if the offender is *suspected of using* these items. So we don't know how intoxicated they are or what they used the computer equipment for. Just that they're suspected of using it. And suspected is key. We don't know for sure if they used it. If, for example, a victim says that their mugger was drunk, NIBRS will say they're suspected of using alcohol, even though there's no definitive proof such as a blood test or breathalyzer. Unless some past variables like offense subtype where it applies to only a subset of crimes, this variable is available for every crime. 
 
 Figure \@ref(fig:offenseDrugAlcoholComputer) shows the distribution is suspected usage for all offenses in 2019 NIBRS. This is just from the first suspected use variable for simplicity of the graph, even though there are three variables on this topic. The most common outcome is "Not Applicable" at 87.6% of offenses. Not Applicable actually just means that the offender was not suspected of using drugs, alcohol, or computer equipment. I'm not sure why it's called that but that's how NIBRS calls "none of the above". Since Not Applicable is so common, Figure \@ref(fig:offenseDrugAlcoholComputerAny) shows the distribution when excluding that option.
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/offenseDrugAlcoholComputer-1} 
-
-}
-
-\caption{The distribution of drug, alcohol, or computer use for all offenses in 2019.}(\#fig:offenseDrugAlcoholComputer)
-\end{figure}
+<div class="figure" style="text-align: center">
+<img src="offense_files/figure-html/offenseDrugAlcoholComputer-1.png" alt="The distribution of drug, alcohol, or computer use for all offenses in 2019." width="90%" />
+<p class="caption">(\#fig:offenseDrugAlcoholComputer)The distribution of drug, alcohol, or computer use for all offenses in 2019.</p>
+</div>
 
 Drug usage is the most common thing offenders are suspected of using, at about 66% of all crimes where they are suspected of using anything. Again, we don't know what type of drug was used, only that it wasn't alcohol. Alcohol follows at 28% while computer equipment is only 6.1%. 
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/offenseDrugAlcoholComputerAny-1} 
-
-}
-
-\caption{The distribution of drug, alcohol, or computer use for offenses where there was usage of one of these items. For easier viewing of how this variable is distributed, this figure excludes all offenses where there was no drug, alcohol, or computer use or the variable was NA.}(\#fig:offenseDrugAlcoholComputerAny)
-\end{figure}
+<div class="figure" style="text-align: center">
+<img src="offense_files/figure-html/offenseDrugAlcoholComputerAny-1.png" alt="The distribution of drug, alcohol, or computer use for offenses where there was usage of one of these items. For easier viewing of how this variable is distributed, this figure excludes all offenses where there was no drug, alcohol, or computer use or the variable was NA." width="90%" />
+<p class="caption">(\#fig:offenseDrugAlcoholComputerAny)The distribution of drug, alcohol, or computer use for offenses where there was usage of one of these items. For easier viewing of how this variable is distributed, this figure excludes all offenses where there was no drug, alcohol, or computer use or the variable was NA.</p>
+</div>
 
 ### Crime location
 
@@ -337,41 +329,29 @@ Table: (\#tab:offenseWeapon)The weapon used by an offender in the crime for all 
 
 When the weapon involved was a firearm there is a variable which indicates that the firearm was fully automatic. To be clear, this means that when you pull the trigger once the gun will fire multiple bullets. Semi-automatic firearms are **not** automatic firearms. Of course, saying a gun is fully automatic requires either the policing seizing the gun or the gun being fired (and for witnesses to accurately determine that it is fully automatic). Since most crimes are never solved (and even those that lead to an arrest may not lead to the gun being seized - though some guns are seized even without an arrest, such as if the gun is left at the crime scene) and most gun crimes don't actually involve the gun being fired, this variable is likely very imprecise. Still, Figure \@ref(fig:offenseAutomaticWeapon) shows the percent of firearms used in offenses in 2019 that are reported to be fully automatic. Even though there can be up to three weapons used in an offense, this figure only looks at the first weapon. The most common guns to be automatic are rifles and handguns, both with about 4.5% of all uses being of an automatic weapon. The remaining categories are all under 3% of uses. 
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/offenseAutomaticWeapon-1} 
-
-}
-
-\caption{The percent of firearms used that were fully automatic, for all offenses in 2019.}(\#fig:offenseAutomaticWeapon)
-\end{figure}
+<div class="figure" style="text-align: center">
+<img src="offense_files/figure-html/offenseAutomaticWeapon-1.png" alt="The percent of firearms used that were fully automatic, for all offenses in 2019." width="90%" />
+<p class="caption">(\#fig:offenseAutomaticWeapon)The percent of firearms used that were fully automatic, for all offenses in 2019.</p>
+</div>
 
 ### Burglary info
 
-\begin{figure}
+<div class="figure" style="text-align: center">
+<img src="offense_files/figure-html/offensePremisesEntered-1.png" alt="The distribution in the number of premises entered during burglaries. This info is only available for a very small subset of burglaries." width="90%" />
+<p class="caption">(\#fig:offensePremisesEntered)The distribution in the number of premises entered during burglaries. This info is only available for a very small subset of burglaries.</p>
+</div>
 
-{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/offensePremisesEntered-1} 
-
-}
-
-\caption{The distribution in the number of premises entered during burglaries. This info is only available for a very small subset of burglaries.}(\#fig:offensePremisesEntered)
-\end{figure}
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/offensesTypeOfEntry-1} 
-
-}
-
-\caption{The percent of burglaries reported in 2019 where the burglary entered the structure forcibly or non-forcibly.}(\#fig:offensesTypeOfEntry)
-\end{figure}
+<div class="figure" style="text-align: center">
+<img src="offense_files/figure-html/offensesTypeOfEntry-1.png" alt="The percent of burglaries reported in 2019 where the burglary entered the structure forcibly or non-forcibly." width="90%" />
+<p class="caption">(\#fig:offensesTypeOfEntry)The percent of burglaries reported in 2019 where the burglary entered the structure forcibly or non-forcibly.</p>
+</div>
 
 
 
 ### Hate crime indicator (bias motivation)
 
 
-Table: (\#tab:offenseBiasMotivation)The number and percent of offenders that had a bias motivataion or not for all offenses reported in 2019.
+Table: (\#tab:offenseBiasMotivation)The number and percent of offenders that had a bias motivation or not for all offenses reported in 2019.
 
 |Bias Motivation    | \# of Offenses| \% of Offenses|
 |:------------------|--------------:|--------------:|
