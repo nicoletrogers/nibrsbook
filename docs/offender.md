@@ -29,7 +29,6 @@ Another indicator of guesses about age is that three of the five most common age
 <p class="caption">(\#fig:offenderAge)The age of all offenders reported in the 2019 NIBRS data. Approximately 39% of offenders have an unknown age are an not shown in the figure.</p>
 </div>
 
-
 #### Sex
 
 The second offender demographic variable available is the offender's sex with male and female being the only available sexes. There is no option for transgender or any other identify. Other than arrestees, where police could (though we don't know if they do) use their identification (e.g. drivers license) to determine their sex, this is the perceived sex of the offender. Figure \@ref(fig:offenderSex) shows the distribution of offenders by sex. The most common sex is male, which is consistent with the literature on who commits crime. About 45% of all offenders were male. Female  offenders make up nearly 19% of offenders. Over a third - 35.9% - of offenders have an unknown sex. Considering that when nothing is known about offenders (including even how many offenders there are) this data includes a single row with "unknown" for all demographic variables, this is actually an undercount of offenders who have unknown sex. 

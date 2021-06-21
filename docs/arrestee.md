@@ -130,13 +130,13 @@ Table: (\#tab:GroupBarresteeCrime)The number and percent of arrests for Group B 
 All crimes can potentially have a weapon
 
 <div class="figure" style="text-align: center">
-<img src="arrestee_files/figure-html/arresteeWeapon-1.png" alt="The weapon used in the crime for all arrestees reported in 2019. Unarmed can still mean that the arrestee used force, such as by punching the victim, but that they did not use any weapon." width="90%" />
-<p class="caption">(\#fig:arresteeWeapon)The weapon used in the crime for all arrestees reported in 2019. Unarmed can still mean that the arrestee used force, such as by punching the victim, but that they did not use any weapon.</p>
+<img src="arrestee_files/figure-html/arresteeWeapon-1.png" alt="The weapon found on the arrestee for all arrestees reported in 2019." width="90%" />
+<p class="caption">(\#fig:arresteeWeapon)The weapon found on the arrestee for all arrestees reported in 2019.</p>
 </div>
 
 <div class="figure" style="text-align: center">
-<img src="arrestee_files/figure-html/arresteeWeaponArmed-1.png" alt="The distribution of weapon usage for all arrestees in 2019 who used a weapon (i.e. excludes unarmed offenders)." width="90%" />
-<p class="caption">(\#fig:arresteeWeaponArmed)The distribution of weapon usage for all arrestees in 2019 who used a weapon (i.e. excludes unarmed offenders).</p>
+<img src="arrestee_files/figure-html/arresteeWeaponArmed-1.png" alt="The distribution of weapon usage for all arrestees in 2019 who were arrested with a weapon (i.e. excludes unarmed arrestees)." width="90%" />
+<p class="caption">(\#fig:arresteeWeaponArmed)The distribution of weapon usage for all arrestees in 2019 who were arrested with a weapon (i.e. excludes unarmed arrestees).</p>
 </div>
 
 
@@ -145,8 +145,8 @@ All crimes can potentially have a weapon
 This variable only tells you if the weapon is automatic 
 
 <div class="figure" style="text-align: center">
-<img src="arrestee_files/figure-html/arresteeAutomaticWeapon-1.png" alt="The percent of firearms used that were fully automatic, for arrestees in 2019." width="90%" />
-<p class="caption">(\#fig:arresteeAutomaticWeapon)The percent of firearms used that were fully automatic, for arrestees in 2019.</p>
+<img src="arrestee_files/figure-html/arresteeAutomaticWeapon-1.png" alt="The percent of firearms the arrestee was carrying that were fully automatic, for arrestees in 2019." width="90%" />
+<p class="caption">(\#fig:arresteeAutomaticWeapon)The percent of firearms the arrestee was carrying that were fully automatic, for arrestees in 2019.</p>
 </div>
 
 ### Type of arrest

@@ -138,13 +138,13 @@ ggplot(temp, aes(x = days_until_arrest, y = proportion)) +
 
 All crimes can potentially have a weapon
 
-```{r arresteeWeapon, fig.cap = "The weapon used in the crime for all arrestees reported in 2019. Unarmed can still mean that the arrestee used force, such as by punching the victim, but that they did not use any weapon."}
+```{r arresteeWeapon, fig.cap = "The weapon found on the arrestee for all arrestees reported in 2019."}
 arrestee$weapon <- capitalize_words(arrestee$arrestee_weapon_1)
 arrestee$weapon <- gsub(" \\(e.g..*", "", arrestee$weapon, ignore.case = TRUE)
 make_barplots(arrestee, "weapon", count = FALSE, ylab = "% of Arrestees")
 ```
 
-```{r arresteeWeaponArmed, fig.cap = "The distribution of weapon usage for all arrestees in 2019 who used a weapon (i.e. excludes unarmed offenders)."}
+```{r arresteeWeaponArmed, fig.cap = "The distribution of weapon usage for all arrestees in 2019 who were arrested with a weapon (i.e. excludes unarmed arrestees)."}
 
 make_barplots(arrestee[arrestee$weapon != "Unarmed", ], "weapon", count = FALSE, ylab = "% of Arrestees") +
    ggplot2::scale_y_continuous(labels = scales::percent)
@@ -155,7 +155,7 @@ make_barplots(arrestee[arrestee$weapon != "Unarmed", ], "weapon", count = FALSE,
 
 This variable only tells you if the weapon is automatic 
 
-```{r arresteeAutomaticWeapon, fig.cap = "The percent of firearms used that were fully automatic, for arrestees in 2019."}
+```{r arresteeAutomaticWeapon, fig.cap = "The percent of firearms the arrestee was carrying that were fully automatic, for arrestees in 2019."}
 temp <- 
   arrestee %>%
   filter(arrestee_weapon_1 %in% c("firearm (type not stated)",

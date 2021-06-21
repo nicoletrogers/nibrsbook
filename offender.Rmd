@@ -43,7 +43,6 @@ offender$age_of_offender <- as.numeric(offender$age_of_offender)
 make_stat_count_plots(offender, "age_of_offender", count = FALSE, ylab = "% of Offenders") + xlab("Age")
 ```
 
-
 #### Sex
 
 The second offender demographic variable available is the offender's sex with male and female being the only available sexes. There is no option for transgender or any other identify. Other than arrestees, where police could (though we don't know if they do) use their identification (e.g. drivers license) to determine their sex, this is the perceived sex of the offender. Figure \@ref(fig:offenderSex) shows the distribution of offenders by sex. The most common sex is male, which is consistent with the literature on who commits crime. About 45% of all offenders were male. Female  offenders make up nearly 19% of offenders. Over a third - 35.9% - of offenders have an unknown sex. Considering that when nothing is known about offenders (including even how many offenders there are) this data includes a single row with "unknown" for all demographic variables, this is actually an undercount of offenders who have unknown sex. 
