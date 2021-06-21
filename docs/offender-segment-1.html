@@ -24,7 +24,7 @@
 <meta name="author" content="Jacob Kaplan" />
 
 
-<meta name="date" content="2021-06-20" />
+<meta name="date" content="2021-06-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -238,15 +238,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="7.1" data-path="arrestee.html"><a href="arrestee.html#important-variables-4"><i class="fa fa-check"></i><b>7.1</b> Important variables</a>
 <ul>
-<li class="chapter" data-level="7.1.1" data-path="arrestee.html"><a href="arrestee.html#crime-arrested-for-excluding-group-b-arrests"><i class="fa fa-check"></i><b>7.1.1</b> Crime arrested for (excluding Group B arrests)</a></li>
-<li class="chapter" data-level="7.1.2" data-path="arrestee.html"><a href="arrestee.html#group-b-crimes-arrested-for"><i class="fa fa-check"></i><b>7.1.2</b> Group B crimes arrested for</a></li>
-<li class="chapter" data-level="7.1.3" data-path="arrestee.html"><a href="arrestee.html#arrest-date"><i class="fa fa-check"></i><b>7.1.3</b> Arrest date</a></li>
-<li class="chapter" data-level="7.1.4" data-path="arrestee.html"><a href="arrestee.html#weapons-1"><i class="fa fa-check"></i><b>7.1.4</b> Weapons</a></li>
-<li class="chapter" data-level="7.1.5" data-path="arrestee.html"><a href="arrestee.html#automatic-weapons-1"><i class="fa fa-check"></i><b>7.1.5</b> Automatic weapons</a></li>
-<li class="chapter" data-level="7.1.6" data-path="arrestee.html"><a href="arrestee.html#type-of-arrest"><i class="fa fa-check"></i><b>7.1.6</b> Type of arrest</a></li>
-<li class="chapter" data-level="7.1.7" data-path="arrestee.html"><a href="arrestee.html#disposition-for-juvenile-arrestees"><i class="fa fa-check"></i><b>7.1.7</b> Disposition for juvenile arrestees</a></li>
+<li class="chapter" data-level="7.1.1" data-path="arrestee.html"><a href="arrestee.html#crimes-arrested-for"><i class="fa fa-check"></i><b>7.1.1</b> Crimes arrested for</a></li>
+<li class="chapter" data-level="7.1.2" data-path="arrestee.html"><a href="arrestee.html#arrest-date"><i class="fa fa-check"></i><b>7.1.2</b> Arrest date</a></li>
+<li class="chapter" data-level="7.1.3" data-path="arrestee.html"><a href="arrestee.html#weapons-1"><i class="fa fa-check"></i><b>7.1.3</b> Weapons</a></li>
+<li class="chapter" data-level="7.1.4" data-path="arrestee.html"><a href="arrestee.html#automatic-weapons-1"><i class="fa fa-check"></i><b>7.1.4</b> Automatic weapons</a></li>
+<li class="chapter" data-level="7.1.5" data-path="arrestee.html"><a href="arrestee.html#type-of-arrest"><i class="fa fa-check"></i><b>7.1.5</b> Type of arrest</a></li>
+<li class="chapter" data-level="7.1.6" data-path="arrestee.html"><a href="arrestee.html#disposition-for-juvenile-arrestees"><i class="fa fa-check"></i><b>7.1.6</b> Disposition for juvenile arrestees</a></li>
+<li class="chapter" data-level="7.1.7" data-path="arrestee.html"><a href="arrestee.html#demographics-2"><i class="fa fa-check"></i><b>7.1.7</b> Demographics</a></li>
 <li class="chapter" data-level="7.1.8" data-path="arrestee.html"><a href="arrestee.html#residence-status-1"><i class="fa fa-check"></i><b>7.1.8</b> Residence status</a></li>
-<li class="chapter" data-level="7.1.9" data-path="arrestee.html"><a href="arrestee.html#demographics-2"><i class="fa fa-check"></i><b>7.1.9</b> Demographics</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="property-and-window-property-segment.html"><a href="property-and-window-property-segment.html"><i class="fa fa-check"></i><b>8</b> Property and Window Property Segment</a>
@@ -290,14 +289,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h4><span class="header-section-number">5.1.1.1</span> Age</h4>
 <p>The age variable is the suspected age of the offender. This is presented to us as whole years though agencies can input an age range if they don’t know the exact age (e.g. age 20-29) and the FBI will convert that to an exact number by averaging it for us. So if the police say the offender is ages 20-29 (since they don’t know for sure), we only see that the offender is 24 years old since the FBI (for some reason) rounds down. This value is top-coded to 99 years old with everyone 99 years or older being set as “over 98 years old.” Figure <a href="offender-segment-1.html#fig:offenderAge">5.1</a> shows the distribution of offender ages for all known offenders in the 2019 NIBRS data. About 14% of offenders have an unknown age and are excluded from the figure.</p>
 <p>This figure shows the percent of offenders at each age that make up known offenders in the data. If you’re familiar with research on the age-crime curve, which says that crimes peak in the late teens and then rapidly decrease, this essentially replicates those findings. There are some differences between this figure and past age-crime research as crime peaks later here, in the mid-20s (the most common age is 25), but the general trend of crime being largely a “young person” phenomenon holds consistent. This also depends on exactly which crime occurs as different crimes have different age-crime trends, so you’ll need to merge this segment with the Offense Segment to be able to subset by crime committed.</p>
-<p>The spike you see at the very end of the data is due to the data maxing out possible individual ages at 98, so anyone older is grouped together. There’s also a spike at age 1 - and other offenders at very young ages - , the youngest possible age. Surely 1-year-olds aren’t going around attacking people, so is this a data error? Potentially yes. But it could actually be real as there are very rare cases where children harm or kill someone while playing with a gun and are included in the data. These aren’t crimes as we conventionally think of them - and won’t be criminally charged - but are still included in the data.</p>
-<p>Another indicator of guesses about age is that three of the five most common ages are 25, 30, and 20 years old. People tend to like multiples of five when making estimates, so these indicate that someone (the victim or the officer) probably didn’t know the exact age and so guessed the age.</p>
 <div class="figure" style="text-align: center"><span id="fig:offenderAge"></span>
-<img src="offender_files/figure-html/offenderAge-1.png" alt="The age of all offenders reported in the 2019 NIBRS data. Approximately 39% of offenders have an unknown age are an not shown in the figure." width="90%" />
+<img src="offender_files/figure-html/offenderAge-1.png" alt="The age of all offenders reported in the 2019 NIBRS data. Approximately 39 percent of offenders have an unknown age are an not shown in the figure." width="90%" />
 <p class="caption">
-Figure 5.1: The age of all offenders reported in the 2019 NIBRS data. Approximately 39% of offenders have an unknown age are an not shown in the figure.
+Figure 5.1: The age of all offenders reported in the 2019 NIBRS data. Approximately 39 percent of offenders have an unknown age are an not shown in the figure.
 </p>
 </div>
+<p>The spike you see at the very end of the data is due to the data maxing out possible individual ages at 98, so anyone older is grouped together. There’s also a spike at age 1 - and other offenders at very young ages - , the youngest possible age. Surely very young children aren’t going around attacking people, so is this a data error? Potentially yes. But it could actually be real as there are very rare cases where children harm or kill someone while playing with a gun and are included in the data. These aren’t crimes as we conventionally think of them - and won’t be criminally charged - but are still included in the data. However, the bulk of this, especially for age 0, is likely just a data error or the police entering age 0 instead of saying that the age is unknown.</p>
+<p>Another indicator of guesses about age is that three of the five most common ages are 25, 30, and 20 years old. People tend to like multiples of five when making estimates, so these indicate that someone (the victim or the officer) probably didn’t know the exact age and so guessed the age.</p>
 </div>
 <div id="sex" class="section level4" number="5.1.1.2">
 <h4><span class="header-section-number">5.1.1.2</span> Sex</h4>

@@ -91,49 +91,33 @@ Table: (\#tab:propertyDescription)The number and percent of property lost, inclu
 
 ### Type of property loss
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/propertyTypeLoss-1} 
-
-}
-
-\caption{The type of loss or if the item is recovered.}(\#fig:propertyTypeLoss)
-\end{figure}
+<div class="figure" style="text-align: center">
+<img src="property_files/figure-html/propertyTypeLoss-1.png" alt="The type of loss or if the item is recovered." width="90%" />
+<p class="caption">(\#fig:propertyTypeLoss)The type of loss or if the item is recovered.</p>
+</div>
 
 
 ### Value of stolen property
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/propertyValuePropertyLevel-1} 
-
-}
-
-\caption{The distribution of the value of property stolen. Values are capped at $1,000,000 and each value is rounded to the nearest $100. The x-axis is set on the log scale as this distribution is hugely right skewed.}(\#fig:propertyValuePropertyLevel)
-\end{figure}
+<div class="figure" style="text-align: center">
+<img src="property_files/figure-html/propertyValuePropertyLevel-1.png" alt="The distribution of the value of property stolen. Values are capped at $1,000,000 and each value is rounded to the nearest $100. The x-axis is set on the log scale as this distribution is hugely right skewed." width="90%" />
+<p class="caption">(\#fig:propertyValuePropertyLevel)The distribution of the value of property stolen. Values are capped at $1,000,000 and each value is rounded to the nearest $100. The x-axis is set on the log scale as this distribution is hugely right skewed.</p>
+</div>
 
 
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/propertyValueIncidentLevel-1} 
-
-}
-
-\caption{The incident-level distribution of the value of property stolen. As values are aggregated to the incident-level, these are higher than the above graph which shows each item individually. Values are capped at $1,000,000 and each value is rounded to the nearest $100. The x-axis is set on the log scale as this distribution is hugely right skewed.}(\#fig:propertyValueIncidentLevel)
-\end{figure}
+<div class="figure" style="text-align: center">
+<img src="property_files/figure-html/propertyValueIncidentLevel-1.png" alt="The incident-level distribution of the value of property stolen. As values are aggregated to the incident-level, these are higher than the above graph which shows each item individually. Values are capped at $1,000,000 and each value is rounded to the nearest $100. The x-axis is set on the log scale as this distribution is hugely right skewed." width="90%" />
+<p class="caption">(\#fig:propertyValueIncidentLevel)The incident-level distribution of the value of property stolen. As values are aggregated to the incident-level, these are higher than the above graph which shows each item individually. Values are capped at $1,000,000 and each value is rounded to the nearest $100. The x-axis is set on the log scale as this distribution is hugely right skewed.</p>
+</div>
 
 
 ### Date property was recovered
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/propertyDaysUntilRecovered-1} 
-
-}
-
-\caption{The distribution of the number of days from the incident to the property recovered date. In 2019 the maximum days from incident to arrest was 450 days. Zero days means that the arrest occurred on the same day as the incident. }(\#fig:propertyDaysUntilRecovered)
-\end{figure}
+<div class="figure" style="text-align: center">
+<img src="property_files/figure-html/propertyDaysUntilRecovered-1.png" alt="The distribution of the number of days from the incident to the property recovered date. In 2019 the maximum days from incident to arrest was 450 days. Zero days means that the arrest occurred on the same day as the incident. " width="90%" />
+<p class="caption">(\#fig:propertyDaysUntilRecovered)The distribution of the number of days from the incident to the property recovered date. In 2019 the maximum days from incident to arrest was 450 days. Zero days means that the arrest occurred on the same day as the incident. </p>
+</div>
 
 
 
@@ -182,12 +166,8 @@ Table: (\#tab:propertyDrugs)The number and percent of drugs seized by police by 
 * Pound
 
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/propertyAllGramMeasures-1} 
-
-}
-
-\caption{For drugs seized that are measured in grams, this figure shows the distribution in the number of grams seized. Values over 10 grams are grouped together for easier interpretation of lower values of drugs seized.}(\#fig:propertyAllGramMeasures)
-\end{figure}
+<div class="figure" style="text-align: center">
+<img src="property_files/figure-html/propertyAllGramMeasures-1.png" alt="For drugs seized that are measured in grams, this figure shows the distribution in the number of grams seized. Values over 10 grams are grouped together for easier interpretation of lower values of drugs seized." width="90%" />
+<p class="caption">(\#fig:propertyAllGramMeasures)For drugs seized that are measured in grams, this figure shows the distribution in the number of grams seized. Values over 10 grams are grouped together for easier interpretation of lower values of drugs seized.</p>
+</div>
 

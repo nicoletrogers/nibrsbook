@@ -24,7 +24,7 @@
 <meta name="author" content="Jacob Kaplan" />
 
 
-<meta name="date" content="2021-06-20" />
+<meta name="date" content="2021-06-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -238,15 +238,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="7.1" data-path="arrestee.html"><a href="arrestee.html#important-variables-4"><i class="fa fa-check"></i><b>7.1</b> Important variables</a>
 <ul>
-<li class="chapter" data-level="7.1.1" data-path="arrestee.html"><a href="arrestee.html#crime-arrested-for-excluding-group-b-arrests"><i class="fa fa-check"></i><b>7.1.1</b> Crime arrested for (excluding Group B arrests)</a></li>
-<li class="chapter" data-level="7.1.2" data-path="arrestee.html"><a href="arrestee.html#group-b-crimes-arrested-for"><i class="fa fa-check"></i><b>7.1.2</b> Group B crimes arrested for</a></li>
-<li class="chapter" data-level="7.1.3" data-path="arrestee.html"><a href="arrestee.html#arrest-date"><i class="fa fa-check"></i><b>7.1.3</b> Arrest date</a></li>
-<li class="chapter" data-level="7.1.4" data-path="arrestee.html"><a href="arrestee.html#weapons-1"><i class="fa fa-check"></i><b>7.1.4</b> Weapons</a></li>
-<li class="chapter" data-level="7.1.5" data-path="arrestee.html"><a href="arrestee.html#automatic-weapons-1"><i class="fa fa-check"></i><b>7.1.5</b> Automatic weapons</a></li>
-<li class="chapter" data-level="7.1.6" data-path="arrestee.html"><a href="arrestee.html#type-of-arrest"><i class="fa fa-check"></i><b>7.1.6</b> Type of arrest</a></li>
-<li class="chapter" data-level="7.1.7" data-path="arrestee.html"><a href="arrestee.html#disposition-for-juvenile-arrestees"><i class="fa fa-check"></i><b>7.1.7</b> Disposition for juvenile arrestees</a></li>
+<li class="chapter" data-level="7.1.1" data-path="arrestee.html"><a href="arrestee.html#crimes-arrested-for"><i class="fa fa-check"></i><b>7.1.1</b> Crimes arrested for</a></li>
+<li class="chapter" data-level="7.1.2" data-path="arrestee.html"><a href="arrestee.html#arrest-date"><i class="fa fa-check"></i><b>7.1.2</b> Arrest date</a></li>
+<li class="chapter" data-level="7.1.3" data-path="arrestee.html"><a href="arrestee.html#weapons-1"><i class="fa fa-check"></i><b>7.1.3</b> Weapons</a></li>
+<li class="chapter" data-level="7.1.4" data-path="arrestee.html"><a href="arrestee.html#automatic-weapons-1"><i class="fa fa-check"></i><b>7.1.4</b> Automatic weapons</a></li>
+<li class="chapter" data-level="7.1.5" data-path="arrestee.html"><a href="arrestee.html#type-of-arrest"><i class="fa fa-check"></i><b>7.1.5</b> Type of arrest</a></li>
+<li class="chapter" data-level="7.1.6" data-path="arrestee.html"><a href="arrestee.html#disposition-for-juvenile-arrestees"><i class="fa fa-check"></i><b>7.1.6</b> Disposition for juvenile arrestees</a></li>
+<li class="chapter" data-level="7.1.7" data-path="arrestee.html"><a href="arrestee.html#demographics-2"><i class="fa fa-check"></i><b>7.1.7</b> Demographics</a></li>
 <li class="chapter" data-level="7.1.8" data-path="arrestee.html"><a href="arrestee.html#residence-status-1"><i class="fa fa-check"></i><b>7.1.8</b> Residence status</a></li>
-<li class="chapter" data-level="7.1.9" data-path="arrestee.html"><a href="arrestee.html#demographics-2"><i class="fa fa-check"></i><b>7.1.9</b> Demographics</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="property-and-window-property-segment.html"><a href="property-and-window-property-segment.html"><i class="fa fa-check"></i><b>8</b> Property and Window Property Segment</a>
@@ -310,7 +309,7 @@ Figure 3.3: The percent of crimes that are reported (the day of the report, even
 </div>
 <div id="hour-of-incident" class="section level3" number="3.1.2">
 <h3><span class="header-section-number">3.1.2</span> Hour of incident</h3>
-<p>An extremely important aspect of crime data is when exactly the crime occurs. If, for example, crime always spikes when the local high school ends their day that would likely indicate that high school students are involved with crime (both as victims-offenders). In my own research on daylight saving time-crime I only care about the sunset hours, which is when daylight saving time would affect outdoor lighting. When crime happens also would affect police behavior as they’d likely increase patrol during times of elevated crime. Luckily NIBRS data does have the time of each incident, though it’s only at the hour level.</p>
+<p>An extremely important aspect of crime data is when exactly the crime occurs. If, for example, crime always spikes when the local high school ends their day that would likely indicate that high school students are involved with crime (both as victims-offenders). In my own research on daylight saving time-crime I only care about the sunset hours, which is when daylight saving time would affect outdoor lighting. When crime happens also would affect police behavior as they’d likely increase patrol during times of elevated crime. Luckily, NIBRS data does have the time of each incident, though it’s only at the hour level.</p>
 <p>Figure @reg(fig:administrativeHours) shows the total number of crimes that occurred in the 2019 NIBRS data for each hour of the day. There are two key trends in this figure. First, past research has found that crime tends to increase during the night (this is especially true during weekends), drop to a daily low in the couple of hours before sunrise, and then slowly increase as the day progresses.<a href="#fn26" class="footnote-ref" id="fnref26"><sup>26</sup></a> What we find here is a little different. Crime peaks at night at 5-5:59pm which is far earlier than other estimates. Since this is all crimes it could be biased by large increases of certain crimes at this time, such as people coming home from work and finding their house burgled. As crime differ in their timing (e.g. burglary happens often during the day, fights are more common at night), you’ll need to merge this segment with the Offense Segment to be able to look at certain types of crimes alone.</p>
 <p>The second key trend is the large spike at midnight-12:59am and at noon-12:59pm. The midnight spike certainly seems far too large to be real. The midnight hour is more than double that of neighboring hours, and reverses the trend in the hours before it. Crime increases more at night (though not as much here as in other studies of this topic) but not by such a massive amount. The noon hour is about 50% larger than in the neighboring hours, so is a sizable increase though continues the trend of increasing crime during the day and is a far smaller increase than at midnight. It seems unlikely that this spike is real, though potentially some of it could be. For example, if a lot of people take their lunch at noon then there could be an increase of crime (such as pickpocketing and purse snatching) when these people gather at restaurants and malls to eat. So what are these spikes? There is no option to say that the hour is unknown so the police must put something in, and it seems that they put midnight and noon as the default “unknown hour” hour.<a href="#fn27" class="footnote-ref" id="fnref27"><sup>27</sup></a> Given this, I recommend that you remove the midnight and noon hour from any analysis you do where the time of day is relevant.</p>
 <div class="figure" style="text-align: center"><span id="fig:administrativeHours"></span>

@@ -1,7 +1,7 @@
 --- 
 title: "National Incident-Based Reporting System (NIBRS) Data: A Practitioner's Guide"
 author: "Jacob Kaplan"
-date: "2021-06-20"
+date: "2021-06-21"
 site: bookdown::bookdown_site
 documentclass: book
 lof: yes
@@ -34,7 +34,7 @@ So why do people so frequently talk about crime as rates per total population? W
 
 While UCR data is the predominant dataset in criminology and the one that truly guides America's perceptions of crime, there is actually one that is far more detailed and allows us do a much better (though far from perfect) measure of crime victimization by a number of victim traits. This dataset, called the National Incident-Based Reporting System - and often called by its abbreviation NIBRS - provides demographics information about each victim of crime. Like the UCR this is a dataset from the FBI which standardizes information from agencies in the United States so it is comparable across agencies and over time (with some caveats). This data includes the age, race, gender, and the relationship of the victim to the offender for every known victim. We also have info about the offense such as which crimes occurred (and unlike the UCR, incidents can have multiple offenses), where and when it occurred, and what weapons (if any) were used. And we have demographic information about offenders, and whether they were arrested (including the type of arrest such as if the police had a warrant and arrested them or saw them committing the crime and arrested them at the scene). From this we can figure out victimization rates based on certain (though not all) victim characteristics.
 
-Of course, the research opportunities from this highly detailed data extend far beyond mere victimization rates. Personally I've used the data to examine topics ranging from marijuana decriminalization and domestic violence injuries to daylight saving time's effect on crime clearance. As of this writing in early summer 2021, [Google Scholar has over 1,500 results for NIBRS research since 2017](https://scholar.google.com/scholar?as_ylo=2017&q=NIBRS&hl=en&as_sdt=0,44). As the FBI has said that starting in 2021 NIBRS data will completely replace UCR data, this is *the* crime dataset of the future (though I believe that UCR will still be heavily used for many years to come). For graduate students and early career researchers, this is likely the dataset that you'll use for your entire career.
+Of course, the research opportunities from this highly detailed data extend far beyond mere victimization rates. Personally, I've used the data to examine topics ranging from marijuana decriminalization and domestic violence injuries to daylight saving time's effect on crime clearance. As of this writing in early summer 2021, [Google Scholar has over 1,500 results for NIBRS research since 2017](https://scholar.google.com/scholar?as_ylo=2017&q=NIBRS&hl=en&as_sdt=0,44). As the FBI has said that starting in 2021 NIBRS data will completely replace UCR data, this is *the* crime dataset of the future (though I believe that UCR will still be heavily used for many years to come). For graduate students and early career researchers, this is likely the dataset that you'll use for your entire career.
 
 ## Goal of the book
 
@@ -89,11 +89,7 @@ While this book is designed to help researchers use this data, the FBI has an ex
 
 If you have any questions, suggestions, or find any issues, please email me at jkkaplan6 [@] gmail.com. For more minor issues like typos or grammar mistakes, you can edit the book directly through its GitHub page. That'll make an update for me to accept, which will change the book to include your edit. To do that, click the edit button at the top of the site - the button is highlighted in the below figure. You will need to make a GitHub account to make edits. When you click on that button you'll be taken to a page that looks like a Word Doc where you can make edits. Make any edits you want and then scroll to the bottom of the page. There you can write a short (please, no more than a sentence or two) description of what you've done and then submit the changes for me to review.
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.9\linewidth]{images/edit_button} 
-
-}
-
-\caption{The edit button for how to make edits of this book.}(\#fig:unnamed-chunk-2)
-\end{figure}
+<div class="figure" style="text-align: center">
+<img src="images/edit_button.PNG" alt="The edit button for how to make edits of this book." width="90%" />
+<p class="caption">(\#fig:unnamed-chunk-2)The edit button for how to make edits of this book.</p>
+</div>
