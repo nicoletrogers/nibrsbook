@@ -20,23 +20,31 @@ The age variable is the suspected age of the offender. This is presented to us a
 
 This figure shows the percent of offenders at each age that make up known offenders in the data. If you're familiar with research on the age-crime curve, which says that crimes peak in the late teens and then rapidly decrease, this essentially replicates those findings. There are some differences between this figure and past age-crime research as crime peaks later here, in the mid-20s (the most common age is 25), but the general trend of crime being largely a "young person" phenomenon holds consistent. This also depends on exactly which crime occurs as different crimes have different age-crime trends, so you'll need to merge this segment with the Offense Segment to be able to subset by crime committed. 
 
-The spike you see at the very end of the data is due to the data maxing out possible individual ages at 98, so anyone older is grouped together. There's also a spike at age 1 - and other offenders at very young ages - , the youngest possible age. Surely 1-year-olds aren't going around attacking people, so is this a data error? Potentially yes. But it could actually be real as there are very rare cases where children harm or kill someone while playing with a gun and are included in the data. These aren't crimes as we conventionally think of them - and won't be criminally charged - but are still included in the data.    
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/offenderAge-1} 
+
+}
+
+\caption{The age of all offenders reported in the 2019 NIBRS data. Approximately 39 percent of offenders have an unknown age are an not shown in the figure.}(\#fig:offenderAge)
+\end{figure}
+
+The spike you see at the very end of the data is due to the data maxing out possible individual ages at 98, so anyone older is grouped together. There's also a spike at age 1 - and other offenders at very young ages - , the youngest possible age. Surely very young children aren't going around attacking people, so is this a data error? Potentially yes. But it could actually be real as there are very rare cases where children harm or kill someone while playing with a gun and are included in the data. These aren't crimes as we conventionally think of them - and won't be criminally charged - but are still included in the data.    
 
 Another indicator of guesses about age is that three of the five most common ages are 25, 30, and 20 years old. People tend to like multiples of five when making estimates, so these indicate that someone (the victim or the officer) probably didn't know the exact age and so guessed the age. 
-
-<div class="figure" style="text-align: center">
-<img src="offender_files/figure-html/offenderAge-1.png" alt="The age of all offenders reported in the 2019 NIBRS data. Approximately 39% of offenders have an unknown age are an not shown in the figure." width="90%" />
-<p class="caption">(\#fig:offenderAge)The age of all offenders reported in the 2019 NIBRS data. Approximately 39% of offenders have an unknown age are an not shown in the figure.</p>
-</div>
 
 #### Sex
 
 The second offender demographic variable available is the offender's sex with male and female being the only available sexes. There is no option for transgender or any other identify. Other than arrestees, where police could (though we don't know if they do) use their identification (e.g. drivers license) to determine their sex, this is the perceived sex of the offender. Figure \@ref(fig:offenderSex) shows the distribution of offenders by sex. The most common sex is male, which is consistent with the literature on who commits crime. About 45% of all offenders were male. Female  offenders make up nearly 19% of offenders. Over a third - 35.9% - of offenders have an unknown sex. Considering that when nothing is known about offenders (including even how many offenders there are) this data includes a single row with "unknown" for all demographic variables, this is actually an undercount of offenders who have unknown sex. 
 
-<div class="figure" style="text-align: center">
-<img src="offender_files/figure-html/offenderSex-1.png" alt="The sex of all offenders reported in the 2019 NIBRS data." width="90%" />
-<p class="caption">(\#fig:offenderSex)The sex of all offenders reported in the 2019 NIBRS data.</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/offenderSex-1} 
+
+}
+
+\caption{The sex of all offenders reported in the 2019 NIBRS data.}(\#fig:offenderSex)
+\end{figure}
 
 #### Race
 
@@ -46,8 +54,12 @@ Figure \@ref(fig:offenderRace) shows the breakdown in offender races for every o
 
 The next most common offender race is White at 38.7% followed by Black at 22.1%. The remaining races make up only a little over 1.5% of offenders, with American Indian/Alaskan Native at 0.77%, Asian/Pacific Islander at 0.63%, and Native Hawaiian/Other Pacific Islander at 0.24%.
 
-<div class="figure" style="text-align: center">
-<img src="offender_files/figure-html/offenderRace-1.png" alt="The race of all offenders reported in the 2019 NIBRS data." width="90%" />
-<p class="caption">(\#fig:offenderRace)The race of all offenders reported in the 2019 NIBRS data.</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/offenderRace-1} 
+
+}
+
+\caption{The race of all offenders reported in the 2019 NIBRS data.}(\#fig:offenderRace)
+\end{figure}
 
