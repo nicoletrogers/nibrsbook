@@ -199,19 +199,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.1.4" data-path="administrative-and-window-exceptional-clearance-segment.html"><a href="administrative-and-window-exceptional-clearance-segment.html#number-of-other-segments"><i class="fa fa-check"></i><b>3.1.4</b> Number of other segments</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="offense-segment-1.html"><a href="offense-segment-1.html"><i class="fa fa-check"></i><b>4</b> Offense Segment</a>
+<li class="chapter" data-level="4" data-path="offenseSegment.html"><a href="offenseSegment.html"><i class="fa fa-check"></i><b>4</b> Offense Segment</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="offense-segment-1.html"><a href="offense-segment-1.html#important-variables-1"><i class="fa fa-check"></i><b>4.1</b> Important variables</a>
+<li class="chapter" data-level="4.1" data-path="offenseSegment.html"><a href="offenseSegment.html#important-variables-1"><i class="fa fa-check"></i><b>4.1</b> Important variables</a>
 <ul>
-<li class="chapter" data-level="4.1.1" data-path="offense-segment-1.html"><a href="offense-segment-1.html#crime-category"><i class="fa fa-check"></i><b>4.1.1</b> Crime category</a></li>
-<li class="chapter" data-level="4.1.2" data-path="offense-segment-1.html"><a href="offense-segment-1.html#offense-subtype"><i class="fa fa-check"></i><b>4.1.2</b> Offense subtype</a></li>
-<li class="chapter" data-level="4.1.3" data-path="offense-segment-1.html"><a href="offense-segment-1.html#offense-completed"><i class="fa fa-check"></i><b>4.1.3</b> Offense completed</a></li>
-<li class="chapter" data-level="4.1.4" data-path="offense-segment-1.html"><a href="offense-segment-1.html#drug-alcohol-or-computer-use"><i class="fa fa-check"></i><b>4.1.4</b> Drug, alcohol, or computer use</a></li>
-<li class="chapter" data-level="4.1.5" data-path="offense-segment-1.html"><a href="offense-segment-1.html#crime-location"><i class="fa fa-check"></i><b>4.1.5</b> Crime location</a></li>
-<li class="chapter" data-level="4.1.6" data-path="offense-segment-1.html"><a href="offense-segment-1.html#weapons"><i class="fa fa-check"></i><b>4.1.6</b> Weapons</a></li>
-<li class="chapter" data-level="4.1.7" data-path="offense-segment-1.html"><a href="offense-segment-1.html#automatic-weapons"><i class="fa fa-check"></i><b>4.1.7</b> Automatic weapons</a></li>
-<li class="chapter" data-level="4.1.8" data-path="offense-segment-1.html"><a href="offense-segment-1.html#burglary-info"><i class="fa fa-check"></i><b>4.1.8</b> Burglary info</a></li>
-<li class="chapter" data-level="4.1.9" data-path="offense-segment-1.html"><a href="offense-segment-1.html#hate-crime-indicator-bias-motivation"><i class="fa fa-check"></i><b>4.1.9</b> Hate crime indicator (bias motivation)</a></li>
+<li class="chapter" data-level="4.1.1" data-path="offenseSegment.html"><a href="offenseSegment.html#crime-category"><i class="fa fa-check"></i><b>4.1.1</b> Crime category</a></li>
+<li class="chapter" data-level="4.1.2" data-path="offenseSegment.html"><a href="offenseSegment.html#offense-subtype"><i class="fa fa-check"></i><b>4.1.2</b> Offense subtype</a></li>
+<li class="chapter" data-level="4.1.3" data-path="offenseSegment.html"><a href="offenseSegment.html#offense-completed"><i class="fa fa-check"></i><b>4.1.3</b> Offense completed</a></li>
+<li class="chapter" data-level="4.1.4" data-path="offenseSegment.html"><a href="offenseSegment.html#drug-alcohol-or-computer-use"><i class="fa fa-check"></i><b>4.1.4</b> Drug, alcohol, or computer use</a></li>
+<li class="chapter" data-level="4.1.5" data-path="offenseSegment.html"><a href="offenseSegment.html#crime-location"><i class="fa fa-check"></i><b>4.1.5</b> Crime location</a></li>
+<li class="chapter" data-level="4.1.6" data-path="offenseSegment.html"><a href="offenseSegment.html#weapons"><i class="fa fa-check"></i><b>4.1.6</b> Weapons</a></li>
+<li class="chapter" data-level="4.1.7" data-path="offenseSegment.html"><a href="offenseSegment.html#automatic-weapons"><i class="fa fa-check"></i><b>4.1.7</b> Automatic weapons</a></li>
+<li class="chapter" data-level="4.1.8" data-path="offenseSegment.html"><a href="offenseSegment.html#burglary-info"><i class="fa fa-check"></i><b>4.1.8</b> Burglary info</a></li>
+<li class="chapter" data-level="4.1.9" data-path="offenseSegment.html"><a href="offenseSegment.html#hate-crime-indicator-bias-motivation"><i class="fa fa-check"></i><b>4.1.9</b> Hate crime indicator (bias motivation)</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="offender-segment-1.html"><a href="offender-segment-1.html"><i class="fa fa-check"></i><b>5</b> Offender Segment</a>
@@ -699,12 +699,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="arrest-date" class="section level3" number="7.1.2">
 <h3><span class="header-section-number">7.1.2</span> Arrest date</h3>
+<p>For each arrest we know the exact date of the arrest. As with the incident date, there is evidence that when agencies don’t know the exact arrest date, they put down the first of the month. However, this is far less of a problem than with the incident date, likely because since the agency is doing the arresting they know exactly when they do it. Instead of looking at arrests by day of the month, we’ll use both the arrest date and the incident date to look at how long it takes for crimes to get solved.</p>
+<p>Figure <a href="arrestee.html#fig:arrestsDaysUntilArrest">7.1</a> shows how long it takes for arrests to be made. The shortest time is zero days which means the arrest and the incident happened on the same day and the longest is 461 days after the incident. About 76.5% of arrests happen on the same day as the incident while 6.6% happen on the next day. 1.4% happen the following day and 1% on the day after this. This trend of a lower probability of the case being solved as the time from the incident continues throughout the figure. Including dates up to 461 days is a bit ridiculous since it’s impossible to see trends among the early dates other than zero days, but it’s a good demonstration of how massively concentrated arrests are that occur on the same day of the incident. The lesson here is that if an arrest isn’t made on the day of the incident (such as at the scene of the crime), it’s very unlikely that’ll it’ll be made at all (and most crimes never lead to an arrest).</p>
 <div class="figure" style="text-align: center"><span id="fig:arrestsDaysUntilArrest"></span>
 <img src="arrestee_files/figure-html/arrestsDaysUntilArrest-1.png" alt="The distribution of the number of days from the incident to the arrest date. In 2019 the maximum days from incident to arrest was 461 days. Zero days means that the arrest occurred on the same day as the incident." width="90%" />
 <p class="caption">
 Figure 7.1: The distribution of the number of days from the incident to the arrest date. In 2019 the maximum days from incident to arrest was 461 days. Zero days means that the arrest occurred on the same day as the incident.
 </p>
 </div>
+<p>Figure <a href="arrestee.html#fig:arrestsDaysUntilArrestBarplot">7.2</a> groups the larger number of days together to make it easier to see trends early after the incident. Here we can see much better how the percent of arrests move quickly downwards after zero days.</p>
 <div class="figure" style="text-align: center"><span id="fig:arrestsDaysUntilArrestBarplot"></span>
 <img src="arrestee_files/figure-html/arrestsDaysUntilArrestBarplot-1.png" alt="The number of days from the incident to the arrest date. Values over 10 days are grouped to better see the distribution for arrests that took fewer than 10 days. Zero days means that the arrest occurred on the same day as the incident." width="90%" />
 <p class="caption">
@@ -721,6 +724,7 @@ Figure 7.2: The number of days from the incident to the arrest date. Values over
 Figure 7.3: The weapon found on the arrestee for all arrestees reported in 2019.
 </p>
 </div>
+<p>To see the weapons carried when the arrestee had a weapon, Figure <a href="arrestee.html#fig:arresteeWeaponArmed">7.4</a> shows the breakdown in which weapon they carried. About 43.8% of people arrested who had a weapon were carrying a handgun followed by 30% with some kind of “lethal cutting instrument” like a knife. While rifles, and especially “assault rifles,” are what people (and especially politicians and the media) focus on when talking about violent crime, handguns are actually the most common gun to be used in a crime so it makes sense that handguns are the most frequently found weapon. “Firearm (type not stated)” basically means that the type of firearm used is unknown so can belong in one of the firearm categories and makes up 9% of weapons. Blunt instruments (including bats, clubs, and brass knuckles) follow at 6.9% of weapons. And the remaining weapons included are “other firearm” (so any other than ones specified) at 5.8%, rifle at 2.3%, and shotgun at 2%.</p>
 <div class="figure" style="text-align: center"><span id="fig:arresteeWeaponArmed"></span>
 <img src="arrestee_files/figure-html/arresteeWeaponArmed-1.png" alt="The distribution of weapon usage for all arrestees in 2019 who were arrested with a weapon (i.e. excludes unarmed arrestees)." width="90%" />
 <p class="caption">
@@ -730,7 +734,7 @@ Figure 7.4: The distribution of weapon usage for all arrestees in 2019 who were 
 </div>
 <div id="automatic-weapons-1" class="section level3" number="7.1.4">
 <h3><span class="header-section-number">7.1.4</span> Automatic weapons</h3>
-<p>This variable only tells you if the weapon is automatic</p>
+<p>This variable tells you if the weapon the arrestee was carrying was a gun whether that gun was fully automatic. To be clear, this means that when you pull the trigger once the gun will fire multiple bullets. Semi-automatic firearms are not automatic firearms. The Offense Segment also has a variable indicating if the offender used an automatic weapon but there they didn’t necessarily recover the gun so it’s much less reliable than in this segment where the police have the gun and are able to test it.<a href="#fn37" class="footnote-ref" id="fnref37"><sup>37</sup></a> The percent of guns that are fully automatic are fairly similar between the weapons seized at arrest, as shown in Figure <a href="arrestee.html#fig:arresteeAutomaticWeapon">7.5</a> and those used in the offense as shown in Figure <a href="offenseSegment.html#fig:offenseAutomaticWeapon">4.3</a> in Chapter <a href="offenseSegment.html#offenseSegment">4</a>. Figure <a href="arrestee.html#fig:arresteeAutomaticWeapon">7.5</a> shows that about 5.6% of rifles seized by police during an arrest were fully automatic. About 4.9% of handguns are automatic while “firearm (type not stated) are automatic in 4.3% of cases. Shotguns and”other firearm" category are the least likely to be automatic at about 2.5% and 1.1% of weapons, respectively.</p>
 <div class="figure" style="text-align: center"><span id="fig:arresteeAutomaticWeapon"></span>
 <img src="arrestee_files/figure-html/arresteeAutomaticWeapon-1.png" alt="The percent of firearms the arrestee was carrying that were fully automatic, for arrestees in 2019." width="90%" />
 <p class="caption">
@@ -762,8 +766,8 @@ Figure 7.7: For juvenile arrestees (under age 18), the distribution of case outc
 </div>
 <div id="residence-status-1" class="section level3" number="7.1.8">
 <h3><span class="header-section-number">7.1.8</span> Residence status</h3>
-<p>The first variable we’ll look at is the residence status for the arrestee. This is residence in the jurisdiction that arrested them and it has nothing to do with residence status or citizenship status in the United States. People tend to commit crimes (and the the victims of crimes) very close to where they live, so this provides some evidence for that. We don’t know where the arrestee lives, but know if they live in the jurisdiction or not. This is useful because some areas (e.g. Las Vegas, Washington DC, urban city centers where people commute to work) likely have a lot more people moving into those areas during the day but who live else compared to places like rural towns or suburbs. So it’s helpful to be able to distinguish locals arrested with people may be tourists or come into town just to commit the crime.<a href="#fn37" class="footnote-ref" id="fnref37"><sup>37</sup></a></p>
-<p>One thing to be cautious about is that residence status may be an imprecise measure of where someone actually lives. How it’s defined may differ by agency which could affect comparability across agencies. For example, if it’s defined as official residence (such as address on a driver’s license) that may be incorrect for a sizable share of the population (e.g. many college students live far from where their driver’s license address is).<a href="#fn38" class="footnote-ref" id="fnref38"><sup>38</sup></a> If residence status is based on asking the arrestee, they may of course lie to the police. There’s also the question of how to label people who are truly transient such as homeless people who may move from city to city.</p>
+<p>The first variable we’ll look at is the residence status for the arrestee. This is residence in the jurisdiction that arrested them and it has nothing to do with residence status or citizenship status in the United States. People tend to commit crimes (and the the victims of crimes) very close to where they live, so this provides some evidence for that. We don’t know where the arrestee lives, but know if they live in the jurisdiction or not. This is useful because some areas (e.g. Las Vegas, Washington DC, urban city centers where people commute to work) likely have a lot more people moving into those areas during the day but who live else compared to places like rural towns or suburbs. So it’s helpful to be able to distinguish locals arrested with people may be tourists or come into town just to commit the crime.<a href="#fn38" class="footnote-ref" id="fnref38"><sup>38</sup></a></p>
+<p>One thing to be cautious about is that residence status may be an imprecise measure of where someone actually lives. How it’s defined may differ by agency which could affect comparability across agencies. For example, if it’s defined as official residence (such as address on a driver’s license) that may be incorrect for a sizable share of the population (e.g. many college students live far from where their driver’s license address is).<a href="#fn39" class="footnote-ref" id="fnref39"><sup>39</sup></a> If residence status is based on asking the arrestee, they may of course lie to the police. There’s also the question of how to label people who are truly transient such as homeless people who may move from city to city.</p>
 <p>Figure <a href="arrestee.html#fig:arresteeResidenceStatus">7.8</a> shows the percent of arrestees in 2019 who were residence or not (or whose status was unknown) of the jurisdiction that arrested them. Most people were arrested near they live, with 56.9% of arrestees being residents, compared with 23.3% not being residents. However, about one-fifth of arrestees had an unknown residence status so the percents of resident and non-resident may change dramatically if we didn’t have any unknowns.</p>
 <div class="figure" style="text-align: center"><span id="fig:arresteeResidenceStatus"></span>
 <img src="arrestee_files/figure-html/arresteeResidenceStatus-1.png" alt="The distribution of residence status for all arrestees reported to NIBRS in 2019. Residence status is residence in the arresting agency's jurisdiction (e.g. do you live in the city you were arrested in?). It is unrelated to citizenship or immigration status." width="90%" />
@@ -794,7 +798,7 @@ Figure 7.10: The sex of all arrestees reported in the 2019 NIBRS data.
 </div>
 <div id="race-2" class="section level4" number="7.1.8.3">
 <h4><span class="header-section-number">7.1.8.3</span> Race</h4>
-<p><a href="#fn39" class="footnote-ref" id="fnref39"><sup>39</sup></a></p>
+<p><a href="#fn40" class="footnote-ref" id="fnref40"><sup>40</sup></a></p>
 <div class="figure" style="text-align: center"><span id="fig:arresteeRace"></span>
 <img src="arrestee_files/figure-html/arresteeRace-1.png" alt="The race of all arrestees reported in the 2019 NIBRS data." width="90%" />
 <p class="caption">
@@ -821,9 +825,10 @@ Figure 7.12: The ethnicity of all arrestees reported in the 2019 NIBRS data.
 <div class="footnotes">
 <hr />
 <ol start="37">
-<li id="fn37"><p>In a ridealong I was on a woman who lived over an hour from the city I was in was caught shoplifting clothes.<a href="arrestee.html#fnref37" class="footnote-back">↩︎</a></p></li>
-<li id="fn38"><p>One another ridealong a man from Florida was arrested for stealing from a local store (in California).<a href="arrestee.html#fnref38" class="footnote-back">↩︎</a></p></li>
-<li id="fn39"><p>I’ve been told that measuring race at all is itself racist so should never been done, even in research. This from a group of people who also said they have no need to actually evaluate police racial bias properly (i.e. using a regression with control variables) since they already knew the answers. If you agree with this, please don’t ever do research on anything, you’ll do it poorly.<a href="arrestee.html#fnref39" class="footnote-back">↩︎</a></p></li>
+<li id="fn37"><p>It’s not clear whether they actually test it or simply go by the design of the gun, such as if the model allows for fully automatic firing.<a href="arrestee.html#fnref37" class="footnote-back">↩︎</a></p></li>
+<li id="fn38"><p>In a ridealong I was on a woman who lived over an hour from the city I was in was caught shoplifting clothes.<a href="arrestee.html#fnref38" class="footnote-back">↩︎</a></p></li>
+<li id="fn39"><p>One another ridealong a man from Florida was arrested for stealing from a local store (in California).<a href="arrestee.html#fnref39" class="footnote-back">↩︎</a></p></li>
+<li id="fn40"><p>I’ve been told that measuring race at all is itself racist so should never been done, even in research. This from a group of people who also said they have no need to actually evaluate police racial bias properly (i.e. using a regression with control variables) since they already knew the answer. If you agree with this, please don’t ever do research on anything, you’ll do it poorly.<a href="arrestee.html#fnref40" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

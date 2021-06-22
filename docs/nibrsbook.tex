@@ -132,14 +132,14 @@
 
 \title{National Incident-Based Reporting System (NIBRS) Data: A Practitioner's Guide}
 \author{Jacob Kaplan}
-\date{2021-06-20}
+\date{2021-06-21}
 
 \begin{document}
 \maketitle
 
 {
 \hypersetup{linkcolor=}
-\setcounter{tocdepth}{3}
+\setcounter{tocdepth}{4}
 \tableofcontents
 }
 \listoftables
@@ -154,7 +154,7 @@ So why do people so frequently talk about crime as rates per total population? W
 
 While UCR data is the predominant dataset in criminology and the one that truly guides America's perceptions of crime, there is actually one that is far more detailed and allows us do a much better (though far from perfect) measure of crime victimization by a number of victim traits. This dataset, called the National Incident-Based Reporting System - and often called by its abbreviation NIBRS - provides demographics information about each victim of crime. Like the UCR this is a dataset from the FBI which standardizes information from agencies in the United States so it is comparable across agencies and over time (with some caveats). This data includes the age, race, gender, and the relationship of the victim to the offender for every known victim. We also have info about the offense such as which crimes occurred (and unlike the UCR, incidents can have multiple offenses), where and when it occurred, and what weapons (if any) were used. And we have demographic information about offenders, and whether they were arrested (including the type of arrest such as if the police had a warrant and arrested them or saw them committing the crime and arrested them at the scene). From this we can figure out victimization rates based on certain (though not all) victim characteristics.
 
-Of course, the research opportunities from this highly detailed data extend far beyond mere victimization rates. Personally I've used the data to examine topics ranging from marijuana decriminalization and domestic violence injuries to daylight saving time's effect on crime clearance. As of this writing in early summer 2021, \href{https://scholar.google.com/scholar?as_ylo=2017\&q=NIBRS\&hl=en\&as_sdt=0,44}{Google Scholar has over 1,500 results for NIBRS research since 2017}. As the FBI has said that starting in 2021 NIBRS data will completely replace UCR data, this is \emph{the} crime dataset of the future (though I believe that UCR will still be heavily used for many years to come). For graduate students and early career researchers, this is likely the dataset that you'll use for your entire career.
+Of course, the research opportunities from this highly detailed data extend far beyond mere victimization rates. Personally, I've used the data to examine topics ranging from marijuana decriminalization and domestic violence injuries to daylight saving time's effect on crime clearance. As of this writing in early summer 2021, \href{https://scholar.google.com/scholar?as_ylo=2017\&q=NIBRS\&hl=en\&as_sdt=0,44}{Google Scholar has over 1,500 results for NIBRS research since 2017}. As the FBI has said that starting in 2021 NIBRS data will completely replace UCR data, this is \emph{the} crime dataset of the future (though I believe that UCR will still be heavily used for many years to come). For graduate students and early career researchers, this is likely the dataset that you'll use for your entire career.
 
 \hypertarget{goal-of-the-book}{%
 \section{Goal of the book}\label{goal-of-the-book}}
@@ -648,7 +648,7 @@ Every line of code you write (or, for SPSS users, click you make) invites the po
 \hypertarget{administrative-and-window-exceptional-clearance-segment}{%
 \chapter{Administrative and Window Exceptional Clearance Segment}\label{administrative-and-window-exceptional-clearance-segment}}
 
-The Administrative Segment provides information about the incident itself, such as how many victims or offenders there were. In practice this means that it tells us how many other segments - offense, victim, offender, and arrestee segments - there are for this particular incident. It also has several important variables at the incident-level such as what hour of the day the incident occurred and whether the incident date variable is actually just the date the incident was reported. Finally, it tells us whether the case was cleared exceptionally and, if so, what type of exceptional clearance it was. This can tell us, for example, how many crimes was cleared because the offender died or the victim refused to cooperate. As the UCR data doesn't differentiate between normal clearances (i.e.~arrest the offender) and exceptional clearances, this provides a far deeper understanding of case outcomes.
+The Administrative Segment provides information about the incident itself, such as how many victims or offenders there were. In practice this means that it tells us how many other segments - offense, victim, offender, and arrestee segments - there are for this particular incident. It also has several important variables at the incident-level such as what hour of the day the incident occurred and whether the incident date variable is actually just the date the incident was reported. Finally, it tells us whether the case was cleared exceptionally and, if so, what type of exceptional clearance it was. This can tell us, for example, how many crimes were cleared because the offender died or the victim refused to cooperate. As the UCR data doesn't differentiate between normal clearances (i.e.~arrest the offender) and exceptional clearances, this provides a far deeper understanding of case outcomes.
 
 \hypertarget{important-variables}{%
 \section{Important variables}\label{important-variables}}
@@ -682,7 +682,7 @@ We can also look at the days of the month to see if there is any variation here.
 \caption{The percent of crimes that occur (the day of the incident, even if the crime wasn't reported that day) each day of the month for all agencies reporting to NIBRS in 2019.}\label{fig:administrativeMonthDayIncident}
 \end{figure}
 
-The above graph showed the days of the month where the incident was said to occur. There is also a variable that says if the date include was the incident date or the date the crime was reported to the police. Figure \ref{fig:administrativeMonthDayReport} replicates Figure \ref{fig:administrativeMonthDayIncident} but now shows only report dates rather than incident date. There's still a spike for the 1st and 15th but they are very small now and comparable to other days of the month. This provides even more evidence that the incident date spike on the 1st and 15th of the month is just an artifact of agencies putting unknown dates there, rather than a true increase in crime on those days.
+The above graph showed the days of the month where the incident was said to occur. There is also a variable that says if the date included was the incident date or the date the crime was reported to the police. Figure \ref{fig:administrativeMonthDayReport} replicates Figure \ref{fig:administrativeMonthDayIncident} but now shows only report dates rather than incident date. There's still a spike for the 1st and 15th but they are very small now and comparable to other days of the month. This provides even more evidence that the incident date spike on the 1st and 15th of the month is just an artifact of agencies putting unknown dates there, rather than a true increase in crime on those days.
 
 \begin{figure}
 
@@ -696,9 +696,9 @@ The above graph showed the days of the month where the incident was said to occu
 \hypertarget{hour-of-incident}{%
 \subsection{Hour of incident}\label{hour-of-incident}}
 
-An extremely important aspect of crime data is when exactly the crime occurs. If, for example, crime always spikes when the local high school ends their day that would likely indicate that high school students are involved with crime (both as victims-offenders). In my own research on daylight saving time-crime I only care about the sunset hours, which is when daylight saving time would affect outdoor lighting. When crime happens also would affect police behavior as they'd likely increase patrol during times of elevated crime. Luckily NIBRS data does have the time of each incident, though it's only at the hour level.
+An extremely important aspect of crime data is when exactly the crime occurs. If, for example, crime always spikes when the local high school ends their day that would likely indicate that high school students are involved with crime (both as victims-offenders). In my own research on daylight saving time-crime I only care about the sunset hours, which is when daylight saving time would affect outdoor lighting. When crime happens also would affect police behavior as they'd likely increase patrol during times of elevated crime. Luckily, NIBRS data does have the time of each incident, though it's only at the hour level.
 
-Figure @reg(fig:administrativeHours) shows the total number of crimes that occurred in the 2019 NIBRS data for each hour of the day. There are two key trends in this figure. First, past research has found that crime tends to increase during the night (this is especially true during weekends), drop to a daily low in the couple of hours before sunrise, and then slowly increase as the day progresses.\footnote{In all of the police ridealongs I've been on the police tend to stop patrolling in early morning (e.g.~3-4am) and go back to the station to do paperwork. I think this likely partially explains the findings that crime is lowest around 4-5am.} What we find here is a little different. Crime peaks at night at 5-5:59pm which is far earlier than other estimates. Since this is all crimes it could be biased by large increases of certain crimes at this time, such as people coming home from work and finding their house burgled. As crime differ in their timing (e.g.~burglary happens often during the day, fights are more common at night), you'll need to merge this segment with the Offense Segment to be able to look at certain types of crimes alone.
+Figure \ref{fig:administrativeHours} shows the total number of crimes that occurred in the 2019 NIBRS data for each hour of the day. There are two key trends in this figure. First, past research has found that crime tends to increase during the night (this is especially true during weekends), drop to a daily low in the couple of hours before sunrise, and then slowly increase as the day progresses.\footnote{In all of the police ridealongs I've been on the police tend to stop patrolling in early morning (e.g.~3-4am) and go back to the station to do paperwork. I think this likely partially explains the findings that crime is lowest around 4-5am.} What we find here is a little different. Crime peaks at night at 5-5:59pm which is far earlier than other estimates. Since this is all crimes it could be biased by large increases of certain crimes at this time, such as people coming home from work and finding their house burgled. As crime differ in their timing (e.g.~burglary happens often during the day, fights are more common at night), you'll need to merge this segment with the Offense Segment to be able to look at certain types of crimes alone.
 
 The second key trend is the large spike at midnight-12:59am and at noon-12:59pm. The midnight spike certainly seems far too large to be real. The midnight hour is more than double that of neighboring hours, and reverses the trend in the hours before it. Crime increases more at night (though not as much here as in other studies of this topic) but not by such a massive amount. The noon hour is about 50\% larger than in the neighboring hours, so is a sizable increase though continues the trend of increasing crime during the day and is a far smaller increase than at midnight. It seems unlikely that this spike is real, though potentially some of it could be. For example, if a lot of people take their lunch at noon then there could be an increase of crime (such as pickpocketing and purse snatching) when these people gather at restaurants and malls to eat. So what are these spikes? There is no option to say that the hour is unknown so the police must put something in, and it seems that they put midnight and noon as the default ``unknown hour'' hour.\footnote{To my knowledge these spikes are not discussed in papers that use NIBRS data other than in my own papers.} Given this, I recommend that you remove the midnight and noon hour from any analysis you do where the time of day is relevant.
 
@@ -714,7 +714,7 @@ The second key trend is the large spike at midnight-12:59am and at noon-12:59pm.
 \hypertarget{exceptional-clearance}{%
 \subsection{Exceptional clearance}\label{exceptional-clearance}}
 
-When we speak of clearances we generally mean that a person was arrested for the crime.\footnote{While a more expansive definition may include a conviction in a court for that crime (including pleading guilty), NIBRS data only extends to the arrest stage so we never know the judicial outcome of the case.} Cases may also be cleared ``through exceptional means'' which is also called an ``exceptional clearance.'' An exceptional clearance means that the police has identified who the offender (in cases with multiple offenders, they need to identify only one offender), have sufficient evidence and ability (e.g.~know where they are) to arrest this offender but are unable to do so for some reason. Basically, if they could arrest them they would but for some reason they can't. NIBRS data tells us if the case is exceptionally cleared as well as the reason for the exceptional clearance. When an incident is exceptionally cleared the data also tells us the data that the case was exceptionally cleared up.
+When we speak of clearances we generally mean that a person was arrested for the crime.\footnote{While a more expansive definition may include a conviction in a court for that crime (including pleading guilty), NIBRS data only extends to the arrest stage so we never know the judicial outcome of the case.} Cases may also be cleared ``through exceptional means'' which is also called an ``exceptional clearance.'' An exceptional clearance means that the police have identified who the offender is (in cases with multiple offenders, they need to identify only one offender), have sufficient evidence and ability (e.g.~know where they are) to arrest this offender but are unable to do so for some reason. Basically, if they could arrest them they would but for some reason they can't. NIBRS data tells us if the case is exceptionally cleared as well as the reason for the exceptional clearance.
 
 Exceptional clearances are quite rare, making up only about 5\% of cases. Figure \ref{fig:administrativeExceptionalClearances} shows the breakdown of reasons why the case was cleared for these \textasciitilde5\% of cases that are exceptionally cleared. The most common reason, at 47.3\% of exceptional clearances, is that the victim refused to cooperate with the police or prosecution. This can include cases where the victim reported their crime to the police and then later decide to stop assisting. The next most common reason, at 45.3\% of exceptionally cleared cases, is that the prosecution decides to not prosecute the case. This excludes cases where the prosecution believes that there is not probably cause to make the arrest. Therefore it largely includes cases that the prosecution either doesn't believe they could win or where the agency has a policy of non-prosecution - this is likely increasingly common in jurisdiction which has ``progressive prosecutors'' who de facto legalize certain crimes.\footnote{Of course this is an empirical question and one that could potentially be examined through NIBRS data. Unfortunately, progressive prosecutors are generally found in large urban cities (e.g.~Philadelphia), which also tend to not report NIBRS data.}
 
@@ -732,7 +732,7 @@ The next most common group is when the offender is a juvenile and the police cho
 \hypertarget{number-of-other-segments}{%
 \subsection{Number of other segments}\label{number-of-other-segments}}
 
-The ``Administrative'' part of this segment is that it tells us about other segments related to this incident. Here we know how many Offense, Offender, Victim, and Arrestee segments there are for the incident. In effect it says how many crime were committed, offenders involved (at least the number known to police), victims involved, and people arrested for this particular incident. This can be useful both as a check to make sure you're not missing anything when looking at the other segments and to quickly subset data, such as to only single-victim or only multiple-offender incidents.
+The ``Administrative'' part of this segment is that it tells us about other segments related to this incident. Here we know how many Offense, Offender, Victim, and Arrestee segments there are for the incident. In effect it says how many crimes were committed, offenders involved (at least the number known to police), victims involved, and people arrested for this particular incident. This can be useful both as a check to make sure you're not missing anything when looking at the other segments and to quickly subset data, such as to only single-victim or only multiple-offender incidents.
 
 \hypertarget{offense-segments}{%
 \subsubsection{Offense Segments}\label{offense-segments}}
@@ -816,8 +816,8 @@ Figure \ref{fig:administrativeArrestsAny} shows this analysis by giving the perc
 \caption{The percent of incidents by number of offenders where at least one offender is arrested.}\label{fig:administrativeArrestsAny}
 \end{figure}
 
-\hypertarget{offense-segment-1}{%
-\chapter{Offense Segment}\label{offense-segment-1}}
+\hypertarget{offenseSegment}{%
+\chapter{Offense Segment}\label{offenseSegment}}
 
 This segment provides information about the offense that occurred, and each incident can have multiple offenses. This data tells you which offense occurred and for a subset of offenses it also provides a more detailed subcategory of offense, allowing a deeper dive into what exactly happened. For example, for animal abuse there are four subcategories of offenses: simple/gross neglect of an animal, intentional abuse or torture, animal sexual abuse (bestiality), and organized fighting of animals such as dog or cock fights. This segment also says what date the crime occurred on, where the crime occurred - in categories such as residence or sidewalk rather than exact coordinates in a city - whether the offender is suspected of using drugs, alcohol, or a computer, and which weapon was used. In cases where the weapon was a firearm it says whether that weapon was fully automatic or not. It also provides information on if the crime was a hate crime by including a variable on the bias motivation (if any) of the offender. This is based on evidence that the crime was motivated, at least in part, by the victim's group (e.g.~race, sexuality, religion, etc.). There are 34 possible bias motivations and while hate crimes could potentially be motivated by bias against multiple groups, this data only allows for a single bias motivation.
 
@@ -1662,7 +1662,7 @@ This figure shows the percent of offenders at each age that make up known offend
 \caption{The age of all offenders reported in the 2019 NIBRS data. Approximately 39 percent of offenders have an unknown age are an not shown in the figure.}\label{fig:offenderAge}
 \end{figure}
 
-The spike you see at the very end of the data is due to the data maxing out possible individual ages at 98, so anyone older is grouped together. There's also a spike at age 1 - and other offenders at very young ages - , the youngest possible age. Surely very young children aren't going around attacking people, so is this a data error? Potentially yes. But it could actually be real as there are very rare cases where children harm or kill someone while playing with a gun and are included in the data. These aren't crimes as we conventionally think of them - and won't be criminally charged - but are still included in the data.
+The spike you see at the very end of the data is due to the data maxing out possible individual ages at 98, so anyone older is grouped together. There's also a spike at age 1 - and other offenders at very young ages - , the youngest possible age. Surely very young children aren't going around attacking people, so is this a data error? Potentially yes. But it could actually be real as there are very rare cases where children harm or kill someone while playing with a gun and are included in the data. These aren't crimes as we conventionally think of them - and won't be criminally charged - but are still included in the data. However, the bulk of this, especially for age 0, is likely just a data error or the police entering age 0 instead of saying that the age is unknown.
 
 Another indicator of guesses about age is that three of the five most common ages are 25, 30, and 20 years old. People tend to like multiples of five when making estimates, so these indicate that someone (the victim or the officer) probably didn't know the exact age and so guessed the age.
 
@@ -1687,7 +1687,7 @@ The final variable available is the race of the offender. The only possible race
 
 Figure \ref{fig:offenderRace} shows the breakdown in offender races for every offender in the 2019 data. The most common offender race is Unknown, with about 38.5\% of offenders not having a known race. This 38.5\% of actually an undercount as in cases where the agency doesn't known anything about the offenders they'll put down a single offender with ``unknown'' for every demographics variable. So there could potentially be multiple offenders represented when there is a row with a unknown offender race. This is also dependent on the type of crimes committed and when they are committed. For example, a daytime robbery would likely have a known offender race as the victim can clearly see (complexities about identifying people's race aside) the race of the robber. A daytime burglary where no one is home would likely have an unknown offender race and there'd be no witnesses.\footnote{When NIBRS 2020 data comes out it'll be interesting to see how people staying at home effects the amount of unknown offender info.} Likewise, a robbery at night could have an unknown offender race because the darkness makes it harder to identify people.
 
-The next most common offender race is White at 38.7\% followed by Black at 22.1\%. The remaining races make up only a little over 1.5\% of offenders, with American Indian/Alaskan Native at 0.77\%, Asian/Pacific Islander at 0.63\%, and Native Hawaiian/Other Pacific Islander at 0.24\%.
+The next most common offender race is White at 38.7\% followed by Black at 22.1\%. The remaining races make up only a little over 1.5\% of offenders, with American Indian/Alaskan Native at 0.77\%, Asian at 0.63\%, and Native Hawaiian/Other Pacific Islander at 0.24\%.
 
 \begin{figure}
 
@@ -2033,13 +2033,26 @@ Only for when victim is individual or law enforcement officer
 
 The Arrestee Segment has information that is largely available in other segments. For example, it has information on the arrestee's age, sex, and race which is the same as in the Offender Segment for that individual, and adds only ethnicity and residency status (of the city, not as a United States citizen) to the available demographics variables. It also says the crime the arrestee was arrested for, the weapon used and if the weapon (if it is a firearm) was an automatic weapon, all of which is available in the Offense Segment. There are a few new variables, however, including the date of the arrest and the type of arrest. The type of arrest is simply whether the person was arrested by police who viewed the crime, if the arrest followed an arrest warrant or a previous arrest (i.e.~arrested for a different crime and then police find out you also committed this one so consider you arrested for this one too), and whether the person was cited by police and ordered to appear in court but not formally taken into custody. Finally, for juvenile arrestees it says whether arrestees were ``handled within the department'' which means they were released without formal sanctions or were ``referred to other authorities'' such as juvenile or criminal court, a welfare agency, or probation or parole department (for those on probation or parole).
 
+This chapter also covers the Group B Arrestee Segment and the Window Arrestee Segment. The Arrestee Segment covers arrests for Group A offenses and there are corresponding Offense, Offender, and Victim segments for these incidents. Group B offenses, however, only have information about the arrest so incidents in this segment do not have any corresponding segments with it. Since Group B only has arrests without any associated incident, instead of the incident number variable like other segments have, this segment has an ``arrest transaction incident number'' which works the same as a normal incident number. Likewise, the Window Arrestee Segment isn't associated with any other segments as the ``window'' part means that they are only partial reports. The Window Arrestee Segment has the same variables as the normal Arrestee Segment but also has 10 variables on each of the offenses committed (up to 10 offenses) during the incident. This is really to try to provide a bit of information that you'd otherwise get from the other segments but don't since this is a window segment.
+
+For the rest of this chapter I'll be using examples from the Arrestee Segment and not the Group B Arrestee (except for a table showing each Group B offense) or the Window Arrestee Segment.
+
 \hypertarget{important-variables-4}{%
 \section{Important variables}\label{important-variables-4}}
 
-\hypertarget{crime-arrested-for-excluding-group-b-arrests}{%
-\subsection{Crime arrested for (excluding Group B arrests)}\label{crime-arrested-for-excluding-group-b-arrests}}
+In addition to the variables detailed below this segment has the tradition agency and incident identifiers: the ORI code, the agency state, the year of this data, and the incident number. It also has an ``arrestee sequence number'' which is an identifier for an arrestee in an incident since incidents can have multiple arrests. This is just the number of each arrestee and to my knowledge is not associated with how involved the arrestee is. Being the 1st arrestee, for example, doesn't mean that individual played a greater role in the crime than the 2nd arrestee.
 
-As Table \ref{tab:arresteeCrime} shows\ldots{}
+\hypertarget{crimes-arrested-for}{%
+\subsection{Crimes arrested for}\label{crimes-arrested-for}}
+
+This segment tells us which offense the arrestee was arrested for. There are a couple of caveats with this data. First, there can be up to 10 crimes per incident but this segment only tells you the most serious offense (based on the agency's decision of which is most serious). This can be solved partially by merging this segment with the Offense Segment and getting all of the offenses related to the incident. It's only partially solved because the crime the person is arrested for may not necessarily be the crime involved in the incident. This is because a person can be arrested for a certain crime (e.g.~shoplifting) and then the police find out that there are also responsible for a more serious crime (e.g.~aggravated assault). Their arrest crime is shoplifting and they'll be associated with the incident for the aggravated assault.
+
+One interesting part of this segment is that while it's associated with Group A offenses, as someone may be arrested for a crime other than the crime in the incident, arrests can include Group B offenses. So the Group B Arrestee Segment can really be thought of as an arrest for a Group B offense where the arrestee isn't associated with a previous Group A incident (other than ones that already led to an arrest). We'll look first at the crimes people were arrested for in the main Arrestee Segment, which includes both Group A and Group B offenses as possible arrest crimes, and then at the Group B Arrestee Segment which only includes Group B offenses.
+
+\hypertarget{arrestee-segment-arrest-crimes}{%
+\subsubsection{Arrestee Segment arrest crimes}\label{arrestee-segment-arrest-crimes}}
+
+Table \ref{tab:arresteeCrime} shows the number and percent of arrests for all arrests associated with a Group A crime incident. Perhaps unsurprising, drug crimes are the most common arrest making up a quarter of all arrests (30\% when including drug equipment crimes). Simple assault (assault without a weapon or without seriously injuring the victim) is the next most common at 19\% of arrests, and aggravated assault is the 4th most common arrest crime at 6.3\% of arrests. Theft, which NIBRS breaks into a number of subcategories of theft such as shoplifting and ``all other larceny'' is among the most common arrest crimes, making up ranks 3 and 6 of the top 6, as well as several other subcategories later on. The remaining crimes are all relatively rare, consisting of under 5\% of arrests each. This is due to a mix of the large concentration of drug and assault crimes as both arrests and overall crimes (more crimes of a certain category artificially inflates its share of arrests) and how the top crimes are broad categories (e.g.~drug offenses ranges from simple possession to large scale sales) while other crimes are specific (e.g.~purse-snatching is a very specific form of theft).
 
 \begin{longtable}[]{@{}lrr@{}}
 \caption{\label{tab:arresteeCrime}The number and percent of arrests for Group A crimes for all arrests reported to NIBRS in 2019.}\tabularnewline
@@ -2117,8 +2130,12 @@ Total & 2,028,028 & 100\%\tabularnewline
 \bottomrule
 \end{longtable}
 
-\hypertarget{group-b-crimes-arrested-for}{%
-\subsection{Group B crimes arrested for}\label{group-b-crimes-arrested-for}}
+\hypertarget{group-b-segment-arrest-crimes}{%
+\subsubsection{Group B Segment arrest crimes}\label{group-b-segment-arrest-crimes}}
+
+Table \ref{tab:GroupBarresteeCrime} shows the number and percent of arrests for all arrests associated with a Group A crime incident. The offense categories overlap with Table \ref{tab:arresteeCrime} but these are for separate arrests, a single arrest cannot be in both segments. Unhelpfully, the most common Group B offense is ``All other offenses'' which means that it's a crime that isn't covered in either the Group A or the Group B crime categories. However, this can also include Group A or Group B crimes if they are not completed. So an attempted or a conspiracy to commit a Group A or B crime can go in this category. At 57\% of Group B arrests, this very vague category covers a huge amount of arrests. The next most common Group B arrest is driving under the influence of drugs or alcohol, and this occurred in 18.4\% - or 352k times - of arrests.
+
+Trespassing makes up 5.7\% of arrests and this is unlawfully entering someone's property, including a building. The difference between this and burglary is that this is entering without any intent to commit theft or a felony. Disorderly conduct is a broad category ranging from indecent exposure (which should be it's own sex offense but isn't for some reason) to ``profanity'' and noise violations, and it makes up 6.2\% of arrests. So be cautious with this offense as it ranges from very minor to quite serious and there's no distinguishing what actually happened. Drunkenness and liquor law violations make up 6\% and 3.6\% of arrests, respectively. The difference is that drunkenness is when someone is seriously drunk in public (to the point where they can't control their own body) and liquor law violations are about illegal making or selling of liquor. So basically bootlegging, selling alcohol without a license (or to people not allowed to drink, like minors), or avoiding paying tax on alcohol sales. ``Family Offenses, Nonviolent'' is also a rather vague category and includes ``nonviolent abuse'' (which I guess means emotional abusive) as well as neglecting the child in a few different ways like not paying alimony and deserting the child. Since these are arrests, the actions have to reach the level of criminal behavior, simply being an awful parent (or even leaving the child, as long as they have another adult to watch them) is not this offense. Runaways is an offense that only applies to people under age 18 and is no longer collected in NIBRS. The remaining categories are all rare and none are more than 1\% of arrests.
 
 \begin{longtable}[]{@{}lrr@{}}
 \caption{\label{tab:GroupBarresteeCrime}The number and percent of arrests for Group B crimes for all arrests reported to NIBRS in 2019.}\tabularnewline
@@ -2148,6 +2165,10 @@ Total & 1,913,610 & 100\%\tabularnewline
 \hypertarget{arrest-date}{%
 \subsection{Arrest date}\label{arrest-date}}
 
+For each arrest we know the exact date of the arrest. As with the incident date, there is evidence that when agencies don't know the exact arrest date, they put down the first of the month. However, this is far less of a problem than with the incident date, likely because since the agency is doing the arresting they know exactly when they do it. Instead of looking at arrests by day of the month, we'll use both the arrest date and the incident date to look at how long it takes for crimes to get solved.
+
+Figure \ref{fig:arrestsDaysUntilArrest} shows how long it takes for arrests to be made. The shortest time is zero days which means the arrest and the incident happened on the same day and the longest is 461 days after the incident. About 76.5\% of arrests happen on the same day as the incident while 6.6\% happen on the next day. 1.4\% happen the following day and 1\% on the day after this. This trend of a lower probability of the case being solved as the time from the incident continues throughout the figure. Including dates up to 461 days is a bit ridiculous since it's impossible to see trends among the early dates other than zero days, but it's a good demonstration of how massively concentrated arrests are that occur on the same day of the incident. The lesson here is that if an arrest isn't made on the day of the incident (such as at the scene of the crime), it's very unlikely that'll it'll be made at all (and most crimes never lead to an arrest).
+
 \begin{figure}
 
 {\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/arrestsDaysUntilArrest-1} 
@@ -2156,6 +2177,8 @@ Total & 1,913,610 & 100\%\tabularnewline
 
 \caption{The distribution of the number of days from the incident to the arrest date. In 2019 the maximum days from incident to arrest was 461 days. Zero days means that the arrest occurred on the same day as the incident.}\label{fig:arrestsDaysUntilArrest}
 \end{figure}
+
+Figure \ref{fig:arrestsDaysUntilArrestBarplot} groups the larger number of days together to make it easier to see trends early after the incident. Here we can see much better how the percent of arrests move quickly downwards after zero days.
 
 \begin{figure}
 
@@ -2180,6 +2203,8 @@ All crimes can potentially have a weapon
 \caption{The weapon found on the arrestee for all arrestees reported in 2019.}\label{fig:arresteeWeapon}
 \end{figure}
 
+To see the weapons carried when the arrestee had a weapon, Figure \ref{fig:arresteeWeaponArmed} shows the breakdown in which weapon they carried. About 43.8\% of people arrested who had a weapon were carrying a handgun followed by 30\% with some kind of ``lethal cutting instrument'' like a knife. While rifles, and especially ``assault rifles'', are what people (and especially politicians and the media) focus on when talking about violent crime, handguns are actually the most common gun to be used in a crime so it makes sense that handguns are the most frequently found weapon. ``Firearm (type not stated)'' basically means that the type of firearm used is unknown so can belong in one of the firearm categories and makes up 9\% of weapons. Blunt instruments (including bats, clubs, and brass knuckles) follow at 6.9\% of weapons. And the remaining weapons included are ``other firearm'' (so any other than ones specified) at 5.8\%, rifle at 2.3\%, and shotgun at 2\%.
+
 \begin{figure}
 
 {\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/arresteeWeaponArmed-1} 
@@ -2192,7 +2217,7 @@ All crimes can potentially have a weapon
 \hypertarget{automatic-weapons-1}{%
 \subsection{Automatic weapons}\label{automatic-weapons-1}}
 
-This variable only tells you if the weapon is automatic
+This variable tells you if the weapon the arrestee was carrying was a gun whether that gun was fully automatic. To be clear, this means that when you pull the trigger once the gun will fire multiple bullets. Semi-automatic firearms are not automatic firearms. The Offense Segment also has a variable indicating if the offender used an automatic weapon but there they didn't necessarily recover the gun so it's much less reliable than in this segment where the police have the gun and are able to test it.\footnote{It's not clear whether they actually test it or simply go by the design of the gun, such as if the model allows for fully automatic firing.} The percent of guns that are fully automatic are fairly similar between the weapons seized at arrest, as shown in Figure \ref{fig:arresteeAutomaticWeapon} and those used in the offense as shown in Figure \ref{fig:offenseAutomaticWeapon} in Chapter \ref{offenseSegment}. Figure \ref{fig:arresteeAutomaticWeapon} shows that about 5.6\% of rifles seized by police during an arrest were fully automatic. About 4.9\% of handguns are automatic while ``firearm (type not stated) are automatic in 4.3\% of cases. Shotguns and''other firearm" category are the least likely to be automatic at about 2.5\% and 1.1\% of weapons, respectively.
 
 \begin{figure}
 
@@ -2227,8 +2252,19 @@ This variable only tells you if the weapon is automatic
 \caption{For juvenile arrestees (under age 18), the distribution of case outcomes.}\label{fig:arresteeJuvenileDisposition}
 \end{figure}
 
+\hypertarget{demographics-2}{%
+\subsection{Demographics}\label{demographics-2}}
+
+This segment provides several variables related to who the arrestee is. Age, race, and sex overlap with the Offender Segment but this segment also adds ethnicity and the whether they live in the jurisdiction of the agency (i.e.~the city the police patrols) they were arrested by.
+
 \hypertarget{residence-status-1}{%
 \subsection{Residence status}\label{residence-status-1}}
+
+The first variable we'll look at is the residence status for the arrestee. This is residence in the jurisdiction that arrested them and it has nothing to do with residence status or citizenship status in the United States. People tend to commit crimes (and the the victims of crimes) very close to where they live, so this provides some evidence for that. We don't know where the arrestee lives, but know if they live in the jurisdiction or not. This is useful because some areas (e.g.~Las Vegas, Washington DC, urban city centers where people commute to work) likely have a lot more people moving into those areas during the day but who live else compared to places like rural towns or suburbs. So it's helpful to be able to distinguish locals arrested with people may be tourists or come into town just to commit the crime.\footnote{In a ridealong I was on a woman who lived over an hour from the city I was in was caught shoplifting clothes.}
+
+One thing to be cautious about is that residence status may be an imprecise measure of where someone actually lives. How it's defined may differ by agency which could affect comparability across agencies. For example, if it's defined as official residence (such as address on a driver's license) that may be incorrect for a sizable share of the population (e.g.~many college students live far from where their driver's license address is).\footnote{One another ridealong a man from Florida was arrested for stealing from a local store (in California).} If residence status is based on asking the arrestee, they may of course lie to the police. There's also the question of how to label people who are truly transient such as homeless people who may move from city to city.
+
+Figure \ref{fig:arresteeResidenceStatus} shows the percent of arrestees in 2019 who were residence or not (or whose status was unknown) of the jurisdiction that arrested them. Most people were arrested near they live, with 56.9\% of arrestees being residents, compared with 23.3\% not being residents. However, about one-fifth of arrestees had an unknown residence status so the percents of resident and non-resident may change dramatically if we didn't have any unknowns.
 
 \begin{figure}
 
@@ -2239,11 +2275,12 @@ This variable only tells you if the weapon is automatic
 \caption{The distribution of residence status for all arrestees reported to NIBRS in 2019. Residence status is residence in the arresting agency's jurisdiction (e.g. do you live in the city you were arrested in?). It is unrelated to citizenship or immigration status.}\label{fig:arresteeResidenceStatus}
 \end{figure}
 
-\hypertarget{demographics-2}{%
-\subsection{Demographics}\label{demographics-2}}
-
 \hypertarget{age-2}{%
 \subsubsection{Age}\label{age-2}}
+
+This variable is the age at the arrest, which may be different than age during the crime. As in the Offender Segment we are giving the exact age (in years) but agencies can input a range of possible ages with the FBI giving up the average of this range (rounding down, not to the nearest integer) in the data. In Figure \ref{fig:offenderAge} in the Offense Segment, this can be seen in the sudden spikes in the percent of offenders of a certain age and that some of the most common ages are divisible by five (e.g.~20, 25, 30). There are also far fewer unknown ages in this data with only 0.1\% of arrestees having a missing age. This is reasonable as a person arrested is present for the police to learn their age from something like a driver's license or past criminal records, or estimate the age by looking at the arrestee. Like the Offender Segment, age as a specific year is cutoff at 98 with all older ages grouped simply as ``over 98 years old''.
+
+Figure \ref{fig:arresteeAge} shows the percent of arrestees at every age available. Relative to Figure \ref{fig:offenderAge}, this graph is far smoother, indicating that there was less estimating ages and more knowing the actual age. While the trend is the same for both of these graphs, the arrestee data doesn't have any odd spikes with certain ages. Age we see that the percent of people arrested increases as they age, peaking in the early twenties before declining and then peaking age even higher in the late 20s. After this, there is a long steady decline as the arrestee ages.
 
 \begin{figure}
 
@@ -2257,6 +2294,8 @@ This variable only tells you if the weapon is automatic
 \hypertarget{sex-2}{%
 \subsubsection{Sex}\label{sex-2}}
 
+We also know the sex of the arrestee. The only options for this variable are male and female and there is never missing data so the police always choose one of these two choices. There is no option for transgender or any other identity. Figure \ref{fig:arresteeSex} shows the distribution of arrestees by sex. The vast majority, 70.5\% of arrestees are male and the remaining 29.5\% are female. This is a higher rate of female arrestees than you might expect - past research has found that crime is largely a male-phenomenon, even greater than found here - and that's because there are differences in sex involvement by type of crime. For rape, as an example, 97.8\% of arrestees in 2019 were male. Shoplifting was an even 50\% split between female and male arrestees.
+
 \begin{figure}
 
 {\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/arresteeSex-1} 
@@ -2269,6 +2308,8 @@ This variable only tells you if the weapon is automatic
 \hypertarget{race-2}{%
 \subsubsection{Race}\label{race-2}}
 
+\footnote{I've been told that measuring race at all is itself racist so should never been done, even in research. This from a group of people who also said they have no need to actually evaluate police racial bias properly (i.e.~using a regression with control variables) since they already knew the answer. If you agree with this, please don't ever do research on anything, you'll do it poorly.}
+
 \begin{figure}
 
 {\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/arresteeRace-1} 
@@ -2280,6 +2321,12 @@ This variable only tells you if the weapon is automatic
 
 \hypertarget{ethnicity-1}{%
 \subsubsection{Ethnicity}\label{ethnicity-1}}
+
+Finally, there is data on the race of the arrestee so we know if they are Hispanic or not. Ethnicity is so poorly used in the UCR data (e.g.~UCR stopped collecting it for arrests for most years available and most agencies still don't report it) that I recommended in the UCR book against ever using it. For NIBRS there's a less less data missing so it's not as much of a problem to use ethnicity as it is with UCR data. The issue remains as to what agencies are actually reporting this data or in which scenarios this variable is reported or not even in agencies that generally do report it.
+
+Ethnicity is an optional variable so agencies are never required to report it, so there's a greater chance that it'll be used only in non-random situations (which would make the data biased in some unknown way). There's also the question of reliability of the ethnicity data. Someone being Hispanic or not is likely just what the arrestees calls themselves or what the arresting officer perceives them to be. Both are important ways of measuring ethnicity but get at different things. Perception is more important for studies of bias, self-identification for differences among groups of people such as arrest rates by ethnicity. And the subjectivity of who is classified as Hispanic means that this measurement may differ by agency and by officer, making it imprecise.
+
+Figure \ref{fig:arresteeEthnicity} shows the breakdown in arrests by arrestee ethnicity. Most arrestees - 72.5\% - are not Hispanic. Only 10\% are reported to be Hispanic but an even higher percent of arrestees - 16.8\% - have an unknown ethnicity so the true percent or Hispanic or non-Hispanic arrestee may be very different than shown here.
 
 \begin{figure}
 

@@ -109,7 +109,7 @@ offense-segments
 offender-segments
 victim-segments
 arrestee-segments
-offense-segment-1
+offenseSegment
 important-variables-1
 crime-category
 offense-subtype
