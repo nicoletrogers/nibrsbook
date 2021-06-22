@@ -116,7 +116,7 @@ offense-subtype
 offense-completed
 drug-alcohol-or-computer-use
 crime-location
-weapons
+offenseWeapons
 automatic-weapons
 burglary-info
 hate-crime-indicator-bias-motivation
@@ -146,7 +146,7 @@ crimes-arrested-for
 arrestee-segment-arrest-crimes
 group-b-segment-arrest-crimes
 arrest-date
-weapons-1
+weapons
 automatic-weapons-1
 type-of-arrest
 disposition-for-juvenile-arrestees
