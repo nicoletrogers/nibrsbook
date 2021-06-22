@@ -252,8 +252,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="8.1" data-path="property-and-window-property-segment.html"><a href="property-and-window-property-segment.html#important-variables-5"><i class="fa fa-check"></i><b>8.1</b> Important variables</a>
 <ul>
-<li class="chapter" data-level="8.1.1" data-path="property-and-window-property-segment.html"><a href="property-and-window-property-segment.html#description-of-property"><i class="fa fa-check"></i><b>8.1.1</b> Description of property</a></li>
-<li class="chapter" data-level="8.1.2" data-path="property-and-window-property-segment.html"><a href="property-and-window-property-segment.html#type-of-property-loss"><i class="fa fa-check"></i><b>8.1.2</b> Type of property loss</a></li>
+<li class="chapter" data-level="8.1.1" data-path="property-and-window-property-segment.html"><a href="property-and-window-property-segment.html#type-of-property-loss"><i class="fa fa-check"></i><b>8.1.1</b> Type of property loss</a></li>
+<li class="chapter" data-level="8.1.2" data-path="property-and-window-property-segment.html"><a href="property-and-window-property-segment.html#description-of-property"><i class="fa fa-check"></i><b>8.1.2</b> Description of property</a></li>
 <li class="chapter" data-level="8.1.3" data-path="property-and-window-property-segment.html"><a href="property-and-window-property-segment.html#value-of-stolen-property"><i class="fa fa-check"></i><b>8.1.3</b> Value of stolen property</a></li>
 <li class="chapter" data-level="8.1.4" data-path="property-and-window-property-segment.html"><a href="property-and-window-property-segment.html#date-property-was-recovered"><i class="fa fa-check"></i><b>8.1.4</b> Date property was recovered</a></li>
 <li class="chapter" data-level="8.1.5" data-path="property-and-window-property-segment.html"><a href="property-and-window-property-segment.html#drugs"><i class="fa fa-check"></i><b>8.1.5</b> Drugs</a></li>
@@ -282,10 +282,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>For drug offenses it includes the drugs seized by police. For these offenses, the data tells us the type of drug, with 16 different drug categories ranging from specific ones like marijuana or heroin to broader categories such as “other narcotics.” There can be up to three different drugs included in this data - if the person has more than three types of drugs seized then the third drug category will simply indicate that there are more than three drugs, so we learn what the first two drugs are but not the third or greater drugs are in these cases. For each drug we also know exactly how much was seized with one variable saying the amount the police found and another saying the units we should we reading that amount as (e.g. pills, grams, plants).</p>
 <div id="important-variables-5" class="section level2" number="8.1">
 <h2><span class="header-section-number">8.1</span> Important variables</h2>
-<div id="description-of-property" class="section level3" number="8.1.1">
-<h3><span class="header-section-number">8.1.1</span> Description of property</h3>
+<div id="type-of-property-loss" class="section level3" number="8.1.1">
+<h3><span class="header-section-number">8.1.1</span> Type of property loss</h3>
+<div class="figure" style="text-align: center"><span id="fig:propertyTypeLoss"></span>
+<img src="property_files/figure-html/propertyTypeLoss-1.png" alt="The type of loss or if the item is recovered." width="90%" />
+<p class="caption">
+Figure 8.1: The type of loss or if the item is recovered.
+</p>
+</div>
+</div>
+<div id="description-of-property" class="section level3" number="8.1.2">
+<h3><span class="header-section-number">8.1.2</span> Description of property</h3>
 <table>
-<caption><span id="tab:propertyDescription">Table 8.1: </span>The number and percent of property lost, including property stolen (including forcibly taken such as during a robbery) in a crime, burned in an arson, or seized by police (generally in drug arrests), for all offenses in 2019. Each offense can have multiple items stolen/seized.</caption>
+<caption><span id="tab:propertyStolenDescription">Table 8.1: </span>The number and percent of property stolen (including forcibly taken such as during a robbery) in a crime, for all offenses in 2019. Each incident can have multiple items stolen</caption>
 <thead>
 <tr class="header">
 <th align="left">Property</th>
@@ -296,360 +305,708 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <tbody>
 <tr class="odd">
 <td align="left">Other</td>
-<td align="right">1,005,616</td>
-<td align="right">13.29%</td>
-</tr>
-<tr class="even">
-<td align="left">Drugs/Narcotics</td>
-<td align="right">714,797</td>
-<td align="right">9.45%</td>
-</tr>
-<tr class="odd">
-<td align="left">Automobiles</td>
-<td align="right">645,115</td>
-<td align="right">8.52%</td>
+<td align="right">687,291</td>
+<td align="right">14.31%</td>
 </tr>
 <tr class="even">
 <td align="left">Money</td>
-<td align="right">637,046</td>
-<td align="right">8.42%</td>
+<td align="right">564,574</td>
+<td align="right">11.75%</td>
 </tr>
 <tr class="odd">
-<td align="left">Vehicle Parts/Accessories</td>
-<td align="right">328,970</td>
-<td align="right">4.35%</td>
+<td align="left">Purses/Handbags/Wallets</td>
+<td align="right">267,044</td>
+<td align="right">5.56%</td>
 </tr>
 <tr class="even">
 <td align="left">Clothes/Furs</td>
-<td align="right">312,506</td>
-<td align="right">4.13%</td>
+<td align="right">247,128</td>
+<td align="right">5.14%</td>
 </tr>
 <tr class="odd">
-<td align="left">Drug/Narcotic Equipment</td>
-<td align="right">292,097</td>
-<td align="right">3.86%</td>
-</tr>
-<tr class="even">
-<td align="left">Purses/Handbags/Wallets</td>
-<td align="right">291,694</td>
-<td align="right">3.85%</td>
-</tr>
-<tr class="odd">
-<td align="left">Merchandise</td>
-<td align="right">266,945</td>
-<td align="right">3.53%</td>
+<td align="left">Automobiles</td>
+<td align="right">246,591</td>
+<td align="right">5.13%</td>
 </tr>
 <tr class="even">
 <td align="left">Credit/Debit Cards</td>
-<td align="right">242,981</td>
-<td align="right">3.21%</td>
+<td align="right">227,460</td>
+<td align="right">4.74%</td>
 </tr>
 <tr class="odd">
 <td align="left">Tools - Power/Hand</td>
-<td align="right">240,156</td>
-<td align="right">3.17%</td>
+<td align="right">214,257</td>
+<td align="right">4.46%</td>
+</tr>
+<tr class="even">
+<td align="left">Vehicle Parts/Accessories</td>
+<td align="right">197,125</td>
+<td align="right">4.10%</td>
+</tr>
+<tr class="odd">
+<td align="left">Merchandise</td>
+<td align="right">190,765</td>
+<td align="right">3.97%</td>
 </tr>
 <tr class="even">
 <td align="left">Consumable Goods</td>
-<td align="right">236,104</td>
-<td align="right">3.12%</td>
+<td align="right">183,699</td>
+<td align="right">3.82%</td>
 </tr>
 <tr class="odd">
-<td align="left">Portible Electronic Communications</td>
-<td align="right">201,787</td>
-<td align="right">2.67%</td>
+<td align="left">Identity Documents</td>
+<td align="right">172,335</td>
+<td align="right">3.59%</td>
 </tr>
 <tr class="even">
 <td align="left">Computer Hardware/Software</td>
-<td align="right">192,970</td>
-<td align="right">2.55%</td>
+<td align="right">170,819</td>
+<td align="right">3.56%</td>
+</tr>
+<tr class="odd">
+<td align="left">Portible Electronic Communications</td>
+<td align="right">163,689</td>
+<td align="right">3.41%</td>
+</tr>
+<tr class="even">
+<td align="left">Radios/Tvs/Vcrs</td>
+<td align="right">144,608</td>
+<td align="right">3.01%</td>
 </tr>
 <tr class="odd">
 <td align="left">Household Goods</td>
-<td align="right">192,923</td>
-<td align="right">2.55%</td>
-</tr>
-<tr class="even">
-<td align="left">Identity Documents</td>
-<td align="right">185,098</td>
-<td align="right">2.45%</td>
-</tr>
-<tr class="odd">
-<td align="left">Radios/Tvs/Vcrs</td>
-<td align="right">169,518</td>
-<td align="right">2.24%</td>
+<td align="right">127,883</td>
+<td align="right">2.66%</td>
 </tr>
 <tr class="even">
 <td align="left">Jewelry/Precious Metals</td>
-<td align="right">123,742</td>
-<td align="right">1.64%</td>
+<td align="right">110,807</td>
+<td align="right">2.31%</td>
 </tr>
 <tr class="odd">
 <td align="left">Firearms</td>
-<td align="right">117,039</td>
-<td align="right">1.55%</td>
+<td align="right">92,796</td>
+<td align="right">1.93%</td>
 </tr>
 <tr class="even">
 <td align="left">Bicycles</td>
-<td align="right">89,936</td>
-<td align="right">1.19%</td>
-</tr>
-<tr class="odd">
-<td align="left">Trucks</td>
-<td align="right">83,796</td>
-<td align="right">1.11%</td>
-</tr>
-<tr class="even">
-<td align="left">Negotiable Instruments</td>
-<td align="right">73,327</td>
-<td align="right">0.97%</td>
+<td align="right">79,115</td>
+<td align="right">1.65%</td>
 </tr>
 <tr class="odd">
 <td align="left">Identity - Intangible</td>
-<td align="right">71,331</td>
-<td align="right">0.94%</td>
+<td align="right">69,226</td>
+<td align="right">1.44%</td>
 </tr>
 <tr class="even">
-<td align="left">Structures - Single Occupancy Dwellings</td>
-<td align="right">64,507</td>
-<td align="right">0.85%</td>
-</tr>
-<tr class="odd">
 <td align="left">Alcohol</td>
-<td align="right">64,339</td>
-<td align="right">0.85%</td>
-</tr>
-<tr class="even">
-<td align="left">Documents - Personal Or Business</td>
-<td align="right">62,883</td>
-<td align="right">0.83%</td>
+<td align="right">53,190</td>
+<td align="right">1.11%</td>
 </tr>
 <tr class="odd">
-<td align="left">Building Materials</td>
-<td align="right">54,091</td>
-<td align="right">0.71%</td>
+<td align="left">Documents - Personal Or Business</td>
+<td align="right">51,234</td>
+<td align="right">1.07%</td>
+</tr>
+<tr class="even">
+<td align="left">Negotiable Instruments</td>
+<td align="right">44,881</td>
+<td align="right">0.93%</td>
+</tr>
+<tr class="odd">
+<td align="left">Drugs/Narcotics</td>
+<td align="right">44,833</td>
+<td align="right">0.93%</td>
 </tr>
 <tr class="even">
 <td align="left">Office-Type Equipment</td>
-<td align="right">53,707</td>
-<td align="right">0.71%</td>
+<td align="right">42,147</td>
+<td align="right">0.88%</td>
 </tr>
 <tr class="odd">
-<td align="left">Lawn/Yard/Garden Equipment</td>
-<td align="right">48,398</td>
-<td align="right">0.64%</td>
+<td align="left">Trucks</td>
+<td align="right">40,316</td>
+<td align="right">0.84%</td>
 </tr>
 <tr class="even">
-<td align="left">Other Motor Vehicles</td>
-<td align="right">46,222</td>
-<td align="right">0.61%</td>
+<td align="left">Lawn/Yard/Garden Equipment</td>
+<td align="right">39,321</td>
+<td align="right">0.82%</td>
 </tr>
 <tr class="odd">
 <td align="left">Nonnegotiable Instruments</td>
-<td align="right">41,596</td>
-<td align="right">0.55%</td>
+<td align="right">29,177</td>
+<td align="right">0.61%</td>
 </tr>
 <tr class="even">
-<td align="left">Structures - Other</td>
-<td align="right">33,265</td>
-<td align="right">0.44%</td>
+<td align="left">Other Motor Vehicles</td>
+<td align="right">28,049</td>
+<td align="right">0.58%</td>
 </tr>
 <tr class="odd">
-<td align="left">Trailers</td>
-<td align="right">30,124</td>
-<td align="right">0.40%</td>
-</tr>
-<tr class="even">
 <td align="left">Recreational/Sports Equipment</td>
-<td align="right">29,946</td>
-<td align="right">0.40%</td>
-</tr>
-<tr class="odd">
-<td align="left">Structures - Commercial/Business</td>
-<td align="right">27,401</td>
-<td align="right">0.36%</td>
+<td align="right">25,509</td>
+<td align="right">0.53%</td>
 </tr>
 <tr class="even">
-<td align="left">Structures - Other Dwellings</td>
-<td align="right">23,936</td>
-<td align="right">0.32%</td>
+<td align="left">Trailers</td>
+<td align="right">23,624</td>
+<td align="right">0.49%</td>
 </tr>
 <tr class="odd">
 <td align="left">Photographic/Optical Equipment</td>
-<td align="right">23,579</td>
-<td align="right">0.31%</td>
+<td align="right">20,252</td>
+<td align="right">0.42%</td>
 </tr>
 <tr class="even">
-<td align="left">Recordings - Audio/Visual</td>
-<td align="right">23,358</td>
-<td align="right">0.31%</td>
+<td align="left">Camping/Hunting/Fishing Equipment/Supplies</td>
+<td align="right">18,925</td>
+<td align="right">0.39%</td>
 </tr>
 <tr class="odd">
-<td align="left">Camping/Hunting/Fishing Equipment/Supplies</td>
-<td align="right">22,040</td>
-<td align="right">0.29%</td>
+<td align="left">Recordings - Audio/Visual</td>
+<td align="right">18,680</td>
+<td align="right">0.39%</td>
 </tr>
 <tr class="even">
-<td align="left">Heavy Construction/Industrial Equipment</td>
-<td align="right">17,546</td>
-<td align="right">0.23%</td>
+<td align="left">Building Materials</td>
+<td align="right">17,690</td>
+<td align="right">0.37%</td>
 </tr>
 <tr class="odd">
 <td align="left">Fuel</td>
-<td align="right">17,013</td>
-<td align="right">0.22%</td>
+<td align="right">16,051</td>
+<td align="right">0.33%</td>
+</tr>
+<tr class="even">
+<td align="left">Pending Inventory (Of Property)</td>
+<td align="right">13,327</td>
+<td align="right">0.28%</td>
+</tr>
+<tr class="odd">
+<td align="left">Heavy Construction/Industrial Equipment</td>
+<td align="right">12,723</td>
+<td align="right">0.26%</td>
 </tr>
 <tr class="even">
 <td align="left">Weapons - Other</td>
-<td align="right">16,690</td>
-<td align="right">0.22%</td>
-</tr>
-<tr class="odd">
-<td align="left">Pending Inventory (Of Property)</td>
-<td align="right">14,262</td>
-<td align="right">0.19%</td>
-</tr>
-<tr class="even">
-<td align="left">Firearm Accessories</td>
-<td align="right">14,053</td>
-<td align="right">0.19%</td>
+<td align="right">12,576</td>
+<td align="right">0.26%</td>
 </tr>
 <tr class="odd">
 <td align="left">Collections/Collectibles</td>
-<td align="right">12,763</td>
-<td align="right">0.17%</td>
+<td align="right">10,925</td>
+<td align="right">0.23%</td>
 </tr>
 <tr class="even">
-<td align="left">Structures - Public/Community</td>
-<td align="right">11,351</td>
-<td align="right">0.15%</td>
+<td align="left">Firearm Accessories</td>
+<td align="right">9,993</td>
+<td align="right">0.21%</td>
 </tr>
 <tr class="odd">
 <td align="left">Musical Instruments</td>
-<td align="right">10,047</td>
-<td align="right">0.13%</td>
+<td align="right">8,729</td>
+<td align="right">0.18%</td>
 </tr>
 <tr class="even">
-<td align="left">Recreational Vehicles</td>
-<td align="right">10,020</td>
-<td align="right">0.13%</td>
-</tr>
-<tr class="odd">
 <td align="left">Metals, Non-Precious</td>
-<td align="right">9,951</td>
-<td align="right">0.13%</td>
-</tr>
-<tr class="even">
-<td align="left">Medical/Medical Lab Equipment</td>
-<td align="right">9,212</td>
-<td align="right">0.12%</td>
+<td align="right">8,316</td>
+<td align="right">0.17%</td>
 </tr>
 <tr class="odd">
-<td align="left">Farm Equipment</td>
-<td align="right">8,831</td>
-<td align="right">0.12%</td>
+<td align="left">Medical/Medical Lab Equipment</td>
+<td align="right">7,758</td>
+<td align="right">0.16%</td>
 </tr>
 <tr class="even">
 <td align="left">Pets</td>
-<td align="right">8,071</td>
-<td align="right">0.11%</td>
+<td align="right">6,821</td>
+<td align="right">0.14%</td>
 </tr>
 <tr class="odd">
-<td align="left">Structures - Storage</td>
-<td align="right">7,019</td>
-<td align="right">0.09%</td>
+<td align="left">Farm Equipment</td>
+<td align="right">6,718</td>
+<td align="right">0.14%</td>
 </tr>
 <tr class="even">
+<td align="left">Recreational Vehicles</td>
+<td align="right">5,906</td>
+<td align="right">0.12%</td>
+</tr>
+<tr class="odd">
 <td align="left">Artistic Supplies/Accessories</td>
-<td align="right">4,705</td>
-<td align="right">0.06%</td>
-</tr>
-<tr class="odd">
-<td align="left">Watercraft</td>
-<td align="right">3,775</td>
-<td align="right">0.05%</td>
+<td align="right">3,425</td>
+<td align="right">0.07%</td>
 </tr>
 <tr class="even">
-<td align="left">Explosives</td>
-<td align="right">3,671</td>
-<td align="right">0.05%</td>
+<td align="left">Drug/Narcotic Equipment</td>
+<td align="right">3,221</td>
+<td align="right">0.07%</td>
 </tr>
 <tr class="odd">
 <td align="left">Chemicals</td>
-<td align="right">3,549</td>
+<td align="right">2,759</td>
+<td align="right">0.06%</td>
+</tr>
+<tr class="even">
+<td align="left">Watercraft</td>
+<td align="right">2,749</td>
+<td align="right">0.06%</td>
+</tr>
+<tr class="odd">
+<td align="left">Explosives</td>
+<td align="right">2,444</td>
 <td align="right">0.05%</td>
 </tr>
 <tr class="even">
 <td align="left">Gambling Equipment</td>
-<td align="right">3,226</td>
-<td align="right">0.04%</td>
+<td align="right">2,332</td>
+<td align="right">0.05%</td>
 </tr>
 <tr class="odd">
 <td align="left">Watercraft Equipment/Parts/Accessories</td>
-<td align="right">2,628</td>
-<td align="right">0.03%</td>
+<td align="right">2,211</td>
+<td align="right">0.05%</td>
 </tr>
 <tr class="even">
 <td align="left">Law Enforcement Equipment</td>
-<td align="right">2,610</td>
-<td align="right">0.03%</td>
+<td align="right">1,771</td>
+<td align="right">0.04%</td>
 </tr>
 <tr class="odd">
 <td align="left">Livestock</td>
-<td align="right">2,114</td>
-<td align="right">0.03%</td>
-</tr>
-<tr class="even">
-<td align="left">Crops</td>
-<td align="right">2,094</td>
-<td align="right">0.03%</td>
-</tr>
-<tr class="odd">
-<td align="left">Buses</td>
-<td align="right">1,962</td>
+<td align="right">1,582</td>
 <td align="right">0.03%</td>
 </tr>
 <tr class="even">
 <td align="left">Logging Equipment</td>
-<td align="right">1,437</td>
-<td align="right">0.02%</td>
+<td align="right">1,251</td>
+<td align="right">0.03%</td>
 </tr>
 <tr class="odd">
-<td align="left">Structures - Industrial Manufacturing</td>
-<td align="right">1,398</td>
+<td align="left">Crops</td>
+<td align="right">954</td>
 <td align="right">0.02%</td>
 </tr>
 <tr class="even">
 <td align="left">Special Category</td>
-<td align="right">1,277</td>
+<td align="right">931</td>
 <td align="right">0.02%</td>
 </tr>
 <tr class="odd">
+<td align="left">Structures - Other</td>
+<td align="right">746</td>
+<td align="right">0.02%</td>
+</tr>
+<tr class="even">
 <td align="left">Aircraft Parts/Accessories</td>
-<td align="right">761</td>
+<td align="right">483</td>
+<td align="right">0.01%</td>
+</tr>
+<tr class="odd">
+<td align="left">Structures - Single Occupancy Dwellings</td>
+<td align="right">411</td>
+<td align="right">0.01%</td>
+</tr>
+<tr class="even">
+<td align="left">Buses</td>
+<td align="right">406</td>
+<td align="right">0.01%</td>
+</tr>
+<tr class="odd">
+<td align="left">Structures - Storage</td>
+<td align="right">281</td>
 <td align="right">0.01%</td>
 </tr>
 <tr class="even">
 <td align="left">Aircraft</td>
-<td align="right">455</td>
-<td align="right">0.01%</td>
+<td align="right">237</td>
+<td align="right">0.00%</td>
+</tr>
+<tr class="odd">
+<td align="left">Structures - Commercial/Business</td>
+<td align="right">208</td>
+<td align="right">0.00%</td>
+</tr>
+<tr class="even">
+<td align="left">Structures - Other Dwellings</td>
+<td align="right">169</td>
+<td align="right">0.00%</td>
+</tr>
+<tr class="odd">
+<td align="left">Structures - Industrial Manufacturing</td>
+<td align="right">118</td>
+<td align="right">0.00%</td>
+</tr>
+<tr class="even">
+<td align="left">Structures - Public/Community</td>
+<td align="right">116</td>
+<td align="right">0.00%</td>
 </tr>
 <tr class="odd">
 <td align="left">Total</td>
-<td align="right">7,567,377</td>
+<td align="right">4,803,688</td>
 <td align="right">100%</td>
 </tr>
 </tbody>
 </table>
-</div>
-<div id="type-of-property-loss" class="section level3" number="8.1.2">
-<h3><span class="header-section-number">8.1.2</span> Type of property loss</h3>
-<div class="figure" style="text-align: center"><span id="fig:propertyTypeLoss"></span>
-<img src="property_files/figure-html/propertyTypeLoss-1.png" alt="The type of loss or if the item is recovered." width="90%" />
-<p class="caption">
-Figure 8.1: The type of loss or if the item is recovered.
-</p>
-</div>
+<table>
+<caption><span id="tab:propertySeizedDescription">Table 8.2: </span>The number and percent of property seized by police (excludes recovering property that was stolen, for all offenses in 2019. Each incident can have multiple items seized.</caption>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="right"># of Property Loss</th>
+<th align="right">% of Property Loss</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Drugs/Narcotics</td>
+<td align="right">667,424</td>
+<td align="right">63.21%</td>
+</tr>
+<tr class="even">
+<td align="left">Drug/Narcotic Equipment</td>
+<td align="right">288,418</td>
+<td align="right">27.31%</td>
+</tr>
+<tr class="odd">
+<td align="left">Other</td>
+<td align="right">27,845</td>
+<td align="right">2.64%</td>
+</tr>
+<tr class="even">
+<td align="left">Money</td>
+<td align="right">21,852</td>
+<td align="right">2.07%</td>
+</tr>
+<tr class="odd">
+<td align="left">Firearms</td>
+<td align="right">9,664</td>
+<td align="right">0.92%</td>
+</tr>
+<tr class="even">
+<td align="left">Portible Electronic Communications</td>
+<td align="right">6,460</td>
+<td align="right">0.61%</td>
+</tr>
+<tr class="odd">
+<td align="left">Automobiles</td>
+<td align="right">3,196</td>
+<td align="right">0.30%</td>
+</tr>
+<tr class="even">
+<td align="left">Firearm Accessories</td>
+<td align="right">2,682</td>
+<td align="right">0.25%</td>
+</tr>
+<tr class="odd">
+<td align="left">Documents - Personal Or Business</td>
+<td align="right">2,437</td>
+<td align="right">0.23%</td>
+</tr>
+<tr class="even">
+<td align="left">Weapons - Other</td>
+<td align="right">2,279</td>
+<td align="right">0.22%</td>
+</tr>
+<tr class="odd">
+<td align="left">Office-Type Equipment</td>
+<td align="right">2,279</td>
+<td align="right">0.22%</td>
+</tr>
+<tr class="even">
+<td align="left">Purses/Handbags/Wallets</td>
+<td align="right">2,104</td>
+<td align="right">0.20%</td>
+</tr>
+<tr class="odd">
+<td align="left">Identity Documents</td>
+<td align="right">1,758</td>
+<td align="right">0.17%</td>
+</tr>
+<tr class="even">
+<td align="left">Computer Hardware/Software</td>
+<td align="right">1,533</td>
+<td align="right">0.15%</td>
+</tr>
+<tr class="odd">
+<td align="left">Consumable Goods</td>
+<td align="right">1,419</td>
+<td align="right">0.13%</td>
+</tr>
+<tr class="even">
+<td align="left">Clothes/Furs</td>
+<td align="right">1,286</td>
+<td align="right">0.12%</td>
+</tr>
+<tr class="odd">
+<td align="left">Alcohol</td>
+<td align="right">1,258</td>
+<td align="right">0.12%</td>
+</tr>
+<tr class="even">
+<td align="left">Negotiable Instruments</td>
+<td align="right">1,227</td>
+<td align="right">0.12%</td>
+</tr>
+<tr class="odd">
+<td align="left">Household Goods</td>
+<td align="right">1,205</td>
+<td align="right">0.11%</td>
+</tr>
+<tr class="even">
+<td align="left">Credit/Debit Cards</td>
+<td align="right">1,032</td>
+<td align="right">0.10%</td>
+</tr>
+<tr class="odd">
+<td align="left">Recordings - Audio/Visual</td>
+<td align="right">1,018</td>
+<td align="right">0.10%</td>
+</tr>
+<tr class="even">
+<td align="left">Nonnegotiable Instruments</td>
+<td align="right">971</td>
+<td align="right">0.09%</td>
+</tr>
+<tr class="odd">
+<td align="left">Vehicle Parts/Accessories</td>
+<td align="right">945</td>
+<td align="right">0.09%</td>
+</tr>
+<tr class="even">
+<td align="left">Explosives</td>
+<td align="right">910</td>
+<td align="right">0.09%</td>
+</tr>
+<tr class="odd">
+<td align="left">Tools - Power/Hand</td>
+<td align="right">785</td>
+<td align="right">0.07%</td>
+</tr>
+<tr class="even">
+<td align="left">Radios/Tvs/Vcrs</td>
+<td align="right">549</td>
+<td align="right">0.05%</td>
+</tr>
+<tr class="odd">
+<td align="left">Heavy Construction/Industrial Equipment</td>
+<td align="right">395</td>
+<td align="right">0.04%</td>
+</tr>
+<tr class="even">
+<td align="left">Merchandise</td>
+<td align="right">390</td>
+<td align="right">0.04%</td>
+</tr>
+<tr class="odd">
+<td align="left">Jewelry/Precious Metals</td>
+<td align="right">354</td>
+<td align="right">0.03%</td>
+</tr>
+<tr class="even">
+<td align="left">Gambling Equipment</td>
+<td align="right">293</td>
+<td align="right">0.03%</td>
+</tr>
+<tr class="odd">
+<td align="left">Medical/Medical Lab Equipment</td>
+<td align="right">260</td>
+<td align="right">0.02%</td>
+</tr>
+<tr class="even">
+<td align="left">Other Motor Vehicles</td>
+<td align="right">201</td>
+<td align="right">0.02%</td>
+</tr>
+<tr class="odd">
+<td align="left">Photographic/Optical Equipment</td>
+<td align="right">175</td>
+<td align="right">0.02%</td>
+</tr>
+<tr class="even">
+<td align="left">Trucks</td>
+<td align="right">166</td>
+<td align="right">0.02%</td>
+</tr>
+<tr class="odd">
+<td align="left">Pending Inventory (Of Property)</td>
+<td align="right">145</td>
+<td align="right">0.01%</td>
+</tr>
+<tr class="even">
+<td align="left">Identity - Intangible</td>
+<td align="right">115</td>
+<td align="right">0.01%</td>
+</tr>
+<tr class="odd">
+<td align="left">Chemicals</td>
+<td align="right">109</td>
+<td align="right">0.01%</td>
+</tr>
+<tr class="even">
+<td align="left">Bicycles</td>
+<td align="right">101</td>
+<td align="right">0.01%</td>
+</tr>
+<tr class="odd">
+<td align="left">Camping/Hunting/Fishing Equipment/Supplies</td>
+<td align="right">98</td>
+<td align="right">0.01%</td>
+</tr>
+<tr class="even">
+<td align="left">Recreational/Sports Equipment</td>
+<td align="right">80</td>
+<td align="right">0.01%</td>
+</tr>
+<tr class="odd">
+<td align="left">Special Category</td>
+<td align="right">60</td>
+<td align="right">0.01%</td>
+</tr>
+<tr class="even">
+<td align="left">Law Enforcement Equipment</td>
+<td align="right">57</td>
+<td align="right">0.01%</td>
+</tr>
+<tr class="odd">
+<td align="left">Metals, Non-Precious</td>
+<td align="right">48</td>
+<td align="right">0.00%</td>
+</tr>
+<tr class="even">
+<td align="left">Collections/Collectibles</td>
+<td align="right">42</td>
+<td align="right">0.00%</td>
+</tr>
+<tr class="odd">
+<td align="left">Farm Equipment</td>
+<td align="right">38</td>
+<td align="right">0.00%</td>
+</tr>
+<tr class="even">
+<td align="left">Structures - Storage</td>
+<td align="right">34</td>
+<td align="right">0.00%</td>
+</tr>
+<tr class="odd">
+<td align="left">Trailers</td>
+<td align="right">33</td>
+<td align="right">0.00%</td>
+</tr>
+<tr class="even">
+<td align="left">Artistic Supplies/Accessories</td>
+<td align="right">31</td>
+<td align="right">0.00%</td>
+</tr>
+<tr class="odd">
+<td align="left">Lawn/Yard/Garden Equipment</td>
+<td align="right">24</td>
+<td align="right">0.00%</td>
+</tr>
+<tr class="even">
+<td align="left">Recreational Vehicles</td>
+<td align="right">23</td>
+<td align="right">0.00%</td>
+</tr>
+<tr class="odd">
+<td align="left">Structures - Other</td>
+<td align="right">19</td>
+<td align="right">0.00%</td>
+</tr>
+<tr class="even">
+<td align="left">Crops</td>
+<td align="right">19</td>
+<td align="right">0.00%</td>
+</tr>
+<tr class="odd">
+<td align="left">Building Materials</td>
+<td align="right">18</td>
+<td align="right">0.00%</td>
+</tr>
+<tr class="even">
+<td align="left">Fuel</td>
+<td align="right">15</td>
+<td align="right">0.00%</td>
+</tr>
+<tr class="odd">
+<td align="left">Musical Instruments</td>
+<td align="right">14</td>
+<td align="right">0.00%</td>
+</tr>
+<tr class="even">
+<td align="left">Aircraft</td>
+<td align="right">13</td>
+<td align="right">0.00%</td>
+</tr>
+<tr class="odd">
+<td align="left">Aircraft Parts/Accessories</td>
+<td align="right">11</td>
+<td align="right">0.00%</td>
+</tr>
+<tr class="even">
+<td align="left">Structures - Single Occupancy Dwellings</td>
+<td align="right">7</td>
+<td align="right">0.00%</td>
+</tr>
+<tr class="odd">
+<td align="left">Pets</td>
+<td align="right">7</td>
+<td align="right">0.00%</td>
+</tr>
+<tr class="even">
+<td align="left">Watercraft Equipment/Parts/Accessories</td>
+<td align="right">6</td>
+<td align="right">0.00%</td>
+</tr>
+<tr class="odd">
+<td align="left">Structures - Public/Community</td>
+<td align="right">6</td>
+<td align="right">0.00%</td>
+</tr>
+<tr class="even">
+<td align="left">Livestock</td>
+<td align="right">6</td>
+<td align="right">0.00%</td>
+</tr>
+<tr class="odd">
+<td align="left">Watercraft</td>
+<td align="right">5</td>
+<td align="right">0.00%</td>
+</tr>
+<tr class="even">
+<td align="left">Buses</td>
+<td align="right">4</td>
+<td align="right">0.00%</td>
+</tr>
+<tr class="odd">
+<td align="left">Logging Equipment</td>
+<td align="right">4</td>
+<td align="right">0.00%</td>
+</tr>
+<tr class="even">
+<td align="left">Structures - Other Dwellings</td>
+<td align="right">2</td>
+<td align="right">0.00%</td>
+</tr>
+<tr class="odd">
+<td align="left">Structures - Industrial Manufacturing</td>
+<td align="right">2</td>
+<td align="right">0.00%</td>
+</tr>
+<tr class="even">
+<td align="left">Structures - Commercial/Business</td>
+<td align="right">1</td>
+<td align="right">0.00%</td>
+</tr>
+<tr class="odd">
+<td align="left">Total</td>
+<td align="right">1,055,967</td>
+<td align="right">100%</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="value-of-stolen-property" class="section level3" number="8.1.3">
 <h3><span class="header-section-number">8.1.3</span> Value of stolen property</h3>
@@ -680,7 +1037,7 @@ Figure 8.4: The distribution of the number of days from the incident to the prop
 <div id="suspected-drug-type" class="section level4" number="8.1.5.1">
 <h4><span class="header-section-number">8.1.5.1</span> Suspected drug type</h4>
 <table>
-<caption><span id="tab:propertyDrugs">Table 8.2: </span>The number and percent of drugs seized by police by type of drug.</caption>
+<caption><span id="tab:propertyDrugs">Table 8.3: </span>The number and percent of drugs seized by police by type of drug.</caption>
 <colgroup>
 <col width="87%" />
 <col width="6%" />

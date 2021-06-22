@@ -10,85 +10,6 @@ For drug offenses it includes the drugs seized by police. For these offenses, th
 
 ## Important variables
 
-### Description of property
-
-
-Table: (\#tab:propertyDescription)The number and percent of property lost, including property stolen (including forcibly taken such as during a robbery) in a crime, burned in an arson, or seized by police (generally in drug arrests), for all offenses in 2019. Each offense can have multiple items stolen/seized.
-
-|Property                                   | # of Property Loss| % of Property Loss|
-|:------------------------------------------|------------------:|------------------:|
-|Other                                      |          1,005,616|            13.29\%|
-|Drugs/Narcotics                            |            714,797|             9.45\%|
-|Automobiles                                |            645,115|             8.52\%|
-|Money                                      |            637,046|             8.42\%|
-|Vehicle Parts/Accessories                  |            328,970|             4.35\%|
-|Clothes/Furs                               |            312,506|             4.13\%|
-|Drug/Narcotic Equipment                    |            292,097|             3.86\%|
-|Purses/Handbags/Wallets                    |            291,694|             3.85\%|
-|Merchandise                                |            266,945|             3.53\%|
-|Credit/Debit Cards                         |            242,981|             3.21\%|
-|Tools - Power/Hand                         |            240,156|             3.17\%|
-|Consumable Goods                           |            236,104|             3.12\%|
-|Portible Electronic Communications         |            201,787|             2.67\%|
-|Computer Hardware/Software                 |            192,970|             2.55\%|
-|Household Goods                            |            192,923|             2.55\%|
-|Identity Documents                         |            185,098|             2.45\%|
-|Radios/Tvs/Vcrs                            |            169,518|             2.24\%|
-|Jewelry/Precious Metals                    |            123,742|             1.64\%|
-|Firearms                                   |            117,039|             1.55\%|
-|Bicycles                                   |             89,936|             1.19\%|
-|Trucks                                     |             83,796|             1.11\%|
-|Negotiable Instruments                     |             73,327|             0.97\%|
-|Identity - Intangible                      |             71,331|             0.94\%|
-|Structures - Single Occupancy Dwellings    |             64,507|             0.85\%|
-|Alcohol                                    |             64,339|             0.85\%|
-|Documents - Personal Or Business           |             62,883|             0.83\%|
-|Building Materials                         |             54,091|             0.71\%|
-|Office-Type Equipment                      |             53,707|             0.71\%|
-|Lawn/Yard/Garden Equipment                 |             48,398|             0.64\%|
-|Other Motor Vehicles                       |             46,222|             0.61\%|
-|Nonnegotiable Instruments                  |             41,596|             0.55\%|
-|Structures - Other                         |             33,265|             0.44\%|
-|Trailers                                   |             30,124|             0.40\%|
-|Recreational/Sports Equipment              |             29,946|             0.40\%|
-|Structures - Commercial/Business           |             27,401|             0.36\%|
-|Structures - Other Dwellings               |             23,936|             0.32\%|
-|Photographic/Optical Equipment             |             23,579|             0.31\%|
-|Recordings - Audio/Visual                  |             23,358|             0.31\%|
-|Camping/Hunting/Fishing Equipment/Supplies |             22,040|             0.29\%|
-|Heavy Construction/Industrial Equipment    |             17,546|             0.23\%|
-|Fuel                                       |             17,013|             0.22\%|
-|Weapons - Other                            |             16,690|             0.22\%|
-|Pending Inventory (Of Property)            |             14,262|             0.19\%|
-|Firearm Accessories                        |             14,053|             0.19\%|
-|Collections/Collectibles                   |             12,763|             0.17\%|
-|Structures - Public/Community              |             11,351|             0.15\%|
-|Musical Instruments                        |             10,047|             0.13\%|
-|Recreational Vehicles                      |             10,020|             0.13\%|
-|Metals, Non-Precious                       |              9,951|             0.13\%|
-|Medical/Medical Lab Equipment              |              9,212|             0.12\%|
-|Farm Equipment                             |              8,831|             0.12\%|
-|Pets                                       |              8,071|             0.11\%|
-|Structures - Storage                       |              7,019|             0.09\%|
-|Artistic Supplies/Accessories              |              4,705|             0.06\%|
-|Watercraft                                 |              3,775|             0.05\%|
-|Explosives                                 |              3,671|             0.05\%|
-|Chemicals                                  |              3,549|             0.05\%|
-|Gambling Equipment                         |              3,226|             0.04\%|
-|Watercraft Equipment/Parts/Accessories     |              2,628|             0.03\%|
-|Law Enforcement Equipment                  |              2,610|             0.03\%|
-|Livestock                                  |              2,114|             0.03\%|
-|Crops                                      |              2,094|             0.03\%|
-|Buses                                      |              1,962|             0.03\%|
-|Logging Equipment                          |              1,437|             0.02\%|
-|Structures - Industrial Manufacturing      |              1,398|             0.02\%|
-|Special Category                           |              1,277|             0.02\%|
-|Aircraft Parts/Accessories                 |                761|             0.01\%|
-|Aircraft                                   |                455|             0.01\%|
-|Total                                      |          7,567,377|              100\%|
-
-\setstretch{1.15}
-
 ### Type of property loss
 
 <div class="figure" style="text-align: center">
@@ -96,6 +17,157 @@ Table: (\#tab:propertyDescription)The number and percent of property lost, inclu
 <p class="caption">(\#fig:propertyTypeLoss)The type of loss or if the item is recovered.</p>
 </div>
 
+### Description of property
+
+
+Table: (\#tab:propertyStolenDescription)The number and percent of property stolen (including forcibly taken such as during a robbery) in a crime, for all offenses in 2019. Each incident can have multiple items stolen
+
+|Property                                   | # of Property Loss| % of Property Loss|
+|:------------------------------------------|------------------:|------------------:|
+|Other                                      |            687,291|            14.31\%|
+|Money                                      |            564,574|            11.75\%|
+|Purses/Handbags/Wallets                    |            267,044|             5.56\%|
+|Clothes/Furs                               |            247,128|             5.14\%|
+|Automobiles                                |            246,591|             5.13\%|
+|Credit/Debit Cards                         |            227,460|             4.74\%|
+|Tools - Power/Hand                         |            214,257|             4.46\%|
+|Vehicle Parts/Accessories                  |            197,125|             4.10\%|
+|Merchandise                                |            190,765|             3.97\%|
+|Consumable Goods                           |            183,699|             3.82\%|
+|Identity Documents                         |            172,335|             3.59\%|
+|Computer Hardware/Software                 |            170,819|             3.56\%|
+|Portible Electronic Communications         |            163,689|             3.41\%|
+|Radios/Tvs/Vcrs                            |            144,608|             3.01\%|
+|Household Goods                            |            127,883|             2.66\%|
+|Jewelry/Precious Metals                    |            110,807|             2.31\%|
+|Firearms                                   |             92,796|             1.93\%|
+|Bicycles                                   |             79,115|             1.65\%|
+|Identity - Intangible                      |             69,226|             1.44\%|
+|Alcohol                                    |             53,190|             1.11\%|
+|Documents - Personal Or Business           |             51,234|             1.07\%|
+|Negotiable Instruments                     |             44,881|             0.93\%|
+|Drugs/Narcotics                            |             44,833|             0.93\%|
+|Office-Type Equipment                      |             42,147|             0.88\%|
+|Trucks                                     |             40,316|             0.84\%|
+|Lawn/Yard/Garden Equipment                 |             39,321|             0.82\%|
+|Nonnegotiable Instruments                  |             29,177|             0.61\%|
+|Other Motor Vehicles                       |             28,049|             0.58\%|
+|Recreational/Sports Equipment              |             25,509|             0.53\%|
+|Trailers                                   |             23,624|             0.49\%|
+|Photographic/Optical Equipment             |             20,252|             0.42\%|
+|Camping/Hunting/Fishing Equipment/Supplies |             18,925|             0.39\%|
+|Recordings - Audio/Visual                  |             18,680|             0.39\%|
+|Building Materials                         |             17,690|             0.37\%|
+|Fuel                                       |             16,051|             0.33\%|
+|Pending Inventory (Of Property)            |             13,327|             0.28\%|
+|Heavy Construction/Industrial Equipment    |             12,723|             0.26\%|
+|Weapons - Other                            |             12,576|             0.26\%|
+|Collections/Collectibles                   |             10,925|             0.23\%|
+|Firearm Accessories                        |              9,993|             0.21\%|
+|Musical Instruments                        |              8,729|             0.18\%|
+|Metals, Non-Precious                       |              8,316|             0.17\%|
+|Medical/Medical Lab Equipment              |              7,758|             0.16\%|
+|Pets                                       |              6,821|             0.14\%|
+|Farm Equipment                             |              6,718|             0.14\%|
+|Recreational Vehicles                      |              5,906|             0.12\%|
+|Artistic Supplies/Accessories              |              3,425|             0.07\%|
+|Drug/Narcotic Equipment                    |              3,221|             0.07\%|
+|Chemicals                                  |              2,759|             0.06\%|
+|Watercraft                                 |              2,749|             0.06\%|
+|Explosives                                 |              2,444|             0.05\%|
+|Gambling Equipment                         |              2,332|             0.05\%|
+|Watercraft Equipment/Parts/Accessories     |              2,211|             0.05\%|
+|Law Enforcement Equipment                  |              1,771|             0.04\%|
+|Livestock                                  |              1,582|             0.03\%|
+|Logging Equipment                          |              1,251|             0.03\%|
+|Crops                                      |                954|             0.02\%|
+|Special Category                           |                931|             0.02\%|
+|Structures - Other                         |                746|             0.02\%|
+|Aircraft Parts/Accessories                 |                483|             0.01\%|
+|Structures - Single Occupancy Dwellings    |                411|             0.01\%|
+|Buses                                      |                406|             0.01\%|
+|Structures - Storage                       |                281|             0.01\%|
+|Aircraft                                   |                237|             0.00\%|
+|Structures - Commercial/Business           |                208|             0.00\%|
+|Structures - Other Dwellings               |                169|             0.00\%|
+|Structures - Industrial Manufacturing      |                118|             0.00\%|
+|Structures - Public/Community              |                116|             0.00\%|
+|Total                                      |          4,803,688|              100\%|
+
+
+Table: (\#tab:propertySeizedDescription)The number and percent of property seized by police (excludes recovering property that was stolen, for all offenses in 2019. Each incident can have multiple items seized.
+
+|Property                                   | # of Property Loss| % of Property Loss|
+|:------------------------------------------|------------------:|------------------:|
+|Drugs/Narcotics                            |            667,424|            63.21\%|
+|Drug/Narcotic Equipment                    |            288,418|            27.31\%|
+|Other                                      |             27,845|             2.64\%|
+|Money                                      |             21,852|             2.07\%|
+|Firearms                                   |              9,664|             0.92\%|
+|Portible Electronic Communications         |              6,460|             0.61\%|
+|Automobiles                                |              3,196|             0.30\%|
+|Firearm Accessories                        |              2,682|             0.25\%|
+|Documents - Personal Or Business           |              2,437|             0.23\%|
+|Weapons - Other                            |              2,279|             0.22\%|
+|Office-Type Equipment                      |              2,279|             0.22\%|
+|Purses/Handbags/Wallets                    |              2,104|             0.20\%|
+|Identity Documents                         |              1,758|             0.17\%|
+|Computer Hardware/Software                 |              1,533|             0.15\%|
+|Consumable Goods                           |              1,419|             0.13\%|
+|Clothes/Furs                               |              1,286|             0.12\%|
+|Alcohol                                    |              1,258|             0.12\%|
+|Negotiable Instruments                     |              1,227|             0.12\%|
+|Household Goods                            |              1,205|             0.11\%|
+|Credit/Debit Cards                         |              1,032|             0.10\%|
+|Recordings - Audio/Visual                  |              1,018|             0.10\%|
+|Nonnegotiable Instruments                  |                971|             0.09\%|
+|Vehicle Parts/Accessories                  |                945|             0.09\%|
+|Explosives                                 |                910|             0.09\%|
+|Tools - Power/Hand                         |                785|             0.07\%|
+|Radios/Tvs/Vcrs                            |                549|             0.05\%|
+|Heavy Construction/Industrial Equipment    |                395|             0.04\%|
+|Merchandise                                |                390|             0.04\%|
+|Jewelry/Precious Metals                    |                354|             0.03\%|
+|Gambling Equipment                         |                293|             0.03\%|
+|Medical/Medical Lab Equipment              |                260|             0.02\%|
+|Other Motor Vehicles                       |                201|             0.02\%|
+|Photographic/Optical Equipment             |                175|             0.02\%|
+|Trucks                                     |                166|             0.02\%|
+|Pending Inventory (Of Property)            |                145|             0.01\%|
+|Identity - Intangible                      |                115|             0.01\%|
+|Chemicals                                  |                109|             0.01\%|
+|Bicycles                                   |                101|             0.01\%|
+|Camping/Hunting/Fishing Equipment/Supplies |                 98|             0.01\%|
+|Recreational/Sports Equipment              |                 80|             0.01\%|
+|Special Category                           |                 60|             0.01\%|
+|Law Enforcement Equipment                  |                 57|             0.01\%|
+|Metals, Non-Precious                       |                 48|             0.00\%|
+|Collections/Collectibles                   |                 42|             0.00\%|
+|Farm Equipment                             |                 38|             0.00\%|
+|Structures - Storage                       |                 34|             0.00\%|
+|Trailers                                   |                 33|             0.00\%|
+|Artistic Supplies/Accessories              |                 31|             0.00\%|
+|Lawn/Yard/Garden Equipment                 |                 24|             0.00\%|
+|Recreational Vehicles                      |                 23|             0.00\%|
+|Structures - Other                         |                 19|             0.00\%|
+|Crops                                      |                 19|             0.00\%|
+|Building Materials                         |                 18|             0.00\%|
+|Fuel                                       |                 15|             0.00\%|
+|Musical Instruments                        |                 14|             0.00\%|
+|Aircraft                                   |                 13|             0.00\%|
+|Aircraft Parts/Accessories                 |                 11|             0.00\%|
+|Structures - Single Occupancy Dwellings    |                  7|             0.00\%|
+|Pets                                       |                  7|             0.00\%|
+|Watercraft Equipment/Parts/Accessories     |                  6|             0.00\%|
+|Structures - Public/Community              |                  6|             0.00\%|
+|Livestock                                  |                  6|             0.00\%|
+|Watercraft                                 |                  5|             0.00\%|
+|Buses                                      |                  4|             0.00\%|
+|Logging Equipment                          |                  4|             0.00\%|
+|Structures - Other Dwellings               |                  2|             0.00\%|
+|Structures - Industrial Manufacturing      |                  2|             0.00\%|
+|Structures - Commercial/Business           |                  1|             0.00\%|
+|Total                                      |          1,055,967|              100\%|
 
 ### Value of stolen property
 

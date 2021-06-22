@@ -62,8 +62,9 @@ fig:arresteeAge
 fig:arresteeSex
 fig:arresteeRace
 fig:arresteeEthnicity
-tab:propertyDescription
 fig:propertyTypeLoss
+tab:propertyStolenDescription
+tab:propertySeizedDescription
 fig:propertyValuePropertyLevel
 fig:propertyValueIncidentLevel
 fig:propertyDaysUntilRecovered
@@ -158,8 +159,8 @@ race-2
 ethnicity-1
 property-and-window-property-segment
 important-variables-5
-description-of-property
 type-of-property-loss
+description-of-property
 value-of-stolen-property
 date-property-was-recovered
 drugs

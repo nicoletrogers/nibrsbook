@@ -21,10 +21,20 @@ For drug offenses it includes the drugs seized by police. For these offenses, th
 
 ## Important variables
 
+### Type of property loss
+
+```{r propertyTypeLoss, fig.cap = "The type of loss or if the item is recovered."}
+property$type_of_property_loss_temp <- capitalize_words(property$type_of_property_loss)
+property$type_of_property_loss_temp <- gsub(" \\(.*", "", property$type_of_property_loss_temp, ignore.case = TRUE)
+property$type_of_property_loss_temp[property$type_of_property_loss_temp == "Stolen/Etc."] <- "Stolen/Robbed/Etc."
+make_barplots(property, "type_of_property_loss_temp", count = FALSE, ylab = "% of Property")
+```
+
 ### Description of property
 
-```{r propertyDescription}
-temp <- make_frequency_table(property,
+```{r propertyStolenDescription}
+
+temp <- make_frequency_table(property[property$type_of_property_loss %in% "stolen/etc. (includes bribed, defrauded, embezzled, extorted, ransomed, robbed, etc.)", ],
                              "property_description",
                              c("Property",
                                "# of Property Loss",
@@ -36,21 +46,27 @@ knitr::kable(temp,
              booktabs = TRUE, 
              longtable = TRUE,
              escape = FALSE,
-             caption = "The number and percent of property lost, including property stolen (including forcibly taken such as during a robbery) in a crime, burned in an arson, or seized by police (generally in drug arrests), for all offenses in 2019. Each offense can have multiple items stolen/seized.") %>%
+             caption = "The number and percent of property stolen (including forcibly taken such as during a robbery) in a crime, for all offenses in 2019. Each incident can have multiple items stolen") %>%
   kable_styling(bootstrap_options = "striped", full_width = FALSE, latex_options = c("hold_position", "repeat_header"))
 ```
 
-\setstretch{1.15}
+```{r propertySeizedDescription}
 
-### Type of property loss
-
-```{r propertyTypeLoss, fig.cap = "The type of loss or if the item is recovered."}
-property$type_of_property_loss_temp <- capitalize_words(property$type_of_property_loss)
-property$type_of_property_loss_temp <- gsub(" \\(.*", "", property$type_of_property_loss_temp, ignore.case = TRUE)
-property$type_of_property_loss_temp[property$type_of_property_loss_temp == "Stolen/Etc."] <- "Stolen/Robbed/Etc."
-make_barplots(property, "type_of_property_loss_temp", count = FALSE, ylab = "% of Property")
+temp <- make_frequency_table(property[property$type_of_property_loss %in% "seized", ],
+                             "property_description",
+                             c("Property",
+                               "# of Property Loss",
+                               "% of Property Loss"))
+knitr::kable(temp, 
+             format = "markdown",
+             digits = 2, 
+             align = c("l", "r", "r"),
+             booktabs = TRUE, 
+             longtable = TRUE,
+             escape = FALSE,
+             caption = "The number and percent of property seized by police (excludes recovering property that was stolen, for all offenses in 2019. Each incident can have multiple items seized.") %>%
+  kable_styling(bootstrap_options = "striped", full_width = FALSE, latex_options = c("hold_position", "repeat_header"))
 ```
-
 
 ### Value of stolen property
 
