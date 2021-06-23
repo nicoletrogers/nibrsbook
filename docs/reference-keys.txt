@@ -69,7 +69,7 @@ fig:propertyValuePropertyLevel
 fig:propertyValueIncidentLevel
 fig:propertyDaysUntilRecovered
 tab:propertyDrugs
-fig:propertyAllGramMeasures
+fig:propertyMarijuanaGramMeasures
 preface
 goal-of-the-book
 structure-of-the-book

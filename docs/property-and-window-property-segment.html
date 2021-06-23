@@ -24,7 +24,7 @@
 <meta name="author" content="Jacob Kaplan" />
 
 
-<meta name="date" content="2021-06-22" />
+<meta name="date" content="2021-06-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -298,8 +298,8 @@ Figure 8.1: The type of loss or if the item is recovered.
 <thead>
 <tr class="header">
 <th align="left">Property</th>
-<th align="right"># of Property Loss</th>
-<th align="right">% of Property Loss</th>
+<th align="right"># of Property Stolen</th>
+<th align="right">% of Property Stolen</th>
 </tr>
 </thead>
 <tbody>
@@ -655,8 +655,8 @@ Figure 8.1: The type of loss or if the item is recovered.
 <thead>
 <tr class="header">
 <th align="left">Property</th>
-<th align="right"># of Property Loss</th>
-<th align="right">% of Property Loss</th>
+<th align="right"># of Property Seized</th>
+<th align="right">% of Property Seized</th>
 </tr>
 </thead>
 <tbody>
@@ -1034,8 +1034,12 @@ Figure 8.4: The distribution of the number of days from the incident to the prop
 </div>
 <div id="drugs" class="section level3" number="8.1.5">
 <h3><span class="header-section-number">8.1.5</span> Drugs</h3>
+<p>This segment also provides information about drugs seized by the police. This also includes cases where the police would have seized the drugs if the offender didn’t destroy it somehow, such as flushing it down the toilet. For each drug seized there is information on what type of drug it was and how much of the drug was seized. There can be up to three drugs seized in an incident and data is available for each type of drug. The exception, however, is when there are more than four drugs seized in an incident. In that case, info on the third drug just says that there were more than three drugs involved. So you’d have info on the first two drugs but none on the third through however many (and it doesn’t say how many) drugs. For the below table and figure I only look at the first drug seized, so the numbers shown are undercounts.</p>
+<p>The ordering of drugs when there are multiple drugs is based on how much drugs were recovered and the seriousness of the drugs.For example, heroin is probably considered more serious than marijuana, but overall ranking of drugs is a subjective assessment depending on the department. Is heroin more serious than heroin? That decision likely varies by the agency and their situation in regards to what drugs they often seize.</p>
 <div id="suspected-drug-type" class="section level4" number="8.1.5.1">
 <h4><span class="header-section-number">8.1.5.1</span> Suspected drug type</h4>
+<p>The drugs in NIBRS are the “suspected drug types” which means that they are what the police believe the drugs to be, even if there is not definitive proof (such as a crime lab testing for what type of drug it is) that the drug is what they say it is. There are 15 possible drug types in NIBRS (16 when including “unknown drug type”) and each is shown in Table <a href="property-and-window-property-segment.html#tab:propertyDrugs">8.3</a> along with how often they occur in the data. Some of these drug types are specific enough to only include a single drug while others are groups of drug types, such as hallucinogens or stimulants (and they include all of these types other than specifically stated drugs).</p>
+<p>Not too surprising, marijuana is the most common drug seized at 47% - or 455k incidents with it seized - of the data. This is followed by amphetamines/methamphetamines (including what we’d normally just call meth) at 20.7% and then heroin at 8.5%. Interestingly, cocaine and crack cocaine (which is always separate categories) both occur in 5.09% of drugs seized. Given the large disparity in sentences for these types of drugs, and that “crack wars” were a major purported cause of violent crime in the 1980s and 1990s, I expected crack cocaine to be much more common than normal cocaine. The remaining drug types are all less than 5% of drugs seized each and has some groupings of drug types (e.g. stimulants) rather than specific drug types (though some of these categories, such as LSD, are specific drugs).</p>
 <table>
 <caption><span id="tab:propertyDrugs">Table 8.3: </span>The number and percent of drugs seized by police by type of drug.</caption>
 <colgroup>
@@ -1087,7 +1091,7 @@ Figure 8.4: The distribution of the number of days from the incident to the prop
 <td align="right">3.83%</td>
 </tr>
 <tr class="even">
-<td align="left">Pcp</td>
+<td align="left">PCP</td>
 <td align="right">30,348</td>
 <td align="right">3.11%</td>
 </tr>
@@ -1117,7 +1121,7 @@ Figure 8.4: The distribution of the number of days from the incident to the prop
 <td align="right">0.31%</td>
 </tr>
 <tr class="even">
-<td align="left">Lsd</td>
+<td align="left">LSD</td>
 <td align="right">1,624</td>
 <td align="right">0.17%</td>
 </tr>
@@ -1141,6 +1145,7 @@ Figure 8.4: The distribution of the number of days from the incident to the prop
 </div>
 <div id="amount-of-drugs" class="section level4" number="8.1.5.2">
 <h4><span class="header-section-number">8.1.5.2</span> Amount of drugs</h4>
+<p>For each drug type we know exactly how much was seized (at least we do other than for the 6.7% where the amount is “not reported”). Since different drug types are measured in different ways, this data also tells us what units the amount seized is in. So you’ll need to look at both the amount and the units to understand how much drugs were actually seized. The possible units are listen below:</p>
 <ul>
 <li>Dosage Unit/Items (Pills, Etc.)</li>
 <li>Fluid Ounce</li>
@@ -1152,14 +1157,15 @@ Figure 8.4: The distribution of the number of days from the incident to the prop
 <li>Liter<br />
 </li>
 <li>Milliliter</li>
-<li>Not Reported</li>
 <li>Number of Plants<br />
 </li>
 <li>Ounce</li>
 <li>Pound</li>
 </ul>
-<div class="figure" style="text-align: center"><span id="fig:propertyAllGramMeasures"></span>
-<img src="property_files/figure-html/propertyAllGramMeasures-1.png" alt="For drugs seized that are measured in grams, this figure shows the distribution in the number of grams seized. Values over 10 grams are grouped together for easier interpretation of lower values of drugs seized." width="90%" />
+<p>Once you know the units you can look at the amount of drugs seized. The amount is specific up to the thousandths place though the integer and the numbers after the decimal point are actually in different columns in the data. For example, if police seized 1.257 grams of heroin, the 1 gram and the 0.257 grams would be in separate columns. As an example, we’ll look at Figure <a href="property-and-window-property-segment.html#fig:propertyMarijuanaGramMeasures">8.5</a> which shows the number of grams seized for marijuana. This is only looking at the column with the amount in integers, so parts of a gram are excluded (but are available in the data). This also excludes any case where the marijuana seized was measured in a unit other than gram, such as number of plants, ounces, or pounds. Even though the data shows the number of grams as actual integers, not grouped at all, I do group the larger values together to make the graph simpler.</p>
+<p>So with those caveats, we can see what amounts of marijuana, measured in grams, are most frequently seized. Generally, the amount of marijuana seized is in small amounts with 22.5% being 1-2 grams (since we don’t include the parts of a gram we can only say that it is 1 to 1.999 grams) and 18.6% being less than one gram. As the amount of drugs increase, the percent of seizures that involve this number of drugs decreases. It’s a bit curious that they include grams for values over 28 since 28.3495 grams is one ounce so it’d make sense to just start reporting in units of ounces instead of just increasingly large number of grams.</p>
+<div class="figure" style="text-align: center"><span id="fig:propertyMarijuanaGramMeasures"></span>
+<img src="property_files/figure-html/propertyMarijuanaGramMeasures-1.png" alt="For drugs seized that are measured in grams, this figure shows the distribution in the number of grams seized. Values over 10 grams are grouped together for easier interpretation of lower values of drugs seized." width="90%" />
 <p class="caption">
 Figure 8.5: For drugs seized that are measured in grams, this figure shows the distribution in the number of grams seized. Values over 10 grams are grouped together for easier interpretation of lower values of drugs seized.
 </p>
