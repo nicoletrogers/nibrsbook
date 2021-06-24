@@ -10,6 +10,8 @@ For drug offenses it includes the drugs seized by police. For these offenses, th
 
 ## Important variables
 
+In addition to the variables detailed below, this segment has the tradition agency and incident identifiers: the ORI code, the agency state, the year of this data, the incident number, and the incident date.
+
 ### Type of property loss
 
 <div class="figure" style="text-align: center">
@@ -20,7 +22,7 @@ For drug offenses it includes the drugs seized by police. For these offenses, th
 ### Description of property
 
 
-Table: (\#tab:propertyStolenDescription)The number and percent of property stolen (including forcibly taken such as during a robbery) in a crime, for all offenses in 2019. Each incident can have multiple items stolen
+Table: (\#tab:propertyStolenDescription)The number and percent of property stolen (including forcibly taken such as during a robbery) in a crime, for all offenses in 2019. Each incident can have multiple items stolen.
 
 |Property                                   | # of Property Stolen| % of Property Stolen|
 |:------------------------------------------|--------------------:|--------------------:|
@@ -93,6 +95,8 @@ Table: (\#tab:propertyStolenDescription)The number and percent of property stole
 |Structures - Industrial Manufacturing      |                  118|               0.00\%|
 |Structures - Public/Community              |                  116|               0.00\%|
 |Total                                      |            4,803,688|                100\%|
+
+As seen in Table \@ref(fig:propertySeizedDescription), all of the 68 different types of properties available in NIBRS can and, in 2019, was seized by police during an incident at least once. This includes atypical property like building material, musical instruments, and pets (and leads me to think that at least some of this is incorrectly labeled as property seized by the police). The vast majority of property seized by police, however, is drugs. 63.2% of the property seized were drugs themselves while 27.3% were equipment related to the drugs. The remaining items were mostly "other" (i.e. anything not explicitly categorized here) at 2.6%, money at 2%, firearms at 0.9%, and then a bunch of very rarely seized items. 
 
 
 Table: (\#tab:propertySeizedDescription)The number and percent of property seized by police (excludes recovering property that was stolen, for all offenses in 2019. Each incident can have multiple items seized.
@@ -171,20 +175,29 @@ Table: (\#tab:propertySeizedDescription)The number and percent of property seize
 
 ### Value of stolen property
 
+For all types of property loss other than the property being seized by the police (and when the type is "unknown") there is data on the estimated value of that property. This is estimates by the police but is supposed to be the current value of the item (e.g. a stolen car is what it currently sells for, not what the buyer bought it for) and is the cost it'll take for the victim to replace the item. To be a bit more specific, this variable is the sum of items stolen in this category. For example, if someone burglaries  house and steals three rings from the victim, this would not count as three thefts of a ring. It would be recorded as loss of jewelry and the value would be the total value of all three rings.
+
+The police can take the victim's estimation into consideration but aren't supposed to immediately accept it as victim's may exaggerate values (especially for insurance purposes). When items are recovered the police put it the value at the time of recovery which may be substantially different than at the time of the loss if the item is damaged or destroyed.
+
+We can use this variable to look at the value of items lost by the victim. This includes items lost by theft, robbery, and burglary so is part of the "Stolen/Robbed/Etc." category of types of property loss. It excludes items damaged or destroyed or burned. Figure \@ref(fig:propertyValuePropertyLevel) looks at the value per item stolen in a crime (if incidents have multiple items stolen, this counts them all separately). To make this graph a bit simpler I've rounded all values to the nearest \$100 so items valued at \$0 mean that they are worth between \$1 and \$50. I've also capped the largest value to \$1,000,000 and set the x-axis on the log scale since the data skews very much to the right. The average item lost was worth \$3,217 and the median was worth \$150. Most items lost were relative cheap with 34.9% worth under \$50 and 13.5% worth between \$51 and \$149. There is a sharp decline in the frequency of property stolen as the value increases. So while some extremely valuable items are lost during crimes, they are much less common than relatively low-value items. 
+
 <div class="figure" style="text-align: center">
 <img src="property_files/figure-html/propertyValuePropertyLevel-1.png" alt="The distribution of the value of property stolen. Values are capped at $1,000,000 and each value is rounded to the nearest $100. The x-axis is set on the log scale as this distribution is hugely right skewed." width="90%" />
 <p class="caption">(\#fig:propertyValuePropertyLevel)The distribution of the value of property stolen. Values are capped at $1,000,000 and each value is rounded to the nearest $100. The x-axis is set on the log scale as this distribution is hugely right skewed.</p>
 </div>
 
-
+Since multiple items can be stolen in a single incident, to better understand the cost of crime we probably want to add up all of the property to the incident-level. Figure \@ref(fig:propertyValuePropertyLevel) does this and shows the cost of property stolen per incident. The trend is nearly identical to Figure \@ref(fig:propertySeizedDescription) but the value is a bit higher than before. Now fewer than a quarter of incidents result in a loss of <\$50 and the average cost per incident is \$4,731 (median = \$300).
 
 <div class="figure" style="text-align: center">
 <img src="property_files/figure-html/propertyValueIncidentLevel-1.png" alt="The incident-level distribution of the value of property stolen. As values are aggregated to the incident-level, these are higher than the above graph which shows each item individually. Values are capped at $1,000,000 and each value is rounded to the nearest $100. The x-axis is set on the log scale as this distribution is hugely right skewed." width="90%" />
 <p class="caption">(\#fig:propertyValueIncidentLevel)The incident-level distribution of the value of property stolen. As values are aggregated to the incident-level, these are higher than the above graph which shows each item individually. Values are capped at $1,000,000 and each value is rounded to the nearest $100. The x-axis is set on the log scale as this distribution is hugely right skewed.</p>
 </div>
 
-
 ### Date property was recovered
+
+This segment tells us both when the incident happened and, for stolen property, when the item was recovered. We can use this to look at how long it generally takes for property to be recovered (though most property stolen is never recovered). Figure \@ref(fig:propertyDaysUntilRecovered) shows the number of days it takes for property to be recovered. Though this data gives us the exact date, allowing for the precise number of days from property loss to recovery, this graph groups days greater than nine days to simplify the graph. The maximum number of days in the 2019 NIBRS data is 450 days so showing all days would be a rather unhelpful graph.   
+
+The majority - 60.8% - of property lost is recovered on the same day, which is shown as zero days. We saw in Figure \@ref(fig:arrestsDaysUntilArrest) that the vast majority of arrests happen on the same day as the incident so it makes sense the most property would too.^[I'd expect most property to be recovered on the arrestee's body.] A smaller and smaller share of property is recovered as the number of days from the incident increase, a trend also found in the time to arrest graph. The lesson here seems to be that if you're a victim of a crime and had something taken, unless it's recovered very quickly it's unlikely to be recovered at all. 
 
 <div class="figure" style="text-align: center">
 <img src="property_files/figure-html/propertyDaysUntilRecovered-1.png" alt="The distribution of the number of days from the incident to the property recovered date. In 2019 the maximum days from incident to arrest was 450 days. Zero days means that the arrest occurred on the same day as the incident. " width="90%" />
@@ -217,7 +230,7 @@ Table: (\#tab:propertyDrugs)The number and percent of drugs seized by police by 
 |Other Narcotics: Codeine, Demerol, Dihydromorphinone Or Dilaudid, Hydrocodone Or Percodan, Methadone, Etc.                                                           |      37,401|      3.83\%|
 |PCP                                                                                                                                                                  |      30,348|      3.11\%|
 |Hashish                                                                                                                                                              |       7,046|      0.72\%|
-|Other Hallucinogrens: Bmda (White Acid), Dmt, Mda, Mdma, Mescaline Or Peyote, Psilocybin, Stp, Etc.                                                                  |       6,256|      0.64\%|
+|Other Hallucinogrens: BMDA (White Acid), DMT, MDA, MDMA, Mescaline Or Peyote, Psilocybin, STP, Etc.                                                                  |       6,256|      0.64\%|
 |Other Depressants: Glutethimide Or Doriden, Methaqualone Or Quaalude, Pentazocine Or Talwin, Etc.                                                                    |       5,165|      0.53\%|
 |Other Stimulants: Adipex, Fastine And Ionamin (Derivatives of Phentermine), Benzedrine, Didrex, Methylphenidate Or Ritalin, Phenmetrazine Or Preludin, Tenuate, Etc. |       3,368|      0.35\%|
 |Opium                                                                                                                                                                |       2,984|      0.31\%|
