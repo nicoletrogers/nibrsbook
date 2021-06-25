@@ -80,7 +80,7 @@ The police can take the victim's estimation into consideration but aren't suppos
 
 We can use this variable to look at the value of items lost by the victim. This includes items lost by theft, robbery, and burglary so is part of the "Stolen/Robbed/Etc." category of types of property loss. It excludes items damaged or destroyed or burned. Figure \@ref(fig:propertyValuePropertyLevel) looks at the value per item stolen in a crime (if incidents have multiple items stolen, this counts them all separately). To make this graph a bit simpler I've rounded all values to the nearest \$100 so items valued at \$0 mean that they are worth between \$1 and \$50. I've also capped the largest value to \$1,000,000 and set the x-axis on the log scale since the data skews very much to the right. The average item lost was worth \$3,217 and the median was worth \$150. Most items lost were relative cheap with 34.9% worth under \$50 and 13.5% worth between \$51 and \$149. There is a sharp decline in the frequency of property stolen as the value increases. So while some extremely valuable items are lost during crimes, they are much less common than relatively low-value items. 
 
-```{r propertyValuePropertyLevel, fig.cap = "The distribution of the value of property stolen. Values are capped at $1,000,000 and each value is rounded to the nearest $100. The x-axis is set on the log scale as this distribution is hugely right skewed."}
+```{r propertyValuePropertyLevel, fig.cap = "The distribution of the value of property stolen. Values are capped at \$1,000,000 and each value is rounded to the nearest \$100. The x-axis is set on the log scale as this distribution is hugely right skewed."}
 temp <-
   property %>%
   filter(type_of_property_loss %in% "stolen/etc. (includes bribed, defrauded, embezzled, extorted, ransomed, robbed, etc.)") %>%
@@ -104,7 +104,7 @@ ggplot(temp, aes(x = value_of_property_100, y = proportion)) +
 
 Since multiple items can be stolen in a single incident, to better understand the cost of crime we probably want to add up all of the property to the incident-level. Figure \@ref(fig:propertyValuePropertyLevel) does this and shows the cost of property stolen per incident. The trend is nearly identical to Figure \@ref(tab:propertySeizedDescription) but the value is a bit higher than before. Now fewer than a quarter of incidents result in a loss of <\$50 and the average cost per incident is \$4,731 (median = \$300).
 
-```{r propertyValueIncidentLevel, fig.cap = "The incident-level distribution of the value of property stolen. As values are aggregated to the incident-level, these are higher than the above graph which shows each item individually. Values are capped at $1,000,000 and each value is rounded to the nearest $100. The x-axis is set on the log scale as this distribution is hugely right skewed."}
+```{r propertyValueIncidentLevel, fig.cap = "The incident-level distribution of the value of property stolen. As values are aggregated to the incident-level, these are higher than the above graph which shows each item individually. Values are capped at \$1,000,000 and each value is rounded to the nearest \$100. The x-axis is set on the log scale as this distribution is hugely right skewed."}
 property$unique_id <- paste(property$ori, property$incident_number)
 temp <-
   property %>%
