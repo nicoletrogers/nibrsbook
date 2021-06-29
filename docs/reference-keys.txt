@@ -36,8 +36,6 @@ tab:victimCrimeCategory
 fig:victimType
 fig:victimInjury
 fig:victimInjuryExcludeNone
-fig:victimInjuryPolice
-fig:victimInjuryPoliceExcludeNone
 tab:victimRelationship
 tab:victimRelationshipPolice
 tab:victimAggAssault

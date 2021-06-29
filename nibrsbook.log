@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.6.21)  29 JUN 2021 12:09
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.6.21)  29 JUN 2021 15:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1015,11 +1015,11 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 
 [7] (./nibrsbook.lof [8
 
-] [9] [10])
+] [9])
 \tf@lof=\write7
 \openout7 = `nibrsbook.lof'.
 
-[11]
+[10] [11]
 Chapter 1.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
 (Font)              scaled to size 5.0pt on input line 151.
@@ -1586,80 +1586,82 @@ Chapter 6.
 [85
 
 ] [86]
-File: nibrsbook_files/figure-latex/victimType-1.pdf Graphic file (type pdf)
-<use nibrsbook_files/figure-latex/victimType-1.pdf>
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[87] [88]
+[87]
+File: nibrsbook_files/figure-latex/victimType-1.pdf Graphic file (type pdf)
+<use nibrsbook_files/figure-latex/victimType-1.pdf>
+[88]
 File: nibrsbook_files/figure-latex/victimInjury-1.pdf Graphic file (type pdf)
 <use nibrsbook_files/figure-latex/victimInjury-1.pdf>
+[89] [90]
 File: nibrsbook_files/figure-latex/victimInjuryExcludeNone-1.pdf Graphic file (
 type pdf)
 <use nibrsbook_files/figure-latex/victimInjuryExcludeNone-1.pdf>
-File: nibrsbook_files/figure-latex/victimInjuryPolice-1.pdf Graphic file (type 
-pdf)
-<use nibrsbook_files/figure-latex/victimInjuryPolice-1.pdf>
-File: nibrsbook_files/figure-latex/victimInjuryPoliceExcludeNone-1.pdf Graphic 
-file (type pdf)
-<use nibrsbook_files/figure-latex/victimInjuryPoliceExcludeNone-1.pdf>
 
-Overfull \hbox (11.93709pt too wide) in alignment at lines 1866--1871
+Overfull \hbox (11.93709pt too wide) in alignment at lines 1860--1865
  [] [] [] 
  []
 
 
-Overfull \hbox (11.93709pt too wide) in alignment at lines 1871--1875
+Overfull \hbox (11.93709pt too wide) in alignment at lines 1865--1869
  [] [] [] 
  []
 
 
-Overfull \hbox (11.93709pt too wide) in alignment at lines 1875--1905
+Overfull \hbox (11.93709pt too wide) in alignment at lines 1869--1899
  [] [] [] 
  []
 
-[89] [90] [91] [92] [93]
-Overfull \hbox (49.6891pt too wide) in alignment at lines 1946--1951
+[91] [92]
+Overfull \hbox (49.6891pt too wide) in alignment at lines 1942--1947
  [] [] [] [] 
  []
 
 
-Overfull \hbox (49.6891pt too wide) in alignment at lines 1951--1955
+Overfull \hbox (49.6891pt too wide) in alignment at lines 1947--1951
  [] [] [] [] 
  []
 
 
-Overfull \hbox (49.6891pt too wide) in alignment at lines 1955--1975
+Overfull \hbox (49.6891pt too wide) in alignment at lines 1951--1971
  [] [] [] [] 
  []
 
-[94]
+[93]
 File: nibrsbook_files/figure-latex/victimJustifiableHomicide-1.pdf Graphic file
  (type pdf)
 <use nibrsbook_files/figure-latex/victimJustifiableHomicide-1.pdf>
 File: nibrsbook_files/figure-latex/victimResidenceStatus-1.pdf Graphic file (ty
 pe pdf)
 <use nibrsbook_files/figure-latex/victimResidenceStatus-1.pdf>
+[94] [95] [96]
 File: nibrsbook_files/figure-latex/victimResidenceStatusPolice-1.pdf Graphic fi
 le (type pdf)
 <use nibrsbook_files/figure-latex/victimResidenceStatusPolice-1.pdf>
-[95] [96] [97] [98]
+[97]
 File: nibrsbook_files/figure-latex/victimAge-1.pdf Graphic file (type pdf)
 <use nibrsbook_files/figure-latex/victimAge-1.pdf>
-[99]
+[98]
 File: nibrsbook_files/figure-latex/victimSex-1.pdf Graphic file (type pdf)
 <use nibrsbook_files/figure-latex/victimSex-1.pdf>
 File: nibrsbook_files/figure-latex/victimRace-1.pdf Graphic file (type pdf)
 <use nibrsbook_files/figure-latex/victimRace-1.pdf>
-[100] [101]
+[99] [100]
 File: nibrsbook_files/figure-latex/victimEthnicity-1.pdf Graphic file (type pdf
 )
 <use nibrsbook_files/figure-latex/victimEthnicity-1.pdf>
-[102] [103]
+[101] [102]
 Chapter 7.
-[104
+[103
 
-] [105]
+]
+Overfull \hbox (39.48785pt too wide) has occurred while \output is active
+\TU/lmr/m/n/12 104 \TU/lmr/m/sl/12 CHAPTER 7.  ARRESTEE, GROUP B ARRESTEE, AND 
+WINDOW ARRESTEE SEGMENT
+ []
+
+[104] [105]
 Overfull \hbox (39.48785pt too wide) has occurred while \output is active
 \TU/lmr/m/n/12 106 \TU/lmr/m/sl/12 CHAPTER 7.  ARRESTEE, GROUP B ARRESTEE, AND 
 WINDOW ARRESTEE SEGMENT
@@ -1671,23 +1673,27 @@ Overfull \hbox (39.48785pt too wide) has occurred while \output is active
 WINDOW ARRESTEE SEGMENT
  []
 
-[108] [109]
+[108]
 File: nibrsbook_files/figure-latex/arrestsDaysUntilArrest-1.pdf Graphic file (t
 ype pdf)
 <use nibrsbook_files/figure-latex/arrestsDaysUntilArrest-1.pdf>
 File: nibrsbook_files/figure-latex/arrestsDaysUntilArrestBarplot-1.pdf Graphic 
 file (type pdf)
 <use nibrsbook_files/figure-latex/arrestsDaysUntilArrestBarplot-1.pdf>
-
+[109]
 Overfull \hbox (39.48785pt too wide) has occurred while \output is active
 \TU/lmr/m/n/12 110 \TU/lmr/m/sl/12 CHAPTER 7.  ARRESTEE, GROUP B ARRESTEE, AND 
 WINDOW ARRESTEE SEGMENT
  []
 
-[110] [111]
+[110]
 File: nibrsbook_files/figure-latex/arresteeWeapon-1.pdf Graphic file (type pdf)
 
 <use nibrsbook_files/figure-latex/arresteeWeapon-1.pdf>
+[111]
+File: nibrsbook_files/figure-latex/arresteeWeaponArmed-1.pdf Graphic file (type
+ pdf)
+<use nibrsbook_files/figure-latex/arresteeWeaponArmed-1.pdf>
 
 Overfull \hbox (39.48785pt too wide) has occurred while \output is active
 \TU/lmr/m/n/12 112 \TU/lmr/m/sl/12 CHAPTER 7.  ARRESTEE, GROUP B ARRESTEE, AND 
@@ -1695,13 +1701,13 @@ WINDOW ARRESTEE SEGMENT
  []
 
 [112]
-File: nibrsbook_files/figure-latex/arresteeWeaponArmed-1.pdf Graphic file (type
- pdf)
-<use nibrsbook_files/figure-latex/arresteeWeaponArmed-1.pdf>
-[113]
 File: nibrsbook_files/figure-latex/arresteeAutomaticWeapon-1.pdf Graphic file (
 type pdf)
 <use nibrsbook_files/figure-latex/arresteeAutomaticWeapon-1.pdf>
+[113]
+File: nibrsbook_files/figure-latex/arresteeTypeOfArrest-1.pdf Graphic file (typ
+e pdf)
+<use nibrsbook_files/figure-latex/arresteeTypeOfArrest-1.pdf>
 
 Overfull \hbox (39.48785pt too wide) has occurred while \output is active
 \TU/lmr/m/n/12 114 \TU/lmr/m/sl/12 CHAPTER 7.  ARRESTEE, GROUP B ARRESTEE, AND 
@@ -1709,15 +1715,18 @@ WINDOW ARRESTEE SEGMENT
  []
 
 [114]
-File: nibrsbook_files/figure-latex/arresteeTypeOfArrest-1.pdf Graphic file (typ
-e pdf)
-<use nibrsbook_files/figure-latex/arresteeTypeOfArrest-1.pdf>
-[115]
 File: nibrsbook_files/figure-latex/arresteeJuvenileDisposition-1.pdf Graphic fi
 le (type pdf)
 <use nibrsbook_files/figure-latex/arresteeJuvenileDisposition-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[115]
+File: nibrsbook_files/figure-latex/arresteeResidenceStatus-1.pdf Graphic file (
+type pdf)
+<use nibrsbook_files/figure-latex/arresteeResidenceStatus-1.pdf>
+
+Underfull \vbox (badness 1072) has occurred while \output is active []
 
 
 Overfull \hbox (39.48785pt too wide) has occurred while \output is active
@@ -1725,25 +1734,24 @@ Overfull \hbox (39.48785pt too wide) has occurred while \output is active
 WINDOW ARRESTEE SEGMENT
  []
 
-[116]
-File: nibrsbook_files/figure-latex/arresteeResidenceStatus-1.pdf Graphic file (
-type pdf)
-<use nibrsbook_files/figure-latex/arresteeResidenceStatus-1.pdf>
-[117]
+[116] [117]
+File: nibrsbook_files/figure-latex/arresteeAge-1.pdf Graphic file (type pdf)
+<use nibrsbook_files/figure-latex/arresteeAge-1.pdf>
+
 Overfull \hbox (39.48785pt too wide) has occurred while \output is active
 \TU/lmr/m/n/12 118 \TU/lmr/m/sl/12 CHAPTER 7.  ARRESTEE, GROUP B ARRESTEE, AND 
 WINDOW ARRESTEE SEGMENT
  []
 
 [118]
-File: nibrsbook_files/figure-latex/arresteeAge-1.pdf Graphic file (type pdf)
-<use nibrsbook_files/figure-latex/arresteeAge-1.pdf>
+File: nibrsbook_files/figure-latex/arresteeSex-1.pdf Graphic file (type pdf)
+<use nibrsbook_files/figure-latex/arresteeSex-1.pdf>
+[119]
+File: nibrsbook_files/figure-latex/arresteeRace-1.pdf Graphic file (type pdf)
+<use nibrsbook_files/figure-latex/arresteeRace-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[119]
-File: nibrsbook_files/figure-latex/arresteeSex-1.pdf Graphic file (type pdf)
-<use nibrsbook_files/figure-latex/arresteeSex-1.pdf>
 
 Overfull \hbox (39.48785pt too wide) has occurred while \output is active
 \TU/lmr/m/n/12 120 \TU/lmr/m/sl/12 CHAPTER 7.  ARRESTEE, GROUP B ARRESTEE, AND 
@@ -1751,246 +1759,235 @@ WINDOW ARRESTEE SEGMENT
  []
 
 [120]
-File: nibrsbook_files/figure-latex/arresteeRace-1.pdf Graphic file (type pdf)
-<use nibrsbook_files/figure-latex/arresteeRace-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[121]
 File: nibrsbook_files/figure-latex/arresteeEthnicity-1.pdf Graphic file (type p
 df)
 <use nibrsbook_files/figure-latex/arresteeEthnicity-1.pdf>
-
+[121]
 Overfull \hbox (39.48785pt too wide) has occurred while \output is active
 \TU/lmr/m/n/12 122 \TU/lmr/m/sl/12 CHAPTER 7.  ARRESTEE, GROUP B ARRESTEE, AND 
 WINDOW ARRESTEE SEGMENT
  []
 
-[122] [123]
+[122]
 Chapter 8.
-[124
+[123
 
 ]
 File: nibrsbook_files/figure-latex/propertyTypeLoss-1.pdf Graphic file (type pd
 f)
 <use nibrsbook_files/figure-latex/propertyTypeLoss-1.pdf>
-[125] [126]
-Overfull \hbox (17.5531pt too wide) in alignment at lines 2443--2448
+[124] [125]
+Overfull \hbox (17.5531pt too wide) in alignment at lines 2447--2452
  [] [] [] 
  []
 
 
-Overfull \hbox (17.5531pt too wide) in alignment at lines 2448--2452
+Overfull \hbox (17.5531pt too wide) in alignment at lines 2452--2456
  [] [] [] 
  []
 
 
-Overfull \hbox (17.5531pt too wide) in alignment at lines 2452--2523
+Overfull \hbox (17.5531pt too wide) in alignment at lines 2456--2527
  [] [] [] 
  []
 
-[127] [128]
+[126] [127]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[129]
-Overfull \hbox (17.52908pt too wide) in alignment at lines 2527--2532
+[128]
+Overfull \hbox (17.52908pt too wide) in alignment at lines 2531--2536
  [] [] [] 
  []
 
 
-Overfull \hbox (17.52908pt too wide) in alignment at lines 2532--2536
+Overfull \hbox (17.52908pt too wide) in alignment at lines 2536--2540
  [] [] [] 
  []
 
 
-Overfull \hbox (17.52908pt too wide) in alignment at lines 2536--2607
+Overfull \hbox (17.52908pt too wide) in alignment at lines 2540--2611
  [] [] [] 
  []
 
-[130] [131]
+[129] [130]
 File: nibrsbook_files/figure-latex/propertyValuePropertyLevel-1.pdf Graphic fil
 e (type pdf)
 <use nibrsbook_files/figure-latex/propertyValuePropertyLevel-1.pdf>
-[132] [133]
+[131] [132]
 File: nibrsbook_files/figure-latex/propertyValueIncidentLevel-1.pdf Graphic fil
 e (type pdf)
 <use nibrsbook_files/figure-latex/propertyValueIncidentLevel-1.pdf>
-[134]
+[133]
 File: nibrsbook_files/figure-latex/propertyDaysUntilRecovered-1.pdf Graphic fil
 e (type pdf)
 <use nibrsbook_files/figure-latex/propertyDaysUntilRecovered-1.pdf>
-[135]
-Overfull \hbox (3.12383pt too wide) in paragraph at lines 2674--2675
+[134]
+Overfull \hbox (3.12383pt too wide) in paragraph at lines 2678--2679
  \TU/lmr/m/n/12 Drugs|
  []
 
 
-Overfull \hbox (3.12383pt too wide) in paragraph at lines 2676--2677
+Overfull \hbox (3.12383pt too wide) in paragraph at lines 2680--2681
  \TU/lmr/m/n/12 Drugs|
  []
 
 
-Overfull \hbox (7.418pt too wide) in alignment at lines 2668--2679
+Overfull \hbox (7.418pt too wide) in alignment at lines 2672--2683
  [] [] [] 
  []
 
 
-Overfull \hbox (3.12383pt too wide) in paragraph at lines 2684--2685
+Overfull \hbox (3.12383pt too wide) in paragraph at lines 2688--2689
  \TU/lmr/m/n/12 Drugs|
  []
 
 
-Overfull \hbox (3.12383pt too wide) in paragraph at lines 2686--2687
+Overfull \hbox (3.12383pt too wide) in paragraph at lines 2690--2691
  \TU/lmr/m/n/12 Drugs|
  []
 
 
-Overfull \hbox (7.418pt too wide) in alignment at lines 2679--2689
+Overfull \hbox (7.418pt too wide) in alignment at lines 2683--2693
  [] [] [] 
  []
 
 
-Overfull \hbox (11.07983pt too wide) in paragraph at lines 2693--2694
+Overfull \hbox (11.07983pt too wide) in paragraph at lines 2697--2698
  []\TU/lmr/m/n/12 455,429|
  []
 
 
-Overfull \hbox (9.11183pt too wide) in paragraph at lines 2695--2696
+Overfull \hbox (9.11183pt too wide) in paragraph at lines 2699--2700
  []\TU/lmr/m/n/12 46.69%|
  []
 
 
-Overfull \hbox (11.07983pt too wide) in paragraph at lines 2700--2701
+Overfull \hbox (11.07983pt too wide) in paragraph at lines 2704--2705
  []\TU/lmr/m/n/12 201,716|
  []
 
 
-Overfull \hbox (9.11183pt too wide) in paragraph at lines 2702--2703
+Overfull \hbox (9.11183pt too wide) in paragraph at lines 2706--2707
  []\TU/lmr/m/n/12 20.68%|
  []
 
 
-Overfull \hbox (5.19983pt too wide) in paragraph at lines 2707--2708
+Overfull \hbox (5.19983pt too wide) in paragraph at lines 2711--2712
  []\TU/lmr/m/n/12 82,437|
  []
 
 
-Overfull \hbox (3.23183pt too wide) in paragraph at lines 2709--2710
+Overfull \hbox (3.23183pt too wide) in paragraph at lines 2713--2714
  []\TU/lmr/m/n/12 8.45%|
  []
 
 
-Overfull \hbox (5.19983pt too wide) in paragraph at lines 2714--2715
+Overfull \hbox (5.19983pt too wide) in paragraph at lines 2718--2719
  []\TU/lmr/m/n/12 49,699|
  []
 
 
-Overfull \hbox (3.23183pt too wide) in paragraph at lines 2716--2717
+Overfull \hbox (3.23183pt too wide) in paragraph at lines 2720--2721
  []\TU/lmr/m/n/12 5.09%|
  []
 
 
-Overfull \hbox (5.19983pt too wide) in paragraph at lines 2721--2722
+Overfull \hbox (5.19983pt too wide) in paragraph at lines 2725--2726
  []\TU/lmr/m/n/12 49,646|
  []
 
 
-Overfull \hbox (3.23183pt too wide) in paragraph at lines 2723--2724
+Overfull \hbox (3.23183pt too wide) in paragraph at lines 2727--2728
  []\TU/lmr/m/n/12 5.09%|
  []
 
 
-Overfull \hbox (5.19983pt too wide) in paragraph at lines 2728--2729
+Overfull \hbox (5.19983pt too wide) in paragraph at lines 2732--2733
  []\TU/lmr/m/n/12 39,836|
  []
 
 
-Overfull \hbox (3.23183pt too wide) in paragraph at lines 2730--2731
+Overfull \hbox (3.23183pt too wide) in paragraph at lines 2734--2735
  []\TU/lmr/m/n/12 4.08%|
  []
 
 
-Overfull \hbox (5.19983pt too wide) in paragraph at lines 2735--2736
+Overfull \hbox (5.19983pt too wide) in paragraph at lines 2739--2740
  []\TU/lmr/m/n/12 37,401|
  []
 
 
-Overfull \hbox (3.23183pt too wide) in paragraph at lines 2737--2738
+Overfull \hbox (3.23183pt too wide) in paragraph at lines 2741--2742
  []\TU/lmr/m/n/12 3.83%|
  []
 
 
-Overfull \hbox (5.19983pt too wide) in paragraph at lines 2742--2743
+Overfull \hbox (5.19983pt too wide) in paragraph at lines 2746--2747
  []\TU/lmr/m/n/12 30,348|
  []
 
 
-Overfull \hbox (3.23183pt too wide) in paragraph at lines 2744--2745
+Overfull \hbox (3.23183pt too wide) in paragraph at lines 2748--2749
  []\TU/lmr/m/n/12 3.11%|
  []
 
 
-Overfull \hbox (3.23183pt too wide) in paragraph at lines 2751--2752
+Overfull \hbox (3.23183pt too wide) in paragraph at lines 2755--2756
  []\TU/lmr/m/n/12 0.72%|
  []
 
 
-Overfull \hbox (3.23183pt too wide) in paragraph at lines 2758--2759
+Overfull \hbox (3.23183pt too wide) in paragraph at lines 2762--2763
  []\TU/lmr/m/n/12 0.64%|
  []
 
 
-Overfull \hbox (3.23183pt too wide) in paragraph at lines 2765--2766
+Overfull \hbox (3.23183pt too wide) in paragraph at lines 2769--2770
  []\TU/lmr/m/n/12 0.53%|
  []
 
 
-Overfull \hbox (3.23183pt too wide) in paragraph at lines 2772--2773
+Overfull \hbox (3.23183pt too wide) in paragraph at lines 2776--2777
  []\TU/lmr/m/n/12 0.35%|
  []
 
 
-Overfull \hbox (3.23183pt too wide) in paragraph at lines 2779--2780
+Overfull \hbox (3.23183pt too wide) in paragraph at lines 2783--2784
  []\TU/lmr/m/n/12 0.31%|
  []
 
 
-Overfull \hbox (3.23183pt too wide) in paragraph at lines 2786--2787
+Overfull \hbox (3.23183pt too wide) in paragraph at lines 2790--2791
  []\TU/lmr/m/n/12 0.17%|
  []
 
 
-Overfull \hbox (3.23183pt too wide) in paragraph at lines 2793--2794
+Overfull \hbox (3.23183pt too wide) in paragraph at lines 2797--2798
  []\TU/lmr/m/n/12 0.13%|
  []
 
 
-Overfull \hbox (3.23183pt too wide) in paragraph at lines 2800--2801
+Overfull \hbox (3.23183pt too wide) in paragraph at lines 2804--2805
  []\TU/lmr/m/n/12 0.13%|
  []
 
 
-Overfull \hbox (11.07983pt too wide) in paragraph at lines 2805--2806
+Overfull \hbox (11.07983pt too wide) in paragraph at lines 2809--2810
  []\TU/lmr/m/n/12 975,528|
  []
 
 
-Overfull \hbox (7.418pt too wide) in alignment at lines 2689--2810
+Overfull \hbox (7.418pt too wide) in alignment at lines 2693--2814
  [] [] [] 
  []
 
-[136]
-Underfull \hbox (badness 10000) in paragraph at lines 2824--2826
-
- []
-
-
+[135]
 Underfull \hbox (badness 10000) in paragraph at lines 2828--2830
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2830--2832
+Underfull \hbox (badness 10000) in paragraph at lines 2832--2834
 
  []
 
@@ -1999,22 +1996,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 2834--2836
 
  []
 
-[137]
+
+Underfull \hbox (badness 10000) in paragraph at lines 2838--2840
+
+ []
+
+[136]
 File: nibrsbook_files/figure-latex/propertyMarijuanaGramMeasures-1.pdf Graphic 
 file (type pdf)
 <use nibrsbook_files/figure-latex/propertyMarijuanaGramMeasures-1.pdf>
 No file nibrsbook.bbl.
-[138] [139] (./nibrsbook.aux)
+[137] [138] (./nibrsbook.aux)
 Package rerunfilecheck Info: File `nibrsbook.out' has not changed.
 (rerunfilecheck)             Checksum: 28EB5A8F12543CB0F90BCAED6E9E5490;15969.
  ) 
 Here is how much of TeX's memory you used:
- 19775 strings out of 478442
- 368380 string characters out of 5856757
- 861659 words of memory out of 5000000
- 39789 multiletter control sequences out of 15000+600000
+ 19753 strings out of 478442
+ 367099 string characters out of 5856757
+ 861378 words of memory out of 5000000
+ 39769 multiletter control sequences out of 15000+600000
  407970 words of font info for 74 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  87i,8n,120p,2046b,443s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on nibrsbook.pdf (139 pages).
+Output written on nibrsbook.pdf (138 pages).

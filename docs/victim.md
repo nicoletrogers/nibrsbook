@@ -75,15 +75,19 @@ Table: (\#tab:victimCrimeCategory)The number and percent of crimes committed aga
 
 ### Victim type
 
+Law enforcement officers who are victimized are only to be classified as law enforcement officers when they are the victims of murder, aggravated or simple assault, or intimidation. Otherwise they're labeled as "individual" victims.
+
+
 <div class="figure" style="text-align: center">
 <img src="victim_files/figure-html/victimType-1.png" alt="The distribution of the type of victim. Victim types are mutually exclusive." width="90%" />
 <p class="caption">(\#fig:victimType)The distribution of the type of victim. Victim types are mutually exclusive.</p>
 </div>
 
-
 ### Injury
 
-An important variable that's completely missing in UCR data is how injured the victim was. 
+An important variable that's completely missing in UCR data is how injured the victim was. NIBRS has eight different categories of victim injuries ranging from no injury to serious injuries such as "possible internal injury" or "apparent broken bones". NIBRS includes five variables for victim injuries so up to five of the seven injury types (if there is no injury, that will take up the first variable and no other will be recorded) per victim. These injuries should be thought of as suspected injuries based on observations by the officer or what the victim says. These do not need to be confirmed by a doctor. Therefore there is some imprecision on the exact victim injury. For example, "possible internal injury" means only the possibility, even if the victim doesn't turn out to have internal injuries.
+
+However, it is still a useful measure of victim injury and is highly necessary given that UCR data doesn't provide any indication about injury. As academics continue to argue about which crimes are serious (criminologists are currently saying that "crime" is down during covid since "crime" is defined as index crimes which are mostly thefts), this variable can provide information as to exactly how injured victims are from the crime. Not all crimes have this information. The FBI only includes this info for what they consider violent crimes which are listed below (since victims may have up to 10 offenses recorded, only one offense has to be among the below list for injury to be recorded). 
 
 * Aggravated assault
 * Extortion/blackmail
@@ -97,25 +101,22 @@ An important variable that's completely missing in UCR data is how injured the v
 * Simple assault
 * Sodomy
 
+Even though there are up to five victim injuries recorded, for the below graphs I'm just looking at the first variable. Injuries are sorted by seriousness with the first recorded injury more serious than the second, and so on, so this will look at the most serious injuries victims received. As with most variables in this data, only "individual" and law enforcement officer victims have this info. 
+
+Figure \@ref(fig:victimInjury) shows the eight injury categories and how common they are for all victims with this information reported. The most common type is "none" at 16.8% of injuries which means the victim didn't suffer any injuries at all. This is followed by 13.4% of victims suffering "apparent minor injuries". The six serious injuries are far lesson common and given that nearly a third of victims suffer none or minor injuries are hard to see on the graph. To make it easier to see, Figure \@ref(fig:victimInjuryExcludeNone) shows the breakdown in victim injury excluding those who didn't suffer an injury or those who suffered a minor injury. 
+
 <div class="figure" style="text-align: center">
 <img src="victim_files/figure-html/victimInjury-1.png" alt="The distribution of the injury sustained by the victim. Only individual and law enforcement officer victims have this variable available." width="90%" />
 <p class="caption">(\#fig:victimInjury)The distribution of the injury sustained by the victim. Only individual and law enforcement officer victims have this variable available.</p>
 </div>
 
+For the group who suffered one of the six more serious injury types, 32.1% suffered an "other major injury" which is a serious injury other than one of the other categories. This is followed by 25.8% having a serious laceration (which is just a cut), 21.6% having a possible internal injury, and 12.5% having an apparent broken bone. About 6.5% of these victims became unconscious at some point in the incident, and 1.5% lost at least one tooth. 
+
+Trends for law enforcement officer victims (not shown) are nearly identical for those with an injury but have more victims reporting no injury at all relative to non-law enforcement officer victims.
+
 <div class="figure" style="text-align: center">
 <img src="victim_files/figure-html/victimInjuryExcludeNone-1.png" alt="The distribution of the injury sustained by the victim for those who had an injury other than 'none'." width="90%" />
 <p class="caption">(\#fig:victimInjuryExcludeNone)The distribution of the injury sustained by the victim for those who had an injury other than 'none'.</p>
-</div>
-
-
-<div class="figure" style="text-align: center">
-<img src="victim_files/figure-html/victimInjuryPolice-1.png" alt="The distribution of the injury sustained by the victim for law enforcement officer victims" width="90%" />
-<p class="caption">(\#fig:victimInjuryPolice)The distribution of the injury sustained by the victim for law enforcement officer victims</p>
-</div>
-
-<div class="figure" style="text-align: center">
-<img src="victim_files/figure-html/victimInjuryPoliceExcludeNone-1.png" alt="The distribution of the injury sustained by the victim for law enforcement officer victims excluding those who had no injury at all." width="90%" />
-<p class="caption">(\#fig:victimInjuryPoliceExcludeNone)The distribution of the injury sustained by the victim for law enforcement officer victims excluding those who had no injury at all.</p>
 </div>
 
 ### Relationship to offender
@@ -154,6 +155,8 @@ Table: (\#tab:victimRelationship)The distribution of the relationship between th
 |Victim Was Babysittee (The Baby)                          |         1,512|        0.07\%|
 |Total                                                     |     2,211,557|         100\%|
 
+We also know the relationship between victim and offender when the victim is a law enforcement officer. As shown in Table \@ref(tab:victimRelationshipPolice), most of the time the officer didn't know the offender, with 58.9% of victimizations being this relationship type. This is followed by 18.7% where the officer knew the offender, including if they were familiar with the person by arresting or stopping them previously. In about 18.5% we don't know the relationship as it is unknown and in 3.2% the officer and the offender were acquaintances. There are also a number of unlikely (and some impossible) relationships like the three in which the officer was the offender's child and the one in which the officer was a baby who was abused by their babysitter. These seem to be clear indications that there is some data errors with this variable. 
+
 
 Table: (\#tab:victimRelationshipPolice)The distribution of the relationship between the victim and the offender for law enforcement officer victims.
 
@@ -183,7 +186,6 @@ Table: (\#tab:victimRelationshipPolice)The distribution of the relationship betw
 |Victim Was Babysittee (The Baby)                        |             1|        0.00\%|
 |Total                                                   |        33,588|         100\%|
 
-
 ### Aggravated assault and homicide circumstances
 
 
@@ -210,8 +212,9 @@ Table: (\#tab:victimAggAssault)The distribution of circumstances for aggravated 
 |Hunting Accident                      |    Negligent Manslaughter|             1|0.00\%        |
 |Total                                 | Aggravated Assault/Murder|       344,652|100\%         |
 
-
 ### Justifiable homicide circumstance
+
+We know a little bit more in cases of justifiable homicides. Here, we know 
 
 <div class="figure" style="text-align: center">
 <img src="victim_files/figure-html/victimJustifiableHomicide-1.png" alt="The distribution of circumstances for justifiable homicides (N = 308 in 2019 for all agencies reporting)." width="90%" />
@@ -224,13 +227,16 @@ As only people have demographics, these variables only apply when the victim is 
 
 #### Residence status
 
-
+The FBI defines residence as their legal permanent address though it's unclear how that is handled for people without this info and when people live permanently in a different spot than their legal address.  
 
 <div class="figure" style="text-align: center">
 <img src="victim_files/figure-html/victimResidenceStatus-1.png" alt="The distribution of residence status for all victims reported to NIBRS in 2019. Residence status is residence in the police agency's jurisdiction (e.g. do you live in the city you were victimized in?). It is unrelated to citizenship or immigration status." width="90%" />
 <p class="caption">(\#fig:victimResidenceStatus)The distribution of residence status for all victims reported to NIBRS in 2019. Residence status is residence in the police agency's jurisdiction (e.g. do you live in the city you were victimized in?). It is unrelated to citizenship or immigration status.</p>
 </div>
 
+One proposed measure to improve policing is to require police officers (or at least newly hired officers) live in the city where they work. The idea here is that people will do a better job if it affects the place they consider home.^[Since crime is generally concentrated in a small number of impoverished parts of town, and police likely won't live in these parts, this probably won't be very effective.] Luckily for us, NIBRS includes law enforcement officers in their measure of whether the victim lives in the jurisdiction where they were victimized. Since law enforcement officers are only recorded to be victims when on the job, this is one measure of where officers live.
+
+Figure \@ref(fig:victimResidenceStatusPolice) shows the residence status for law enforcement officer victims. Most law enforcement officer victims reside in their jurisdiction with being 53.2% residents and 13.3% being non-residents. However, there is a lot of uncertainty as 21.9% have an unknown residence status. 
 
 <div class="figure" style="text-align: center">
 <img src="victim_files/figure-html/victimResidenceStatusPolice-1.png" alt="The distribution of residence status for all Law Enforcement Officer victims." width="90%" />
