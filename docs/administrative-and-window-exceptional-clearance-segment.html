@@ -24,7 +24,7 @@
 <meta name="author" content="Jacob Kaplan" />
 
 
-<meta name="date" content="2021-06-27" />
+<meta name="date" content="2021-06-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -245,7 +245,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.1.5" data-path="arrestee.html"><a href="arrestee.html#type-of-arrest"><i class="fa fa-check"></i><b>7.1.5</b> Type of arrest</a></li>
 <li class="chapter" data-level="7.1.6" data-path="arrestee.html"><a href="arrestee.html#disposition-for-juvenile-arrestees"><i class="fa fa-check"></i><b>7.1.6</b> Disposition for juvenile arrestees</a></li>
 <li class="chapter" data-level="7.1.7" data-path="arrestee.html"><a href="arrestee.html#demographics-2"><i class="fa fa-check"></i><b>7.1.7</b> Demographics</a></li>
-<li class="chapter" data-level="7.1.8" data-path="arrestee.html"><a href="arrestee.html#residence-status-1"><i class="fa fa-check"></i><b>7.1.8</b> Residence status</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="property-and-window-property-segment.html"><a href="property-and-window-property-segment.html"><i class="fa fa-check"></i><b>8</b> Property and Window Property Segment</a>
@@ -281,7 +280,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>The Administrative Segment provides information about the incident itself, such as how many victims or offenders there were. In practice this means that it tells us how many other segments - offense, offender, victim, and arrestee segments - there are for this particular incident. It also has several important variables at the incident-level such as what hour of the day the incident occurred and whether the incident date variable is actually just the date the incident was reported. Finally, it tells us whether the case was cleared exceptionally and, if so, what type of exceptional clearance it was. This can tell us, for example, how many crimes were cleared because the offender died or the victim refused to cooperate. As the UCR data doesn’t differentiate between normal clearances (i.e. arrest the offender) and exceptional clearances, this provides a far deeper understanding of case outcomes.</p>
 <div id="important-variables" class="section level2" number="3.1">
 <h2><span class="header-section-number">3.1</span> Important variables</h2>
-<p>In addition to the variables detailed below,this segment has the traditional agency and incident identifiers: the ORI code, the agency state, the year of this data, and the incident number.</p>
+<p>In addition to the variables detailed below, this segment has the traditional agency and incident identifiers: the ORI code, the agency state, the year of this data, and the incident number.</p>
 <div id="the-incident-and-report-date" class="section level3" number="3.1.1">
 <h3><span class="header-section-number">3.1.1</span> The incident and report date</h3>
 <p>An important variable, especially for policy analyses, is when the crime happened. NIBRS tells you both the date and the hour of the day for when the crime occurred. We’ll start with the date. We can convert the date a few different ways, such as daily, weekly, monthly, quarterly. We could use this precise date to do regression discontinuity studies where we look at days just before and just after some policy change or natural experiment. In this chapter we’ll look simply at the percent of crimes each month and each day of the month (overall, not within each month).</p>

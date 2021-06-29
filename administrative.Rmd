@@ -28,7 +28,7 @@ The Administrative Segment provides information about the incident itself, such 
 
 ## Important variables
 
-In addition to the variables detailed below,this segment has the traditional agency and incident identifiers: the ORI code, the agency state, the year of this data, and the incident number. 
+In addition to the variables detailed below, this segment has the traditional agency and incident identifiers: the ORI code, the agency state, the year of this data, and the incident number. 
 
 ### The incident and report date
 

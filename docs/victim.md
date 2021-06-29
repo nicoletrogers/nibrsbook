@@ -4,11 +4,13 @@
 
 
 
-The Victim Segment provides data at the victim-level and includes information about who the victim is and their relationship to offenders. This data tells us what "type" of victim it is with the type meaning if they are a police officer, a civilian ("Individual" and basically any person who isn't a police officer), a business, the government, etc. It also includes the standard demographics variables in other segments - age, race, sex, ethnicity - as well as whether the victim is a resident (i.e. do they live there?) of the jurisdiction where they were victimized. We also learn from this data what types of injuries (if any) the victim suffered as a result of the crime. This is limited to physical injuries - excluding important outcomes such as mental duress or PTSD - but allows for a much better measure of harm from crime than simply assuming (or using past studies that tend to be old and only look at the cost of crime) what harm comes from certain offenses. There seven possible injury types (including no injury at all) and victims can report up to five of these injuries so we have a fairly detailed measure of victim injury.
+The Victim Segment provides data at the victim-level and includes information about who the victim is and their relationship to offenders. This data tells us what "type" of victim it is with the type meaning if they are a police officer, a civilian ("Individual" and basically any person who isn't a police officer), a business, the government, etc. It also includes the standard demographics variables in other segments - age, race, sex, ethnicity - as well as whether the victim is a resident (i.e. do they live there?) of the jurisdiction where they were victimized. We also learn from this data what types of injuries (if any) the victim suffered as a result of the crime. This is limited to physical injuries - excluding important outcomes such as mental duress or PTSD - but allows for a much better measure of harm from crime than simply assuming (or using past studies that tend to be old and only look at the cost of crime) what harm comes from certain offenses. There are seven possible injury types (including no injury at all) and victims can report up to five of these injuries so we have a fairly detailed measure of victim injury.
 
-One highly interesting variable is the relationship between the victim and the offender (for up to 10 offenders). This includes, for example, if the victim was the offender's wife, their child, employee, or if the stranger was unknown to them, with 27 total possible relationship categories. You can use this to determine which incidents were crimes by strangers, identify domestic violence, or simply learn who tends to commit crimes against certain types of victims. This variable is only available when the victim is a police officer or an "individual." This makes some sense though there could actually be cases where non-human victims (e.g. businesses, religious organizations) do have a relationship with the offender such as an employee stealing from a store. Related to the victim-offender relationship, this segment provides a bit of information about the motive for the crime. For aggravated assaults and homicides, there is a variable with the "circumstance" of the offense which is essentially the reason why the crime occurred. For example, possible circumstances are arguments between people, hunting accidents, child playing with weapon, and mercy killings. 
+One highly interesting variable in this segment is the relationship between the victim and the offender (for up to 10 offenders). This includes, for example, if the victim was the offender's wife, their child, employee, or if the stranger was unknown to them, with 27 total possible relationship categories. You can use this to determine which incidents were crimes by strangers, identify domestic violence, or simply learn who tends to commit crimes against certain types of victims. This variable is only available when the victim is a police officer or an "individual." This makes some sense though there could actually be cases where non-human victims (e.g. businesses, religious organizations) do have a relationship with the offender such as an employee stealing from a store. Related to the victim-offender relationship, this segment provides a bit of information about the motive for the crime. For aggravated assaults and homicides, there is a variable with the "circumstance" of the offense which is essentially the reason why the crime occurred. For example, possible circumstances are arguments between people, hunting accidents, child playing with weapon, and domestic violence. 
 
 ## Important variables
+
+In addition to the variables detailed below this segment has the traditional agency and incident identifiers: the ORI code, the agency state, the year of this data, and the incident number. It also has a "victim sequence number" which is a number identifying the victim in an incident since some incidents have multiple victims. 
 
 ### Crime category
 
@@ -71,7 +73,6 @@ Table: (\#tab:victimCrimeCategory)The number and percent of crimes committed aga
 |Sports Tampering                                    |             5|        0.00\%|
 |Total                                               |     7,423,963|         100\%|
 
-
 ### Victim type
 
 <div class="figure" style="text-align: center">
@@ -81,6 +82,20 @@ Table: (\#tab:victimCrimeCategory)The number and percent of crimes committed aga
 
 
 ### Injury
+
+An important variable that's completely missing in UCR data is how injured the victim was. 
+
+* Aggravated assault
+* Extortion/blackmail
+* Fondling
+* Human trafficking - commercial sex acts
+* Human trafficking - involuntary servitude
+* Kidnapping/abduction
+* Rape
+* Robbery
+* Sexual assault with an object
+* Simple assault
+* Sodomy
 
 <div class="figure" style="text-align: center">
 <img src="victim_files/figure-html/victimInjury-1.png" alt="The distribution of the injury sustained by the victim. Only individual and law enforcement officer victims have this variable available." width="90%" />
@@ -179,7 +194,7 @@ Table: (\#tab:victimAggAssault)The distribution of circumstances for aggravated 
 |Argument                              | Aggravated Assault/Murder|       147,027|42.66\%       |
 |Unknown Circumstances                 | Aggravated Assault/Murder|        82,432|23.92\%       |
 |Other Circumstances                   | Aggravated Assault/Murder|        64,605|18.74\%       |
-|Lovers Quarrel                        | Aggravated Assault/Murder|        32,249|9.36\%        |
+|Lovers Quarrel/Domestic Violence      | Aggravated Assault/Murder|        32,249|9.36\%        |
 |Assault On Law Enforcement Officer(S) | Aggravated Assault/Murder|         9,695|2.81\%        |
 |Other Felony Involved                 | Aggravated Assault/Murder|         4,007|1.16\%        |
 |Drug Dealing                          | Aggravated Assault/Murder|         1,718|0.50\%        |
@@ -205,9 +220,10 @@ Table: (\#tab:victimAggAssault)The distribution of circumstances for aggravated 
 
 ### Demographics
 
+As only people have demographics, these variables only apply when the victim is an individual or a law enforcement officer. The demographics here cover victim age, race, sex, ethnicity, and whether they live in the jurisdiction of the agency where they were victimized. For the following graphs I'll be using all victims, not separating by if they are an "individual" or a law enforcement officer. 
+
 #### Residence status
 
-Only for when victim is individual or law enforcement officer
 
 
 <div class="figure" style="text-align: center">
@@ -223,6 +239,10 @@ Only for when victim is individual or law enforcement officer
 
 #### Age
 
+This variable is the age of the victim when the crime occurred, regardless of when they reported the crime. Age is given as how many years old the victim is, with a few exceptions. Victims older than 98 are grouped together as "over 98 years old" while victims younger than 1 years old are broken down into "under 24 hours (neonate)", "1-6 days old", and "7-364 days old". About 1.4% of victim ages are unknown. 
+
+Figure \@ref(fig:victimAge) shows the percent of victims at each age available. This is pretty similar to the age of offenders shown in Figure \@ref(fig:offenderAge) with a peak in the mid to late 20s with a long decline after. The most common victim age is 27 followed by 28, 29, and 30.  Many people are victimized by people they know and there's generally a close age-range among acquaintances. For victims, however, there are far more young victims. About 2.8% of victims, or 145k victims, in 2019 were aged 14 or younger. However, remember that this is for all victims of any crime so age trends may differ by which crime you're looking at.
+
 <div class="figure" style="text-align: center">
 <img src="victim_files/figure-html/victimAge-1.png" alt="The age of all victims reported in the 2019 NIBRS data." width="90%" />
 <p class="caption">(\#fig:victimAge)The age of all victims reported in the 2019 NIBRS data.</p>
@@ -231,13 +251,18 @@ Only for when victim is individual or law enforcement officer
 
 #### Sex
 
+As with the Offender and the Arrestee Segments, we know the sex of the victim. The only choices are female, male, and unknown sex. There is no option for transgender or any other identify. Since the victim can tell the police their sex, and the police can see them clearly in most cases (though this may not be true if the victim reports a crime over the phone by calling 911 but then doesn't stay to be interviewed) so is more reliable than in the Offender Segment which may include guesses about the offender. The most common victim sex is female at 50.8% of victims, followed closely by male at 48.4%. Only about 0.8% of victims have an unknown sex. It's interesting that female victims are so common since most criminology research finds that male victims are so common. I think this is likely due to criminologists primarily focusing on murder and index violent crimes as their measure of crime, which ignores many other crimes.^[Murder and other violent crimes are mainly men hurting/killing other men, except in domestic violence which is primarily men hurting/killing women.]  
+
 <div class="figure" style="text-align: center">
 <img src="victim_files/figure-html/victimSex-1.png" alt="The sex of all victims reported in the 2019 NIBRS data." width="90%" />
 <p class="caption">(\#fig:victimSex)The sex of all victims reported in the 2019 NIBRS data.</p>
 </div>
 
-
 #### Race
+
+For each victim we also know their race. The only possible races are White, Black, American Indian/Alaskan Native, Asian, and Native Hawaiian/Other Pacific Islander. These categories are mutually exclusive so people cannot be labeled as mixed race, they must be put into one of the categories. Since the police generally can talk to the victim it is possible that they ask the victim what race they are rather than just guess based on appearance. However, this may differ based on agency and the officer taking the report so may be inconsistent. 
+
+Figure \@ref(fig:victimRace) shows the breakdown in victims by race. Most victims are White at about 67.8% of victims, followed by Black victims at 23.4%. 5.6% have an unknown race. The remaining victims are made up of 1.9% Asian victims, 0,7% American Indian/Alaskan Native victims, and 0.5% Native Hawaiian/Pacific Islander.
 
 <div class="figure" style="text-align: center">
 <img src="victim_files/figure-html/victimRace-1.png" alt="The race of all victims reported in the 2019 NIBRS data." width="90%" />
@@ -245,6 +270,12 @@ Only for when victim is individual or law enforcement officer
 </div>
 
 #### Ethnicity
+
+The final demographics variable for victims is their ethnicity, which is whether they are Hispanic or not. Ethnicity is an optional variable so agencies don't have to ever report it. This means that some agencies never report it, some always report it, and some report it only sometimes. The "sometimes report" agencies are probably the most dangerous to use since it's unclear when they report it, which could lead to biased data (such as only reporting it when the suspect is confirmed Hispanic or not, which may not be how other agencies define it). 
+
+There’s also the question of reliability of the ethnicity data. Someone being Hispanic or not is likely just what the arrestees calls themselves or what the arresting officer perceives them to be. Both are important ways of measuring ethnicity but get at different things. Perception is more important for studies of bias, self-identification for differences among groups of people such as arrest rates by ethnicity. And the subjectivity of who is classified as Hispanic means that this measurement may differ by agency and by officer, making it imprecise.
+
+Figure \@ref(fig:victimEthnicity) shows the breakdown in arrests by victim ethnicity for all victims in 2019. Most arrestees - 62.2 - are not Hispanic. Only 10.5% are reported to be Hispanic but a much higher percent of arrestees - 27.2% - have an unknown ethnicity. Given that over a quarter of victims don't have ethnicity data, if you'd like to use this variable I recommend that you carefully examine the data to ensure that the agencies you're looking at (if you don't use all agencies in the data) have a much higher reporting rate. 
 
 <div class="figure" style="text-align: center">
 <img src="victim_files/figure-html/victimEthnicity-1.png" alt="The ethnicity of all victims reported in the 2019 NIBRS data." width="90%" />
