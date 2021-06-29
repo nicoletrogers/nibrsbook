@@ -130,17 +130,25 @@ For each arrest we know the exact date of the arrest. As with the incident date,
 
 Figure \@ref(fig:arrestsDaysUntilArrest) shows how long it takes for arrests to be made. The shortest time is zero days which means the arrest and the incident happened on the same day and the longest is 461 days after the incident. About 76.5% of arrests happen on the same day as the incident while 6.6% happen on the next day. 1.4% happen the following day and 1% on the day after this. This trend of a lower probability of the case being solved as the time from the incident increases continues throughout the figure. Including dates up to 461 days is a bit ridiculous since it's impossible to see trends among the early dates other than zero days, but it's a good demonstration of how massively concentrated arrests are that occur on the same day of the incident. The lesson here is that if an arrest isn't made on the day of the incident (such as at the scene of the crime), it's very unlikely that'll it'll be made at all (and most crimes never lead to an arrest). 
 
-<div class="figure" style="text-align: center">
-<img src="arrestee_files/figure-html/arrestsDaysUntilArrest-1.png" alt="The distribution of the number of days from the incident to the arrest date. In 2019 the maximum days from incident to arrest was 461 days. Zero days means that the arrest occurred on the same day as the incident." width="90%" />
-<p class="caption">(\#fig:arrestsDaysUntilArrest)The distribution of the number of days from the incident to the arrest date. In 2019 the maximum days from incident to arrest was 461 days. Zero days means that the arrest occurred on the same day as the incident.</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/arrestsDaysUntilArrest-1} 
+
+}
+
+\caption{The distribution of the number of days from the incident to the arrest date. In 2019 the maximum days from incident to arrest was 461 days. Zero days means that the arrest occurred on the same day as the incident.}(\#fig:arrestsDaysUntilArrest)
+\end{figure}
 
 Figure \@ref(fig:arrestsDaysUntilArrestBarplot) groups the larger number of days together to make it easier to see trends early after the incident. Here we can see much better how the percent of arrests move quickly downwards after zero days. 
 
-<div class="figure" style="text-align: center">
-<img src="arrestee_files/figure-html/arrestsDaysUntilArrestBarplot-1.png" alt="The number of days from the incident to the arrest date. Values over 10 days are grouped to better see the distribution for arrests that took fewer than 10 days. Zero days means that the arrest occurred on the same day as the incident." width="90%" />
-<p class="caption">(\#fig:arrestsDaysUntilArrestBarplot)The number of days from the incident to the arrest date. Values over 10 days are grouped to better see the distribution for arrests that took fewer than 10 days. Zero days means that the arrest occurred on the same day as the incident.</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/arrestsDaysUntilArrestBarplot-1} 
+
+}
+
+\caption{The number of days from the incident to the arrest date. Values over 10 days are grouped to better see the distribution for arrests that took fewer than 10 days. Zero days means that the arrest occurred on the same day as the incident.}(\#fig:arrestsDaysUntilArrestBarplot)
+\end{figure}
 
 ### Weapons
 
@@ -148,26 +156,38 @@ In the Offense Segment we get info on what weapon (if any) was used during the c
 
 Figure \@ref(fig:arresteeWeapon) shows the breakdown in the weapon carried by the arrestee during the arrest. In 94% of arrests, the arrestee was not carrying any weapon. Since this graph shows arrests for all crimes, it makes a good deal of sense. Most crimes are non-violent so we'd expect those people to not carry a weapon. Since so few arrestees have weapons, we'll look at the breakdown among those who were carrying a weapon in Figure \@ref(fig:arresteeWeaponArmed). 
 
-<div class="figure" style="text-align: center">
-<img src="arrestee_files/figure-html/arresteeWeapon-1.png" alt="The weapon found on the arrestee for all arrestees reported in 2019." width="90%" />
-<p class="caption">(\#fig:arresteeWeapon)The weapon found on the arrestee for all arrestees reported in 2019.</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/arresteeWeapon-1} 
+
+}
+
+\caption{The weapon found on the arrestee for all arrestees reported in 2019.}(\#fig:arresteeWeapon)
+\end{figure}
 
 To see the weapons carried when the arrestee had a weapon, Figure \@ref(fig:arresteeWeaponArmed) shows the breakdown in which weapon they carried. About 43.8% of people arrested who had a weapon were carrying a handgun followed by 30% with some kind of "lethal cutting instrument" like a knife. While rifles, and especially "assault rifles", are what people (and especially politicians and the media) focus on when talking about violent crime, handguns are actually the most common gun to be used in a crime so it makes sense that handguns are the most frequently found weapon. "Firearm (type not stated)"  basically means that the type of firearm used is unknown so can belong in one of the firearm categories and makes up 9% of weapons. Blunt instruments (including bats, clubs, and brass knuckles) follow at 6.9% of weapons. And the remaining weapons included are "other firearm" (so any other than ones specified) at 5.8%, rifle at 2.3%, and shotgun at 2%. 
 
-<div class="figure" style="text-align: center">
-<img src="arrestee_files/figure-html/arresteeWeaponArmed-1.png" alt="The distribution of weapon usage for all arrestees in 2019 who were arrested with a weapon (i.e. excludes unarmed arrestees)." width="90%" />
-<p class="caption">(\#fig:arresteeWeaponArmed)The distribution of weapon usage for all arrestees in 2019 who were arrested with a weapon (i.e. excludes unarmed arrestees).</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/arresteeWeaponArmed-1} 
+
+}
+
+\caption{The distribution of weapon usage for all arrestees in 2019 who were arrested with a weapon (i.e. excludes unarmed arrestees).}(\#fig:arresteeWeaponArmed)
+\end{figure}
 
 ### Automatic weapons
 
 This variable tells you if the weapon the arrestee was carrying was a gun whether that gun was fully automatic. To be clear, this means that when you pull the trigger once the gun will fire multiple bullets. Semi-automatic firearms are not automatic firearms. The Offense Segment also has a variable indicating if the offender used an automatic weapon but there they didn't necessarily recover the gun so it's much less reliable than in this segment where the police have the gun and are able to test it.^[It's not clear whether they actually test it or simply go by the design of the gun, such as if the model allows for fully automatic firing.] The percent of guns that are fully automatic are fairly similar between the weapons seized at arrest, as shown in Figure \@ref(fig:arresteeAutomaticWeapon) and those used in the offense as shown in Figure \@ref(fig:offenseAutomaticWeapon) in Chapter \@ref(offenseSegment). Figure \@ref(fig:arresteeAutomaticWeapon) shows that about 5.6% of rifles seized by police during an arrest were fully automatic. About 4.9% of handguns are automatic while "firearm (type not stated) are automatic in 4.3% of cases. Shotguns and  "other firearm" category are the least likely to be automatic at about 2.5% and 1.1% of weapons, respectively. 
 
-<div class="figure" style="text-align: center">
-<img src="arrestee_files/figure-html/arresteeAutomaticWeapon-1.png" alt="The percent of firearms the arrestee was carrying that were fully automatic, for arrestees in 2019." width="90%" />
-<p class="caption">(\#fig:arresteeAutomaticWeapon)The percent of firearms the arrestee was carrying that were fully automatic, for arrestees in 2019.</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/arresteeAutomaticWeapon-1} 
+
+}
+
+\caption{The percent of firearms the arrestee was carrying that were fully automatic, for arrestees in 2019.}(\#fig:arresteeAutomaticWeapon)
+\end{figure}
 
 ### Type of arrest
 
@@ -177,19 +197,27 @@ The next type of arrest is a "warrant/previous incident report" and this makes u
 
 Finally, people can get a "summoned/cited" arrest which isn't really an arrest at all. This is when they are given a subpoena that says that must go to court to be tried for a crime, but they are not formally arrested and taken into police custody (i.e. they are never handcuffed, taken to a police precinct or to jail). About 22.2% of arrests are this form of arrest.
 
-<div class="figure" style="text-align: center">
-<img src="arrestee_files/figure-html/arresteeTypeOfArrest-1.png" alt="The distribution of arrests by type of arrest. Previous Incident Report includes cases where an individual was arrested for a separate crime and are then reported as also arrested for this incident." width="90%" />
-<p class="caption">(\#fig:arresteeTypeOfArrest)The distribution of arrests by type of arrest. Previous Incident Report includes cases where an individual was arrested for a separate crime and are then reported as also arrested for this incident.</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/arresteeTypeOfArrest-1} 
+
+}
+
+\caption{The distribution of arrests by type of arrest. Previous Incident Report includes cases where an individual was arrested for a separate crime and are then reported as also arrested for this incident.}(\#fig:arresteeTypeOfArrest)
+\end{figure}
 
 ### Disposition for juvenile arrestees
 
 For juvenile arrestees - those under age 18 *at the time of the arrest* (and, by definition they'd also be under age 18 during the incident) - there is some information about the outcome of the arrest.^[There are a few people older than 18 with this variable but it's so rare that I think that they're just incorrectly inputted ages.] There are two possible outcomes (which NIBRS calls "dispositions"): being referred to other (that is, other than the arresting agency) authorities or handled within the arresting agency. Figure \@ref(fig:arresteeJuvenileDisposition) shows this breakdown and being referred to other authorities is the most common outcome at 72.6% of juvenile arrests. This is a very broad category and the "other authorities" can range from juvenile or adult court (so the police recommend that they be prosecuted) to welfare agencies and being sent to other police agencies (such as if they committed a crime elsewhere and are being extradited). The other category, being handled within the department, means that the police release the juvenile without any formal action taken (but they may give the juvenile a warning). In these cases the juvenile is released to an adult (including but not limited to family members or guardians) and the case is essentially dropped. In about 0.001% of juvenile arrests the disposition is unknown.^[A juvenile can potentially get multiple dispositions, such as if they're initially released but later the police recommend them for prosecution. It's not clear which outcome is recorded in these cases. In UCR data, however, only the initial disposition is recorded so that is likely how it also is in NIBRS.] 
 
-<div class="figure" style="text-align: center">
-<img src="arrestee_files/figure-html/arresteeJuvenileDisposition-1.png" alt="For juvenile arrestees (under age 18), the distribution of case outcomes." width="90%" />
-<p class="caption">(\#fig:arresteeJuvenileDisposition)For juvenile arrestees (under age 18), the distribution of case outcomes.</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/arresteeJuvenileDisposition-1} 
+
+}
+
+\caption{For juvenile arrestees (under age 18), the distribution of case outcomes.}(\#fig:arresteeJuvenileDisposition)
+\end{figure}
 
 ### Demographics
 
@@ -203,10 +231,14 @@ One thing to be cautious about is that residence status may be an imprecise meas
 
 Figure \@ref(fig:arresteeResidenceStatus) shows the percent of arrestees in 2019 who were residents or not (or whose status was unknown) of the jurisdiction that arrested them. Most people were arrested near where they live, with 56.9% of arrestees being residents, compared with 23.3% not being residents. However, about one-fifth of arrestees had an unknown residence status so the percents of resident and non-resident may change dramatically if we didn't have any unknowns. 
 
-<div class="figure" style="text-align: center">
-<img src="arrestee_files/figure-html/arresteeResidenceStatus-1.png" alt="The distribution of residence status for all arrestees reported to NIBRS in 2019. Residence status is residence in the arresting agency's jurisdiction (e.g. do you live in the city you were arrested in?). It is unrelated to citizenship or immigration status." width="90%" />
-<p class="caption">(\#fig:arresteeResidenceStatus)The distribution of residence status for all arrestees reported to NIBRS in 2019. Residence status is residence in the arresting agency's jurisdiction (e.g. do you live in the city you were arrested in?). It is unrelated to citizenship or immigration status.</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/arresteeResidenceStatus-1} 
+
+}
+
+\caption{The distribution of residence status for all arrestees reported to NIBRS in 2019. Residence status is residence in the arresting agency's jurisdiction (e.g. do you live in the city you were arrested in?). It is unrelated to citizenship or immigration status.}(\#fig:arresteeResidenceStatus)
+\end{figure}
 
 #### Age
 
@@ -214,19 +246,27 @@ This variable is the age at the arrest, which may be different than age during t
 
 Figure \@ref(fig:arresteeAge) shows the percent of arrestees at every age available. Relative to Figure \@ref(fig:offenderAge), this graph is far smoother, indicating that there was less estimating ages and more knowing the actual age. While the trend is the same for both of these graphs, the arrestee data doesn't have any odd spikes with certain ages. Age we see that the percent of people arrested increases as they age, peaking in the early twenties before declining and then peaking age even higher in the late 20s. After this, there is a long steady decline as the arrestee ages.     
 
-<div class="figure" style="text-align: center">
-<img src="arrestee_files/figure-html/arresteeAge-1.png" alt="The age of all arrestees reported in the 2019 NIBRS data." width="90%" />
-<p class="caption">(\#fig:arresteeAge)The age of all arrestees reported in the 2019 NIBRS data.</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/arresteeAge-1} 
+
+}
+
+\caption{The age of all arrestees reported in the 2019 NIBRS data.}(\#fig:arresteeAge)
+\end{figure}
 
 #### Sex
 
 We also know the sex of the arrestee. The only options for this variable are male and female and there is never missing data so the police always choose one of these two choices. There is no option for transgender or any other identity. Figure \@ref(fig:arresteeSex) shows the distribution of arrestees by sex. The vast majority, 70.5% of arrestees are male and the remaining 29.5% are female. This is a higher rate of female arrestees than you might expect - past research has found that crime is largely a male-phenomenon, even greater than found here (though "crime" in most criminology research is only murder or violent index crimes) - and that's because there are differences in sex involvement by type of crime. For rape, as an example, 97.8% of arrestees in 2019 were male. Shoplifting was an even 50% split between female and male arrestees.
 
-<div class="figure" style="text-align: center">
-<img src="arrestee_files/figure-html/arresteeSex-1.png" alt="The sex of all arrestees reported in the 2019 NIBRS data." width="90%" />
-<p class="caption">(\#fig:arresteeSex)The sex of all arrestees reported in the 2019 NIBRS data.</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/arresteeSex-1} 
+
+}
+
+\caption{The sex of all arrestees reported in the 2019 NIBRS data.}(\#fig:arresteeSex)
+\end{figure}
 
 #### Race
 
@@ -234,10 +274,14 @@ For each arrestee we know their race, with possible races being White, Black, Am
 
 Figure \@ref(fig:arresteeRace) shows the breakdown for the races of each arrestee. White arrestees are most common at 64.2% of arrestees, following by Black arrestees at 29.8%. Only 3.1% of arrestees have an unknown race. The remaining small share of arrestees is made up of American Indian/Alaskan Native at 1.6%, Asian at 1%, and Native Hawaiian/Pacific Islander at 0.3% of arrestees.
 
-<div class="figure" style="text-align: center">
-<img src="arrestee_files/figure-html/arresteeRace-1.png" alt="The race of all arrestees reported in the 2019 NIBRS data." width="90%" />
-<p class="caption">(\#fig:arresteeRace)The race of all arrestees reported in the 2019 NIBRS data.</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/arresteeRace-1} 
+
+}
+
+\caption{The race of all arrestees reported in the 2019 NIBRS data.}(\#fig:arresteeRace)
+\end{figure}
 
 #### Ethnicity
 
@@ -247,7 +291,11 @@ Ethnicity is an optional variable so agencies are never required to report it. T
 
 Figure \@ref(fig:arresteeEthnicity) shows the breakdown in arrests by arrestee ethnicity. Most arrestees - 72.5% - are not Hispanic. Only 10% are reported to be Hispanic but an even higher percent of arrestees - 16.8% - have an unknown ethnicity so the true percent or Hispanic or non-Hispanic arrestee may be different than shown here. 
 
-<div class="figure" style="text-align: center">
-<img src="arrestee_files/figure-html/arresteeEthnicity-1.png" alt="The ethnicity of all arrestees reported in the 2019 NIBRS data." width="90%" />
-<p class="caption">(\#fig:arresteeEthnicity)The ethnicity of all arrestees reported in the 2019 NIBRS data.</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/arresteeEthnicity-1} 
+
+}
+
+\caption{The ethnicity of all arrestees reported in the 2019 NIBRS data.}(\#fig:arresteeEthnicity)
+\end{figure}

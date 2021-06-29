@@ -89,7 +89,7 @@ For the group who suffered one of the six more serious injury types, 32.1% suffe
 
 Trends for law enforcement officer victims (not shown) are nearly identical for those with an injury but have more victims reporting no injury at all relative to non-law enforcement officer victims.
 
-```{r victimInjuryExcludeNone, fig.cap = "The distribution of the injury sustained by the victim for those who had an injury other than 'none'."}
+```{r victimInjuryExcludeNone, fig.cap = "The distribution of the injury sustained by the victim for those who had an injury other than 'none' or 'apparent minor injuries'."}
 victim %>%
   filter(!is.na(type_of_injury_1)) %>%
   filter(!type_of_injury_1 %in% c("none", "apparent minor injuries")) %>%
