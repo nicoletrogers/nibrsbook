@@ -14,6 +14,10 @@ In addition to the variables detailed below this segment has the traditional age
 
 ### Crime category
 
+The first variable we'll look at is the crime the victim experienced. This is a bit different than the offenses in the Offense Segment as not all victims in an incident are victimized by all of the crimes involved. For example, if a couple is assaulted and the woman is raped, the woman would experience rape and assault while the man only experiences assault. NIBRS allows for up to 10 offenses per victim and these are supposed to be ranked in order of seriousness. So the first variable has the most serious offense, the second has the second most serious offense, and so on. This is true is most cases but some has more minor crimes presented before more serious crimes. This seems to just be a data entry issue and nothing systematic but you should still check all offense variables if you're interested in finding the most serious crime per victim. 
+
+There are 52 possible offenses included in this segment and Table \@ref(tab:victimCrimeCategory) shows how frequent each offense is. Though there are 10 possible offenses per victim, this table only looks at the first offense. The most common offense is simple assault, affecting 12.7% of victims or 944k people. This is followed by damage, vandalism, or destruction of property for 11% of victims. About 9.6% of victims experience drugs/narcotic violations, and these victims are likely also the offenders in the case (all incidents must have a victim recorded so in drug crimes the victims are also the offenders in most cases). Theft crimes, broken into some subcategories like "all other larceny" and "theft from motor vehicle" make up the three of the top six crimes (ranks 3, 5, and 6) people are victimized by. And the only remaining crime that accounts for 5% or more of offenses is burglary at 6.4%.
+
 
 Table: (\#tab:victimCrimeCategory)The number and percent of crimes committed against each victim. For victims with multiple crimes committed against them, this shows the most serious crime.
 
@@ -75,17 +79,16 @@ Table: (\#tab:victimCrimeCategory)The number and percent of crimes committed aga
 
 ### Victim type
 
-Law enforcement officers who are victimized are only to be classified as law enforcement officers when they are the victims of murder, aggravated or simple assault, or intimidation. Otherwise they're labeled as "individual" victims.
+I spoke above as if all victims are people who are victimized. This isn't entirely true. Some victims may be organizations, businesses, or other inanimate objects.^[Even though "corporations are people".] NIBRS has nine different types of victims (including "unknown" type and "other" type) in the data and it tells us which type each victim is. 
 
+Figure \@ref(fig:victimType) shows each of the victim types and how commonly they appear in the data. Two key ones are "individual" at 69.4% of victims and law enforcement officer at 0.5% of victims. Law enforcement officers who are victimized are only to be classified as law enforcement officers when they are the victims of murder, aggravated or simple assault, or intimidation. Otherwise they're labeled as "individual" victims. So an individual is a person who is either not a law enforcement officer or who is an officer but isn't victimized by one of the approved crimes. These two are special types of victims as all other variables in this segment apply only to them. This is because non-humans cannot have demographic information, injuries (injury to property would be detailed in the Property Segment in Chapter \@ref(property)) or relationships.^[Businesses may have some form of demographic information if you think about demographics of the owners or managers. However, that information is not available. If the business was targeted due to the owner's demographics then that may be considered a hate crime and be reported in the Offense Segment.]
 
-\begin{figure}
+The next most common type is business at 15.6% of victims, "society/public" at 12.9% of victims, and the government in 1% of victims. When the victim is society/public that means that the offense is a "victimless crime" or one where there is no specific victim. This includes drug offenses, animal cruelty (animals cannon be victims in this data), prostitution-related offenses (purchasing, promoting, and being a prostitute), pornography/obscene materials, and weapon offenses. The remaining categories - financial institution, other victim type, unknown victim type, and religion organization - are each under 0.25% of victims. 
 
-{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/victimType-1} 
-
-}
-
-\caption{The distribution of the type of victim. Victim types are mutually exclusive.}(\#fig:victimType)
-\end{figure}
+<div class="figure" style="text-align: center">
+<img src="victim_files/figure-html/victimType-1.png" alt="The distribution of the type of victim. Victim types are mutually exclusive." width="90%" />
+<p class="caption">(\#fig:victimType)The distribution of the type of victim. Victim types are mutually exclusive.</p>
+</div>
 
 ### Injury
 
@@ -109,27 +112,19 @@ Even though there are up to five victim injuries recorded, for the below graphs 
 
 Figure \@ref(fig:victimInjury) shows the eight injury categories and how common they are for all victims with this information reported. The most common type is "none" at 16.8% of injuries which means the victim didn't suffer any injuries at all. This is followed by 13.4% of victims suffering "apparent minor injuries". The six serious injuries are far lesson common and given that nearly a third of victims suffer none or minor injuries are hard to see on the graph. To make it easier to see, Figure \@ref(fig:victimInjuryExcludeNone) shows the breakdown in victim injury excluding those who didn't suffer an injury or those who suffered a minor injury. 
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/victimInjury-1} 
-
-}
-
-\caption{The distribution of the injury sustained by the victim. Only individual and law enforcement officer victims have this variable available.}(\#fig:victimInjury)
-\end{figure}
+<div class="figure" style="text-align: center">
+<img src="victim_files/figure-html/victimInjury-1.png" alt="The distribution of the injury sustained by the victim. Only individual and law enforcement officer victims have this variable available." width="90%" />
+<p class="caption">(\#fig:victimInjury)The distribution of the injury sustained by the victim. Only individual and law enforcement officer victims have this variable available.</p>
+</div>
 
 For the group who suffered one of the six more serious injury types, 32.1% suffered an "other major injury" which is a serious injury other than one of the other categories. This is followed by 25.8% having a serious laceration (which is just a cut), 21.6% having a possible internal injury, and 12.5% having an apparent broken bone. About 6.5% of these victims became unconscious at some point in the incident, and 1.5% lost at least one tooth. 
 
 Trends for law enforcement officer victims (not shown) are nearly identical for those with an injury but have more victims reporting no injury at all relative to non-law enforcement officer victims.
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/victimInjuryExcludeNone-1} 
-
-}
-
-\caption{The distribution of the injury sustained by the victim for those who had an injury other than 'none' or 'apparent minor injuries'.}(\#fig:victimInjuryExcludeNone)
-\end{figure}
+<div class="figure" style="text-align: center">
+<img src="victim_files/figure-html/victimInjuryExcludeNone-1.png" alt="The distribution of the injury sustained by the victim for those who had an injury other than 'none' or 'apparent minor injuries'." width="90%" />
+<p class="caption">(\#fig:victimInjuryExcludeNone)The distribution of the injury sustained by the victim for those who had an injury other than 'none' or 'apparent minor injuries'.</p>
+</div>
 
 ### Relationship to offender
 
@@ -228,14 +223,10 @@ Table: (\#tab:victimAggAssault)The distribution of circumstances for aggravated 
 
 We know a little bit more in cases of justifiable homicides. Here, we know 
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/victimJustifiableHomicide-1} 
-
-}
-
-\caption{The distribution of circumstances for justifiable homicides (N = 308 in 2019 for all agencies reporting).}(\#fig:victimJustifiableHomicide)
-\end{figure}
+<div class="figure" style="text-align: center">
+<img src="victim_files/figure-html/victimJustifiableHomicide-1.png" alt="The distribution of circumstances for justifiable homicides (N = 308 in 2019 for all agencies reporting)." width="90%" />
+<p class="caption">(\#fig:victimJustifiableHomicide)The distribution of circumstances for justifiable homicides (N = 308 in 2019 for all agencies reporting).</p>
+</div>
 
 ### Demographics
 
@@ -243,29 +234,23 @@ As only people have demographics, these variables only apply when the victim is 
 
 #### Residence status
 
-The FBI defines residence as their legal permanent address though it's unclear how that is handled for people without this info and when people live permanently in a different spot than their legal address.  
+This segments tells us if the victim is a resident of the jurisdiction they were victimized in. This basically means whether or not they live in the city where the crime happened. it has nothing to do with residence status or citizenship status in the United States. The FBI defines residence as their legal permanent address though it's unclear how that is handled for people without this info (though this is far less likely to be a problem here than for arrestees which also report this variable) and when people live permanently in a different spot than their legal address. This variable is useful when trying to figure out if victims are those who live in the area or live outside of it, such as tourists or workers who live nearby. Since crime rates are usually crimes per residents in the jurisdiction, this can be used to determine how reliable that denominator is. If many victims are residents then it makes much more sense than if few are.   
 
-\begin{figure}
+Table \@ref(fig:victimResidenceStatus) shows the residence status for all individual or law enforcement officer victims. The vast majority, 67%, of victims are residents of the jurisdiction where they were victimized while 12.5% were not residents. 8.9% of victims have an unknown resident status.    
 
-{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/victimResidenceStatus-1} 
-
-}
-
-\caption{The distribution of residence status for all victims reported to NIBRS in 2019. Residence status is residence in the police agency's jurisdiction (e.g. do you live in the city you were victimized in?). It is unrelated to citizenship or immigration status.}(\#fig:victimResidenceStatus)
-\end{figure}
+<div class="figure" style="text-align: center">
+<img src="victim_files/figure-html/victimResidenceStatus-1.png" alt="The distribution of residence status for all victims reported to NIBRS in 2019. Residence status is residence in the police agency's jurisdiction (e.g. do you live in the city you were victimized in?). It is unrelated to citizenship or immigration status." width="90%" />
+<p class="caption">(\#fig:victimResidenceStatus)The distribution of residence status for all victims reported to NIBRS in 2019. Residence status is residence in the police agency's jurisdiction (e.g. do you live in the city you were victimized in?). It is unrelated to citizenship or immigration status.</p>
+</div>
 
 One proposed measure to improve policing is to require police officers (or at least newly hired officers) live in the city where they work. The idea here is that people will do a better job if it affects the place they consider home.^[Since crime is generally concentrated in a small number of impoverished parts of town, and police likely won't live in these parts, this probably won't be very effective.] Luckily for us, NIBRS includes law enforcement officers in their measure of whether the victim lives in the jurisdiction where they were victimized. Since law enforcement officers are only recorded to be victims when on the job, this is one measure of where officers live.
 
 Figure \@ref(fig:victimResidenceStatusPolice) shows the residence status for law enforcement officer victims. Most law enforcement officer victims reside in their jurisdiction with being 53.2% residents and 13.3% being non-residents. However, there is a lot of uncertainty as 21.9% have an unknown residence status. 
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/victimResidenceStatusPolice-1} 
-
-}
-
-\caption{The distribution of residence status for all Law Enforcement Officer victims.}(\#fig:victimResidenceStatusPolice)
-\end{figure}
+<div class="figure" style="text-align: center">
+<img src="victim_files/figure-html/victimResidenceStatusPolice-1.png" alt="The distribution of residence status for all Law Enforcement Officer victims." width="90%" />
+<p class="caption">(\#fig:victimResidenceStatusPolice)The distribution of residence status for all Law Enforcement Officer victims.</p>
+</div>
 
 #### Age
 
@@ -273,28 +258,19 @@ This variable is the age of the victim when the crime occurred, regardless of wh
 
 Figure \@ref(fig:victimAge) shows the percent of victims at each age available. This is pretty similar to the age of offenders shown in Figure \@ref(fig:offenderAge) with a peak in the mid to late 20s with a long decline after. The most common victim age is 27 followed by 28, 29, and 30.  Many people are victimized by people they know and there's generally a close age-range among acquaintances. For victims, however, there are far more young victims. About 2.8% of victims, or 145k victims, in 2019 were aged 14 or younger. However, remember that this is for all victims of any crime so age trends may differ by which crime you're looking at.
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/victimAge-1} 
-
-}
-
-\caption{The age of all victims reported in the 2019 NIBRS data.}(\#fig:victimAge)
-\end{figure}
-
+<div class="figure" style="text-align: center">
+<img src="victim_files/figure-html/victimAge-1.png" alt="The age of all victims reported in the 2019 NIBRS data." width="90%" />
+<p class="caption">(\#fig:victimAge)The age of all victims reported in the 2019 NIBRS data.</p>
+</div>
 
 #### Sex
 
 As with the Offender and the Arrestee Segments, we know the sex of the victim. The only choices are female, male, and unknown sex. There is no option for transgender or any other identify. Since the victim can tell the police their sex, and the police can see them clearly in most cases (though this may not be true if the victim reports a crime over the phone by calling 911 but then doesn't stay to be interviewed) so is more reliable than in the Offender Segment which may include guesses about the offender. The most common victim sex is female at 50.8% of victims, followed closely by male at 48.4%. Only about 0.8% of victims have an unknown sex. It's interesting that female victims are so common since most criminology research finds that male victims are so common. I think this is likely due to criminologists primarily focusing on murder and index violent crimes as their measure of crime, which ignores many other crimes.^[Murder and other violent crimes are mainly men hurting/killing other men, except in domestic violence which is primarily men hurting/killing women.]  
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/victimSex-1} 
-
-}
-
-\caption{The sex of all victims reported in the 2019 NIBRS data.}(\#fig:victimSex)
-\end{figure}
+<div class="figure" style="text-align: center">
+<img src="victim_files/figure-html/victimSex-1.png" alt="The sex of all victims reported in the 2019 NIBRS data." width="90%" />
+<p class="caption">(\#fig:victimSex)The sex of all victims reported in the 2019 NIBRS data.</p>
+</div>
 
 #### Race
 
@@ -302,14 +278,10 @@ For each victim we also know their race. The only possible races are White, Blac
 
 Figure \@ref(fig:victimRace) shows the breakdown in victims by race. Most victims are White at about 67.8% of victims, followed by Black victims at 23.4%. 5.6% have an unknown race. The remaining victims are made up of 1.9% Asian victims, 0,7% American Indian/Alaskan Native victims, and 0.5% Native Hawaiian/Pacific Islander.
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/victimRace-1} 
-
-}
-
-\caption{The race of all victims reported in the 2019 NIBRS data.}(\#fig:victimRace)
-\end{figure}
+<div class="figure" style="text-align: center">
+<img src="victim_files/figure-html/victimRace-1.png" alt="The race of all victims reported in the 2019 NIBRS data." width="90%" />
+<p class="caption">(\#fig:victimRace)The race of all victims reported in the 2019 NIBRS data.</p>
+</div>
 
 #### Ethnicity
 
@@ -319,14 +291,10 @@ There’s also the question of reliability of the ethnicity data. Someone being 
 
 Figure \@ref(fig:victimEthnicity) shows the breakdown in arrests by victim ethnicity for all victims in 2019. Most arrestees - 62.2 - are not Hispanic. Only 10.5% are reported to be Hispanic but a much higher percent of arrestees - 27.2% - have an unknown ethnicity. Given that over a quarter of victims don't have ethnicity data, if you'd like to use this variable I recommend that you carefully examine the data to ensure that the agencies you're looking at (if you don't use all agencies in the data) have a much higher reporting rate. 
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/victimEthnicity-1} 
-
-}
-
-\caption{The ethnicity of all victims reported in the 2019 NIBRS data.}(\#fig:victimEthnicity)
-\end{figure}
+<div class="figure" style="text-align: center">
+<img src="victim_files/figure-html/victimEthnicity-1.png" alt="The ethnicity of all victims reported in the 2019 NIBRS data." width="90%" />
+<p class="caption">(\#fig:victimEthnicity)The ethnicity of all victims reported in the 2019 NIBRS data.</p>
+</div>
 
 
 

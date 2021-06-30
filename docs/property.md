@@ -1,4 +1,4 @@
-# Property and Window Property Segment
+# Property and Window Property Segment {#property}
 
 
 
@@ -22,14 +22,10 @@ The next most common group, at 13.3%, is when the item was seized by the police.
 
 Next is "none" which only means that no properly was stolen or damaged but that it could have been. For example, if someone tries to grab a person's purse but fails, that would be considered "none" since the purse wasn't actually taken. The remaining types are when the item was a counterfeit/forgery, at 1.2%, was burned (such as during an arson) at 0.2%, or when the type of loss is unknown at 0.2% 
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/propertyTypeLoss-1} 
-
-}
-
-\caption{The type of loss or if the item is recovered.}(\#fig:propertyTypeLoss)
-\end{figure}
+<div class="figure" style="text-align: center">
+<img src="property_files/figure-html/propertyTypeLoss-1.png" alt="The type of loss or if the item is recovered." width="90%" />
+<p class="caption">(\#fig:propertyTypeLoss)The type of loss or if the item is recovered.</p>
+</div>
 
 ### Description of property
 
@@ -201,25 +197,17 @@ The police can take the victim's estimation into consideration but aren't suppos
 
 We can use this variable to look at the value of items lost by the victim. Figure \@ref(fig:propertyValuePropertyLevel) looks at the value per item stolen in a crime (if incidents have multiple items stolen, this counts them all separately). This includes items lost by theft, robbery, and burglary so is part of the "Stolen/Robbed/Etc." category of types of property loss. It excludes items damaged or destroyed or burned (there is info about the value of property in these incidents but these are not shown in the figure). To make this graph a bit simpler I've rounded all values to the nearest \$100 so items valued at \$0 mean that they are worth between \$1 and \$50. I've also capped the largest value to \$1,000,000 and set the x-axis on the log scale since the data skews very much to the right. The average item lost was worth \$3,217 and the median was worth \$150. Most items lost were relative cheap with 34.9% worth under \$50 and 13.5% worth between \$51 and \$149. There is a sharp decline in the frequency of property stolen as the value increases. So while some extremely valuable items are lost during crimes, they are much less common than relatively low-value items. 
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/propertyValuePropertyLevel-1} 
-
-}
-
-\caption{The distribution of the value of property stolen. Values are capped at 1,000,000 and each value is rounded to the nearest 100. The x-axis is set on the log scale as this distribution is hugely right skewed.}(\#fig:propertyValuePropertyLevel)
-\end{figure}
+<div class="figure" style="text-align: center">
+<img src="property_files/figure-html/propertyValuePropertyLevel-1.png" alt="The distribution of the value of property stolen. Values are capped at 1,000,000 and each value is rounded to the nearest 100. The x-axis is set on the log scale as this distribution is hugely right skewed." width="90%" />
+<p class="caption">(\#fig:propertyValuePropertyLevel)The distribution of the value of property stolen. Values are capped at 1,000,000 and each value is rounded to the nearest 100. The x-axis is set on the log scale as this distribution is hugely right skewed.</p>
+</div>
 
 Since multiple items can be stolen in a single incident, to better understand the cost of crime for the victim we probably want to add up all of the property to the incident-level. Figure \@ref(fig:propertyValuePropertyLevel) does this and shows the cost of property stolen per incident. The trend is nearly identical to Figure \@ref(tab:propertySeizedDescription) but the value is a bit higher than before. Now fewer than a quarter of incidents result in a loss of <\$50 and the average cost per incident is \$4,731 (median = \$300).
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/propertyValueIncidentLevel-1} 
-
-}
-
-\caption{The incident-level distribution of the value of property stolen. As values are aggregated to the incident-level, these are higher than the above graph which shows each item individually. Values are capped at 1,000,000 and each value is rounded to the nearest 100. The x-axis is set on the log scale as this distribution is hugely right skewed.}(\#fig:propertyValueIncidentLevel)
-\end{figure}
+<div class="figure" style="text-align: center">
+<img src="property_files/figure-html/propertyValueIncidentLevel-1.png" alt="The incident-level distribution of the value of property stolen. As values are aggregated to the incident-level, these are higher than the above graph which shows each item individually. Values are capped at 1,000,000 and each value is rounded to the nearest 100. The x-axis is set on the log scale as this distribution is hugely right skewed." width="90%" />
+<p class="caption">(\#fig:propertyValueIncidentLevel)The incident-level distribution of the value of property stolen. As values are aggregated to the incident-level, these are higher than the above graph which shows each item individually. Values are capped at 1,000,000 and each value is rounded to the nearest 100. The x-axis is set on the log scale as this distribution is hugely right skewed.</p>
+</div>
 
 ### Date property was recovered
 
@@ -227,14 +215,10 @@ This segment tells us both when the incident happened and, for stolen property, 
 
 The majority - 60.8% - of property lost is recovered on the same day, which is shown as zero days. We saw in Figure \@ref(fig:arrestsDaysUntilArrest) that the vast majority of arrests happen on the same day as the incident so it makes sense the most property would too.^[I'd expect most property to be recovered on the arrestee's body.] A smaller and smaller share of property is recovered as the number of days from the incident increase, a trend also found in the time to arrest graph. The lesson here seems to be that if you're a victim of a crime and had something taken, unless it's recovered very quickly it's unlikely to be recovered at all. 
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/propertyDaysUntilRecovered-1} 
-
-}
-
-\caption{The distribution of the number of days from the incident to the property recovered date. In 2019 the maximum days from incident to arrest was 450 days. Zero days means that the arrest occurred on the same day as the incident. }(\#fig:propertyDaysUntilRecovered)
-\end{figure}
+<div class="figure" style="text-align: center">
+<img src="property_files/figure-html/propertyDaysUntilRecovered-1.png" alt="The distribution of the number of days from the incident to the property recovered date. In 2019 the maximum days from incident to arrest was 450 days. Zero days means that the arrest occurred on the same day as the incident. " width="90%" />
+<p class="caption">(\#fig:propertyDaysUntilRecovered)The distribution of the number of days from the incident to the property recovered date. In 2019 the maximum days from incident to arrest was 450 days. Zero days means that the arrest occurred on the same day as the incident. </p>
+</div>
 
 ### Drugs
 
@@ -291,12 +275,8 @@ Once you know the units you can look at the amount of drugs seized. The amount i
 
 So with those caveats, we can see what amounts of marijuana, measured in grams, are most frequently seized. Generally, the amount of marijuana seized is in small amounts with 22.5% being 1-2 grams (since we don't include the parts of a gram we can only say that it is 1 to 1.999 grams) and 18.6% being less than one gram. As the amount of drugs increase, the percent of seizures that involve this number of drugs decreases. It's a bit curious that they include grams for values over 28 since 28.3495 grams is one ounce so it'd make sense to just start reporting in units of ounces instead of just increasingly large number of grams.
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/propertyMarijuanaGramMeasures-1} 
-
-}
-
-\caption{For drugs seized that are measured in grams, this figure shows the distribution in the number of grams seized. Values over 10 grams are grouped together for easier interpretation of lower values of drugs seized.}(\#fig:propertyMarijuanaGramMeasures)
-\end{figure}
+<div class="figure" style="text-align: center">
+<img src="property_files/figure-html/propertyMarijuanaGramMeasures-1.png" alt="For drugs seized that are measured in grams, this figure shows the distribution in the number of grams seized. Values over 10 grams are grouped together for easier interpretation of lower values of drugs seized." width="90%" />
+<p class="caption">(\#fig:propertyMarijuanaGramMeasures)For drugs seized that are measured in grams, this figure shows the distribution in the number of grams seized. Values over 10 grams are grouped together for easier interpretation of lower values of drugs seized.</p>
+</div>
 

@@ -1715,6 +1715,10 @@ In addition to the variables detailed below this segment has the traditional age
 \hypertarget{crime-category-1}{%
 \subsection{Crime category}\label{crime-category-1}}
 
+The first variable we'll look at is the crime the victim experienced. This is a bit different than the offenses in the Offense Segment as not all victims in an incident are victimized by all of the crimes involved. For example, if a couple is assaulted and the woman is raped, the woman would experience rape and assault while the man only experiences assault. NIBRS allows for up to 10 offenses per victim and these are supposed to be ranked in order of seriousness. So the first variable has the most serious offense, the second has the second most serious offense, and so on. This is true is most cases but some has more minor crimes presented before more serious crimes. This seems to just be a data entry issue and nothing systematic but you should still check all offense variables if you're interested in finding the most serious crime per victim.
+
+There are 52 possible offenses included in this segment and Table \ref{tab:victimCrimeCategory} shows how frequent each offense is. Though there are 10 possible offenses per victim, this table only looks at the first offense. The most common offense is simple assault, affecting 12.7\% of victims or 944k people. This is followed by damage, vandalism, or destruction of property for 11\% of victims. About 9.6\% of victims experience drugs/narcotic violations, and these victims are likely also the offenders in the case (all incidents must have a victim recorded so in drug crimes the victims are also the offenders in most cases). Theft crimes, broken into some subcategories like ``all other larceny'' and ``theft from motor vehicle'' make up the three of the top six crimes (ranks 3, 5, and 6) people are victimized by. And the only remaining crime that accounts for 5\% or more of offenses is burglary at 6.4\%.
+
 \begin{longtable}[]{@{}lrr@{}}
 \caption{\label{tab:victimCrimeCategory}The number and percent of crimes committed against each victim. For victims with multiple crimes committed against them, this shows the most serious crime.}\tabularnewline
 \toprule
@@ -1784,7 +1788,11 @@ Total & 7,423,963 & 100\%\tabularnewline
 \hypertarget{victim-type}{%
 \subsection{Victim type}\label{victim-type}}
 
-Law enforcement officers who are victimized are only to be classified as law enforcement officers when they are the victims of murder, aggravated or simple assault, or intimidation. Otherwise they're labeled as ``individual'' victims.
+I spoke above as if all victims are people who are victimized. This isn't entirely true. Some victims may be organizations, businesses, or other inanimate objects.\footnote{Even though ``corporations are people''.} NIBRS has nine different types of victims (including ``unknown'' type and ``other'' type) in the data and it tells us which type each victim is.
+
+Figure \ref{fig:victimType} shows each of the victim types and how commonly they appear in the data. Two key ones are ``individual'' at 69.4\% of victims and law enforcement officer at 0.5\% of victims. Law enforcement officers who are victimized are only to be classified as law enforcement officers when they are the victims of murder, aggravated or simple assault, or intimidation. Otherwise they're labeled as ``individual'' victims. So an individual is a person who is either not a law enforcement officer or who is an officer but isn't victimized by one of the approved crimes. These two are special types of victims as all other variables in this segment apply only to them. This is because non-humans cannot have demographic information, injuries (injury to property would be detailed in the Property Segment in Chapter \ref{property}) or relationships.\footnote{Businesses may have some form of demographic information if you think about demographics of the owners or managers. However, that information is not available. If the business was targeted due to the owner's demographics then that may be considered a hate crime and be reported in the Offense Segment.}
+
+The next most common type is business at 15.6\% of victims, ``society/public'' at 12.9\% of victims, and the government in 1\% of victims. When the victim is society/public that means that the offense is a ``victimless crime'' or one where there is no specific victim. This includes drug offenses, animal cruelty (animals cannon be victims in this data), prostitution-related offenses (purchasing, promoting, and being a prostitute), pornography/obscene materials, and weapon offenses. The remaining categories - financial institution, other victim type, unknown victim type, and religion organization - are each under 0.25\% of victims.
 
 \begin{figure}
 
@@ -1992,7 +2000,9 @@ As only people have demographics, these variables only apply when the victim is 
 \hypertarget{residence-status}{%
 \subsubsection{Residence status}\label{residence-status}}
 
-The FBI defines residence as their legal permanent address though it's unclear how that is handled for people without this info and when people live permanently in a different spot than their legal address.
+This segments tells us if the victim is a resident of the jurisdiction they were victimized in. This basically means whether or not they live in the city where the crime happened. it has nothing to do with residence status or citizenship status in the United States. The FBI defines residence as their legal permanent address though it's unclear how that is handled for people without this info (though this is far less likely to be a problem here than for arrestees which also report this variable) and when people live permanently in a different spot than their legal address. This variable is useful when trying to figure out if victims are those who live in the area or live outside of it, such as tourists or workers who live nearby. Since crime rates are usually crimes per residents in the jurisdiction, this can be used to determine how reliable that denominator is. If many victims are residents then it makes much more sense than if few are.
+
+Table \ref{fig:victimResidenceStatus} shows the residence status for all individual or law enforcement officer victims. The vast majority, 67\%, of victims are residents of the jurisdiction where they were victimized while 12.5\% were not residents. 8.9\% of victims have an unknown resident status.
 
 \begin{figure}
 
@@ -2401,8 +2411,8 @@ Figure \ref{fig:arresteeEthnicity} shows the breakdown in arrests by arrestee et
 \caption{The ethnicity of all arrestees reported in the 2019 NIBRS data.}\label{fig:arresteeEthnicity}
 \end{figure}
 
-\hypertarget{property-and-window-property-segment}{%
-\chapter{Property and Window Property Segment}\label{property-and-window-property-segment}}
+\hypertarget{property}{%
+\chapter{Property and Window Property Segment}\label{property}}
 
 The Property Segment provides a bit more info than would be expected from the name. For each item involved in the crime it tells you what category that items falls into, with 68 total categories (including ``other'') ranging from explosives and pets to money and alcohol. It also tells you the estimated value of that item. This data covers more than just items stolen during a crime. For each item it tells you what happened to that item such as if it was stolen, damaged, seized by police (such as illegal items like drugs), recovered (from being stolen) by police, or burned during an arson.
 

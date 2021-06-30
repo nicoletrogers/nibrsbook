@@ -135,14 +135,10 @@ One of the UCR datasets, the [Law Enforcement Officers Killed and Assaulted (LEO
 
 NIBRS data is often discussed - and is used - as if it was a single file with all of this information available. But it actually comes as multiple different files that each provide different information about a crime incident, including at different levels of analysis so users must clean each segment before merging them together. In this section we'll discuss each of the segments and how they are related to each other. First, keep in mind that NIBRS is at its core an incident-level dataset (hence the "Incident-Based" part of its name). Everything that we have stems from the incident, even though we can get more detailed and look at, for example, individual victims in an incident or even offenses within an incident. Figure \@ref(fig:segmentFlowchart) shows the seven main segments and how they relate to each other.^[There are also segments called "batch headers" which provide information about the agency such as the population under its jurisdiction but we won't cover those since they are agency-level and the same across each incident] There are also three segments called "window segments" - there is one for arrestees, one of exceptional clearances (i.e. police could have made an arrest but didn't for some reason but still consider the case closed), and one for property - that do not have an associated segment with them, they only have the information available in the given "window" segment. We'll talk about window segments more in Section \@ref(window) below.
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.9\linewidth]{images/segments_flowchart} 
-
-}
-
-\caption{The association of each segment file in the NIBRS dataset.}(\#fig:segmentFlowchart)
-\end{figure}
+<div class="figure" style="text-align: center">
+<img src="images/segments_flowchart.png" alt="The association of each segment file in the NIBRS dataset." width="90%" />
+<p class="caption">(\#fig:segmentFlowchart)The association of each segment file in the NIBRS dataset.</p>
+</div>
 
 The first two boxes in Figure \@ref(fig:segmentFlowchart), colored in orange, are not part of NIBRS but are part of the data generating process. First, obviously, a crime has to occur. The police then have to learn about the crime. This can happen in two ways. First, they can discover it themselves while on patrol. This is common in crimes such as drug possession or sale as well as any crime that occurs outdoors, which is largely where police are able to observe behavior. The second way is that the victim or witness to a crime reports it. So if they call the police to report a crime, the police learn about it from that call. We don't actually know from the data how the police learned of a crime but it's important to think about this data generating process when using the data. 
 Alongside the crime being reported (or discovered) to the police, agencies must then report the crime to NIBRS. All crimes that occur in that agency's jurisdiction *should* be reported, but that's not always the case. Since reporting is voluntary (at least nationally, though some states do require agencies to report data), agencies are free to report as many or as few crimes as they wish. This often occurs when agencies report only parts of the year, excluding certain months, so you should ensure that the agency reported data for each month you're interested in.
@@ -191,36 +187,24 @@ So if this data has the same info (other than unfounded and negative crimes) as 
 
 We'll look here at how many agencies report at least one crime each year between 1991 - the first year of data - and 2019 - the latest year of data - as well as compare NIBRS reporting to UCR reporting. Figure \@ref(fig:agenciesReporting) shows the number of agencies each year that reported at least one incident. Keep in mind that there are about 18,000 police agencies in the United States. Only a little over 600 agencies reported in 1991. This has grown pretty linearly, adding a few hundred agencies each year though that trend accelerated in recent years. In 2019, nearly 8,200 agencies reported at least some data to NIBRS. Compared to the estimated 18,000 police agencies in the United States, however, this is still fewer than half of agencies. The data shown here is potentially an overcount, however, as it includes agencies reporting any crime that year, even if they don't report every month. 
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/agenciesReporting-1} 
-
-}
-
-\caption{The annual number of agencies reporting at least one incident in that year.}(\#fig:agenciesReporting)
-\end{figure}
+<div class="figure" style="text-align: center">
+<img src="nibrs_general_files/figure-html/agenciesReporting-1.png" alt="The annual number of agencies reporting at least one incident in that year." width="90%" />
+<p class="caption">(\#fig:agenciesReporting)The annual number of agencies reporting at least one incident in that year.</p>
+</div>
 
 Another way to look at reporting is comparing it to reporting to UCR. Figure \@ref(fig:agenciesReportingMap) shows the number of agencies in each state that report NIBRS data in 2019. Since 2019 is the year with the most participation, this does overstate reporting for previous years. This map pretty closely follows a population map of the US. Texas had the most agencies, followed by Michigan and Ohio. The southern states have more agencies reporting than the lightly populated northern states. The issue here is that a number of states are in white, indicating that very few agencies reported. Indeed, four of the most populated states - California, New York, Florida, and New Jersey - don't have any agencies at all that report NIBRS data.
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/agenciesReportingMap-1} 
-
-}
-
-\caption{The number of agencies in each state that reported at least one crime in 2019 to NIBRS.}(\#fig:agenciesReportingMap)
-\end{figure}
+<div class="figure" style="text-align: center">
+<img src="nibrs_general_files/figure-html/agenciesReportingMap-1.png" alt="The number of agencies in each state that reported at least one crime in 2019 to NIBRS." width="90%" />
+<p class="caption">(\#fig:agenciesReportingMap)The number of agencies in each state that reported at least one crime in 2019 to NIBRS.</p>
+</div>
 
 Since the number of agencies in a state is partially just a factor of population, Figure \@ref(fig:agenciesReportingMapPercent) shows each state as a percent of agencies in that state that report to NIBRS that also reported to the UCR Offenses Known and Clearances by Arrest (the "crime" dataset) in 2019.^[This is the UCR dataset which has the highest reporting rate.] Not all agencies in the US reported to UCR in 2019 -  and a small number reported to NIBRS but not UCR in 2019 - but this is a fairly good measure of reporting rates. Here the story looks a bit different than in the previous figure. Now we can tell that among north-western states and states along the Appalachian  mountains, nearly all agencies report. In total, 18 states have 90% or more of agencies that reported to UCR in 2019 also reporting to NIBRS. Thirteen agencies have fewer than 10% of agencies reporting to NIBRS that also reported to UCR, with 5 of these having 0% of agencies reporting. The remaining states average about 56% of agencies reporting. So when using NIBRS data, keep in mind that you have very good coverage of certain states, and very poor coverage of other states. And the low - or zero - reporting states are systematically high population states.    
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.9\linewidth]{nibrsbook_files/figure-latex/agenciesReportingMapPercent-1} 
-
-}
-
-\caption{Agencies in each state reporting at least one crime to NIBRS in 2019 as a percent of agencies that reported UCR Offenses Known and Clearances by Arrests data in 2019.}(\#fig:agenciesReportingMapPercent)
-\end{figure}
+<div class="figure" style="text-align: center">
+<img src="nibrs_general_files/figure-html/agenciesReportingMapPercent-1.png" alt="Agencies in each state reporting at least one crime to NIBRS in 2019 as a percent of agencies that reported UCR Offenses Known and Clearances by Arrests data in 2019." width="90%" />
+<p class="caption">(\#fig:agenciesReportingMapPercent)Agencies in each state reporting at least one crime to NIBRS in 2019 as a percent of agencies that reported UCR Offenses Known and Clearances by Arrests data in 2019.</p>
+</div>
 
 For ease of reference, Table \@ref(tab:agenciesReportingTable) shows the number of agencies in each state reporting to NIBRS and to UCR in 2019, and the percent shown in Figure \@ref(fig:agenciesReportingMapPercent). 
 
@@ -291,14 +275,10 @@ When dealing with specific agencies, make sure to use the ORI rather than the ag
 
 We'll finish this overview of the NIBRS data by briefly talking about format of the data that is released by the FBI, before the processing done by myself or [NACJD](https://www.icpsr.umich.edu/web/pages/NACJD/index.html) that converts the data to a type that software like R or Stata or Excel can understand. The FBI releases their data as fixed-width ASCII files which are basically just an Excel file but with all of the columns squished together. As an example, Figure \@ref(fig:ascii) shows what the data looks like as you receive it from the FBI for the 1991 NIBRS data, the first year with data available. The way the FBI releases NIBRS data adds even more complications to using ASCII files. Since there are multiple segments in each NIBRS file you'd think that each segment would be its own file. But, no, the FBI gives you a single file with every segment stacked on top of each other. And, it's "stacked" essentially in a random way where row 1 may be from a certain segment while the next row is from a different segment. 
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.9\linewidth]{images/nibrs_ascii} 
-
-}
-
-\caption{Fixed-width ASCII file for the 1991 National Incident-Based Reporting System (NIBRS) dataset.}(\#fig:ascii)
-\end{figure}
+<div class="figure" style="text-align: center">
+<img src="images/nibrs_ascii.PNG" alt="Fixed-width ASCII file for the 1991 National Incident-Based Reporting System (NIBRS) dataset." width="90%" />
+<p class="caption">(\#fig:ascii)Fixed-width ASCII file for the 1991 National Incident-Based Reporting System (NIBRS) dataset.</p>
+</div>
 
 You can think of this a little like chapters from a book. Normally chapter 1 is first, followed by chapter 2 and so on. And within each chapter are sentences that use proper punctuation so we can easily read it and know where one sentence ends and the next begins. The FBI's NIBRS data basically removes all punctuation, cuts up every sentence and rearranges them in a random order and then hands it to you and says "read this." This is a terrible way to present any data, but is what we've had every since data began in 1991 and seems highly unlikely to change.
 
