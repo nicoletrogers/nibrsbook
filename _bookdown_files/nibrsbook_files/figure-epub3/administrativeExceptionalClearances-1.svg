@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='svglite' width='360.00pt' height='288.00pt' viewBox='0 0 360.00 288.00'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<defs>
+  <clipPath id='cpMC4wMHwzNjAuMDB8MC4wMHwyODguMDA='>
+    <rect x='0.00' y='0.00' width='360.00' height='288.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHwzNjAuMDB8MC4wMHwyODguMDA=)'>
+<rect x='0.00' y='0.00' width='360.00' height='288.00' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+</g>
+<defs>
+  <clipPath id='cpMjIzLjQ3fDM1NC41Mnw1LjQ4fDI0MC40NQ=='>
+    <rect x='223.47' y='5.48' width='131.05' height='234.97' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMjIzLjQ3fDM1NC41Mnw1LjQ4fDI0MC40NQ==)'>
+<polyline points='223.47,240.45 223.47,5.48 ' style='stroke-width: 0.53; stroke: #BEBEBE; stroke-linecap: butt;' />
+<polyline points='262.39,240.45 262.39,5.48 ' style='stroke-width: 0.53; stroke: #BEBEBE; stroke-linecap: butt;' />
+<polyline points='301.30,240.45 301.30,5.48 ' style='stroke-width: 0.53; stroke: #BEBEBE; stroke-linecap: butt;' />
+<polyline points='340.22,240.45 340.22,5.48 ' style='stroke-width: 0.53; stroke: #BEBEBE; stroke-linecap: butt;' />
+<polyline points='223.47,213.34 354.52,213.34 ' style='stroke-width: 2.18; stroke: #BEBEBE; stroke-linecap: butt;' />
+<polyline points='223.47,168.15 354.52,168.15 ' style='stroke-width: 2.18; stroke: #BEBEBE; stroke-linecap: butt;' />
+<polyline points='223.47,122.96 354.52,122.96 ' style='stroke-width: 2.18; stroke: #BEBEBE; stroke-linecap: butt;' />
+<polyline points='223.47,77.78 354.52,77.78 ' style='stroke-width: 2.18; stroke: #BEBEBE; stroke-linecap: butt;' />
+<polyline points='223.47,32.59 354.52,32.59 ' style='stroke-width: 2.18; stroke: #BEBEBE; stroke-linecap: butt;' />
+<polyline points='242.93,240.45 242.93,5.48 ' style='stroke-width: 2.18; stroke: #BEBEBE; stroke-linecap: butt;' />
+<polyline points='281.84,240.45 281.84,5.48 ' style='stroke-width: 2.18; stroke: #BEBEBE; stroke-linecap: butt;' />
+<polyline points='320.76,240.45 320.76,5.48 ' style='stroke-width: 2.18; stroke: #BEBEBE; stroke-linecap: butt;' />
+<rect x='242.93' y='193.00' width='1.70' height='40.67' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #595959;' />
+<rect x='242.93' y='147.82' width='3.12' height='40.67' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #595959;' />
+<rect x='242.93' y='102.63' width='9.51' height='40.67' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #595959;' />
+<rect x='242.93' y='57.44' width='88.13' height='40.67' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #595959;' />
+<rect x='242.93' y='12.26' width='92.14' height='40.67' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #595959;' />
+</g>
+<g clip-path='url(#cpMC4wMHwzNjAuMDB8MC4wMHwyODguMDA=)'>
+<polyline points='223.47,240.45 223.47,5.48 ' style='stroke-width: 1.07; stroke-linecap: butt;' />
+<text x='217.59' y='218.64' text-anchor='end' style='font-size: 16.00px; font-family: Times New Roman;' textLength='116.98px' lengthAdjust='spacingAndGlyphs'>Death of Offender</text>
+<text x='217.59' y='173.45' text-anchor='end' style='font-size: 16.00px; font-family: Times New Roman;' textLength='122.16px' lengthAdjust='spacingAndGlyphs'>Extradition Denied</text>
+<text x='217.59' y='128.26' text-anchor='end' style='font-size: 16.00px; font-family: Times New Roman;' textLength='134.65px' lengthAdjust='spacingAndGlyphs'>Juvenile/No Custody</text>
+<text x='217.59' y='83.08' text-anchor='end' style='font-size: 16.00px; font-family: Times New Roman;' textLength='137.28px' lengthAdjust='spacingAndGlyphs'>Prosecution Declined</text>
+<text x='217.59' y='37.89' text-anchor='end' style='font-size: 16.00px; font-family: Times New Roman;' textLength='190.00px' lengthAdjust='spacingAndGlyphs'>Victim Refused To Cooperate</text>
+<polyline points='219.78,213.34 223.47,213.34 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='219.78,168.15 223.47,168.15 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='219.78,122.96 223.47,122.96 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='219.78,77.78 223.47,77.78 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='219.78,32.59 223.47,32.59 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='223.47,240.45 354.52,240.45 ' style='stroke-width: 1.07; stroke-linecap: butt;' />
+<polyline points='242.93,244.13 242.93,240.45 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='281.84,244.13 281.84,240.45 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='320.76,244.13 320.76,240.45 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<text x='242.93' y='256.92' text-anchor='middle' style='font-size: 16.00px; font-family: Times New Roman;' textLength='21.33px' lengthAdjust='spacingAndGlyphs'>0%</text>
+<text x='281.84' y='256.92' text-anchor='middle' style='font-size: 16.00px; font-family: Times New Roman;' textLength='29.33px' lengthAdjust='spacingAndGlyphs'>20%</text>
+<text x='320.76' y='256.92' text-anchor='middle' style='font-size: 16.00px; font-family: Times New Roman;' textLength='29.33px' lengthAdjust='spacingAndGlyphs'>40%</text>
+<text x='288.99' y='275.33' text-anchor='middle' style='font-size: 22.00px; font-weight: bold; font-family: Times New Roman;' textLength='271.94px' lengthAdjust='spacingAndGlyphs'>% of Exceptional Clearances</text>
+</g>
+</svg>

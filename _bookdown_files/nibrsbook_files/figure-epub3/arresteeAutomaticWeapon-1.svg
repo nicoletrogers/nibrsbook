@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='svglite' width='360.00pt' height='288.00pt' viewBox='0 0 360.00 288.00'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<defs>
+  <clipPath id='cpMC4wMHwzNjAuMDB8MC4wMHwyODguMDA='>
+    <rect x='0.00' y='0.00' width='360.00' height='288.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHwzNjAuMDB8MC4wMHwyODguMDA=)'>
+<rect x='0.00' y='0.00' width='360.00' height='288.00' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+</g>
+<defs>
+  <clipPath id='cpMjAyLjUwfDM1NC41Mnw1LjQ4fDI0MC40NQ=='>
+    <rect x='202.50' y='5.48' width='152.02' height='234.97' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMjAyLjUwfDM1NC41Mnw1LjQ4fDI0MC40NQ==)'>
+<polyline points='233.96,240.45 233.96,5.48 ' style='stroke-width: 0.53; stroke: #BEBEBE; stroke-linecap: butt;' />
+<polyline points='283.07,240.45 283.07,5.48 ' style='stroke-width: 0.53; stroke: #BEBEBE; stroke-linecap: butt;' />
+<polyline points='332.17,240.45 332.17,5.48 ' style='stroke-width: 0.53; stroke: #BEBEBE; stroke-linecap: butt;' />
+<polyline points='202.50,213.34 354.52,213.34 ' style='stroke-width: 2.18; stroke: #BEBEBE; stroke-linecap: butt;' />
+<polyline points='202.50,168.15 354.52,168.15 ' style='stroke-width: 2.18; stroke: #BEBEBE; stroke-linecap: butt;' />
+<polyline points='202.50,122.96 354.52,122.96 ' style='stroke-width: 2.18; stroke: #BEBEBE; stroke-linecap: butt;' />
+<polyline points='202.50,77.78 354.52,77.78 ' style='stroke-width: 2.18; stroke: #BEBEBE; stroke-linecap: butt;' />
+<polyline points='202.50,32.59 354.52,32.59 ' style='stroke-width: 2.18; stroke: #BEBEBE; stroke-linecap: butt;' />
+<polyline points='209.41,240.45 209.41,5.48 ' style='stroke-width: 2.18; stroke: #BEBEBE; stroke-linecap: butt;' />
+<polyline points='258.51,240.45 258.51,5.48 ' style='stroke-width: 2.18; stroke: #BEBEBE; stroke-linecap: butt;' />
+<polyline points='307.62,240.45 307.62,5.48 ' style='stroke-width: 2.18; stroke: #BEBEBE; stroke-linecap: butt;' />
+<rect x='209.41' y='12.26' width='138.20' height='40.67' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #595959;' />
+<rect x='209.41' y='57.44' width='119.67' height='40.67' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #595959;' />
+<rect x='209.41' y='102.63' width='104.42' height='40.67' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #595959;' />
+<rect x='209.41' y='147.82' width='62.47' height='40.67' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #595959;' />
+<rect x='209.41' y='193.00' width='27.87' height='40.67' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #595959;' />
+</g>
+<g clip-path='url(#cpMC4wMHwzNjAuMDB8MC4wMHwyODguMDA=)'>
+<polyline points='202.50,240.45 202.50,5.48 ' style='stroke-width: 1.07; stroke-linecap: butt;' />
+<text x='196.62' y='218.64' text-anchor='end' style='font-size: 16.00px; font-family: Times New Roman;' textLength='91.07px' lengthAdjust='spacingAndGlyphs'>Other Firearm</text>
+<text x='196.62' y='173.45' text-anchor='end' style='font-size: 16.00px; font-family: Times New Roman;' textLength='53.34px' lengthAdjust='spacingAndGlyphs'>Shotgun</text>
+<text x='196.62' y='128.26' text-anchor='end' style='font-size: 16.00px; font-family: Times New Roman;' textLength='169.03px' lengthAdjust='spacingAndGlyphs'>Firearm (Type Not Stated)</text>
+<text x='196.62' y='83.08' text-anchor='end' style='font-size: 16.00px; font-family: Times New Roman;' textLength='58.65px' lengthAdjust='spacingAndGlyphs'>Handgun</text>
+<text x='196.62' y='37.89' text-anchor='end' style='font-size: 16.00px; font-family: Times New Roman;' textLength='31.98px' lengthAdjust='spacingAndGlyphs'>Rifle</text>
+<polyline points='198.81,213.34 202.50,213.34 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='198.81,168.15 202.50,168.15 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='198.81,122.96 202.50,122.96 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='198.81,77.78 202.50,77.78 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='198.81,32.59 202.50,32.59 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='202.50,240.45 354.52,240.45 ' style='stroke-width: 1.07; stroke-linecap: butt;' />
+<polyline points='209.41,244.13 209.41,240.45 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='258.51,244.13 258.51,240.45 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='307.62,244.13 307.62,240.45 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<text x='209.41' y='256.92' text-anchor='middle' style='font-size: 16.00px; font-family: Times New Roman;' textLength='33.33px' lengthAdjust='spacingAndGlyphs'>0.0%</text>
+<text x='258.51' y='256.92' text-anchor='middle' style='font-size: 16.00px; font-family: Times New Roman;' textLength='33.33px' lengthAdjust='spacingAndGlyphs'>2.0%</text>
+<text x='307.62' y='256.92' text-anchor='middle' style='font-size: 16.00px; font-family: Times New Roman;' textLength='33.33px' lengthAdjust='spacingAndGlyphs'>4.0%</text>
+<text x='278.51' y='275.33' text-anchor='middle' style='font-size: 22.00px; font-weight: bold; font-family: Times New Roman;' textLength='207.42px' lengthAdjust='spacingAndGlyphs'>% Automatic Weapon</text>
+<text transform='translate(16.70,122.96) rotate(-90)' text-anchor='middle' style='font-size: 22.00px; font-weight: bold; font-family: Times New Roman;' textLength='77.03px' lengthAdjust='spacingAndGlyphs'>Weapon</text>
+</g>
+</svg>
