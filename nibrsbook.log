@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.6.21)  29 JUN 2021 22:27
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.6.21)  30 JUN 2021 00:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1591,11 +1591,11 @@ File: nibrsbook_files/figure-latex/victimType-1.pdf Graphic file (type pdf)
 [89]
 File: nibrsbook_files/figure-latex/victimInjury-1.pdf Graphic file (type pdf)
 <use nibrsbook_files/figure-latex/victimInjury-1.pdf>
-[90] [91]
+[90]
 File: nibrsbook_files/figure-latex/victimInjuryExcludeNone-1.pdf Graphic file (
 type pdf)
 <use nibrsbook_files/figure-latex/victimInjuryExcludeNone-1.pdf>
-[92]
+[91] [92]
 Overfull \hbox (11.93709pt too wide) in alignment at lines 1874--1879
  [] [] [] 
  []
@@ -1629,6 +1629,9 @@ Overfull \hbox (49.6891pt too wide) in alignment at lines 1967--1987
 File: nibrsbook_files/figure-latex/victimJustifiableHomicide-1.pdf Graphic file
  (type pdf)
 <use nibrsbook_files/figure-latex/victimJustifiableHomicide-1.pdf>
+
+Underfull \vbox (badness 4429) has occurred while \output is active []
+
 [96] [97]
 File: nibrsbook_files/figure-latex/victimResidenceStatus-1.pdf Graphic file (ty
 pe pdf)
@@ -1640,9 +1643,9 @@ le (type pdf)
 [99]
 File: nibrsbook_files/figure-latex/victimAge-1.pdf Graphic file (type pdf)
 <use nibrsbook_files/figure-latex/victimAge-1.pdf>
+[100]
 File: nibrsbook_files/figure-latex/victimSex-1.pdf Graphic file (type pdf)
 <use nibrsbook_files/figure-latex/victimSex-1.pdf>
-[100]
 File: nibrsbook_files/figure-latex/victimRace-1.pdf Graphic file (type pdf)
 <use nibrsbook_files/figure-latex/victimRace-1.pdf>
 [101] [102]
@@ -1724,7 +1727,7 @@ File: nibrsbook_files/figure-latex/arresteeResidenceStatus-1.pdf Graphic file (
 type pdf)
 <use nibrsbook_files/figure-latex/arresteeResidenceStatus-1.pdf>
 
-Underfull \vbox (badness 1072) has occurred while \output is active []
+Underfull \vbox (badness 2671) has occurred while \output is active []
 
 
 Overfull \hbox (39.48785pt too wide) has occurred while \output is active
@@ -2011,7 +2014,7 @@ Package rerunfilecheck Info: File `nibrsbook.out' has not changed.
 Here is how much of TeX's memory you used:
  19753 strings out of 478442
  367071 string characters out of 5856757
- 861411 words of memory out of 5000000
+ 861408 words of memory out of 5000000
  39769 multiletter control sequences out of 15000+600000
  407970 words of font info for 74 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
