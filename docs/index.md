@@ -1,7 +1,7 @@
 --- 
 title: "National Incident-Based Reporting System (NIBRS) Data: A Practitioner's Guide"
 author: "Jacob Kaplan"
-date: "2021-07-10"
+date: "2022-08-23"
 site: bookdown::bookdown_site
 documentclass: book
 lof: yes
@@ -57,7 +57,7 @@ Kaplan J (2021). *National Incident-Based Reporting System (NIBRS) Data: A Pract
 BibTeX format:
 
 ```bibtex
-@Manual{ucrbook,
+@Manual{nibrsbook,
   title = {National Incident-Based Reporting System (NIBRS) Data: A Practitioner's Guide},
   author = {{Jacob Kaplan}},
   year = {2021},

@@ -7,7 +7,6 @@ bookdown::gitbook:
       collapse: section
       before: |
         <li><a href="./">National Incident-Based Reporting System (NIBRS) Data: A Practitioner's Guide</a></li>
-    download: [ ["nibrsbook.pdf", "PDF"], ["nibrsbook.epub", "EPUB"] ]
     edit:
       link: https://github.com/jacobkap/nibrsbook/edit/main/%s
       text: "Edit"
